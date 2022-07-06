@@ -1,0 +1,2 @@
+joonas = input()
+print(joonas + "??!")
