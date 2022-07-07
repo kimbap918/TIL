@@ -1,4 +1,4 @@
-# git(2)
+# git(2) - 원격저장소(emote Repository)
 
 
 
