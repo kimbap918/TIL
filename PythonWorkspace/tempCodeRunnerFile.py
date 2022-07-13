@@ -1,3 +1,3 @@
-for k in range(97, 122):
-#     C.append(ord(k))
-# print(C)
+    # else:
+    #     print(-1)
+    #     break
