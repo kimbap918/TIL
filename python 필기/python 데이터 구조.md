@@ -318,7 +318,7 @@ print(data, my_dict)
 
 <br>
 
-.update([other]) : 값을 제공하 key, value로 덮어씀
+.update([other]) : 값을 제공하는 key, value로 덮어씀
 
 ``` python
 my_dict = {'apple': '사', 'banana': '바나나'}
