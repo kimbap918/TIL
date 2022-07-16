@@ -1,34 +1,20 @@
 # 1 = 시작점
 # 2~7(6), 8~19(12), 20~37(18), 38~61(24)
+
 # 등차수열 
 # N번째 항의 값 = 시작숫자 + (시작숫자-1) * 공차
 start = 1 # 시작지점(시작숫자)
 res = 0 # 도착까지 횟수 
 goal = int(input()) # N번째 항의 값, 목표지점
-a = []
 
-for i in range(0, goal):
+for i in range(0, goal): 
     start += res * 6
-    a.append(start)
     if start < goal:
         res += 1
     else:
         res += 1
         break
 print(res)
-
-
-
-# while goal >= a:
-#     a += start + (res-1) * 6
-#     if a <= goal:
-#         res += 1
-#     else:
-#         break
-# print(res)
-
-
-
 
 # while True:
 #     if goal >= (start + (n-1) * 6):
@@ -37,11 +23,6 @@ print(res)
 #         print(n)
 #         break
 #     if start >= goal: break
-
-
-
-
-
 
 # N=int(input())
 # res=0
