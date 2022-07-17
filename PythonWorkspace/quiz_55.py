@@ -5,10 +5,8 @@ t_sum = 0 # 라인 1부터 n까지의 블럭 개수의 합
 while n > t_sum: # t_sum이 n보다 작은 동안
     line += 1    # line 수 1씩 증가 1, 2, 3, (4)...
     t_sum += line # t_sum + 라인수의 누적 1, 3, 6, (10)...
-    print("line :"+str(line))
-    print("t_sum :"+str(t_sum))
 # 8 = 2/3
-# n : 2 line :2 t_sym : 3
+# n : 2 line :2 t_sum : 3
 if line % 2 == 0:
     mo = n - (t_sum - line) # 8 - (10 - 4) = 2
     ja = (t_sum - n) + 1 # (10 - 8) + 1 = 3
