@@ -52,7 +52,7 @@ function
 
   * breakpoint, 변수 조회
 
-    ![스크린샷 2022-07-18 오전 10.31.06](../../kimbap918.github.io/images/python3.png)
+    ![스크린샷 2022-07-18 오전 10.31.06](python 에러:예외처리.assets/python3.png)
 
 * Python tutor 활용 (단순 파이썬 코드인 경우)
 
