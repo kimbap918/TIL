@@ -250,5 +250,21 @@ print(john.name) # 인스턴스 변수 접근 및 할당
   print(jimin.name)
   ```
 
-  
+<br>
+
+#### 소멸자(destructor) 메서드
+
+* 인스턴스 객체가 소멸(파괴)되기 직전에 호출되는 메소드
+
+``` python
+class Person:
+  def __del__(self):
+    print('인스턴스가 사라졌습니다.')
+    
+person1 = Person()
+del person1
+# 인스턴스가 사라졌습니다.
+```
+
+
 
