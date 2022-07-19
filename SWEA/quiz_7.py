@@ -1,0 +1,5 @@
+T = int(input())
+A = map(int, input().split())
+B = list(A)
+B.sort()
+print(B[len(B)//2])
