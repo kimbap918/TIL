@@ -4,6 +4,7 @@ for _ in range((2*m)+1):
     if True:
         array1.append(_)
 array1[0], array1[1] = False, False #0,1은 소수가 아니기에 False로 설정
+print(array1)
 
 # 에라토스테네스의 체 공식
 for i in range(2, int((2*m)**0.5)+1): # 2부터 2*m의 제곱근 까지
