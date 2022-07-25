@@ -1,8 +1,8 @@
 def counting_stars(n):
-  if n == 1:
+  if n == 1: # 별 찍기
     return ['*']
 
-  stars=counting_stars(n//3)
+  stars = counting_stars(n//3) # 3의 거듭제곱 값들을 나눈 몫을 함수로 호출
   L = []
 
   for star in stars:
@@ -14,5 +14,5 @@ def counting_stars(n):
 
   return L
 
-N=int(input())
+N = int(input())
 print('\n'.join(counting_stars(N)))
