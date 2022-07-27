@@ -1,11 +1,7 @@
-N = int(input())
-
-for i in range(N):
-  X, Y = map(int, input().split())
-  
-for x in range(X):
-  rank = 1
-  for y in range(Y):
-    if X[0] < X[1] and Y[0] < Y[1]:
-      rank += 1
-print(rank, end= ' ')
+ 
+# for i in range(max_length): # 0 1 2 3 4
+#     for j in range(len(s)): # 0 1 2 3 4
+#         if i >= len(s[j]): # 입력한 값의 길이 보다 i가 길거나 같으면
+#             continue # 건너뜀
+#         else:
+#             print(s[j][i], end='')

@@ -1,13 +1,7 @@
-N = int(input())
-p_list = []
+censored = ['C','A','M','B','R','I','D','G','E']
+S = input()
 
-for i in range(N):
-  X, Y = map(int, input().split())
-  p_list.append([X,Y])
-
-for x in p_list:
-    rank = 1
-    for y in p_list:
-        if x[0] < y[0] and x[1] < y[1]:
-            rank += 1
-    print(rank, end= ' ')
+for i in censored:
+    if i in S:
+       S = S.replace(i, "")
+print(S)
