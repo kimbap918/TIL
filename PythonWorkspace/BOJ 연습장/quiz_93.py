@@ -1,5 +1,3 @@
-N = int(input())
-a = []
-for i in range(1, N+1):
-    a.append(i)
-print(a)
+S = input().split('-')
+for i in range(len(S)):
+    print(S[i][0], end='')
