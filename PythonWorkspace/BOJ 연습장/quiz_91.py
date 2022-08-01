@@ -5,9 +5,10 @@ sum = 0
 for i in range(len(num)):
     for j in range(i+1, N):
         for k in range(j+1, N):
-            print("i :"+str(i))
-            print("j :"+str(j))
-            print("k :"+str(k))   
+            # i:0, j:1, k:2, 0,1,3, 0,1,4, 0,2,3, 0,2,4..
+            # print("i :"+str(i))
+            # print("j :"+str(j))
+            # print("k :"+str(k))   
             # 카드 3장 합이 M보다 작거나 카드 3장 합이 S보다 작으면 건너뜀          
             if num[i]+num[j]+num[k] > M or num[i]+num[j]+num[k] < sum:
                 continue
