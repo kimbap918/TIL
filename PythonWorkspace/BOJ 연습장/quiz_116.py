@@ -12,7 +12,7 @@ for _ in range(T):
         print(s1[j].rstrip(), end = ' ')
     
         
-# for i in range(T):
-#     string = list(input().split())
-#     for j in string:
-#         print(j[::-1], end = ' ')
+for i in range(T):
+    string = list(input().split())
+    for j in string:
+        print(j[::-1], end = ' ')
