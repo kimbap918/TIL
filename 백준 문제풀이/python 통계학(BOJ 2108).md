@@ -2,6 +2,8 @@
 
 <br>
 
+> from collections import Counter
+
 ## 문제
 
 수를 처리하는 것은 통계학에서 상당히 중요한 일이다. 통계학에서 N개의 수를 대표하는 기본 통계값에는 다음과 같은 것들이 있다. 단, N은 홀수라고 가정하자.
@@ -112,6 +114,53 @@ N개의 수가 주어졌을 때, 네 가지 기본 통계값을 구하는 프로
 <br>
 
 ## 📝 풀어보기
+
+📌 `floor` 함수를 사용하기 위해 `math`, 시간초과 방지를 위해 `sys`, 최빈값을 사용하기위한 `Counter` 라이브러리를 사용했다.
+
+수의 개수 `N`을 입력받고 N개의 수를 담기위한 리스트 a를 생성한다.
+
+``` python
+import math
+import sys
+from collections import Counter
+
+input = sys.stdin.readline
+N = int(input())
+a = [] 
+```
+
+<br>
+
+📌 N만큼 반복하면서 a에 수를 입력받고 a를 정렬한다. 
+
+첫번째로, a의 합을 N으로 나눈 후 소숫점 첫째자리를 반올림하여 int로 형변환한 산술평균을 출력한다.
+
+두번째로, N을 2로 나누고 소숫점을 버림한 값이 리스트의 중앙에 위치한 값이므로 중앙값을 출력한다.
+
+세번째로, Counter를 사용해서 최빈값의 횟수와 수를 튜플 형태로 받아낸다. 튜플의 첫번째 요소와 그 다음 요소가 같다면(최빈값의 횟수가 같다면) 두번째로 작은값을 출력하고 그 외엔 최빈값을 출력한다.
+
+네번째로, a 내의 최대값과 최소값의 차이인 범위를 출력한다 .
+
+``` python
+for i in range(N):
+    a.append(int(input()))
+a.sort()
+print(int(round((sum(a)/N), 0))) # 1. 산술평균
+
+print(a[math.floor(N/2)]) # 2. 중앙값
+
+cnt_a = Counter(a).most_common()
+if len(cnt_a) > 1 and cnt_a[0][1] == cnt_a[1][1]: # 최빈값이 2개 이상이면
+    print(cnt_a[1][0]) # 3. 최빈값
+else:
+    print(cnt_a[0][0]) 
+
+print(max(a) - min(a)) # 4. 범위
+```
+
+<br>
+
+#### 전체코드
 
 ``` python
 import math

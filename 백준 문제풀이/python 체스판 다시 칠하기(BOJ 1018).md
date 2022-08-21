@@ -176,6 +176,64 @@ WBWWBWBBWWBW
 
 ## 📝 풀어보기
 
+📌 보드의 세로 `N`, 가로  `M` 을 입력받는다.
+
+원래의 판을 저장하기 위한 리스트 `original`, 바뀐 체스판의 개수를 저장하기 위한 리스트 `count` 를 각각 생성하고 N만큼 반복하면서 original에 원래 판을 저장한다.
+
+``` python
+N, M = map(int, input().split()) # N * M 보드
+original = [] # 원래 판을 저장하기 위한 리스트
+count = [] # 바뀐 체스판의 개수를 저장하기 위한 리스트
+
+for _ in range(N):
+    original.append(input()) # original에 원래 판을 저장
+```
+
+<br>
+
+📌 보드판은 8 x 8 크기로 잘라서 사용하지만 시작점을 모르기때문에 N, M에서 7을 빼서 시작점을 잡는다.
+
+시작점 a, b를 기준으로 8칸을 반복하면서 i+j의 값이 짝수일 경우 W면 index1에 1을 합산하고 B면 index2에 1을 합산한다.
+
+i+j의 값이 홀수일 경우는 체스판의 흑백이 짝수일때와 정반대이므로 B면 index1에, W면 index2에 1을 합산한다. 
+
+``` python
+for a in range(N-7): # 전체 체스판에서 시작점을 잡기위함
+    for b in range(M-7):
+        index1 = 0
+        index2 = 0
+        # 전체 체스판 중 아무곳에서나 8*8을 잘라내 최소로 칠할 값을 구하면됨
+        for i in range(a, a+8): # 시작점 a를 기준으로 8칸 모두 체크
+            for j in range(b, b+8): # 시작점 b를 기준으로 8칸 모두 체크
+                # 0, 0 1 2 3 4 5 6 7
+                # 1, 0 1 2 3 4 5 6 7...
+                if (i+j) % 2 == 0: # i+j 합이 짝수인 경우
+                    if original[i][j] != "W":
+                        index1 += 1
+                    if original[i][j] != "B":
+                        index2 += 1
+                else:
+                    if original[i][j] != "B":
+                        index1 += 1
+                    if original[i][j] != "W":
+                        index2 += 1
+```
+
+<br>
+
+📌 이 문제는 최소로 칠해야하는 횟수를 구하는 문제이므로 index1과 index2중에 최소값을 가져와 count에 추가한다.
+
+마지막으로 count의 최소값을 출력한다.
+
+``` python
+        count.append(min(index1, index2))
+print(min(count))
+```
+
+<br>
+
+#### 전체코드
+
 ``` python
 N, M = map(int, input().split()) # N * M 보드
 original = [] # 원래 판을 저장하기 위한 리스트
