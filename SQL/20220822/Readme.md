@@ -88,7 +88,7 @@ SELECT * FROM invoice_items A, invoices B, customers C WHERE A.invoiceId = B.inv
 ### 13. 각 cusotmer가 주문한 invoices_item의 개수를 출력하세요.
 | 단, CustomerId와 개수 컬럼을 `CustomerId` 기준으로 오름차순으로 5개만 출력하세요.
 ```sql
-SELECT C.CustomerId, COUNT(A.invoiceId) FROM invoice_items A, invoices B, customers C WHERE A.invoiceId = B.invoiceId AND B.CustomerId = C.CustomerID GROUP BY C.customerId ORDER BY C.CustomerId;
+SELECT C.Country, COUNT(A.InvoiceLineId) FROM invoice_items A, invoices B, customers C WHERE A.invoiceId = B.invoiceId AND B.CustomerId = C.CustomerID AND B.InvoiceDate LIKE '2010%' GROUP BY C.Country ORDER BY COUNT(A.InvoiceLineId) DESC LIMIT 10;
 ```
 
 
