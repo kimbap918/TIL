@@ -160,7 +160,7 @@ genre.objects.all()
     # 인디밴드를 인디음악으로 변경(수정)
     genre = Genre.objects.get(id=1)
     In[13] : genre.name = '인디음악'
-    In[14] : genre.svae() # 반드시 save해야 반영됨
+    In[14] : genre.save() # 반드시 save해야 반영됨
     
     # 삭제
     genre = Genre.objects.get(id=1)
