@@ -165,6 +165,45 @@ Kakuna
 
 ## 📝 풀어보기
 
+📌 포켓몬의 개수 N과 맞춰야할 문제의 개수 M을 입력받는다.
+
+``` python
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+```
+
+<br>
+
+📌 포켓몬의 이름과 해당하는 번호를 담을 딕셔너리를 생성한다. 포켓몬의 번호는 1부터 시작하므로 1부터 N+1까지  반복하면서 `포켓몬 딕셔너리의 해당 번호가 포켓몬의 이름인 값`과, `포켓몬 이름이 해당 포켓몬의 번호인 값 ` 을 동시에 저장한다.
+
+``` python
+poke_dic = {}
+for i in range(1, N+1):
+    pokemon = input().rstrip()
+    poke_dic[i] = pokemon
+    poke_dic[pokemon] = i
+```
+
+<br>
+
+📌 문제의 개수만큼 반복하면서 문제를 입력받는다.
+
+문제가 숫자면 poke_dic의 숫자값을 넣어 문자를 반환받고 문자면 문자값을 넣어 숫자를 반환받는다.
+
+``` python
+for j in range(M):
+    S = input().rstrip()
+    if S.isalpha() == False: # S가 숫자면
+        print(poke_dic[int(S)])
+    else:
+        print(poke_dic[S])
+```
+
+<br>
+
+#### 전체코드
+
 ``` python
 import sys
 input = sys.stdin.readline
