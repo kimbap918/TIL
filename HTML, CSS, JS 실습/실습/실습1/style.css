@@ -1,0 +1,41 @@
+/* 아래에 CSS를 작성해주세요. */
+.card_image, .head1 { 
+  font-family:'SamsungOneKorean', '맑은고딕', '돋움', sans-serif;
+}
+.headline1 {
+  text-align: center;
+  font-size: 12px;
+}
+.headline2 {
+  text-align: center;
+}
+.card {
+  float: left;
+  margin: 5px; 
+}
+.card_image {
+  width: 900px;
+  list-style:none;
+  align-items: center;
+}
+.item {
+  display: block;
+  padding-left: 15px;
+  color: gray
+}
+.str {
+  font-size: 15pt;
+  padding-left: 15px;
+}
+.txt {
+  display: inline-block;
+  color: gray;
+  font-size: 10pt;
+  padding-left: 15px;
+}
+.card1 {
+  border-radius: 30px;
+}
+.image {
+  border-radius: 20px;
+}

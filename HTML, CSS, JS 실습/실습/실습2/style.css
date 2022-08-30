@@ -1,0 +1,30 @@
+/* 아래에 CSS를 작성해주세요. */
+
+.card_image { 
+  font-family: '맑은고딕', '돋움', sans-serif;
+  list-style:none;
+  align-items: center;
+}
+.image {
+  width: 300px;
+  border-radius: 5px;
+}
+.sp1, .sp2, .sp3, .sp4 {
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.sp1 {
+  margin: 0px;
+  color: gray;
+}
+.sp2 {
+  margin: 0px;
+  font-size: 11pt;
+}
+.sp3 {
+  margin: 0px;
+  font-size: 18pt;
+}
+.sp4{
+  margin: 0px;
+}
