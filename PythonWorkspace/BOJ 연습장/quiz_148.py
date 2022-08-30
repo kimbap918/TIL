@@ -23,5 +23,4 @@ for i in range(K):
 # K!
 num2 = factorial(K)
 
-# N * N-1 * ... // K!
-print(num1 // num2)
+print((num1 // num2)%10007)
