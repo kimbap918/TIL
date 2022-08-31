@@ -10,15 +10,12 @@
   text-align: center;
 }
 .card {
-  /*float: left;*/
   margin: 5px; 
 }
 .card_image {
   display: flex;
-
   width: 900px;
   list-style:none;
-  /*align-items: center;*/
 }
 .item {
   display: block;

@@ -1,0 +1,11 @@
+.item-container {
+  display: flex;
+  height: 500px;
+}
+
+.card {
+  width: 100px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 1rem;
+}
