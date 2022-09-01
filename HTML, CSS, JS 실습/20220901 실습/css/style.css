@@ -95,8 +95,51 @@ body {
 .arrow_img {
   height: 30px;
   width: 30px;
-  position: fixed; /* 이 부분을 고정 */
-  bottom: 0; /* 하단에 여백 없이 */
+  position: fixed; 
+  bottom: 0; 
   right: 0;
 
+}
+
+.product {
+  width: 1280px;
+  margin-top: 5rem;
+}
+
+.product_list {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.product_list li {
+  width: 21rem;
+  height: 25rem;
+  margin-right: 1rem;
+  border: 1px solid gray;
+}
+
+.product_img {
+  padding: 8px;
+  width: 20rem;
+  height: 10rem;
+}
+
+.product_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.product_text {
+  padding: 8px;
+  line-height: 19px;
+}
+
+.product_text h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.product_text p {
+  margin-top: 1rem;
 }
