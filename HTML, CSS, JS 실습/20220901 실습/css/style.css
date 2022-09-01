@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+}
+
+.nav-box {
+  margin: 1rem;
+  width: 1200px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  /* border-style: solid;
+  border-top-color: 1px black; */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.nav-link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.bg_img {
+  background-image: url('../assets/apparel.jpeg');
+  background-size: 1280px;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.about {
+  display: flex;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_img {
+  width: 500px;
+  border-radius: 20px;
+  margin: 2rem;
+}
+
+.headline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.about_info {
+  margin-top: 2rem;
+  line-height: 2;
+}
+
+.more {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.more_info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.m {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.more_img {
+  height: 64px;
+  width: 64px;
+}
+
+.arrow_img {
+  height: 30px;
+  width: 30px;
+  position: fixed; /* 이 부분을 고정 */
+  bottom: 0; /* 하단에 여백 없이 */
+  right: 0;
+
+}

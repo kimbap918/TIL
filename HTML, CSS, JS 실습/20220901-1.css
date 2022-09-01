@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height : 10000px;
+  background-color: aqua;
+  font-family: 'Noto Sans KR'
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: black;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: black;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
