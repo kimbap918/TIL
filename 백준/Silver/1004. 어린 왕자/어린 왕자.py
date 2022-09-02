@@ -9,9 +9,8 @@ for _ in range(T):
     n = int(input())
     for _ in range(n):
         x, y, r = map(int, input().split())
-        d1 = (((x1 - x) ** 2) + ((y1 - y) ** 2)) ** 0.5
-        d2 = (((x2 - x) ** 2) + ((y2 - y) ** 2)) ** 0.5
+        d1 = math.sqrt(((x1 - x) ** 2) + ((y1 - y) ** 2))
+        d2 = math.sqrt(((x2 - x) ** 2) + ((y2 - y) ** 2))
         if (d1 < r and d2 > r) or (d1 > r and d2 < r):
             cnt += 1
     print(cnt)
-    
