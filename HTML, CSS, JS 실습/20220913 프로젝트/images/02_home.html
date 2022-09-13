@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 추천 사이트, 영추싸</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+    <nav w3-include-html="01_nav.html"></nav>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1920x600" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x600" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/1920x600" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="py-5 px-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Boxoffice</h2>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 gx-4">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie1.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">쇼생크 탈출</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie2.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">죽은 시인의 사회</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie3.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">다크 나이트 라이즈</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie4.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">그랜드 부다페스트 호텔</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie5.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">그녀</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <img class="card-img-top" src="movie6.jpg" alt="..." />
+                    <div class="card-body py-4">
+                        <div class="text-center">
+                            <h5 class="fw-bold">위대한 쇼맨</h5>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark" href="#">지금 예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer w3-include-html="01_footer.html"></footer>
+</body>
+    <script>
+    w3.includeHTML();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>

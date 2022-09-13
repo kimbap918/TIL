@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영추싸</title>
+    <link rel="icon" type="image/logo.png" href="images/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<style>
+    .nav-logo {
+  width: 5rem;
+  object-fit: cover;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="nav mx-1">
+            <img class="nav-logo mx-1" src="logo.png" href="#"/>
+        </div>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--  두 항목을 오른쪽으로 밀기 .me-auto -->
+            <!-- .navbar-nav으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현. -->
+            <ul class="navbar-nav mb-2 mx-3 mb-lg-0 ms-lg-4 align-items-end">
+                <li class="nav-item"><a class="nav-link active" href="02_home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="03_community.html">Community</a></li>
+                <li class="nav-item"><a class='nav-link' href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="email-address" class="col-form-label">Email address</label>
+                    <input type="text" class="form-control" id="email-address">
+                    <p class="text-black-50">We'll never share your email with anyone else.</p>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="col-form-label">Password</label>
+                    <input type="text" class="form-control" id="password">
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Check me out
+                    </label>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+</body>
+</html>
