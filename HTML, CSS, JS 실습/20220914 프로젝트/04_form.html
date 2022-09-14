@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 추천 사이트, 영추싸</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link href="movie.css" rel="stylesheet">
+</head>
+<body>
+    <!-- nav -->
+    <nav w3-include-html="01_nav.html"></nav>
+
+    <!-- 게시판 영역 -->
+    <section class="mx-5">
+        <!-- 게시판 제목 -->
+        <div class="text-center my-5 mx-5"> 
+            <h1>리뷰 작성하기</h1>
+        </div>
+        <div class="container mx-5 my-5">
+            <div class="col-md mb-3">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                    <option value="0"></option>
+                    <option value="1">쇼생크 탈출</option>
+                    <option value="2">죽은 시인의 사회</option>
+                    <option value="3">다크나이트 라이즈</option>
+                    <option value="4">그랜드 부다페스트 호텔</option>
+                    <option value="5">her</option>
+                    <option value="6">위대한 쇼맨</option>
+                  </select>
+                  <label for="floatingSelectGrid">눌러서 영화 선택하기</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="col-form-label">리뷰 제목</label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="col-form-label">리뷰 내용</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2" class="">내용을 입력하세요</label>
+                </div>
+            </div>
+            <form>
+                <a class="btn btn-primary w-auto" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">제출하기</a>
+            </form>
+            
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">완료</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                        <div class="mb-3">
+                            <p>성공적으로 제출되었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a class="text-decoration-none" href="02_community.html">Close</a></button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+
+    </section>
+    <footer w3-include-html="03_footer.html"></footer>
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+</body>
+</html>
