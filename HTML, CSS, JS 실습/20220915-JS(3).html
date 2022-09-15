@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color : red;
+    }
+    .blue {
+      color : blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="red text-center my-5">안녕하세요</h1>
+  <script>
+    const a = document.createElement('a')
+    a.innerText = '실라버스'
+    const body = document.querySelector('body')
+    body.appendchild(a)
+    // a에 속성을 붙혀서 사용할 수 있음
+    a.setAttribute('href', 'https://syllaverse.com')
+    // a에 있는 속성을 가져올 수 있음  
+    console.log(a.getAttribute('href'))
+
+    // h1 태그 조작(클래스)
+    const h1 = documnet.querySelector('h1')
+    // h1.getAttribute('class')
+    // // 'red'
+    // h1.setAttribute('class', 'blue')
+    // // 'blue'로 변경됨
+    console.log(h1.classList)
+  </script>
+</body>
+</html>
