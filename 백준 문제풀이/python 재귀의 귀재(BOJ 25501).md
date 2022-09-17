@@ -75,6 +75,46 @@ PALINDROME
 
 ## 📝 풀어보기
 
+📌 문제의 예시를 참고해서 recursion 함수와 isPalindrome 함수를 만든다.
+
+cnt를 생성해서 재귀가 일어날 때마다 cnt를 1씩 증가시켜준다.
+
+예제에서, 팰린드롬일때 1, 팰린드롬이 아닐때 0, 그외엔 함수를 다시 호출한다. isPalindrome 함수에서 입력받은 문자열 S를 `문자열 s, 0, 문자열 s의 길이-1 ` 로 반환해 recursion 함수로 넘기고, recursion에서 팰린드롬인지 아닌지 숫자로 판별한다. 
+
+``` python
+def recursion(s, l, r):
+    global cnt
+    cnt += 1
+    if l >= r: 
+      return 1
+    elif s[l] != s[r]: 
+      return 0
+    else: 
+      return recursion(s, l+1, r-1)
+
+def isPalindrome(s):
+    return recursion(s, 0, len(s)-1)
+```
+
+<br>
+
+📌 테스트 케이스 T를 입력받고 cnt를 생성한다.
+
+T의 횟수만큼 반복하면서 문자열 S를 입력받고 isPalindrome(S)와 cnt를 출력한다.
+
+``` python
+T = int(input())
+cnt = 0
+for _ in range(T):
+    S = input()
+    print(isPalindrome(S), cnt)
+    cnt = 0
+```
+
+<br>
+
+#### 전체 코드
+
 ``` python
 def recursion(s, l, r):
     global cnt
