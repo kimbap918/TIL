@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .modal-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100vh;
+      /* 내부 내용 */
+      color: white;
+      justify-content: center;
+      align-items: center;
+      /* 기본은 안보이게 */
+      display: none;
+    }
+    .active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <button>모달 버튼</button>
+  <div id="modal-content" class="modal-overlay">모달</div>
+
+  <script>
+    // 모달 버튼이 클릭되면
+    const modalBtn = document.querySelector('#modal-btn')
+    modalBtn.addEventListener('click', function() {
+      // 클래스 active를 토글함
+      documnet.querySelector('#modal-content').classList.toggle('active')
+    })
+
+    // 모달 취소버튼이 클릭되면
+    const modalCancelBtn = document.querySelector('#modal-cancel-btn')
+    modalCancelBtn.addEventListener('click', function() {
+      document.querySelector('#modal-content').classList.toggle('active')
+    })
+  </script>
+</body>
+</html>

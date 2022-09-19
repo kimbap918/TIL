@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>정말 중요한 내용</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum officia facilis nulla aspernatur ratione atque explicabo, magni quod quam! Omnis delectus dicta ad. Doloremque quam ut ex consequuntur adipisci atque quod porro, quos quas amet aliquid aspernatur expedita nobis consequatur fuga recusandae veniam voluptate consectetur quae sapiente deserunt reprehenderit tempore, voluptas mollitia! Obcaecati minus maxime quod ratione corporis doloremque, tempora magnam quisquam quaerat earum. Perferendis odit modi molestiae ea in sed repellat, sit eveniet, architecto corporis odio facere amet labore fugiat nemo rerum facilis saepe sapiente soluta porro? Sint, sunt. Rerum delectus sed facilis magnam nobis ducimus voluptatum dolorum voluptatem dolor fugit maiores quia cum odit dolore inventore laudantium ex incidunt ipsum, officia consequatur nesciunt vero quibusdam. Ut repellendus inventore placeat. Necessitatibus, quasi praesentium. Odit architecto, voluptatibus deleniti minima in tenetur dicta, inventore quod, recusandae vel velit distinctio autem sint eveniet illum fugiat placeat quibusdam? Consequuntur aut quia quidem voluptas, sunt, dolorem cum autem earum, eos perspiciatis illo! Tenetur natus provident rem mollitia accusamus impedit maiores architecto debitis, officiis reiciendis numquam eaque fuga eveniet tempora pariatur voluptatem cupiditate, facere aperiam sed veniam voluptatum. Iure voluptatem itaque sapiente iste asperiores quidem corporis dolor et eius tenetur repellat consequatur, rem, assumenda earum numquam dolorem commodi ducimus libero necessitatibus recusandae enim voluptas. Reiciendis repellat excepturi vel. Impedit repellendus quibusdam suscipit iste velit exercitationem recusandae! Quidem unde, laudantium, eveniet deserunt minus corporis nulla ipsum provident sunt perspiciatis placeat aliquam earum consequatur fugiat eligendi, hic ut facere? Tempore saepe alias et nemo nulla magnam impedit architecto rerum facere qui. Omnis eum laborum architecto cumque incidunt, rerum illum dolorem quia delectus ducimus id quidem quaerat. Esse, aliquid provident, nulla id unde totam perspiciatis commodi ducimus at doloremque ut sequi vel, numquam ipsam magnam quidem nam enim porro iste quae? Esse, iure! Aliquid minus nulla consequatur.</p>
+  <script>
+    const h1 = document.querySelect('h1')
+    h1.addEventListener('copy', function(event) {
+      // event의 기본 동작을 막고, 다른 행위를 할수 없게함
+      event.preventDefault()
+      console.log('복사를 할 수 없습니다.')
+      
+    h1.addEventListener('dragstart', function(event) {
+      event.preventDefault()
+      console.log('드래그가 금지되어 있습니다.')
+    })
+    })
+  </script>
+</body>
+</html>
