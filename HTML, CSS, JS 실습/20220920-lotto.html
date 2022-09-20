@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ball {
+      width: 10rem;
+      height: 10rem;
+      background-color: yellowgreen;
+      border-radius: 50%;
+      /* 컨텐츠 중앙, 수직 정렬 */
+      text-align: center;
+      line-height: 10rem;
+      /* 폰트 정리 */
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .ball-container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1>로또 추천 번호</h1>
+  <div class="ball-container">
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+    <div class="ball"></div>
+  </div>
+
+  <script>
+    const button = document.querySelector('#lotto-btn')
+    button.addEventListener('click', function() {
+      // 컨테이너를 생성
+      const ballContainer = document.createElement('div')
+      ballContainer.classList.add('ball-container')
+      // 공 생성
+      const ball = document.createElement('div')
+      ball.classList.add('ball')
+      
+      // 컨테이너에 붙인다
+      ballContainer.appendChild(ball)
+      // 컨테이너를 결과 영역에 붙인다.
+      const result = document.querySelector('#result')
+      result.appendChild(ballContainer)
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ball {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      /* 컨텐츠 중앙, 수직 정렬 */
+      text-align: center;
+      line-height: 10rem;
+      /* 폰트 정리 */
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .ball-container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1>로또 추천 번호</h1>
+  <button id="lotto-btn">생성하기</button>
+  
+  <div id="result"></div>
+  <hr>
+  <div class="ball-container">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
+  <script>
+    const button = document.querySelector('#lotto-btn')
+    var lotto = []
+    button.addEventListener('click', function() {
+      // 컨테이너를 생성
+      const ballContainer = document.createElement('div')
+      ballContainer.classList.add('ball-container')
+      // 공 생성
+      const numbers = _.sampleSize(_.range(1, 46), 6)
+      console.log(numbers)
+
+        for (let i = 0; i < 6; i++) {
+            let ball = document.createElement('div')
+            ball.classList.add('ball')
+            ball.innerText = numbers[i]
+            if(numbers[i] <= 10) {
+                ball.style.backgroundColor = "#fbc400";
+            }
+            else if(numbers[i] <= 20){
+                ball.style.backgroundColor = "#69c8f2";
+            }
+            else if(numbers[i] <= 30){
+                ball.style.backgroundColor = "#ff7272";
+            }
+            else if(numbers[i] <= 40){
+                ball.style.backgroundColor = "#aaa";
+            }
+            else if(numbers[i] <= 45) {
+                ball.style.backgroundColor = "#b0d840";
+            }
+            // 컨테이너에 붙인다
+            ballContainer.appendChild(ball)
+
+            // 컨테이너를 결과 영역에 붙인다.
+            const result = document.querySelector('#result')
+            result.appendChild(ballContainer)
+          }      
+    })
+  </script>
+</body>
+</html>

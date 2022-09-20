@@ -1,0 +1,35 @@
+/* style.css파일  */
+
+.ball {
+    float: left;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 0px 0px 3px rgba(73, 57, 0, .8);
+    margin-right: 6px;
+}
+
+.ball1 {
+    background: #fbc400;
+}
+.ball2 {
+    background: #69c8f2;
+}
+.ball3 {
+    background: #ff7272;
+}
+.ball4 {
+    background: #aaa;
+}
+.ball5 {
+    background: #b0d840;
+}
+.ball6 {
+    background: #c7c7c7;
+}

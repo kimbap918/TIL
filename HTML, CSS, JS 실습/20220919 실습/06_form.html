@@ -8,12 +8,24 @@
 </head>
 <body>
   <form name="join">
-    비밀번호 : <input type="password" id="pw1">
-    비밀번호 확인 : <input type="password" id="pw2">
+    비밀번호 : <input type="password" name="password" id="pw1">
+    비밀번호 확인 : <input type="password" name="password_confirmation" id="pw2">
     <input type="button" onclick="test()" value="확인">
+    <!-- <button type="submit">제출</button> -->
   </form1>
 
   <script type="text/javascript">
+
+    // const form = document.querySelector('#form')
+    // form.addEventListener('submit', function(event) {
+    //   event.preventDefault()
+    //   const formDate = new FormData(form)
+    //   console.log(formData)
+    //   console.log(formData.get('password'))
+    //   console.log(formData.get('password_confirmation'))
+    // })
+
+
     function test() {
       let p1 = document.getElementById('pw1').value;
       let p2 = document.getElementById('pw2').value;
