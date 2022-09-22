@@ -60,7 +60,7 @@
 1 1 1 1
 ```
 
-## 예제 출력 2 복사
+## 예제 출력 2 
 
 ```
 10
@@ -69,6 +69,50 @@
 <br>
 
 ## 📝 풀어보기
+
+📌 도시의 개수 N을 입력받고, 도시간의 거리를 나타내는 arr_len, 도시의 주유 가격인 arr_oil을 입력받는다.
+
+제일 왼쪽 도시에서 주유를 시작하고 주행하므로 초기의 가격은 arr_len[0] * arr_oil[0] 일것이다.
+
+``` python
+N = int(input())
+# 제일 왼쪽 도시에서 제일 오른쪽 도시로 가는 최소 비용을 출력한다. 
+arr_len = list(map(int, input().split())) # 도시간의 거리
+arr_oil = list(map(int, input().split())) # 도시의 주유 가격
+
+
+ans = arr_len[0] * arr_oil[0] # 제일 왼쪽 도시에서 주유 (10)
+```
+
+<br>
+
+📌 비교를 하기 위해 제일 왼쪽 도시의 주유비를 ans에 저장하고 이동거리 dist를 저장해둔다.
+
+1부터 N-1까지 이동한 현재, 주유 가격이 min보다 더 작으면 ans 에 min*dist를 누적하고 dist를 현재 이동한 도시간의 거리로 갱신, min값을 현재의 가격으로 갱신한다.
+
+주유 가격이 min보다 큰 경우에는 dist 에 이동한 거리를 누적한다. 
+
+반복문의 i가 N-2값이 되어 반복문을 다 돌게되면 ans에 min*dist값을 누적시키고 출력한다.
+
+``` python
+min = arr_oil[0] # 제일 왼쪽 도시의 주유비 (5)
+dist = 0 
+for i in range(1, N-1):
+    if arr_oil[i] < min: # 현재 주유 가격이 최소값보다 작으면 (2 < 5)
+        ans += min*dist # 거리 * 주유가격을 곱해서 더해주고 (10 + 5*0) 
+        dist = arr_len[i] # 거리를 갱신 (3)
+        min = arr_oil[i] # 주유가격을 제일 작은 가격으로 갱신 (2)
+    else:
+        dist += arr_len[i]
+    
+    if i == N-2: # i가 arr_len의 값을 다 돌면
+        ans += min*dist
+print(ans)
+```
+
+<br>
+
+#### 전체코드
 
 ``` python
 N = int(input())

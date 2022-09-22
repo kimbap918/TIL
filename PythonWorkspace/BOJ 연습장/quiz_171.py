@@ -1,4 +1,5 @@
 dp = [0 for i in range(101)] # 1 <= N <= 100
+print(len(dp))
 dp[1] = 1 # 1번째부터 3번째 변의 길이는 무조건 1
 dp[2] = 1
 dp[3] = 1

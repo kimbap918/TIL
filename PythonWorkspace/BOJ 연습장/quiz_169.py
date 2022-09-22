@@ -20,6 +20,7 @@ def w(a, b, c):
 
 
 dp = [[[0 for _ in range(21)] for _ in range (21)] for _ in range (21)]
+print(dp)
 while True:
     a,b,c = map(int, input().split())
     if a==-1 and b==-1 and c==-1:
