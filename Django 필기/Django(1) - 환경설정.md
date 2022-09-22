@@ -96,6 +96,7 @@ $ pyenv versions
 ``` terminal
 $ pyenv activate [가상 환경 이름]
 $ pyenv activate venv
+$ source server-venv/bin/activate
 ```
 
 <br>

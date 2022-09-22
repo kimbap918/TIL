@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .ball {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      /* 컨텐츠 중앙, 수직 정렬 */
+      text-align: center;
+      line-height: 10rem;
+      /* 폰트 정리 */
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .ball-container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1>로또 추천 번호</h1>
+
+  
+  <div id="result"></div>
+  <hr>
+  <div class="ball-container">
+    {% for i in lotto %}
+      <p>&nbsp;{{ forloop.counter }}.&nbsp;{{ i }}</p>
+    {% endfor %}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script> 
+
+</body>
+</html>
