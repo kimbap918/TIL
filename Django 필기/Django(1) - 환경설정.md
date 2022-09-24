@@ -141,6 +141,8 @@ django 설치
 ``` terminal
 $ pip install django
 $ pip3 install django
+$ pip install django==3.2.13 // LTS 버전
+$ pip install -r requirements.txt // requirements 생성
 ```
 
 <br>
