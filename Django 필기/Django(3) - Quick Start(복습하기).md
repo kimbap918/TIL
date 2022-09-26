@@ -86,7 +86,8 @@ You should consider upgrading via the
 (day3-venv) server/day3 - (main) > django-admin startproject day3pjt .
 # 8. 애플리케이션 생성
 (day3-venv) server/day3 - (main) > python manage.py startapp practices
-
+# 9. 애플리케이션 실행
+(day3-venv) server/day3 - (main) > python manage.py runserver
 ```
 
 <br>
@@ -374,4 +375,3 @@ index 템플릿에서 base템플릿을 상속받음
 공통된 부분을 제외하고 block 과 endblock 사이에 개별적인 내용을 넣으면 템플릿 상속이 가능함
 
 <br>
-
