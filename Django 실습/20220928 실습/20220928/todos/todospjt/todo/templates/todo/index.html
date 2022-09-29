@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .checked {
+    color: grey;
+    text-decoration-line: line-through;
+  }
+</style>
+<h1>Todo.list</h1>
+<!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
+<!-- action : 어떤 url을 요청할지 -->
+<!-- create 라는 이름을 가진 주소를 요청 -->
+<form action="{% url 'todo:create' %}">
+  <!-- input에 입력한 text 값을 content_ 로 식별해준다 -->
+  <!-- 할 일 -->
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">할 일</span>
+    <input type="text" class="form-control" name="content_" maxlength="80" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  <!-- 우선 순위 -->
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupSelect01">우선 순위</label>
+    <select class="form-select" name="priority_" id="inputGroupSelect01">
+      <option selected>클릭하여 선택</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <!-- 마감기한 -->
+  <div class="input-group date mb-3">
+    <label class="input-group-text">마감 기한</label>
+    <input type="text" class="form-control" name="deadline_" placeholder="YYYY-MM-DD">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  </div>
+  <!-- 할 일 추가 -->
+  <button type="submit" class="btn btn-outline-primary col-12">할 일 추가</button>
+</form>
+
+<table class="table">
+  <thead class="table-light">
+    <tr>
+      <th scope="col">우선 순위</th>
+      <th scope="col">할 일</th>
+      <th scope="col">생성 날짜</th>
+      <th scope="col">마감 기한</th>
+      <th scope="col">진행 상태</th>
+      <th scope="col">상태 변경</th>
+      <th scope="col">삭 제</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for todo in todos %}
+    <tr>
+      {% if todo.completed %}
+
+      <th><del>{{ todo.priority }}</del></th>
+      <th><del>{{ todo.content }}</del></th>
+      <th><del>{{ todo.created_at }}</del></th>
+      <th><del>{{ todo.deadline }}</del></th>
+      <th><del>{{ todo.completed }}</del></th>
+
+      {% else %}
+      <th>{{ todo.priority }}</th>
+      <th>{{ todo.content }}</th>
+      <th>{{ todo.created_at }}</th>
+      <th>{{ todo.deadline }}</th>
+      <th>{{ todo.completed }}</th>
+      {% endif %}
+      <th>
+        <form action="{% url 'todo:update' todo.pk %}">
+          <button type="submit" class="btn btn-primary mod">변경</button>
+        </form>
+      </th>
+      <th>
+        <form action="{% url 'todo:delete' todo.pk %}">
+          <button type="submit" class="btn btn-danger">삭제</button>
+        </form>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+<script type='text/javascript'
+  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="/js/bootstrap-datepicker.kr.js" charset="UTF-8"></script>
+
+<script type='text/javascript'>
+  $(function () { $('.input-group.date').datepicker({ calendarWeeks: false, todayHighlight: true, autoclose: true, format: "yyyy-mm-dd", language: "kr" }); });
+</script>
+<script>
+  $(document).ready(function () {
+    var date_input = $('input[name="date"]');
+    var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+    var options = {
+      format: 'YYYY-MM-DD',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+
+  // let modBtn = document.querySelector('.mod')
+  // modBtn.addEventListener("click", doneTodo);
+  // function doneTodo(event) {
+  //   const th = event.target.parentElement;
+  //   th.style.textDecoration = "line-through";
+  // }
+</script>
+{% endblock %}
