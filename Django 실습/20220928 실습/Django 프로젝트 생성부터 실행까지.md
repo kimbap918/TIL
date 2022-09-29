@@ -268,9 +268,9 @@ def index(request):
 
 ## 본격적인 프로젝트 내용 작성
 
-* 아래의 내용부터는 프로젝트의 내용에 대해서 다루므로, 내용이 세세하고 많습니다. 프로젝트의 생성과 실행만 참고한다면 보지 않아도 상관없어요.
+* 아래의 내용부터는 프로젝트의 내용에 대해서 다루므로, 내용이 많습니다. 프로젝트의 생성과 실행만 참고한다면 보지 않아도 상관없어요.
 
-## 할 일 추가하기(Create)
+## 1. 할 일 추가하기(Create)
 
 #### templates > todo > index.html
 
@@ -341,7 +341,7 @@ def create(request):
 
 <br>
 
-## 할 일 목록 보기(Read)
+## 2. 할 일 목록 보기(Read)
 
 #### 애플리케이션 폴더(todo) > views.py 
 
@@ -413,11 +413,111 @@ def create(request):
 
 <br>
 
-## 할 일 완료(completed) 여부 (True/False) 변경하기(Update)
+## 3. 할 일 완료(completed) 여부 (True/False) 변경하기(Update)
 
+#### templates > todo > index.html
 
+``` html
+{% extends 'base.html' %}
 
-## 할 일 삭제하기(Delete)
+{% block content %}
+<h1>index.html</h1>
+<!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
+<!-- action : 어떤 url을 요청할지 -->
+<!-- create 라는 이름을 가진 주소를 요청 -->
+<form action="{% url 'todo:create' %}">
+  <!-- input에 입력한 text 값을 content_ 로 식별해준다 -->
+  <input type="text" name="content_" id="" maxlength="80">
+  <input type="submit" value="할 일 추가">
+</form>
+
+<!-- DTL for문 사용법 -->
+<ul>
+  {% for todo in todos %}
+  <li>{{ todo.id }} - {{ todo.content }} - {{ todo.completed }}
+    <!-- 수정 버튼 생성 -->
+    <a href="{% url 'todo:update' todo.pk %}">변경</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+```
+
+<br>
+
+#### 애플리케이션 폴더(todo) > urls.py
+
+* urlpatterns에 update를 정의, 수정할 항목을 구분하기 위해 pk값을 이용
+
+``` python
+from django.urls import path
+from . import views # .은 현재경로 라는 뜻, 현재경로의 views를 가져온다. 
+
+# url namespace
+# url을 이름으로 분류하는 기능
+
+app_name = "todo"
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('create/', views.create, name='create'),
+    path('update/<int:pk>', views.update, name='update'),
+]
+```
+
+<br>
+
+#### 애플리케이션 폴더(todo) > views.py 
+
+* todo에 pk값을 가져와 저장 
+*  pk_를 사용해 update할 특정 데이터를 불러온다
+* 불러온 완료 여부의 값을 내가 수정한 값으로 변경
+* 수정 후 index로 리다이렉트시켜 바로 반영된 정보를 보여주게함
+
+``` python
+# redirect 사용을 위해 import
+from django.shortcuts import render, redirect
+# db에 저장하기 위해 model을 import
+from .models import Todo
+
+# Create your views here.
+def index(request):
+    # models에서 정의한 Todo의 모든 정보를 가져와서 _todos에 저장 
+    _todos = Todo.objects.all()
+    # _todos의 정보를 context에 담아서 반환하게함
+    context = {
+        "todos" : _todos,
+    }
+    return render(request, 'todo/index.html', context)
+
+def create(request):
+    # input에서 입력받은 값을 content에 저장 
+    content = request.GET.get("content_")
+    # db에 저장, create(필드, 값) 
+    Todo.objects.create(content=content)
+
+    _todos = Todo.objects.all()
+    context = {
+        "todos" : _todos,
+    }
+
+    return redirect('todo:index')
+
+def update(request, pk):
+    # update할 특정 데이터를 불러온다 -> pk_를 사용
+    todo = Todo.objects.get(pk = pk)
+    # True로 변경
+    completed_ = True
+    # 불러온 완료 여부의 값을 내가 수정한 값으로 변경
+    todo.completed = completed_
+    # 데이터를 수정한 것을 반영
+    todo.save()
+    return redirect('todo:index')
+```
+
+<br>
+
+## 4. 할 일 삭제하기(Delete)
 
 #### templates > todo > index.html
 
@@ -441,6 +541,8 @@ def create(request):
 <ul>
   {% for todo in todos %}
   <li>{{ todo.id }} - {{ todo.content }} - {{ todo.completed }}
+    <!-- 수정 버튼 생성 -->
+    <a href="{% url 'todo:update' todo.pk %}">변경</a>
     <!-- 삭제 버튼 생성 -->
     <a href="{% url 'todo:delete' todo.pk %}">삭제</a>
   </li>
@@ -468,6 +570,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('create/', views.create, name='create'),
     path('delete/<int:todo_pk>', views.delete, name='delete'),
+      path('update/<int:pk>', views.update, name='update'),
 ]
 ```
 
@@ -507,11 +610,239 @@ def create(request):
     }
 
     return redirect('todo:index')
-
+  
+def update(request, pk):
+    # update할 특정 데이터를 불러온다 -> pk_를 사용
+    todo = Todo.objects.get(pk = pk)
+    # True로 변경
+    completed_ = True
+    # 불러온 완료 여부의 값을 내가 수정한 값으로 변경
+    todo.completed = completed_
+    # 데이터를 수정한 것을 반영
+    todo.save()
+    return redirect('todo:index')
+  
 def delete(request, todo_pk):
     todo = Todo.objects.get(pk = todo_pk)
     todo.delete()
 
     return redirect('todo:index')
 ```
+
+<br>
+
+## 디자인 및 기능 변경
+
+* 여기서부터는 위의 작업과정을 거치고 난 후에 제 주관적인 생각으로 작성한 디자인과 기능이 포함되어 있습니다. 내용이 난잡하니 넘기셔도 상관없습니다.
+* 내용이 많으므로 설명은 주석으로 하고 과정을 일일히 보여주지 않습니다.
+
+#### index.html
+
+``` html
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 변경 버튼 클릭 시 취소선을 긋기 위한 스타일 정의 -->
+<style>
+  .checked {
+    color: grey;
+    text-decoration-line: line-through;
+  }
+</style>
+<h1>Todo.list</h1>
+<!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
+<!-- action : 어떤 url을 요청할지 -->
+<!-- create 라는 이름을 가진 주소를 요청 -->
+<form action="{% url 'todo:create' %}">
+  <!-- input에 입력한 text 값을 content_ 로 식별해준다 -->
+  
+  <!-- 할 일 -->
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">할 일</span>
+    <input type="text" class="form-control" name="content_" maxlength="80" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default">
+  </div>
+  
+  <!-- 우선 순위 -->
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupSelect01">우선 순위</label>
+    <select class="form-select" name="priority_" id="inputGroupSelect01">
+      <option selected>클릭하여 선택</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  
+  <!-- 마감기한 -->
+  <div class="input-group date mb-3">
+    <label class="input-group-text">마감 기한</label>
+    <input type="text" class="form-control" name="deadline_" placeholder="YYYY-MM-DD">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+  </div>
+  
+  <!-- 할 일 추가 버튼 -->
+  <button type="submit" class="btn btn-outline-primary col-12">할 일 추가</button>
+</form>
+
+<!-- 테이블 영역 -->
+<table class="table">
+  <!-- 헤드 -->
+  <thead class="table-light">
+    <tr>
+      <th scope="col">우선 순위</th>
+      <th scope="col">할 일</th>
+      <th scope="col">생성 날짜</th>
+      <th scope="col">마감 기한</th>
+      <th scope="col">진행 상태</th>
+      <th scope="col">상태 변경</th>
+      <th scope="col">삭 제</th>
+    </tr>
+  </thead>
+  <!-- 바디 -->
+  <tbody>
+    {% for todo in todos %}
+    <tr>
+      {% if todo.completed %}
+
+      <th><del>{{ todo.priority }}</del></th>
+      <th><del>{{ todo.content }}</del></th>
+      <th><del>{{ todo.created_at }}</del></th>
+      <th><del>{{ todo.deadline }}</del></th>
+      <th><del>{{ todo.completed }}</del></th>
+
+      {% else %}
+      <th>{{ todo.priority }}</th>
+      <th>{{ todo.content }}</th>
+      <th>{{ todo.created_at }}</th>
+      <th>{{ todo.deadline }}</th>
+      <th>{{ todo.completed }}</th>
+      {% endif %}
+      <th>
+        <form action="{% url 'todo:update' todo.pk %}">
+          <button type="submit" class="btn btn-primary mod">변경</button>
+        </form>
+      </th>
+      <th>
+        <form action="{% url 'todo:delete' todo.pk %}">
+          <button type="submit" class="btn btn-danger">삭제</button>
+        </form>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<!-- datepicker 스크립트 -->
+<script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+<script type='text/javascript'
+  src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script src="/js/bootstrap-datepicker.kr.js" charset="UTF-8"></script>
+<script type='text/javascript'>
+  $(function () { $('.input-group.date').datepicker({ calendarWeeks: false, todayHighlight: true, autoclose: true, format: "yyyy-mm-dd", language: "kr" }); });
+</script>
+<!-- datepicker function -->
+<script>
+  $(document).ready(function () {
+    var date_input = $('input[name="date"]');
+    var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+    var options = {
+      format: 'YYYY-MM-DD',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+</script>
+{% endblock %}
+```
+
+<br>
+
+#### urls.py
+
+* 변경 사항이 없습니다.
+
+``` python
+from django.urls import path
+from . import views # .은 현재경로 라는 뜻, 현재경로의 views를 가져온다. 
+
+# url namespace
+# url을 이름으로 분류하는 기능
+
+app_name = "todo"
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('create/', views.create, name='create'),
+    path('delete/<int:todo_pk>', views.delete, name='delete'),
+    path('update/<int:pk>', views.update, name='update'),
+]
+```
+
+<br>
+
+#### views.py
+
+* create 부분의 내용이 변경되었습니다.
+* index.html 에서 출력되는 테이블에 맞게 내용을 출력하기 위해 변경되었습니다.
+
+``` python
+# redirect 사용을 위해 import
+from django.shortcuts import render, redirect
+# db에 저장하기 위해 model을 import
+from .models import Todo
+
+# Create your views here.
+def index(request):
+    # models에서 정의한 Todo의 모든 정보를 가져와서 _todos에 저장 
+    _todos = Todo.objects.all()
+    # _todos의 정보를 context에 담아서 반환하게함
+    context = {
+        "todos" : _todos,
+    }
+    return render(request, 'todo/index.html', context)
+
+def create(request):
+    # input에서 입력받은 값을 content에 저장 
+    content = request.GET.get("content_")
+    priority = request.GET.get("priority_")
+    deadline = request.GET.get("deadline_")
+    # db에 저장, create(필드, 값) 
+    # create를 각각 하면 테이블이 생성될 때 바뀐 항목마다 개별적으로 생성되기 때문에 하나에 담아서 생성
+    Todo.objects.create(content=content, priority=priority, deadline=deadline)
+
+    _todos = Todo.objects.all()
+    context = {
+        "todos" : _todos,
+    }
+
+    return redirect('todo:index')
+
+def delete(request, todo_pk):
+    todo = Todo.objects.get(pk = todo_pk)
+    todo.delete()
+
+    return redirect('todo:index')
+
+def update(request, pk):
+    # update할 특정 데이터를 불러온다 -> pk_를 사용
+    todo = Todo.objects.get(pk = pk)
+    completed_ = True
+
+    # 불러온 제목과 내용의 값을 내가 수정한 값으로 변경
+    todo.completed = completed_
+
+    # 데이터를 수정한 것을 반영
+    todo.save()
+
+    return redirect('todo:index')
+```
+
+<br>
 
