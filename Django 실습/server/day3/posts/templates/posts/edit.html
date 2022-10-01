@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>글 수정</h1>
+<!-- 특정 pk를 가진 데이터를 불러오기 위해 pk를 동적인자로 전달-->
+<form action="{% url 'posts:update' post.pk %}">
+  제목: <input type="text" name="title" value="{{ post.title }}"><br>
+  내용:
+  <input type="text" name="content" value="{{ post.content }}">
+  <input type="submit">
+</form>
+
+{% endblock %}

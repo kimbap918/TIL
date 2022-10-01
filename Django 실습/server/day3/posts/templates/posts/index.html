@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>게시판</h1>
+
+<ul>
+  {% for post in posts %}
+  <li>ID: {{ post.id }} |
+    <a href="{% url 'posts:detail' post.pk %}">
+      제목: {{ post.title }}
+    </a>
+    <!-- 기존의 값을 받기 위해 pk를 동적 인자로 받음 -->
+    <a href="{% url 'posts:edit' post.pk %}">
+      [수정]
+    </a>/
+    <a href="{% url 'posts:delete' post.pk %}">
+      [삭제]
+    </a>
+  </li>
+  {% end for %}
+</ul>
+
+<a href="{% url 'posts:new' %}">새글쓰기</a>
+{% endblock %}
