@@ -846,3 +846,363 @@ def update(request, pk):
 
 <br>
 
+## 추가적인 내용
+
+#### (번외)Create - POST로 제출하기
+
+new.html
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+	<h1>글쓰기</h1>
+  <!-- method를 POST로 변경 -->
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% csrf_token %}
+    <label for="title">제목 : </label>
+    <input type="text" name="title" id='title'>
+    <label for="title">내용 : </label>
+    <textarea name="content" id='content' cols='30' rows=10></textarea>
+    <input type="submit" value='글쓰기'>
+  </form>
+</body>
+
+</html>
+```
+
+<br>
+
+views.py
+
+``` python
+from django.shortcuts import render, redirect
+from .models import Article
+
+# 요청 정보를 받아서
+def index(request):
+  	# 게시글을 가져와서
+  	articles = Article.objects.order_by('-pk')
+    # template에 전달한다
+    context = {
+      'articles' : articles
+    }
+		# 페이지를 render
+    return render(request, 'articles/index.html')
+  
+def new(request):
+  
+  return render(request, 'articles/new.html')
+
+def create(request):
+  title = request.POST.get('title')
+  content = request.POST.get('content')
+  Article.objects.create(title=title, content=content)
+  return redirect('articles:index')
+```
+
+<br>
+
+## Django ModelForm
+
+* DB기반의 애플리케이션을 개발하다보면,  HTML Form(UI)은 Django 모델(DB)과 매우 밀접한 관계를 가지게 됨
+  * 사용자로부터 값을 받아 DB에 저장하여 활용하기 때문
+  * 즉, 모델에 정의한 필드의 구성 및 종류에 따라 HTML Form이 결정됨
+* 사용자가 입력한 값이 DB의 데이터 형식과 일치하는지를 확인하는 유효성 검증이 반드시 필요하며 이는 서버 사이드에서 반드시 처리해야함.
+
+forms.py 생성
+
+``` python
+from django import forms
+from .models import Article
+
+class ArticleForm(forms.ModelForm):
+  
+  class Meta:
+    model = Article
+    fields = '__all__'
+    # fields = ['title', 'content'] 필요한것만 가져올 수 있음
+```
+
+ <br>
+
+views.py
+
+``` python
+from django.shortcuts import render, redirect
+from .models import Article
+
+# 요청 정보를 받아서
+def index(request):
+  	# 게시글을 가져와서
+  	articles = Article.objects.order_by('-pk')
+    # template에 전달한다
+    context = {
+      'articles' : articles
+    }
+		# 페이지를 render
+    return render(request, 'articles/index.html')
+  
+#def new(request):
+#  article_form = ArticleForm()
+#  context = {
+#    'article_form' : article_form
+#  }
+#  return render(request, 'articles/new.html', context=context)
+
+# new를 제거하고 create에서 전부 처리 가능
+def create(request): # 유효성 검사도 가능
+  if request.method == 'POST':
+  	article_form = ArticleForm(request.POST)
+  	if article_form.is_valid():
+    	article_form.save()
+    	return redirect('articles:index')
+  else:
+    # 유효하지 않을때
+    article_form = ArticleForm()
+    context = {
+      'article_form': article_form
+    }
+    return render(request, 'articles/new.html', context=context)
+```
+
+<br>
+
+new.html
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+	<h1>글쓰기</h1>
+  <!-- method를 POST로 변경 -->
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% csrf_token %}
+    <!-- 기존의 form을 대체할 수 있다 -->
+    {{ article_form.as_p }}
+</body>
+
+</html>
+```
+
+<br>
+
+#### 3. read - 상세보기
+
+url.py
+
+``` python
+from django.urls import path
+from . import views
+
+app_name = 'articles'
+
+urlpatterns = [
+  path('', views.index, name='index'),
+  # path('new/', views.new, name='new'),
+  path('create/', views.create, name='create'),
+  path('<int:pk>/', views.detail, name='detail'),
+]
+```
+
+views.py
+
+``` python
+from django.shortcuts import render, redirect
+from .models import Article
+
+# 요청 정보를 받아서
+def index(request):
+  	# 게시글을 가져와서
+  	articles = Article.objects.order_by('-pk')
+    # template에 전달한다
+    context = {
+      'articles' : articles
+    }
+		# 페이지를 render
+    return render(request, 'articles/index.html')
+  
+#def new(request):
+#  article_form = ArticleForm()
+#  context = {
+#    'article_form' : article_form
+#  }
+#  return render(request, 'articles/new.html', context=context)
+
+# new를 제거하고 create에서 전부 처리 가능
+def create(request): # 유효성 검사도 가능
+  if request.method == 'POST':
+  	article_form = ArticleForm(request.POST)
+  	if article_form.is_valid():
+    	article_form.save()
+    	return redirect('articles:index')
+  else:
+    # 유효하지 않을때
+    article_form = ArticleForm()
+    context = {
+      'article_form': article_form
+    }
+    return render(request, 'articles/new.html', context=context)
+  
+def detail(request):
+  article = Article.onjects.get(pk=pk)
+  context = {
+    'article' : article
+  }
+  return render(request, 'articles/detail.html', context)
+  
+```
+
+detail.html
+
+``` python
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+	<h1>{{ article.pk }}번 게시글</h1>
+  <p>{{ article.created_at }} | {{ article.updated_at}}</p>
+  <p>{{ article.content }}</p>
+  <a href="{% url 'article:update' article.pk %}">수정하기</a>
+</body>
+
+</html>
+```
+
+<br>
+
+#### 수정하기(Update)
+
+urls.py
+
+``` python
+from django.urls import path
+from . import views
+
+app_name = 'articles'
+
+urlpatterns = [
+  path('', views.index, name='index'),
+  # path('new/', views.new, name='new'),
+  path('create/', views.create, name='create'),
+  path('<int:pk>/', views.detail, name='detail'),
+  path('<int:pk>/update/', views.update, name='update'),
+]
+```
+
+<br>
+
+views.py
+
+``` python
+from django.shortcuts import render, redirect
+from .models import Article
+
+# 요청 정보를 받아서
+def index(request):
+  	# 게시글을 가져와서
+  	articles = Article.objects.order_by('-pk')
+    # template에 전달한다
+    context = {
+      'articles' : articles
+    }
+		# 페이지를 render
+    return render(request, 'articles/index.html')
+  
+#def new(request):
+#  article_form = ArticleForm()
+#  context = {
+#    'article_form' : article_form
+#  }
+#  return render(request, 'articles/new.html', context=context)
+
+# new를 제거하고 create에서 전부 처리 가능
+def create(request): # 유효성 검사도 가능
+  if request.method == 'POST':
+  	article_form = ArticleForm(request.POST)
+  	if article_form.is_valid():
+    	article_form.save()
+    	return redirect('articles:index')
+  else:
+    # 유효하지 않을때
+    article_form = ArticleForm()
+  context = {
+      'article_form': article_form
+  }
+ 	return render(request, 'articles/new.html', context=context)
+ 
+def detail(request):
+  article = Article.onjects.get(pk=pk)
+  context = {
+    'article' : article
+  }
+  return render(request, 'articles/detail.html', context)
+  
+def update(request, pk)
+  article = Article.objects.get(pk=pk)
+  if request.method == 'POST':
+    # POST : input 값 가져와서 검증하고 DB에 저장
+    article_form = ArticleForm(request.POST, instance=article) # 특정한 글을 수정하는 것이기 때문에 인스턴스를 반드시 넘겨주어야 함
+    if article_form.is_valid():
+      # 유효성 검사 통과하면 저장하고 상세보기 페이지로 
+      article_form.save()
+      return redirect('articles:detail', article.pk)
+      
+  else:
+  	article_form = ArticleForm(instance=article)
+  context = {
+    'article_form' : article_form
+  }
+  return render(request, 'artitle/update.html', context)
+  
+```
+
+<br>
+
+update.html
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+	<h1>글 수정하기</h1>
+  <form action="{% url 'articles:update' %}" method="POST"></form>
+  {{ article_form.as_p }}
+  <input type="submit" value="수정하기">
+  </form>
+</body>
+
+</html>
+```
+
