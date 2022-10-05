@@ -1,0 +1,87 @@
+## Django Admin
+
+``` terminal
+$ source venv/bin/activate # 가상환경 실행
+$ python manage.py createsuperuser # 슈퍼유저 생성
+
+Username (leave blank to use 'mac'): admin
+Email address: fx887722@naver.com
+Password: 
+Password (again): 
+Superuser created successfully.
+(server-venv) server/day3 - (main) > 
+```
+
+<br>
+
+admin.py
+
+``` python
+from django.contrib import admin
+from .models import Article
+
+# Register your models here.
+admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    fields = ['title']
+
+admin.site.register(Article, ArticleAdmin)
+```
+
+<br>
+
+#### Static files
+
+* 웹 서버는 특정 위치(URL)에 있는 자원(resource)을 요청받아서 제공하는 응답을 처리하는 것을 기본 동작으로 한다.
+* 즉, 웹 서버는 요청 받은 URL로 서버에 존재하는 정적 자원을 제공
+
+settings.py
+
+``` python
+INSTALLED_APPS = [
+    'posts',
+    'articles',
+    'practices',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles', # 프로젝트 생성시 설정이 되어있음
+]
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+STATIC_URL = '/static/'
+```
+
+<br>
+
+앱 안에 static 폴더 생성 -> static 폴더 안에 image 폴더 생성 -> 생성한 image 폴더에 이미지 넣기
+
+<br>
+
+HTML 내에서 아래와 같이 {% STATIC_URL 에 설정한 경로  '파일명' %} 사용시 파일 로드 가능
+
+``` html
+<img src="{% static 'image/apparel.jpeg' %}">
+```
+
+<br>
+
+#### (참고)django bootstrap5 적용하기
+
+``` html
+{% load django_bootstrap5 %}
+
+{% bootstrap_css %}
+
+{% bootstrap_javascript %}
+
+{% bootstrap_form article_form %}
+
+{% bootstrap_button button_type="submit" %}
+```
+
