@@ -71,7 +71,26 @@ HTML 내에서 아래와 같이 {% STATIC_URL 에 설정한 경로  '파일명' 
 
 <br>
 
-#### (참고)django bootstrap5 적용하기
+## Django Bootstrap5
+
+#### settings.py
+
+``` python
+INSTALLED_APPS = [
+    'articles',
+    'django_bootstrap5', # 부트스트랩 추가
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+<br>
+
+#### 사용 예시
 
 ``` html
 {% load django_bootstrap5 %}
@@ -84,4 +103,6 @@ HTML 내에서 아래와 같이 {% STATIC_URL 에 설정한 경로  '파일명' 
 
 {% bootstrap_button button_type="submit" %}
 ```
+
+
 
