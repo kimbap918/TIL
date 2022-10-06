@@ -55,17 +55,17 @@ ROOT_URLCONF = 'pjt.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'BACKEND': 'django.template.backends.django.DjangoTemplates', # HTML로 만드는 템플릿 엔진은 DjangoTemplates
         'DIRS': [
             BASE_DIR / 'pjt' / 'templates'
-        ],
-        'APP_DIRS': True,
+        ], # 추가 DIR들을 템플릿으로 관리하겠다
+        'APP_DIRS': True, # APP에 있는 templates 폴더들을 템플릿으로 관리하겠다
         'OPTIONS': {
-            'context_processors': [
+            'context_processors': [ # context 처리
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request', # 요청
+                'django.contrib.auth.context_processors.auth', # 다음주
+                'django.contrib.messages.context_processors.messages', # 과제 
             ],
         },
     },

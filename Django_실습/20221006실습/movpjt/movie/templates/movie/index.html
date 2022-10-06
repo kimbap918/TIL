@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  <h1>메인입니다.</h1>
+  <a href="{% url 'movie:create' %}">글 쓰기</a>
+  {% for movie in movies %}
+    <p>
+      <a href="{% url 'movie:detail' movie.pk %}">{{ movie.title }}</a>
+      |
+      {{ movie.summary }}
+      |
+      {{ movie.running_time }}</p>
+    <hr>
+  {% endfor %}
+{% endblock %}

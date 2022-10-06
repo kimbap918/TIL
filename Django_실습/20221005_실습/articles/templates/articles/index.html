@@ -3,17 +3,21 @@
 {% load django_bootstrap5 %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock %}
 
 {% block body %}
-<h1>게시판</h1>
-<img src="{% static 'images/apparel.jpeg' %}" alt="">
-<!-- urls.py에서 등록한 app_name Template에서 사용하기  -->
-<a href="{% url 'articles:create' %}">글 쓰기</a>
-{% for article in articles %}
-<h3><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></h3>
-<p>{{ article.created_at }} | {{ article.updated_at }}</p>
-<hr>
-{% endfor %}
+  <h1>게시판</h1>
+  <img src="{% static 'images/apparel.jpeg' %}" alt="">
+  <!-- urls.py에서 등록한 app_name Template에서 사용하기 -->
+  <a href="{% url 'articles:create' %}">글 쓰기</a>
+  {% for article in articles %}
+    <h3>
+      <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    </h3>
+    <p>{{ article.created_at }}
+      |
+      {{ article.updated_at }}</p>
+    <hr>
+  {% endfor %}
 {% endblock %}

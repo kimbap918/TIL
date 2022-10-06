@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  <h1>글쓰기</h1>
+  <!-- 제출을 POST 방식으로 -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ movie_form.as_p }}
+    <input type="submit" value="글쓰기">
+  </form>
+{% endblock %}

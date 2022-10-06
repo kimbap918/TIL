@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  <p>{{ movie.running_time }}</p>
+  <div>
+    <h1>{{ movie.title }}</h1>
+    <p>{{ movie.summary }}</p>
+  </div>
+  <a href="{% url 'movie:delete' movie.pk %}">삭제하기</a>
+  <a href="{% url 'movie:update' movie.pk %}">수정하기</a>
+{% endblock %}

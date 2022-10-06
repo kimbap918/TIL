@@ -53,6 +53,16 @@ python -m pip install --upgrade pip
 
 <br>
 
+#### Django 설치 및 기록
+
+``` terminal
+$ pip install django==3.2.13
+$ pip install django-bootstrap5 # 부트스트랩 5 사용시
+$ pip freeze > requirements.txt
+```
+
+<br>
+
 #### Django 프로젝트 폴더 생성
 
 ``` terminal
@@ -197,6 +207,22 @@ urlpatterns = {
 
 <br>
 
+* 활용 : `todo:index` => `/todo/`
+
+* Template에서 활용 예시
+
+```django
+{% url 'todo:index' %}
+```
+
+* View에서 활용 예시
+
+```python
+redirect('todo:index')
+```
+
+<br>
+
 #### 애플리케이션 폴더(todo) > views.py
 
 * urls.py에서 작성한 index에 대한 정보를 views.py 에서 정의
@@ -212,34 +238,32 @@ def index(request):
 
 <br>
 
-#### 애플리케이션 폴더(todo) > template 폴더 생성 > template 폴더 내 todo 폴더 생성 > index.html 파일 생성
+#### 애플리케이션 폴더(todo) > templates 폴더 생성 > templates 폴더 내 todo 폴더 생성 > index.html 파일 생성
 
 <br>
 
-#### templates > base.html
+#### 프로젝트 폴더(todospjt) > templates 폴더 생성 > templates 폴더 내 base.html 생성
 
 ``` html
+{% load django_bootstrap5 %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% bootstrap_css %}
+    {% block css %}{% endblock css %}
+  </head>
 
-<body>
-  {% block content %}
-  {% endblock content %}
-</body>
+  <body>
+    <div class="container">
+      {% block body %}{% endblock body %}
+    </div>
+    {% bootstrap_javascript %}
+  </body>
 
 </html>
 ```
@@ -250,13 +274,41 @@ def index(request):
 
 ``` html
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block content %}
-  <h1>index.html</h1>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %} 
+<h1>todo list</h1>
 {% endblock %}
 ```
 
 <br>
+
+#### settings.py > TEMPLATES
+
+``` python
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "todospjt" / "templates"], # BASE_DIR / "프로젝트폴더명" / "템플릿폴더명"
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
+```
+
+
 
 #### 프로젝트 실행 후 작동 확인(manage.py 경로에서 실행 해야함)
 
@@ -270,6 +322,24 @@ def index(request):
 
 * 아래의 내용부터는 프로젝트의 내용에 대해서 다루므로, 내용이 많습니다. 프로젝트의 생성과 실행만 참고한다면 보지 않아도 상관없어요.
 
+## 0. ModelForm 선언
+
+> 선언된 모델에 따른 필드 구성 (1) Form 생성 (2) 유효성 검사
+
+```python
+# 애플리케이션 폴더에 forms.py 생성하기
+from django import forms
+from .models import Todo
+
+class TodoForm(forms.ModelForm):
+
+    class Meta:
+        model = Todo
+        fields = ['content', 'completed', 'priority', 'created_at', 'deadline']
+```
+
+<br>
+
 ## 1. 할 일 추가하기(Create)
 
 #### templates > todo > index.html
@@ -282,8 +352,14 @@ def index(request):
 
 ``` html
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %} 
   <h1>index.html</h1>
   <!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
   <!-- action : 어떤 url을 요청할지 -->
@@ -388,8 +464,14 @@ def create(request):
 
 ``` python
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %} 
   <h1>index.html</h1>
   <!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
   <!-- action : 어떤 url을 요청할지 -->
@@ -419,8 +501,14 @@ def create(request):
 
 ``` html
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %} 
 <h1>index.html</h1>
 <!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
 <!-- action : 어떤 url을 요청할지 -->
@@ -525,8 +613,14 @@ def update(request, pk):
 
 ``` html
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %} 
 <h1>index.html</h1>
 <!-- 사용자에게 정보를 입력받을 때 form 태그를 사용해야한다. -->
 <!-- action : 어떤 url을 요청할지 -->
@@ -640,6 +734,12 @@ def delete(request, todo_pk):
 
 ``` html
 {% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
 
 {% block content %}
 <!-- 변경 버튼 클릭 시 취소선을 긋기 위한 스타일 정의 -->
