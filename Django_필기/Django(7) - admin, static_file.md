@@ -19,11 +19,18 @@ admin.py
 ``` python
 from django.contrib import admin
 from .models import Article
+# import는 내가 필요할때 가져와서 쓰는 것
+
 
 # Register your models here.
 admin.site.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    fields = ['title']
+  	# 아래와 같이 표기하는 방식을 커스텀 할수도 있다.
+    list_display = ('title', 'created_at', 'updated_at')
+    # class가 많은 이유?
+    # 기본 기능을 상속 받아서 커스텀 설정을 하고 이걸 그대로 사용, 나도 사용, Django도 사용
+    # 현재는 view를 function으로 정의하고 있지만 view까지도 class로 정의하는 것이 있다.
+    # fields = ['title']
 
 admin.site.register(Article, ArticleAdmin)
 ```

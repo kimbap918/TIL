@@ -18,8 +18,9 @@ $ source venv/bin/activate
 
 ### 2. Django 설치 및 기록
 
-```
+```terminal
 $ pip install django==3.2.13
+$ pip install django-bootstrap5 # 부트스트랩 5 설치시
 $ pip freeze > requirements.txt
 ```
 
@@ -33,10 +34,11 @@ $ django-admin startproject pjt .
 
 > Django : 주요 기능 단위의 App 구조, App 별로 MTV를 구조를 가지는 모습 + `urls.py` 
 
-### 1. app 생성
+### 1. app 생성 및 실행
 
 ```bash
 $ python manage.py startapp app_name
+$ python manage.py runserver
 ```
 
 ### 2. app 등록
@@ -46,11 +48,38 @@ $ python manage.py startapp app_name
 ```python
 INSTALLED_APPS = [
     'articles',
+  	'django_bootstrap5', # 부트스트랩 사용시
     ...
 ]
 ```
 
-### 3. urls.py 설정
+## 3. Model 정의 (DB 설계)
+
+### 1. 클래스 정의
+
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+```
+
+### 2. 마이그레이션 파일 생성
+
+* app 폴더 내의 `migrations` 폴더에 생성된 파일 확인
+
+```bash
+$ python manage.py makemigrations
+```
+
+### 3. DB 반영(`migrate`)
+
+```bash
+$ python manage.py migrate
+```
+
+## 4. urls.py 설정
 
 > app 단위의 URL 관리
 
@@ -89,33 +118,28 @@ urlpatterns = [
 redirect('articles:index')
 ```
 
-## 3. Model 정의 (DB 설계)
+* settings.py  TEMPLATES에 추가
 
-### 1. 클래스 정의
-
-```python
-class Article(models.Model):
-    title = models.CharField(max_length=20)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+````python
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "pjt" / "templates"], # DIRS에 경로 등록
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
 ```
+````
 
-### 2. 마이그레이션 파일 생성
-
-* app 폴더 내의 `migrations` 폴더에 생성된 파일 확인
-
-```bash
-$ python manage.py makemigrations
-```
-
-### 3. DB 반영(`migrate`)
-
-```bash
-$ python manage.py migrate
-```
-
-## 4. CRUD 기능 구현
+## 5. CRUD 기능 구현
 
 ### 0. ModelForm 선언
 
@@ -157,6 +181,10 @@ urlpatterns = [
 ##### (2) views.py
 
 ```python
+from django.shortcuts import render, redirect
+from .models import Article
+from .forms import ArticleForm
+
 def create(request):
     # forms.py에서 선언한 ArticleForm
     article_form = ArticleForm()
