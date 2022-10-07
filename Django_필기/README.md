@@ -508,8 +508,13 @@ admin.site.register(Article, ArticleAdmin)
 settings.py
 
 ``` python
+...
+import os
+
 INSTALLED_APPS = [
+    'posts',
     'articles',
+    'practices',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -522,7 +527,11 @@ INSTALLED_APPS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # 기본으로 설정되어있음.
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'config', 'static') # 추가
+]
 ```
 
 <br>
