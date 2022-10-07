@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  <div class="container mt-3">
+    <h1>글쓰기</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ review_form.as_p }}
+      <button type="submit" class="btn btn-outline-primary">추가</button>
+    </form>
+  </div>
+{% endblock %}

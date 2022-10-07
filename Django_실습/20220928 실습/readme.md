@@ -102,6 +102,7 @@ $ pip freeze > requirements.txt
 INSTALLED_APPS = [
   	# 생성한 애플리케이션 폴더(todo) 등록
   	'todo',
+  	'django_bootstrap5', # 부트스트랩5 설치시 등록
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -199,10 +200,10 @@ from . import views # .은 현재경로 라는 뜻, 현재경로의 views를 가
 
 app_name = 'todo' 
 
-urlpatterns = {
+urlpatterns = [
     path('', views.index, name='index'),
 
-}
+]
 ```
 
 <br>
