@@ -107,25 +107,78 @@ N=4이고, S가 아래와 같은 경우를 살펴보자.
 
 ## 📝 풀어보기
 
+📌 전체 인원의 수 n을 입력받는다. 방문 확인을 위해 visited에 n만큼 0을 생성해서 리스트로 저장한다.
+
+능력치를 이중리스트 형태로 입력받아 저장해둔다. 최소 차이값을 저장하기 위해 min_diff를 생성한다.
+
+``` python
+n = int(input())
+
+visited = [0 for _ in range(n)]
+graph = [list(map(int, input().split())) for _ in range(n)]
+min_diff = int(1e9)
+```
+
+<br>
+
+📌  min_diff를 전역변수로 설정하고 idx부터 n의 범위까지 반복하면서 방문이 없으면 visited[i]를 True로 변경하고 depth, i 에 각각 1을 더하고 dfs를 실행시킨다. 실행을 하고 방문을 False로 변경한다.
+
+depth가 증가하다가 팀의 인원수인 n//2명과 같아지면 team1, team2를 생성해서 0으로 초기화 하고 n의 범위에서 2중반복하면서 방문처리된 팀에 `graph[i][j]` 값을 누적하고 나머지 방문처리 되지 않은 팀에  `graph[i][j]` 값을 저장하고 min_diff, team1-team2의 절대값 중 최소값을 min_diff에 저장한다.
+
 ``` python
 def dfs(depth, idx):
     global min_diff
+    # 팀의 인원수가 n//2명으로 다 채워졌을때
     if depth == n//2:
+      	# 스타트팀, 링크팀 능력치를 구하기 위한 변수
         team1, team2 = 0, 0
         for i in range(n):
             for j in range(n):
+              	# 방문처리된 팀이 스타트팀이면
                 if visited[i] and visited[j]:
                     team1 += graph[i][j]
+                # 방문처리 되지않은 팀이 링크팀
                 elif not visited[i] and not visited[j]:
                     team2 += graph[i][j]
         min_diff = min(min_diff, abs(team1-team2))
         return
-
+		# idx(시작 : 0) 부터 n까지 
     for i in range(idx, n):
+      	# 방문이 없으면 
         if not visited[i]:
-            visited[i] = True
-            dfs(depth+1, i+1)
-            visited[i] = False
+            visited[i] = True # 1
+            dfs(depth+1, i+1) # 1을 추가하고 dfs실행
+            visited[i] = False # 0
+```
+
+<br>
+
+#### 전체 코드
+
+``` python
+def dfs(depth, idx):
+    global min_diff
+    # 팀의 인원수가 n//2명으로 다 채워졌을때
+    if depth == n//2:
+      	# 스타트팀, 링크팀 능력치를 구하기 위한 변수
+        team1, team2 = 0, 0
+        for i in range(n):
+            for j in range(n):
+              	# 방문처리된 팀이 스타트팀이면
+                if visited[i] and visited[j]:
+                    team1 += graph[i][j]
+                # 방문처리 되지않은 팀이 링크팀
+                elif not visited[i] and not visited[j]:
+                    team2 += graph[i][j]
+        min_diff = min(min_diff, abs(team1-team2))
+        return
+		# idx(시작 : 0) 부터 n까지 
+    for i in range(idx, n):
+      	# 방문이 없으면 
+        if not visited[i]:
+            visited[i] = True # 1
+            dfs(depth+1, i+1) # 1을 추가하고 dfs실행
+            visited[i] = False # 0
 
 
 n = int(input())
