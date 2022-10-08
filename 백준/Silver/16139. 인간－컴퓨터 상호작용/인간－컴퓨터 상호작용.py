@@ -2,7 +2,7 @@ import sys
 import string
 input = sys.stdin.readline
 
-S = input().rstrip()
+S = input()
 q = int(input())
 alphabet = {}
 for char in string.ascii_lowercase:
