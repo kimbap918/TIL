@@ -25,6 +25,7 @@
       <label for="reviewgrade" class="form-label">평점</label>
       <textarea name='content' class="form-control" id="reviewgrade" rows="3" disabled="disabled" readonly="readonly">{{ review.movie_name }}</textarea>
     </div>
+
     <div class="row">
       <div class="col">
         <a href="{% url 'movie:update' review.pk %}">

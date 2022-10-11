@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+  <div class="col-lg-9 col-md-12 px-5 mb-3">
+    <!-- 테이블 영역 -->
+    <table class="table">
+      <!-- 테이블 헤드 -->
+      <thead class="table-light">
+        <tr>
+          <th scope="col">PK</th>
+          <th scope="col">USER NAME</th>
+          <th scope="col">EMAIL</th>
+        </tr>
+      </thead>
+      <!-- 테이블 바디 -->
+      <tbody class="table-group-divider">
+        {% for account in accounts %}
+          <tr>
+            <th>{{ account.pk }}</th>
+            <th>
+              <a href="{% url 'authapp:detail' account.pk %}">
+                {{ account.username }}</a>
+            </th>
+
+            <th>{{ account.email }}</th>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock body %}

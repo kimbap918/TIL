@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+  <h1>상세 페이지</h1>
+  <div class="mb-3 mt-3">
+    <label for="userpk" class="form-label">순번</label>
+    <textarea name='content' class="form-control" id="userpk" rows="3" disabled="disabled" readonly="readonly">{{ user.pk }}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">유저명</label>
+    <textarea name='content' class="form-control" id="username" rows="3" disabled="disabled" readonly="readonly">{{ user.username }}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="useremail" class="form-label">이메일</label>
+    <textarea name='content' class="form-control" id="useremail" rows="3" disabled="disabled" readonly="readonly">{{ user.email }}</textarea>
+  </div>
+{% endblock body %}
