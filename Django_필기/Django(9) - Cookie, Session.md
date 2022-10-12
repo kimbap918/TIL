@@ -97,7 +97,7 @@ def login(request):
     if request.method == 'POST':
       # 이 상태에서는 유효성 검사가 되지 않는다. AuthenticationForm은 modelForm이 아니다
       # form = AuthenticationForm(request.POST)
-      form = AuthenticationForm(request.POST)
+      form = AuthenticationForm(request, data=request.POST)
       if form.is_valid():
         # 세션에 저장
         # login 함수는 request, user 객체를 인자로 받음
