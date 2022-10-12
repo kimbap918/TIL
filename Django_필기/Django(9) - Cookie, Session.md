@@ -93,7 +93,6 @@ from django.contrib.auth.decorators import login_required
 @login_required # 이 어노테이션을 함수 위에 사용하면 로그인을 요구한다. 수정하기 등.. 
 
 def login(request):
-  if request.user.is_authenticated:
     if request.method == 'POST':
       # 이 상태에서는 유효성 검사가 되지 않는다. AuthenticationForm은 modelForm이 아니다
       # form = AuthenticationForm(request.POST)
@@ -111,12 +110,6 @@ def login(request):
       'form': form
     }
     return render(request, 'accounts/login.html', context)
- 	else:
-    form = AuthenticationForm()
-  context = {
-    'form': form
-  }
-    return redirect('accounts:login')
 ```
 
 * 로그인을 위한 built-in-form
