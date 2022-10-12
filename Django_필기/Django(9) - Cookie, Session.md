@@ -282,3 +282,33 @@ def logout(request):
 
    있으면 /articles/1/update/ or 'articles:index'
 
+#### 유저 로그인 검증 참고
+
+``` python
+def create(request):
+  if request.user.is_authenticated:
+    if request.method == 'POST':
+      # 이 상태에서는 유효성 검사가 되지 않는다. AuthenticationForm은 modelForm이 아니다
+      # form = AuthenticationForm(request.POST)
+      form = AuthenticationForm(request, data=request.POST)
+      if form.is_valid():
+        # 세션에 저장
+        # login 함수는 request, user 객체를 인자로 받음
+        # user 객체는 form에서 인증된 유저 정보를 받을 수 있음
+        auth_login(request, form.get_user())
+        # 접근 제한 막기
+        return redirect(request.GET.get('next') or 'articles:index')
+    else:
+        form = AuthenticationForm()
+    context = {
+      'form': form
+    }
+    return render(request, 'accounts/login.html', context)
+ 	else:
+    form = AuthenticationForm()
+  context = {
+    'form': form
+  }
+    return redirect('accounts:login')
+```
+
