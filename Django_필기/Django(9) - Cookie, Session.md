@@ -312,3 +312,20 @@ def create(request):
     return redirect('accounts:login')
 ```
 
+<br>
+
+django.contrib.auth => login, logout
+
+django.contrib.auth.models => AbstractUser
+
+django.contrib.auth.decorators => login_required
+
+django.contrib.auth.forms => UserCreationForm
+
+#### 게시글을 작성한 계정만 글을 수정하고 삭제할 수 있게 하려면?
+
+{% raw %}{% if request.user == article.user %}
+
+삭제, 수정버튼
+
+{% endif %}{% endraw %}
