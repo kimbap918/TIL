@@ -36,7 +36,7 @@
 1
 ```
 
-## 예제 출력 1 복사
+## 예제 출력 1
 
 ```
 +
@@ -83,6 +83,61 @@ NO
 <br>
 
 ## 📝 풀어보기
+
+📌 연산 횟수 N을 입력받고, 스택 stack, 연산자를 담을 oper, 카운트 cnt, 연산 가능 여부를 판별할 temp를 생성한다.
+
+``` python
+import sys
+input = sys.stdin.readline
+N = int(input())
+stack = []
+oper = []
+cnt = 1
+temp = True
+```
+
+<br>
+
+📌 N만큼 반복하면서 연산 명령을 입력받는다.
+
+cnt 보다 명령어의 값이 크면 append로 추가해야한다. 이 때, 마지막으로 입력된 숫자보다 작은 값은 append되지 않기때문에 cnt보다 큰 값이 항상 담길수 있도록 한다. stack에 추가될때 oper에도 연산자를 추가해준다.
+
+``` python
+for _ in range(N):
+    command = int(input())
+    if cnt <= command: # cnt 보다 명령어가 크면 추가
+        for i in range(cnt, command+1): # cnt이후의 수
+            stack.append(cnt)
+            oper.append('+')
+            # print("cnt:"+str(cnt))
+            # print("stack:"+str(stack))
+            cnt += 1 # cnt 증가
+```
+
+<br>
+
+📌 stack의 마지막 값이 입력값과 같다면 pop명령어로 제거한다. oper에는 - 연산자를 추가한다.
+
+그 외에는 연산이 불가능한 경우이므로 temp를 False로 바꾼다.
+
+temp의 결과값이 False인 경우 NO를 출력하고 그 외엔 oper에서 연산자를 하나씩 꺼내서 출력한다.
+
+``` python
+    if stack[-1] == command: # stack의 끝이 입력숫자와 같으면
+        stack.pop() # 빼준다
+        oper.append('-') # - 추가
+        # print("stack:"+str(stack))
+    else: # 그외(연산불가)
+        temp = False 
+
+if temp == False:
+    print('NO')
+else:
+    for i in oper:
+        print(i)
+```
+
+
 
 ``` python
 import sys
