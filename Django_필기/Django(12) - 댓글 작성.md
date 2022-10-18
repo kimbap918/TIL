@@ -342,3 +342,93 @@ def comment_create(request, pk):
 {% endblock %}
 ```
 
+<br>
+
+#### 댓글 삭제
+
+#### urls.py
+
+``` python
+from django.urls import path 
+from . import views
+
+app_name = 'articles'
+
+urlpatterns = [
+  path('', views.index, name='index'),
+  path('create/', views.create, name='create'),
+  path('<int:pk>/', views.detail, name='detail'),
+  path('<int:pk>/update/', views.update, name='update'),
+  path('<int:pk>/delete/', views.delete, name='delete'),
+  path('<int:pk>/comments/', views.comment_create, name='comment_create'),
+  # 삭제 url 생성
+  path('<int:article_pk>/comments/<int:comment_pk>/delete/', views.comment_delete, name='comment_delete'),
+]
+```
+
+<br>
+
+#### views.py
+
+``` python
+from .models import Article, Comment
+
+def comment_delete(request, article_pk, comment_pk):
+    comment = Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect('articles:detail', article_pk)
+```
+
+<br>
+
+#### detail.html
+
+``` html
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+
+{% block body %}
+  <h1>{{ article.pk }}번 게시글</h1>
+  <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
+    |
+    {{ article.updated_at|date:"y-m-d D" }}</p>
+  <p>{{ article.content }}
+  </p>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+  {% endif %}
+  <div>
+  <a class="btn btn-primary my-3" href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <a class="btn btn-danger my-3" href="{% url 'articles:delete' article.pk %}">삭제하기</a>
+  </div>
+  <h4 class="my-3">댓글</h4>
+  <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form comment_form layout='inline' %}
+    {% bootstrap_button button_type="submit" content="OK" %}
+    {% comment %}  {% endcomment %}
+  </form>
+  <hr>
+  {% for comment in comments %}
+    <p>{{ comment.content }}</p>
+		<!-- delete form 추가 -->
+    <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="DELETE">
+    </form>
+    <hr>
+    {% empty %}
+    <p>댓글이 없어요 ㅠ_ㅠ</p>
+  {% endfor %}
+{% endblock %}
+```
+
+<br>
+
+#### 댓글 개수 카운트
+
+``` html
+  <p>총 {{ comments.count }}개의 댓글이 있습니다.</p>
+```
+
