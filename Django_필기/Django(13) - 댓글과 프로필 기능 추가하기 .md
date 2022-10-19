@@ -65,6 +65,8 @@ def create(request):
     if request.method == 'POST':
         article_form = ArticleForm(request.POST, request.FILES)
         if article_form.is_valid():
+          	# 댓글 저장과 같이바로 저장하지 않고 
+            # 객체를 주면 내가 필요한 값을 넣고 저장함
             article = article_form.save(commit=False)
             article.user = request.user
             article.save()
@@ -120,31 +122,6 @@ def create(request):
           </div>
         </div>
       </div>
-```
-
-<br>
-
-## 프로필에 자신이 작성한 글 표시하기
-
-#### accounts > detail.html
-
-``` html
-{% extends 'base.html' %}
-
-{% block body %}
-  <h1>{{ user.username }}님의 프로필</h1>
-  <p>{{ user.email }}
-    |
-    {{ user.full_name }}
-  </p>
-  {% for article in user.articles_set.all %}
-		<!-- 작성자의 게시글을 클릭하면 해당 게시글로 감 -->
-		{{ forloop.counter }}
-    <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
-    <p>{{ article.title }}</p>
-  {% endfor %}
-
-{% endblock body %}
 ```
 
 <br>
@@ -284,3 +261,65 @@ def comment_create(request, pk):
 
 <br>
 
+## 프로필에 자신이 작성한 글 표시하기
+
+#### accounts > detail.html
+
+``` html
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>{{ user.username }}님의 프로필</h1>
+  <p>{{ user.email }}
+    |
+    {{ user.full_name }}
+  </p>
+  {% for article in user.articles_set.all %}
+		<!-- 작성자의 게시글을 클릭하면 해당 게시글로 감 -->
+		{{ forloop.counter }}
+    <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    <p>{{ article.title }}</p>
+  {% endfor %}
+
+{% endblock body %}
+```
+
+<br>
+
+## 프로필에 자신이 작성한 댓글 표시하기 + 몇개의 글을 썼는지 추가
+
+``` html
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>{{ user.username }}님의 프로필</h1>
+  <p>{{ user.email }}
+    |
+    {{ user.full_name }}
+  </p>
+  <div class="col-6">
+    <h3>작성한 글</h3>
+    <p class="text-muted">{{ user.article_set.count }}개를 작성하였습니다.</p>
+    {% for article in user.article_set.all %}
+      <p>
+        {{ forloop.counter }}
+        <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+      </p>
+    </div>
+  {% endfor %}
+
+  <div class="col-6">
+    <h3>작성한 댓글</h3>
+    <p class="text-muted">{{ user.comment_set.count }}개를 작성하였습니다.</p>
+    {% for comment in user.comment_set.all %}
+      <p>
+        {{ forloop.counter }}
+        <a href="{% url 'articles:detail' comment.article.pk %}">{{ comment.content }}</a>
+      </p>
+    </div>
+  {% endfor %}
+
+{% endblock body %}
+```
+
+<br>
