@@ -13,7 +13,6 @@
 ```bash
 $ python -m venv venv
 $ source venv/bin/activate
-(venv) $
 ```
 
 ### 2. Django 설치 및 기록
