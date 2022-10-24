@@ -228,28 +228,19 @@ urlpatterns = [
 #### views.py
 
 ``` python
-{% extends 'base.html' %}
-{% load django_bootstrap5 %}
-
-
-{% block body %}
-  <h1>{{ article.title }}</h1>
-  <h2>{{ article.pk }}번 게시글</h2>
-  <h3><a href="{% url 'accounts:detail' article.user.pk %}">{{ article.user.username }}</a></h3>
-  <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
-    |
-    {{ article.updated_at|date:"y-m-d D" }}</p>
-  {% if request.user in article.like_users.all %}
-    <a class="btn btn-secondary" href="{% url 'articles:like' article.pk %}">
-      <i class="bi bi-balloon-heart-fill"></i> 좋아요 취소</a>
-  {% else %}
-    <a class="btn btn-danger" href="{% url 'articles:like' article.pk %}">
-      <i class="bi bi-balloon-heart"></i> 좋아요</a>
-  {% endif %}
-  <span>{{ article.like_users.count }}</span>
-  <p>작성자: {{ article.user }}</p>
-  <p>{{ article.content }}
-  </p>
+@login_required
+def like(request, pk):
+  article = Article.objects.get(pk=pk)
+  # 만약에 로그인한 유저가 이 글을 좋아요를 눌렀다면,
+  # like_users.all() 안에 그 안에 유저가 있으면 (apple 에 a가 포함되어있나? 정도 느낌)
+  if request.user in article.like_users.all(): 
+    # 좋아요 삭제
+    article.like_users.remove(request.user)
+  else:
+    # 좋아요 추가
+    article.like_users.add(request.user)
+  # 상세 페이지로 redirect
+  return redirect('articles:detail', pk)
 ```
 
 <br>
