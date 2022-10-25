@@ -259,10 +259,18 @@ def like(request, pk):
   <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
     |
     {{ article.updated_at|date:"y-m-d D" }}</p>
-  <a href="{% url 'articles:like' article.pk %}">좋아요</a><span>{{ article.like_users.count }}</span>
+  {% if request.user.is_authenticated %}
+    {% if request.user in article.like_users.all %}
+      <a class="btn btn-secondary" href="{% url 'articles:like' article.pk %}">
+        <i class="bi bi-balloon-heart-fill"></i> 좋아요 취소</a>
+    {% else %}
+      <a class="btn btn-danger" href="{% url 'articles:like' article.pk %}">
+        <i class="bi bi-balloon-heart"></i> 좋아요</a>
+    {% endif %}
+  {% endif %}
+  <span>{{ article.like_users.count }}</span>
   <p>작성자: {{ article.user }}</p>
   <p>{{ article.content }}
   </p>
-	...
 ```
 
