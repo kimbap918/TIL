@@ -1,231 +1,276 @@
-# Django CRUD 
+## 좋아요 기능 구현하기
 
-> Django : 파이썬 기반 웹 프레임워크 
+#### 예시- 의사와 환자 모델 Django ManyToManyField
 
-## 1. 가상환경 및 Django 설치
+#### hospitals/models.py
 
-> 가상환경 : 프로젝트별 별도 패키지 관리
-
-### 1. 가상환경 생성 및 실행
-
-* 가상환경 폴더를 `.gitignore`로 설정을 해둔다.
-
-```bash
-$ python -m venv venv
-$ source venv/Scripts/activate
-(venv) $
+``` python
+class Patient(models.Model):
+  # ManyToManyField 작성
+  doctors = models.ManyToManyField(Doctor)
+  name = models.TextField()
+  
+  def __str__(self):
+    return f'{self.pk}번 환자 {self.name}'
+  
+# Reservation Class 주석 처리
 ```
 
-### 2. Django 설치 및 기록
+<br>
 
-```
-$ pip install django==3.2.13
-$ pip freeze > requirements.txt
-```
+#### terminal
 
-### 3. Django 프로젝트 생성
+``` terminal
+$ python manage.py makemigrations
+$ python manage.py migrate
 
-```bash
-$ django-admin startproject pjt .
+$ python manage.py shell_plus
 ```
 
-## 2. articles app 
+<br>
 
-> Django : 주요 기능 단위의 App 구조, App 별로 MTV를 구조를 가지는 모습 + `urls.py` 
+#### 의사 1명과 환자 2명 생성
 
-### 1. app 생성
-
-```bash
-$ python manage.py startapp app_name
+``` python
+doctor = Doctor.objects.create(name='alice')
+patient1 = Patient.objects.create(name='carol')
+patient2 = Patient.objects.create(name='dane')
 ```
 
-### 2. app 등록
+<br>
 
-* `settings.py` 파일의 `INSTALLED_APPS`에 추가
+#### 예약 생성(환자가 의사에게 예약)
 
-```python
-INSTALLED_APPS = [
-    'articles',
-    ...
-]
+``` python
+# patient1이 doctor1에게 예약
+patient1.doctors.add(doctor1)
+
+# patient1 - 자신이 예약한 의사목록 확인
+patient1.doctors.all()
+<QuerySet [<Doctor: 1번 의사 alice>]>
+
+# doctor1 - 자신의 예약된 환자목록 확인
+doctor1.patient_set.all()
+<QuerySet [<Patient: 1번 환자 carol>]>
 ```
 
-### 3. urls.py 설정
+<br>
 
-> app 단위의 URL 관리
+#### 예약 생성(의사가 환자를 예약)
 
-```python
-# pjt/urls.py
-urlpatterns = [
-    ...
-    path('articles/', include('articles.urls')),
-]
+#### doctor1이 patient2을 예약
+
+``` python
+# doctor1이 patient2을 예약
+doctor1.patient_set.add(patient2)
+
+# doctor1 - 자신의 예약 환자목록 확인
+doctor1.patient_set.all()
+<QuerySet [<Patient: 1번 환자 carol>, <Patient: 2번 환자 dane>]>
+
+# patient1, 2 - 자신이 예약한 의사목록 확인
+patient1.doctors.all()
+<QuerySet [<Doctor: 1번 의사 alice>]>
+
+patient2.doctors.all()
+<QuerySet [<Doctor: 1번 의사 alice>]>
+
 ```
 
-```python
-# articles/urls.py
+<br>
+
+#### 예약 취소하기(삭제)
+
+* .remove()로 삭제
+
+``` python
+# doctor1이 patient1 진료 예약 취소
+doctor1.patient_set.remove(patient1)
+doctor1.patient_set.all()
+<QuerySet [<Patient: 2번 환자 harry>]>
+patient1.doctors.all()
+<QuerySet []>
+
+# patient2가 doctor1 진료 예약 취소
+patient2.doctors.remove(doctor1)
+patient2.doctors.all()
+<QuerySet []>
+doctor1.patient_set.all()
+<QuerySet []>
+doctor1.patient_set.all()
+<QuerySet []>
+```
+
+<br>
+
+#### 'related_name' argument
+
+* target model이 source model을 참조할 때 사용할 manager name
+* ForeignKey()의 related_name과 동일
+
+``` python
+class Patient(models.Model):
+  # ManyToManyField - related_name 작성
+  doctors = models.ManyToManyField(Doctor, related_name='patients')
+  name = models.TextField()
+  
+  def __str__(self):
+    return f'{self.pk}번 환자 {self.name}'
+```
+
+<br>
+
+#### 'through' argument
+
+* through 설정 및 Reservation Class 수정
+  * 예약 정보에 증상과 예약일이라는 추가 데이터가 생김
+
+``` python
+class Patient(models.Model):
+  doctor = models.ManyToManyField(Doctor, through='Reservation')
+  name = models.TextField()
+  
+  def __str__(self):
+    return f'{self.pk}번 환자 {self.name}'
+  
+class Reservation(models.Model):
+  doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+  patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+  symptom = models.TextField()
+  reserved_at = models.DateTimeField(quto_now_add=True)
+  
+  def __str__(self):
+    return f'{self.doctor.pk}번 의사의 {self.patient.name}번 환자'    
+```
+
+<br>
+
+#### 정리
+
+* M:N 관계로 맺어진 두 테이블에는 변화가 없음
+* Django의 ManyToManyField는 중개 테이블을 자동으로 생성함
+* Django의 ManyToManyField는 M:N 관계를 가진 모델 어디에 위치해도 상관 없음
+  * 대신 필드 작성 위치에 따라 참조와 역참조 방향을 주의할 것
+* 만약 테이블에서 예약정보들을 더 기록하는 형태가 된다면 중개 모델을 만들어서 through옵션을 만들어야함
+
+<br>
+
+## 좋아요 기능 구현
+
+1. DB 좋아요 기록할 것인지?
+   * Article(M) - User(N)
+   * Article은 0명 이상의 User에게 좋아요를 받는다.
+   * User는 0개 이상의 글에 좋아요를 누를 수 있다.
+2. 로직
+   * 상세보기 페이지에서 좋아요 링크를 누르면(URL : /articles/`<int:pk>`/like/)
+   * 좋아요를 DB에 추가하고(add 메서드) 다시 상세보기 페이지로 redirect
+
+<br>
+
+#### articles > models.py
+
+``` python
+# 1. 모델 설계 (DB 스키마 설계)
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    image = ProcessedImageField(upload_to='images/', blank=True,
+                                processors=[ResizeToFill(400, 300)],
+                                format='JPEG',
+                                options={'quality': 80})
+    image_thumbnail = ProcessedImageField(
+	                                      upload_to = 'images/', 	blank=True,# settings.py 원본 ImageField 명
+	                                      processors = [Thumbnail(100, 100)], # 처리할 작업목록
+		                                  format = 'JPEG',		   # 최종 저장 포맷
+		                                  options = {'quality': 60}) # 저장 옵션
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, 
+                                on_delete=models.CASCADE, null=True)
+    # 이 부분을 추가, 여기서 related_name을 설정하지 않으면 같은 모델을 참조하는 상황에서 문제가 생기기 때문에 역참조설정을 꼭 해줘야한다.
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="like_articles")
+
+```
+
+<br>
+
+#### terminal
+
+``` terminal
+$ python manage.py makemigration
+$ python manage.py migrate
+```
+
+<br>
+
+#### articles > urls.py
+
+``` python
 from django.urls import path 
 from . import views
 
 app_name = 'articles'
 
 urlpatterns = [
-  # http://127.0.0.1:8000/articles/
   path('', views.index, name='index'),
-  ...
+  path('create/', views.create, name='create'),
+  path('<int:pk>/', views.detail, name='detail'),
+  path('<int:pk>/update/', views.update, name='update'),
+  path('<int:pk>/delete/', views.delete, name='delete'),
+  path('<int:pk>/comments/', views.comment_create, name='comment_create'),
+  path('<int:article_pk>/comments/<int:comment_pk>/delete/', views.comment_delete, name='comment_delete'),
+  path('<int:pk>/like/', views.like, name='like'),
 ]
 ```
 
-* 활용 : `articles:index` => `/articles/`
+<br>
 
-* Template에서 활용 예시
-```django
-{% url 'articles:index' %}
+#### views.py
+
+``` python
+@login_required
+def like(request, pk):
+  article = Article.objects.get(pk=pk)
+  # 만약에 로그인한 유저가 이 글을 좋아요를 눌렀다면,
+  # like_users.all() 안에 그 안에 유저가 있으면 (apple 에 a가 포함되어있나? 정도 느낌)
+  if request.user in article.like_users.all(): 
+    # 좋아요 삭제
+    article.like_users.remove(request.user)
+  else:
+    # 좋아요 추가
+    article.like_users.add(request.user)
+  # 상세 페이지로 redirect
+  return redirect('articles:detail', pk)
 ```
 
-* View에서 활용 예시
+<br>
 
-```python
-redirect('articles:index')
+#### articles > detail.html
+
+``` html
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+
+{% block body %}
+  <h1>{{ article.title }}</h1>
+  <h2>{{ article.pk }}번 게시글</h2>
+  <h3><a href="{% url 'accounts:detail' article.user.pk %}">{{ article.user.username }}</a></h3>
+  <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
+    |
+    {{ article.updated_at|date:"y-m-d D" }}</p>
+  {% if request.user.is_authenticated %}
+    {% if request.user in article.like_users.all %}
+      <a class="btn btn-secondary" href="{% url 'articles:like' article.pk %}">
+        <i class="bi bi-balloon-heart-fill"></i> 좋아요 취소</a>
+    {% else %}
+      <a class="btn btn-danger" href="{% url 'articles:like' article.pk %}">
+        <i class="bi bi-balloon-heart"></i> 좋아요</a>
+    {% endif %}
+  {% endif %}
+  <span>{{ article.like_users.count }}</span>
+  <p>작성자: {{ article.user }}</p>
+  <p>{{ article.content }}
+  </p>
 ```
 
-## 3. Model 정의 (DB 설계)
-
-### 1. 클래스 정의
-
-```python
-class Article(models.Model):
-    title = models.CharField(max_length=20)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-```
-
-### 2. 마이그레이션 파일 생성
-
-* app 폴더 내의 `migrations` 폴더에 생성된 파일 확인
-
-```bash
-$ python manage.py makemigrations
-```
-
-### 3. DB 반영(`migrate`)
-
-```bash
-$ python manage.py migrate
-```
-
-## 4. CRUD 기능 구현
-
-### 0. ModelForm 선언
-
-> 선언된 모델에 따른 필드 구성 (1) Form 생성 (2) 유효성 검사
-
-```python
-from django import forms
-from .models import Article
-
-class ArticleForm(forms.ModelForm):
-
-    class Meta:
-        model = Article
-        fields = ['title', 'content']
-```
-
-### 1. 게시글 생성
-
-> 사용자에게 HTML Form 제공, 입력받은 데이터를 처리 (ModelForm 로직으로 변경)
-
-#### 1. HTML Form 제공
-
-> GET http://127.0.0.1:8000/articles/create/
-
-##### (1) urls.py 
-
-##### (2) views.py
-
-```python
-def create(request):
-    article_form = ArticleForm()
-    context = {
-        'article_form': article_form
-    }
-    return render(request, 'articles/create.html', context=context)
-```
-
-##### (3) articles/create.html
-
-* HTML Form 태그 활용시 핵심
-
-  * 어떤 필드를 구성할 것인지 (`name`, `value`)
-
-  * 어디로 보낼 것인지 (`action`, `method`)
-
-```django
-<h1>글쓰기</h1>
-<form action="" method="POST">
-  {% csrf_token %}
-  {{ article_form.as_p }}
-  <input type="submit" value="글쓰기">
-</form>
-```
-
-#### 2. 입력받은 데이터 처리
-
-> POST http://127.0.0.1:8000/articles/create/
-
-> 게시글 DB에 생성하고 index 페이지로 redirect
-
-##### (1) urls.py
-
-##### (2) views.py
-
-* GET 요청 처리 흐름
-
-* POST 요청 처리 흐름 (주의! invalid)
-
-```python
-def create(request):
-    if request.method == 'POST':
-        article_form = ArticleForm(request.POST)
-        if article_form.is_valid():
-            article_form.save()
-            return redirect('articles:index')
-    else: 
-        article_form = ArticleForm()
-    context = {
-        'article_form': article_form
-    }
-    return render(request, 'articles/new.html', context=context)
-```
-
-### 2. 게시글 목록
-
-> DB에서 게시글을 가져와서, template에 전달
-
-### 3. 상세보기
-
-> 특정한 글을 본다.
-
-> http://127.0.0.1:8000/articles/<int:pk>/
-
-### 4. 삭제하기
-
-> 특정한 글을 삭제한다.
-
-> http://127.0.0.1:8000/articles/<int:pk>/delete/
-
-### 5. 수정하기
-
-> 특정한 글을 수정한다. => 사용자에게 수정할 수 양식을 제공하고(GET) 특정한 글을 수정한다.(POST)
-
-> http://127.0.0.1:8000/articles/<int:pk>/update/
-
-
-## 추천 문서
-
-* [HTTP request & response object](https://docs.djangoproject.com/en/4.1/ref/request-response/)
-
-* [ModelForm](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/)
-
-* [Django view shortcut functions](https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/)

@@ -1,125 +1,240 @@
-# Django CRUD 
+## 이미지 업로드하기
 
-> Django : 파이썬 기반 웹 프레임워크 
+#### 사전 설정
 
-## 1. 가상환경 및 Django 설치
-
-> 가상환경 : 프로젝트별 별도 패키지 관리
-
-### 1. 가상환경 생성 및 실행
-
-* 가상환경 폴더를 `.gitignore`로 설정을 해둔다.
-
-```bash
-$ python -m venv venv
-$ source venv/Scripts/activate
-(venv) $
-```
-
-### 2. Django 설치 및 기록
-
-```
-$ pip install django==3.2.13
+``` python
+$ pip install Pillow
+$ pip install pilkit
 $ pip freeze > requirements.txt
 ```
 
-### 3. Django 프로젝트 생성
+* Pillow의 설치 이유 : 이미지를 관리하기 위해서(Python Image Library)
 
-```bash
-$ django-admin startproject pjt .
-```
+<br>
 
-## 2. articles app 
+#### models.py
 
-> Django : 주요 기능 단위의 App 구조, App 별로 MTV를 구조를 가지는 모습 + `urls.py` 
-
-### 1. app 생성
-
-```bash
-$ python manage.py startapp app_name
-```
-
-### 2. app 등록
-
-* `settings.py` 파일의 `INSTALLED_APPS`에 추가
-
-```python
-INSTALLED_APPS = [
-    'articles',
-    ...
-]
-```
-
-### 3. urls.py 설정
-
-> app 단위의 URL 관리
-
-```python
-# pjt/urls.py
-urlpatterns = [
-    ...
-    path('articles/', include('articles.urls')),
-]
-```
-
-```python
-# articles/urls.py
-from django.urls import path 
-from . import views
-
-app_name = 'articles'
-
-urlpatterns = [
-  # http://127.0.0.1:8000/articles/
-  path('', views.index, name='index'),
-  ...
-]
-```
-
-* 활용 : `articles:index` => `/articles/`
-
-* Template에서 활용 예시
-```django
-{% url 'articles:index' %}
-```
-
-* View에서 활용 예시
-
-```python
-redirect('articles:index')
-```
-
-## 3. Model 정의 (DB 설계)
-
-### 1. 클래스 정의
-
-```python
+``` python
+# 1. 모델 설계 (DB 스키마 설계)
 class Article(models.Model):
     title = models.CharField(max_length=20)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    # 추가
+    image = models.ImageField(upload_to='images/', blank=True)
 ```
 
-### 2. 마이그레이션 파일 생성
+<br>
 
-* app 폴더 내의 `migrations` 폴더에 생성된 파일 확인
+#### forms.py
 
-```bash
-$ python manage.py makemigrations
+``` python
+from django import forms
+from .models import Article
+
+class ArticleForm(forms.ModelForm):
+
+    class Meta:
+        model = Article
+        # 이미지 필드 추가
+        fields = ['title', 'content', 'image']
 ```
 
-### 3. DB 반영(`migrate`)
+<br>
 
-```bash
-$ python manage.py migrate
+#### views.py
+
+``` python
+def create(request):
+    if request.method == 'POST':
+        # request.FILES 추가
+        article_form = ArticleForm(request.POST, request.FILES)
+        if article_form.is_valid():
+            article_form.save()
+            messages.success(request, '글 작성이 완료되었습니다.')
+            return redirect('articles:index')
+    else: 
+        article_form = ArticleForm()
+    context = {
+        'article_form': article_form
+    }
+    return render(request, 'articles/form.html', context=context)
+
 ```
 
-## 4. CRUD 기능 구현
+<br>
 
-### 0. ModelForm 선언
+#### forms.html
 
-> 선언된 모델에 따른 필드 구성 (1) Form 생성 (2) 유효성 검사
+``` html
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+
+{% if request.resolver_match.url_name == 'create' %}
+<h1> 글쓰기 </h1>
+{% else %}
+<h1> 수정하기 </h1>
+{% endif %}
+
+<!-- enctype 추가 -->
+<form action="" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% bootstrap_form article_form %}
+  {% bootstrap_button button_type="submit" content="OK" %}
+</form>
+{% endblock %}
+```
+
+<br>
+
+## 수정화면에서의 이미지 업로드
+
+#### detail.html
+
+``` python
+{% extends 'base.html' %}
+
+{% block body %} 
+<h1>{{ article.pk }}번 게시글</h1>
+<p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }} | {{ article.updated_at|date:"y-m-d D" }}</p>
+<p>{{ article.content }} </p>
+<img src="{{ article.image.url }}" alt="{{ article.image }}">
+<a href="{% url 'articles:update' article.pk %}">수정하기</a>
+{% endblock %}
+```
+
+<br>
+
+#### settings.py
+
+``` python
+# Media files (user uploaded filed) 추가
+
+MEDIA_ROOT = BASE_DIR / 'images'
+MEDIA_URL = '/media/'
+```
+
+<br>
+
+#### urls.py
+
+``` python
+from django.conf import settings 
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('articles/', include('articles.urls')),
+    path('accounts/', include('accounts.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+<br>
+
+## 이미지 Resizing
+
+#### terminal
+
+``` python
+$ pip install django-imagekit
+```
+
+<br>
+
+#### models.py
+
+``` python
+# imagekit import
+from imagekit.models import ProcessedImageField
+from imagekit.processors import ResizeToFill
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    # ProcessedImageField 추가
+    image = ProcessedImageField(upload_to='images/', blank=True,
+                                processors=[ResizeToFill(400, 300)],
+                                format='JPEG',
+                                options={'quality': 80})
+```
+
+<br>
+
+## views.py
+
+``` python
+@login_required
+def update(request, pk):
+    article = Article.objects.get(pk=pk)
+    if request.method == 'POST':
+        # POST : input 값 가져와서, 검증하고, DB에 저장
+        article_form = ArticleForm(request.POST, request.FILES, instance=article)
+        if article_form.is_valid():
+            # 유효성 검사 통과하면 저장하고, 상세보기 페이지로
+            article_form.save()
+            messages.success(request, '글이 수정되었습니다.')
+            return redirect('articles:detail', article.pk)
+        # 유효성 검사 통과하지 않으면 => context 부터해서 오류메시지 담긴 article_form을 랜더링
+    else:
+        # GET : Form을 제공
+        article_form = ArticleForm(instance=article)
+    context = {
+        'article_form': article_form
+    }
+    return render(request, 'articles/form.html', context)
+```
+
+<br>
+
+#### detail.html
+
+``` python
+{% extends 'base.html' %}
+
+{% block body %} 
+<h1>{{ article.pk }}번 게시글</h1>
+<p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }} | {{ article.updated_at|date:"y-m-d D" }}</p>
+<p>{{ article.content }} </p>
+{% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+{% endif %}
+<a href="{% url 'articles:update' article.pk %}">수정하기</a>
+{% endblock %}
+```
+
+<br>
+
+## 썸네일 업로드하기
+
+#### models.py
+
+``` python
+from imagekit.models import ProcessedImageField
+from imagekit.processors import Thumbnail
+
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    image = ProcessedImageField(upload_to='images/', blank=True,
+                                processors=[ResizeToFill(400, 300)],
+                                format='JPEG',
+                                options={'quality': 60})
+    image_thumbnail = ProcessedImageField(
+	                                 upload_to = 'images/', 	# settings.py 원본 ImageField 명
+	                                 processors = [Thumbnail(100, 100)], # 처리할 작업목록
+		                             format = 'JPEG',		   # 최종 저장 포맷
+		                             options = {'quality': 60}) # 저장 옵션
+```
+
+#### forms.py
 
 ```python
 from django import forms
@@ -129,103 +244,69 @@ class ArticleForm(forms.ModelForm):
 
     class Meta:
         model = Article
-        fields = ['title', 'content']
+        # 썸네일 추가
+        fields = ['title', 'content', 'image', 'image_thumbnail']
 ```
 
-### 1. 게시글 생성
+<br>
 
-> 사용자에게 HTML Form 제공, 입력받은 데이터를 처리 (ModelForm 로직으로 변경)
+#### index.html
 
-#### 1. HTML Form 제공
+``` html
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
 
-> GET http://127.0.0.1:8000/articles/create/
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
 
-##### (1) urls.py 
+{% block body %}
+  <h1>게시판</h1>
+  {% if request.user.is_authenticated %}
+    <a class="btn btn-primary my-3 float-right" href="{% url 'articles:create' %}">글 쓰기</a>
+  {% endif %}
 
-##### (2) views.py
-
-```python
-def create(request):
-    article_form = ArticleForm()
-    context = {
-        'article_form': article_form
-    }
-    return render(request, 'articles/create.html', context=context)
+  <div class="row">
+    {% for article in articles %}
+      <div class="col-4">
+        <div class="card">
+          # image_thumbnail로 변경
+          <img src="{{ article.image_thumbnail.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <a href="{% url 'articles:detail' article.pk %}" class="btn btn-outline-primary my-3">복습하기</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
 ```
 
-##### (3) articles/create.html
+<br>
 
-* HTML Form 태그 활용시 핵심
+#### detail.html
 
-  * 어떤 필드를 구성할 것인지 (`name`, `value`)
+``` python
+{% extends 'base.html' %}
 
-  * 어디로 보낼 것인지 (`action`, `method`)
+{% block body %}
+  <h1>{{ article.pk }}번 게시글</h1>
+  <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
+    |
+    {{ article.updated_at|date:"y-m-d D" }}</p>
+  <p>{{ article.content }}
+  </p>
+  {% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+  {% endif %}
+  {% if article.image_thumbnail %}
+    <img src="{{ article.image_thumbnail.url }}" alt="{{ article.image_thumbnail }}" width="400" height="300">
 
-```django
-<h1>글쓰기</h1>
-<form action="" method="POST">
-  {% csrf_token %}
-  {{ article_form.as_p }}
-  <input type="submit" value="글쓰기">
-</form>
+  {% endif %}
+  <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <a href="{% url 'articles:delete' article.pk %}">삭제하기</a>
+{% endblock %}
 ```
 
-#### 2. 입력받은 데이터 처리
-
-> POST http://127.0.0.1:8000/articles/create/
-
-> 게시글 DB에 생성하고 index 페이지로 redirect
-
-##### (1) urls.py
-
-##### (2) views.py
-
-* GET 요청 처리 흐름
-
-* POST 요청 처리 흐름 (주의! invalid)
-
-```python
-def create(request):
-    if request.method == 'POST':
-        article_form = ArticleForm(request.POST)
-        if article_form.is_valid():
-            article_form.save()
-            return redirect('articles:index')
-    else: 
-        article_form = ArticleForm()
-    context = {
-        'article_form': article_form
-    }
-    return render(request, 'articles/new.html', context=context)
-```
-
-### 2. 게시글 목록
-
-> DB에서 게시글을 가져와서, template에 전달
-
-### 3. 상세보기
-
-> 특정한 글을 본다.
-
-> http://127.0.0.1:8000/articles/<int:pk>/
-
-### 4. 삭제하기
-
-> 특정한 글을 삭제한다.
-
-> http://127.0.0.1:8000/articles/<int:pk>/delete/
-
-### 5. 수정하기
-
-> 특정한 글을 수정한다. => 사용자에게 수정할 수 양식을 제공하고(GET) 특정한 글을 수정한다.(POST)
-
-> http://127.0.0.1:8000/articles/<int:pk>/update/
-
-
-## 추천 문서
-
-* [HTTP request & response object](https://docs.djangoproject.com/en/4.1/ref/request-response/)
-
-* [ModelForm](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/)
-
-* [Django view shortcut functions](https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/)
