@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container mt-3 mb-3">
+    <h1>{{ user.username }}님의 프로필</h1>
+    <p>{{ user.email }}
+      |
+      {{ user.full_name }}
+    </p>
+    팔로우 :
+    {{ user.followings.count }}
+    | 팔로워 :
+    {{ user.follower.count }}<br>
+    {% if request.user.is_authenticated %}
+      {% if request.user != user %}
+        {% if request.user in user.followings.all %}
+          <a class="btn btn-outline-secondary" href="{% url 'accounts:follow' user.pk %}">팔로우 취소</a>
+        {% else %}
+          <a class="btn btn-outline-primary" href="{% url 'accounts:follow' user.pk %}">팔로우</a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    <div class="col-6">
+      <h3>작성한 글</h3>
+      <p class="text-muted">{{ user.review_set.count }}개를 작성하였습니다.</p>
+      {% for article in user.review_set.all %}
+        <p>
+          {{ forloop.counter }}
+          <a href="{% url 'reviews:detail' article.pk %}">{{ article.title }}</a>
+        </p>
+      </div>
+    {% endfor %}
+
+    <div class="col-6">
+      <h3>작성한 댓글</h3>
+      <p class="text-muted">{{ user.comment_set.count }}개를 작성하였습니다.</p>
+      {% for comment in user.comment_set.all %}
+        <p>
+          {{ forloop.counter }}
+          <a href="{% url 'reviews:detail' comment.article.pk %}">{{ comment.content }}</a>
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock body %}

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+  <div class="container mt-3 mb-3">
+    <h1>{{ review.title }}</h1>
+    <hr>
+    <span>{{ review.pk }}번 게시글</span><br>
+    <span>작성자:
+      <a href="{% url 'accounts:detail' review.user.pk %}">{{ review.user.username }}</a>
+    </span><br>
+    <span>작성일자:
+      {{ review.created_at|date:"SHORT_DATETIME_FORMAT" }}
+      | 수정일자:
+      {{ review.updated_at|date:"y-m-d D" }}</span><br>
+    {% if request.user.is_authenticated %}
+      {% if request.user in review.like_users.all %}
+        <i id="like-btn" data-article-id="{{ review.pk }}" class="bi bi-heart-fill"></i>
+      {% else %}
+        <i id="like-btn" data-article-id="{{ review.pk }}" class="bi bi-heart"></i>
+      {% endif %}
+    {% endif %}
+    <span id="like-count">{{ review.like_users.count }}</span>
+    <div class="mb-3 mt-3">
+      <label for="reviewContent" class="form-label">내용</label><br>
+      {% if review.image %}
+        <img class="mb-2" src="{{ review.image.url }}" alt="{{ review.image }}" width="400" height="300">
+      {% endif %}
+      <textarea name='content' class="form-control" id="reviewContent" rows="3" readonly="readonly">{{ review.content }}
+      </textarea>
+    </div>
+
+    {% if request.user == review.user %}
+      <div>
+        <a class="btn btn-outline-primary my-3" href="{% url 'reviews:update' review.pk %}">수정하기</a>
+        <a class="btn btn-outline-danger my-3" href="{% url 'reviews:delete' review.pk %}">삭제하기</a>
+      </div>
+    {% endif %}
+    <hr>
+    <!-- 댓글 부분 -->
+    <h4 class="my-3">댓글</h4>
+    {% if request.user.is_authenticated %}
+    <form id="comment-form" data-article-id="{{ review.pk }}" >
+      {% csrf_token %}
+      <div class="mb-2">
+        <input name='content' class="form-control" id="comment_form" rows="3"></input>
+      </div>
+      {% bootstrap_button button_type="submit" content="OK" %}
+      {% comment %}  {% endcomment %}
+    </form>
+    {% endif %}
+    <hr>
+    <p>총 {{ comment.count }}개의 댓글이 있습니다.</p>
+    <div id="comments">
+      {% for comment in comment %}
+        <p>{{ comment.user.username }} | {{ comment.content }}</p>
+        <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="DELETE">
+        </form>
+        <hr>
+        {% empty %}
+        <p>댓글이 없어요 ㅠ_ㅠ</p>
+      {% endfor %}
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // (1) 좋아요 버튼
+    const likeBtn = document.querySelector('#like-btn')
+    // (2) 좋아요 버튼을 클릭하면, 함수 실행
+    likeBtn.addEventListener('click', function (event) {
+      // 서버로 비동기 요청을 하고싶음
+      console.log(event.target.dataset)
+      axios({method: 'get', url: `/reviews/like/${event.target.dataset.articleId}`}).then(response => {
+        console.log(response)
+        console.log(response.data)
+        if (response.data.isLiked === true) {
+          event
+            .target
+            .classList
+            .add('bi-heart-fill')
+          event
+            .target
+            .classList
+            .remove('bi-heart')
+        } else {
+          event
+            .target
+            .classList
+            .add('bi-heart')
+          event
+            .target
+            .classList
+            .remove('bi-heart-fill')
+        }
+        const likeCount = document.querySelector('#like-count')
+        likeCount.innerText = response.data.likeCount
+      })
+    })
+  </script>
+  <script>
+    // 1. form을 작성
+    const commentForm = document.querySelector('#comment-form')
+    // 2. 제출하면, 함수 실행
+    // csrf
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+    commentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        axios({
+          method: 'post',
+          url: `/reviews/comments/${event.target.dataset.articleId}`,
+          headers: {
+            "X-CSRFToken": csrftoken
+          },
+          data: new FormData(commentForm) // 폼에 있는 정보를 data로 넘겨줄 수 있도록 변환
+        }).then(response => {
+          console.log(response.data)
+          const comments = document.querySelector('#comments')
+          const p = document.createElement('p')
+          p.innerText = `${response.data.userName} | ${response.data.content}`
+          const hr = document.createElement('hr')
+          comments.append(p, hr)
+          //comments.insertAdjacentHTML('beforeend', '
+          //<p> ${response.data.userName} | ${response.data.content}</p>
+          //<hr>
+          //')
+          commentForm.reset()
+        })
+      })
+  </script>
+{% endblock %}
