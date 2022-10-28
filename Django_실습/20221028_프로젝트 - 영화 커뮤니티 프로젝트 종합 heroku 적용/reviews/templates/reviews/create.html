@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+<style>
+  .create-form {
+    height: 120vh;
+  }
+</style>
+
+<div class="container mt-3 mb-3">
+  {% if request.resolver_match.url_name == 'create' %}
+  <h1> 글쓰기 </h1>
+  {% else %}
+  <h1> 수정하기 </h1>
+  {% endif %}
+
+  <form class="create-form" action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form review_form %}
+    {% bootstrap_button button_type="submit" content="OK" %}
+    {% comment %}  {% endcomment %}
+  </form>
+</div>
+{% endblock %}
