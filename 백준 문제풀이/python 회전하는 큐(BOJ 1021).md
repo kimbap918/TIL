@@ -84,6 +84,57 @@
 
 ## 📝 풀어보기
 
+📌 deque를 사용하기 위해 from collections import deque 라이브러리를 가져온다.
+
+queue의 크기 N, 뽑아내려고 하는 수의 개수  M을 입력받고 뽑아내려는 수의 위치를 입력받는다.
+
+그리고 queue에 1부터 N까지의 수를 저장한다.
+
+``` python
+from collections import deque
+import sys
+input = sys.stdin.readline
+# queue의 크기 N, 뽑아내려고 하는 수의 개수 M
+N, M = map(int, input().split())
+pos = list(map(int, input().split()))
+queue = deque([i for i in range(1, N+1)])
+```
+
+<br>
+
+📌 pos의 요소를 순회하면서 모두 뽑아낼때까지 반복한다.
+
+queue의 첫번째 요소가 뽑아내려는 값과 같으면 값을 뽑아내고 반복을 종료한다.
+
+그외에 인덱스의 값이 큐를 반으로 나눈것 보다 작다면 왼쪽의 값이므로 왼쪽의 값을 뽑아내고 queue의 오른쪽에 삽입하면서 카운트를 늘린다.
+
+인덱스의 값이 큐를 반으로 나눈것 보다 크다면 오른쪽의 값이므로 오른쪽의 값을 뽑아내고 왼쪽에 삽입하면서 카운트를 늘린다.
+
+최종 카운트를 출력한다.
+
+``` python
+cnt = 0
+for i in pos: # 위치 하나씩마다 반복하기
+    while True: # 뽑을때까지 반복하기
+        if queue[0] == i: # 큐의 첫 인덱스가 뽑아내려는 숫자와 같다면
+            queue.popleft()
+            break
+        else:
+            if queue.index(i) < len(queue) / 2: # 인덱스 값이 큐를 반으로 나눈것보다 작으면?
+                while queue[0] != i: # 2번 실행
+                    queue.append(queue.popleft())
+                    cnt += 1
+            else: # 큐를 반으로 나눈 값 보다 크면 
+                while queue[0] != i: # 3번 실행
+                    queue.appendleft(queue.pop())
+                    cnt += 1
+print(cnt)
+```
+
+<br>
+
+#### 전체 코드
+
 ``` python
 # 1. 첫 번째 원소를 뽑아낸다. 이 연산을 수행하면, 원래 큐의 원소가 a1, ..., ak이었던 것이 a2, ..., ak와 같이 된다.
 # 2. 왼쪽으로 한 칸 이동시킨다. 이 연산을 수행하면, a1, ..., ak가 a2, ..., ak, a1이 된다.
