@@ -97,7 +97,7 @@ pop_back
 pop_back
 ```
 
-## 예제 출력 2 복사
+## 예제 출력 2
 
 ```
 -1
@@ -122,15 +122,24 @@ pop_back
 
 ## 📝 풀어보기
 
+deque를 사용하기 위해 from collections import deque로 라이브러리를 가져온다.
+
+deque를 생성하고 n을 입력받아 n만큼 반복하면서 명령어를 입력받는다.
+
+명령어중 push는 입력 명령어와 입력값이 따로 있으므로 input().split()으로 명령어를 각각 저장하고 push 명령어에 따라서 command[1]의 값을 앞이나 뒤에 넣는다.
+
+그외에는 위의 문제 조건에 맞게 구현한다.
+
 ``` python
 from collections import deque
 import sys
 
 d = deque()
 n = int(input())
+input = sys.stdin.readline
 
 for i in range(n):
-    command = sys.stdin.readline().split()
+    command = input().split()
 
     if command[0] == "push_front":
         d.appendleft(command[1])
