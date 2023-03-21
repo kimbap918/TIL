@@ -17,4 +17,6 @@ def MenOfPassion(A, n):
 
 n = int(input())
 print(MenOfPassion(A, n))
+
+print(n*n)
 print(2)
