@@ -24,5 +24,6 @@ def paper_cnt(x, y, N):
 
 
 paper_cnt(0,0,N) # 시작지점
+print(res.count(-1))
 print(res.count(0))
 print(res.count(1))
