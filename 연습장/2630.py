@@ -11,11 +11,11 @@ def paper_cnt(x, y, N):
     color = paper[x][y] # 색깔이 초기 값
     for i in range(x, x+N):
         for j in range(y, y+N):
-            if color != paper[i][j]:
-                paper_cnt(x, y, N//2)
-                paper_cnt(x, y+N//2, N//2)
-                paper_cnt(x+N//2, y, N//2)
-                paper_cnt(x+N//2, y+N//2, N//2)
+            if color != paper[i][j]: # color의 값이 현재 위치의 값과 다르다면
+                paper_cnt(x, y, N//2) # 제 1사분면 
+                paper_cnt(x, y+N//2, N//2) # 제 2사분면
+                paper_cnt(x+N//2, y, N//2) # 제 3사분면
+                paper_cnt(x+N//2, y+N//2, N//2) # 제 4사분면
                 return
     if color == 0:
         res.append(0)
@@ -23,6 +23,6 @@ def paper_cnt(x, y, N):
         res.append(1)
 
 
-paper_cnt(0,0,N)
+paper_cnt(0,0,N) # 시작지점
 print(res.count(0))
 print(res.count(1))
