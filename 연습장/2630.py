@@ -9,6 +9,7 @@ res = []
 
 def paper_cnt(x, y, N):
     color = paper[x][y] # 색깔이 초기 값
+    
     for i in range(x, x+N):
         for j in range(y, y+N):
             if color != paper[i][j]: # color의 값이 현재 위치의 값과 다르다면
