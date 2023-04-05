@@ -22,11 +22,7 @@ def divide_matrix(N, B, matrix):
     if B == 1:
         # 그대로 이므로 반환
         return matrix
-    # 차수가 2일때
-    elif B == 2:
-        # 행렬곱셈을 한 값을 반환
-        return multiple_matrix(N, matrix, matrix)
-    # 차수가 2초과일때
+    # 차수가 2이상
     else:
         # B를 2분할
         temp = divide_matrix(N, B//2, matrix)
