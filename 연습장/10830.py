@@ -41,6 +41,6 @@ res = divide_matrix(N, B, A)
 
 for i in res:
     for j in i:
-        print(j, end=' ')
+        print(j%1000, end=' ')
     print('')
 
