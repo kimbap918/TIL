@@ -1,4 +1,4 @@
-# [Bronze V] 피보나치 수 5 - 10870 
+# [Bronze II] 피보나치 수 5 - 10870 
 
 [문제 링크](https://www.acmicpc.net/problem/10870) 
 
@@ -8,7 +8,7 @@
 
 ### 분류
 
-구현(implementation), 수학(math), 재귀(recursion)
+수학, 구현
 
 ### 문제 설명
 
