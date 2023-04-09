@@ -1,29 +1,26 @@
-
-# 이진탐색
 import sys
 input = sys.stdin.readline
+
 N = int(input())
-# 이분탐색을 위해 집합 arr1을 먼저 정렬
 arr1 = sorted(map(int, input().split()))
 M = int(input())
 arr2 = map(int, input().split())
 
-def binary(num, arr, start, end):
+def binary_search(num, arr, start, end):
+    # 시작보다 끝이 작으면
     if start > end:
         return 0
-    # 시작과 끝 지점을 이용해서 중간 지점의 인덱스를 구한다.
-    mid = (start+end)//2
-    # 중간지점의 값과 arr2의 요소를 비교한다.
-    # 동일값이몇 리턴, 값이 크면 중간보다 윗부분, 값이 작으면 중간보다 작은 부분에서 탐색
+
+    mid = (start+end) // 2
+
     if num == arr[mid]:
         return 1
     elif num < arr[mid]:
-        return binary(num, arr, start, mid-1)
+        return binary_search(num, arr, start, mid-1)
     else:
-        return binary(num, arr, mid+1, end)
+        return binary_search(num, arr, mid+1, end)
 
 for num in arr2:
-    # 시작과 끝 지점의 인덱스를 지정한다. 
     start = 0
     end = len(arr1)-1
-    print(binary(num, arr1, start, end))
+    print(binary_search(num, arr1, start, end))
