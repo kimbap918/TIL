@@ -31,11 +31,11 @@ def binary(num, arr, start, end):
     # arr2의 요소가 중간보다 작으면
     elif num < arr[mid]:
         # 작은쪽(왼쪽)을 탐색
-        return binary(num, arr, start, end-1)
+        return binary(num, arr, start, mid-1)
     # arr2의 요소가 중간보다 크면
     else:
         # 큰쪽(오른쪽)을 탐색
-        return binary(num, arr, start+1, end)
+        return binary(num, arr, mid+1, end)
 
 for num in arr2:
     # 시작과 끝 지점의 인덱스를 지정한다. 
