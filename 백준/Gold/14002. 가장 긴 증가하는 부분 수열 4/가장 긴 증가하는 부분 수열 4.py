@@ -7,8 +7,9 @@ dp = [0 for i in range(N+1)]
 
 for i in range(N):
     for j in range(i):
-        if A[i] > A[j]:
-            dp[i] = max(dp[i], dp[j]+1)
+        if A[i] > A[j] and dp[i] < dp[j]:
+            dp[i] = dp[j]
+    dp[i] += 1
 
 ans1 = max(dp)
 res = []
@@ -20,4 +21,3 @@ res.reverse()
 print(len(res))
 for i in res:
     print(i, end=' ')
-
