@@ -14,7 +14,6 @@ for i in range(N):
 ans1 = max(dp)
 res = []
 for i in range(N-1, -1, -1):
-    print(i)
     if dp[i] == ans1:
         res.append(A[i])
         ans1 -= 1
