@@ -19,12 +19,14 @@ def BFS(x,y):
                 queue.append((nx,ny))
                 matrix[nx][ny] = 0
 
+# 테스트 케이스 수
 T = int(input()) 
 
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
 for i in range(T):
+    # 배추밭의 가로, 세로, 배추가 심어진 위치의 개수
     M, N, K = map(int, input().split())
     matrix = [[0]*(N) for _ in range(M)]
     cnt = 0
