@@ -1,44 +1,45 @@
 from collections import deque
-from pprint import pprint
 import sys
 input = sys.stdin.readline
 
 M, N, H = map(int, input().split())
 board = [[list(map(int, input().split())) for _ in range(N)] for _ in range(H)]
-visited = [[[0] * M for _ in range(N)] for _ in range(H)]
-dx = [1, -1, 0, 0, 0, 0] 
+visited = [[list(False for _ in range(M)) for _ in range(N)] for _ in range(H)]
+dx = [1, -1, 0, 0, 0, 0]
 dy = [0, 0, 1, -1, 0, 0]
 dz = [0, 0, 0, 0, 1, -1]
-# pprint(board)
 Q = deque()
 
+# (높이, 세로, 가로)
 def BFS():
     while Q:
         a, b, c = Q.popleft()
+        for l in range(6):
+            z = a + dz[l] # 높이
+            y = b + dy[l] # 세로
+            x = c + dx[l] # 가로
 
-        for i in range(6):
-            h = a + dz[i]
-            n = b + dy[i]
-            m = c + dx[i]
-            
-            if h < 0 or h >= H or n < 0 or n >= N or m < 0 or m >= M:
+            # 탐색 범위를 넘어서면 건너뛴다.
+            if 0 > x or x >= M or 0 > y or y >= N or 0 > z or z >= H:
                 continue
+            if board[z][y][x] == 0 and visited[z][y][x] == False:
+                visited[z][y][x] = True
+                board[z][y][x] = board[a][b][c] + 1
+                Q.append([z, y, x])
 
-            if board[h][n][m] == 0 and visited[h][n][m] == 0:
-                Q.append([h, n, m])
-                board[h][n][m] = board[a][b][c]+1
-                visited[h][n][m] = 1
+# N = 가로칸(x축)
+# M = 세로칸(y축)
+# H = 높이(z축)
+for i in range(H): # 높이
+    for j in range(N): # 세로
+        for k in range(M): # 가로
+            if board[i][j][k] == 1 and visited[i][j][k] == False:
+                visited[i][j][k] = True
+                Q.append([i, j, k])
 
-for k in range(H):
-    for i in range(N):
-        for j in range(M):  
-            if board[k][i][j] == 1 and visited[k][i][j] == 0:
-                visited[k][i][j] = 1
-                Q.append([k, i, j])
 
-BFS()                
+BFS() # (높이, 세로, 가로)
 cnt = 0
-
 for i in board:
     for j in i:
         for k in j:
@@ -48,5 +49,3 @@ for i in board:
         cnt = max(cnt, max(j))
 
 print(cnt-1)
-
-
