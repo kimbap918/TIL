@@ -10,8 +10,8 @@ S = [list(map(int, input().split())) for _ in range(N)]
 visited = [[False for _ in range(M)] for _ in range(N)]
 # 모래사장을 바로 갱신하지 않기 위해 가라앉을 칸을 기록
 update = [[False for _ in range(M)] for _ in range(N)]
-print(visited)
-print(update)
+# print(visited)
+# print(update)
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 

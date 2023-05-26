@@ -21,7 +21,6 @@ input = sys.stdin.readline
 N, M = map(int, input().split())
 # defaultdict 는 자료형을 미리 선언 가능하다
 cnt = defaultdict(int)
-print(cnt)
 
 
 

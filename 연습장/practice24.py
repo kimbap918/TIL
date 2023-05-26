@@ -38,3 +38,5 @@ for i in range(M):
             
 print(sum(ans))
 print(shape)
+
+
