@@ -1,44 +1,42 @@
-from collections import deque
+def backtrack(board, row, col, moves, apples):
+    if apples >= 2:  # 사과를 2개 이상 먹은 경우
+        return True
 
-board = [list(map(int, input().split())) for _ in range(5)]
-y, x = map(int, input().split())
-dy = [0, 0, 1, -1]
-dx = [1, -1, 0, 0]
-eat = 0
-result = 0
+    if moves == 3:  # 이동 횟수가 3번을 초과한 경우
+        return False
 
-def BFS(y, x):
-    global eat
-    global result
-    Q = deque([[y, x, 0]])  # 이동 횟수도 큐에 함께 저장
-    visited = [[False] * 5 for _ in range(5)]  # 방문 여부를 저장하는 2차원 리스트
+    directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]  # 상하좌우 방향
 
-    while Q:
-        col, row, move = Q.popleft()
-        if board[col][row] == 1:
-            eat += 1
-        if eat >= 2:
-            result = 1
-            return
+    for dx, dy in directions:
+        new_row = row + dx
+        new_col = col + dy
 
-        if move > 2:
-            continue
+        if 0 <= new_row < 5 and 0 <= new_col < 5 and board[new_row][new_col] != -1:
+            eaten = 0
 
-        for i in range(4):
-            ny = col + dy[i]
-            nx = row + dx[i]
-            if 0 <= ny < 5 and 0 <= nx < 5 and board[ny][nx] != -1 and not visited[ny][nx]:
-                if board[ny][nx] == 1:
-                    eat += 1
-                    Q.append([ny, nx, move + 1])
-                    visited[ny][nx] = True
-                elif board[ny][nx] == 0:
-                    Q.append([ny, nx, move + 1])
-                    visited[ny][nx] = True
+            if board[new_row][new_col] == 1:  # 사과가 있는 경우
+                eaten = 1
+                board[new_row][new_col] = 0  # 사과를 먹었으므로 해당 위치를 빈칸으로 변경
 
-        visited[col][row] = True
+            board[row][col] = -1  # 현재 위치를 장애물로 변경
+            if backtrack(board, new_row, new_col, moves + 1, apples + eaten):
+                return True
+            board[row][col] = 0  # 백트래킹: 현재 위치를 원래대로 복구
 
-# 초기 위치에 장애물로 설정하여 학생이 해당 위치를 떠났을 때 장애물로 변경되게 함
-board[y][x] = -1
-BFS(y, x)
-print(result)
+            if board[new_row][new_col] == 1:  # 사과를 먹은 경우 원래대로 되돌려줌
+                board[new_row][new_col] = 1
+
+    return False
+
+
+board = []
+for _ in range(5):
+    row = list(map(int, input().split()))
+    board.append(row)
+
+r, c = map(int, input().split())
+
+if backtrack(board, r, c, 0, 0):
+    print(1)
+else:
+    print(0)

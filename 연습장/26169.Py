@@ -8,41 +8,41 @@ visited = [[False] * 5 for _ in range(5)]
 y, x = map(int, input().split())
 dy = [0, 0, 1, -1]
 dx = [1, -1, 0, 0]
-move = 0
-eat = 0
+
 
 def BFS(y, x):
-    global eat
-    global move
+    move = 0
+    eat = 0
+
+    if move > 3:
+        return 0
+
+    if eat >= 2 and move <= 3:
+        return 1
+
     Q = deque([[y, x]])
 
     while Q:
         col, row = Q.popleft()
-        visited[col][row] = True
-        if board[col][row] == 1:
-            eat += 1
-        if move > 2 and eat < 2:
-            return 0
-        if eat >= 2:
-            return 1
 
         for i in range(4):
             ny = col + dy[i]
             nx = row + dx[i]
             if 0 <= ny < 5 and 0 <= nx < 5 and board[ny][nx] != -1 and not visited[ny][nx]:
+
                 if board[ny][nx] == 1:
-                    move += 1
                     eat += 1
-                    Q.append([ny, nx])
-                    visited[ny][nx] = True
+                    move += 1
                     board[ny][nx] = 0
-                    
+                    visited[ny][nx] = True
+                    Q.append([ny, nx])
                 elif board[ny][nx] == 0:
                     move += 1
                     Q.append([ny, nx])
                     visited[ny][nx] = True
 
-
+                print(move)
+    print(board)
 
 
 print(BFS(y, x))
