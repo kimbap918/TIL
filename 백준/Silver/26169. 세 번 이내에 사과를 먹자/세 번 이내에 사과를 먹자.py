@@ -1,42 +1,50 @@
-def backtrack(board, row, col, moves, apples):
-    if apples >= 2:  # 사과를 2개 이상 먹은 경우
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**7)
+
+def DFS(arr, row, col, apple, move):
+    x, y = row, col
+    # 이동이 3회 이하면서 사과를 2개이상 먹었을 경우
+    if apple >= 2:
         return True
 
-    if moves == 3:  # 이동 횟수가 3번을 초과한 경우
+    if move == 3:
         return False
 
-    directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]  # 상하좌우 방향
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
 
-    for dx, dy in directions:
-        new_row = row + dx
-        new_col = col + dy
-
-        if 0 <= new_row < 5 and 0 <= new_col < 5 and board[new_row][new_col] != -1:
+        if 0 <= nx < board_size and 0 <= ny < board_size and arr[nx][ny] != -1:
             eaten = 0
 
-            if board[new_row][new_col] == 1:  # 사과가 있는 경우
+            # 사과가 있는 경우
+            if arr[nx][ny] == 1:
                 eaten = 1
-                board[new_row][new_col] = 0  # 사과를 먹었으므로 해당 위치를 빈칸으로 변경
+                # 사과를 먹었으므로 빈 칸으로 변경
+                arr[nx][ny] = 0
 
-            board[row][col] = -1  # 현재 위치를 장애물로 변경
-            if backtrack(board, new_row, new_col, moves + 1, apples + eaten):
-                return True
-            board[row][col] = 0  # 백트래킹: 현재 위치를 원래대로 복구
+            arr[x][y] = -1 # 현재 위치를 장애물로 변경
+            if DFS(arr, nx, ny, apple+eaten, move+1):
+                return True    
+            arr[x][y] = 0 # 백트래킹 : 원래대로 복구
 
-            if board[new_row][new_col] == 1:  # 사과를 먹은 경우 원래대로 되돌려줌
-                board[new_row][new_col] = 1
+            if arr[nx][ny] == 1: 
+                arr[nx][ny] = 1
 
     return False
 
 
-board = []
-for _ in range(5):
-    row = list(map(int, input().split()))
-    board.append(row)
-
+board_size = 5
+board = [list(map(int, input().split())) for _ in range(board_size)]
 r, c = map(int, input().split())
+move, apple = 0, 0
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
 
-if backtrack(board, r, c, 0, 0):
+res = DFS(board, r, c, apple, move)
+
+if res:
     print(1)
 else:
     print(0)
