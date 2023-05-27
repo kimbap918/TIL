@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
 
 def DFS(arr, row, col, apple, move):
     x, y = row, col
