@@ -2,11 +2,9 @@ import sys
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
-arr = list(map(int, input().split()))
+arr = sorted(list(map(int, input().split())))
 visited = [False] * N
 ans = []
-
-arr.sort()
 
 def backtraking(depth, N, M):
     if depth == M:
@@ -23,3 +21,4 @@ def backtraking(depth, N, M):
 
 
 backtraking(0, N, M)
+
