@@ -32,7 +32,7 @@ DFS(R, 0)
 for i in range(1, N+1):
     ans += visited[i] * t[i]
 
-# print(ans)
+print(ans)
 # print(graph)
 # print(visited)
 # print(t)
