@@ -1,104 +1,90 @@
 import sys
 from copy import deepcopy
-input = sys.stdin.readline
 
-N = int(input())
-board = [list(map(int, input().split())) for _ in range(N)]
-ans = 0
-# 동, 서, 남, 북으로 이동
+N = int(sys.stdin.readline())
+board = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+answer = 0
 
-def move(board, dir):
-    if dir == 0: # 방향이 왼쪽
+def move(board, direction):
+    if direction == 0:  # 왼쪽으로 이동
         for i in range(N):
             cur = 0
             for j in range(1, N):
-                if board[i][j] != 0: # 0이 아닌값이 있을경우
-                    tmp = board[i][j]
-                    board[i][j] = 0 # 합쳐질 것이기 때문에 비운다.
-
-                    if board[i][cur] == 0: # 비어있는 공간이면
-                        board[i][cur] = tmp # 값을 옮긴다.
-                    
-                    elif board[i][cur] == tmp: # 값이 같으면
-                        board[i][cur] *= 2 # 합친다
-                        cur += 1
-                    
-                    else: # 비어있지 않고, 다른 값이면
-                        cur += 1
-                        board[i][cur] = tmp
-        # print(board)
-    elif dir == 1: # 방향이 오른쪽
-        for i in range(N):
-            cur = N-1
-            for j in range(N-1, -1, -1):
                 if board[i][j] != 0:
                     tmp = board[i][j]
                     board[i][j] = 0
 
                     if board[i][cur] == 0:
                         board[i][cur] = tmp
-
                     elif board[i][cur] == tmp:
                         board[i][cur] *= 2
-                        cur -= 1
-                    
+                        cur += 1
                     else:
-                        cur -= 1
+                        cur += 1
                         board[i][cur] = tmp
-
-    elif dir == 2: # 방향이 위
-        for j in range(N):
-            cur = 0
-            for i in range(N):
-                if board[i][j] != 0: 
+    elif direction == 1:  # 오른쪽으로 이동
+        for i in range(N):
+            cur = N - 1
+            for j in range(N - 2, -1, -1):
+                if board[i][j] != 0:
                     tmp = board[i][j]
                     board[i][j] = 0
 
-                    if board[cur][j] == 0: 
-                        board[cur][j] = tmp
+                    if board[i][cur] == 0:
+                        board[i][cur] = tmp
+                    elif board[i][cur] == tmp:
+                        board[i][cur] *= 2
+                        cur -= 1
+                    else:
+                        cur -= 1
+                        board[i][cur] = tmp
+    elif direction == 2:  # 위로 이동
+        for j in range(N):
+            cur = 0
+            for i in range(1, N):
+                if board[i][j] != 0:
+                    tmp = board[i][j]
+                    board[i][j] = 0
 
+                    if board[cur][j] == 0:
+                        board[cur][j] = tmp
                     elif board[cur][j] == tmp:
                         board[cur][j] *= 2
                         cur += 1
-
                     else:
                         cur += 1
                         board[cur][j] = tmp
+    elif direction == 3:  # 아래로 이동
+        for j in range(N):
+            cur = N - 1
+            for i in range(N - 2, -1, -1):
+                if board[i][j] != 0:
+                    tmp = board[i][j]
+                    board[i][j] = 0
 
-
-    else:
-        for i in range(N):
-            cur = N-1
-            for j in range(N-1, -1, -1):
-                if board[j][i] != 0:
-                    tmp = board[j][i]
-                    board[j][i] = 0
-
-                    if board[cur][i] == 0:
-                        board[cur][i] = tmp
-
-                    elif board[cur][i] == tmp:
-                        board[cur][i] *= 2
+                    if board[cur][j] == 0:
+                        board[cur][j] = tmp
+                    elif board[cur][j] == tmp:
+                        board[cur][j] *= 2
                         cur -= 1
-                    
                     else:
                         cur -= 1
-                        board[cur][i] = tmp
+                        board[cur][j] = tmp
 
     return board
 
-def DFS(board, cnt):
-    global ans
-    if cnt == 5:
+def dfs(board, count):
+    global answer
+    if count == 10:
         for i in range(N):
             for j in range(N):
-                ans = max(ans, board[i][j])
+                answer = max(answer, board[i][j])
         return
-    
-    # 위, 왼쪽, 아래, 오른쪽
-    for i in range(4):
-        tmp = move(deepcopy(board), i)
-        DFS(tmp, cnt+1)
 
-DFS(board, 0)
-print(ans)
+    for direction in range(4):
+        tmp_board = deepcopy(board)
+        new_board = move(tmp_board, direction)
+        dfs(new_board, count + 1)
+
+dfs(board, 0)
+print(answer)
