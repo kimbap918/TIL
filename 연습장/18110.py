@@ -17,3 +17,11 @@ if sum(score) != 0:
     print(round_((sum(score)/len(score))))
 else:
     print(0)
+# import decimal
+
+# context = decimal.getcontext()
+# context.rounding = decimal.ROUND_HALF_UP
+# print(round(decimal.Decimal(2.5), 0))
+# print(round(2.5))
+# print(round(1.5))
+# print(round(0.5))
