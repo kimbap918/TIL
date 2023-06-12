@@ -2,13 +2,17 @@
 # . : 빈칸, # : 벽, O : 구멍, R : 빨간공, B : 파란공
 import sys
 from collections import deque
+from pprint import pprint
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
 board = [list(input().rstrip()) for _ in range(N)]
 visited = [[[[False] * M for _ in range(N)] for _ in range(M)] for _ in range(N)]
+path = [[[[[0, 0, 0, 0, 0] for _ in range(M)] for _ in range(N)] for _ in range(M)] for _ in range(N)]
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
+command = ['U', 'R', 'D', 'L']
+ans = list()
 
 def move(x, y, dir):
     cnt = 0
@@ -36,7 +40,16 @@ def BFS(x1, y1, x2, y2):
 
             if board[bnx][bny] != "O":
                 if board[rnx][rny] == "O":
+                    ans.append(command[i])
+                    rmx, rmy, bmx, bmy = rx, ry, bx, by
+                    while rmx:
+                        rmx, rmy, bmx, bmy, k = path[rmx][rmy][bmx][bmy]
+                        ans.append(command[k])
+                    print(ans)
+                    ans.pop()
+                    ans.reverse()
                     print(cnt)
+                    print(''.join(ans))
                     exit(0)
 
                 if rnx == bnx and rny == bny:
@@ -50,10 +63,14 @@ def BFS(x1, y1, x2, y2):
                 if not visited[rnx][rny][bnx][bny]:
                     visited[rnx][rny][bnx][bny] = True
                     Q.append([rnx, rny, bnx, bny, cnt+1])
+                    path[rnx][rny][bnx][bny] = (rx, ry, bx, by, i)
+
 
     print(-1)
     return
 
+
+rx, ry, bx, by = 0, 0, 0, 0
 for i in range(N):
     for j in range(M):
         if board[i][j] == 'R':

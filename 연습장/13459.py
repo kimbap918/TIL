@@ -2,7 +2,6 @@
 # . : 빈칸, # : 벽, O : 구멍, R : 빨간공, B : 파란공
 import sys
 from collections import deque
-from pprint import pprint
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
@@ -55,8 +54,6 @@ def BFS(x1, y1, x2, y2):
     print(0)
     return
 
-
-rx, ry, bx, by = 0, 0, 0, 0
 for i in range(N):
     for j in range(M):
         if board[i][j] == 'R':
@@ -65,5 +62,3 @@ for i in range(N):
             bx, by = i, j
 
 BFS(rx, ry, bx, by)
-
-# pprint(board)
