@@ -1,33 +1,25 @@
-N = int(input()) # 수의 개수
-arr = list(map(int, input().split())) # 수열 입력받기
-plus, minus, mul, div = map(int, input().split()) # 연산자 개수 계산
-# 최소, 최대값 초기화
-max_val = -1e9
-min_val = 1e9
+N = int(input())
+A = list(map(int, input().split()))
+C = list(map(int, input().split()))
+max_num = -1e9
+min_num = 1e9
 
-def dfs(i, ary):
-    global plus, minus, mul, div, max_val, min_val
-    if i == N: # 수열을 수의 개수만큼 다 받았을경우 
-        max_val = max(max_val, ary)
-        min_val = min(min_val, ary)
+def DFS(plus, minus, multiple, divide, depth, total):
+    global max_num, min_num
+    if depth == N:
+        max_num = max(total, max_num)
+        min_num = min(total, min_num)
+        return
     else:
-        # 덧셈
-        if plus > 0:
-            plus -= 1
-            dfs(i+1, ary + arr[i])
-            plus += 1
-        if minus > 0:
-            minus -= 1
-            dfs(i+1, ary - arr[i])
-            minus += 1
-        if mul > 0:
-            mul -= 1
-            dfs(i+1, ary * arr[i])
-            mul += 1
-        if div > 0:
-            div -= 1
-            dfs(i+1, int(ary / arr[i]))
-            div += 1
-dfs(1, arr[0])
-print(max_val)
-print(min_val)
+        if plus:
+            DFS(plus-1, minus, multiple, divide, depth+1, total+A[depth])
+        if minus:
+            DFS(plus, minus-1, multiple, divide, depth+1, total-A[depth])
+        if multiple:
+            DFS(plus, minus, multiple-1, divide, depth+1, total*A[depth])
+        if divide:
+            DFS(plus, minus, multiple, divide-1, depth+1, int(total/A[depth]))
+
+DFS(C[0], C[1], C[2], C[3], 1, A[0])
+print(max_num)
+print(min_num)
