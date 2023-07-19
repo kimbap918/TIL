@@ -585,6 +585,10 @@ ns_book4.replace({'부가기호': {np.nan: '없음'}, '발행년도': {'2021': '
 
 - 데이터 전처리 시 가장 많이 사용하는 방법
 
+https://pandas.pydata.org/docs/user_guide/missing_data.html#string-regular-expression-replacement
+
+https://velog.io/@hhhs101/Pandas-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D-str.extractstr.contains
+
 ```python
 # 발행년도가 '2021' 인 값을 '21'로 표현
 # 데이터프레임의 100번부터 101번까지 슬라이싱
