@@ -17,7 +17,7 @@
 
 ### MySQL, MySQL Workbench  설치(mac)
 
-- MacOS BigSur를 사용하고 있어서 버전이 안맞을수도 있습니다.
+(MacOS BigSur를 사용하고 있어서 버전이 다를수 있습니다.)
 
 [MySQL :: Download MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
 
@@ -236,6 +236,8 @@ SELECT * FROM buy;
 
 <br>
 
+## 데이터 조회를 위한 SQL문
+
 ### SELECT 와 FROM
 
 (SQL의 명령문은 대문자로 작성하는것이 좋지만 편의상 소문자로 작성했습니다.)
@@ -313,7 +315,7 @@ where addr in('경기', '전남', '경남');
 - 문자열의 일부 글자를 검색하기 위해 사용한다.
 
 ```sql
--- 첫 글자가 우로 시작하는 회원 무엇이든(%) 허용
+-- 첫 글자가 '우'로 시작하는 회원 무엇이든(%) 허용
 select *
 from member
 where mem_name like '우%';
@@ -420,7 +422,7 @@ from member;
 
 ### GROUP BY
 
-- 그룹으로 묶어주는 역할을 한다.
+- 데이터를 그룹으로 묶어주는 역할을 한다.
 - GROUP BY와 함께 집계함수를 사용하는데, 주로 사용하는 함수의 종류는 다음과 같다.
 
 | SUM()           | 합계                  |
@@ -443,6 +445,7 @@ group by mem_id; -- mem_id로 그룹화
 
 - 집계함수는 조건절(where)에서 사용할 수 없다.
 - 이 때에 where 대신 사용하는것이 having이다.
+- having은 집계 함수와 관련된 조건을 제한하며, group by 다음에 나온다.
 
 ```sql
 select mem_id, sum(price*amount)
@@ -480,3 +483,78 @@ where group_name = (select group_name from buy group by group_name order by
                     sum(amount*price) desc limit 1);
         
 ```
+
+<br>
+
+## 데이터 변경을 위한 SQL문
+
+### INSERT
+
+- 데이터 입력을 위해 사용된다.
+- 사용 방법은 다음과 같다.
+
+```sql
+-- 테이블 생성, toy_id, toy_name, age 
+create table hongong1 (toy_id INT, toy_name CHAR(4), age INT);
+
+-- 1. 순서와 조건에 맞게 values 안에 입력
+insert into hongong1 values(1, "우디", 25);
+-- 2. 칼럼 직접 써서 정한 순서에 맞게 values 안에 입력, 이 경우 지정하지 않은 칼럼은 null 처리된다.
+insert into hongong1 (toy_name, toy_id, age) values("우디", 2, 25);
+-- toy_id는 자동으로 증가하면서 생성된다.
+-- AUTO_INCREMENT로 지정하는 열은 반드시 PK로 지정해줘야한다.
+create table hongong2 (toy_id INT AUTO_INCREMENT PRIMARY KEY,
+										 toy_name CHAR(4),
+	                        age INT);
+
+-- null을 넣어도 자동으로 숫자가 증가하며 생성된다.
+insert into hongong2 values(null, "TES1", 1);
+-- 값을 넣지 않아도 자동으로 숫자가 증가하며 생성된다.
+insert into hongong2 (toy_name, age) values("TES2", 2);
+```
+
+<br>
+
+### UPDATE
+
+- 기존에 입력되어 있는 값을 수정하는 명령
+- 주의할점은 where을 지정하지 않으면 모든 값이 변경될 수 있으므로 where절을 꼭 사용해야한다.
+
+```sql
+update hongong1 
+set toy_name = "우디3"
+where toy_id = 1;
+```
+
+<br>
+
+### DELETE
+
+- 테이블의 행 데이터를 삭제해야하는 경우 사용
+- UPDATE문과 마찬가지로 where절 사용을 주의해야한다.
+
+```sql
+delete
+from hongong1
+where toy_id = 1;
+```
+
+<br>
+
+### 연습문제
+
+```sql
+-- 가장 돈을 많이 사용한 걸그룹의 그룹명과 인원수 출력
+select mem_name 그룹명, mem_number 인원수
+from member
+where mem_id = (select mem_id from buy group by mem_id order by sum(amount*price) desc limit 1);
+
+-- join을 이용하여 아래와 같이 풀수 있다.
+select m.mem_name 그룹명, m.mem_number 인원수
+from member m, buy b
+where m.mem_id = b.mem_id -- pk인 mem_id로 각 테이블을 join
+group by 그룹명, 인원수
+order by sum(b.price*b.amount) desc
+limit 1;
+```
+
