@@ -245,13 +245,13 @@ SELECT * FROM buy;
 - 아래에 적어둔 내용처럼 생각해보면 순서를 알기 쉽다.
 
 ```sql
-	SELECT 열_이름 -- 5
-		FROM 테이블_이름 -- 1
-	 WHERE 조건식 -- 2
+SELECT 열_이름 -- 5
+FROM 테이블_이름 -- 1
+WHERE 조건식 -- 2
 GROUP BY 열_이름 -- 3
-  HAVING 조건식 -- 4
+HAVING 조건식 -- 4
 ORDER BY 열_이름 -- 6
-   LIMIT 숫자 -- 7
+LIMIT 숫자 -- 7
 
 어떤 테이블에서(from), 내가 정한 조건으로(where), 그룹화를 하는데(group by), 
 그룹을 묶기위한 조건을 설정해서(having) 뽑아낸다(select).
@@ -262,12 +262,12 @@ ORDER BY 열_이름 -- 6
 use market_db; -- 처음에만 사용
 
 -- market_db의 member 테이블 전체를 조회
-select * 
-	from member;
+select *
+from member;
 
 -- member 테이블의 mem_name, addr을 조회
 select mem_name, addr 
-	from member;
+from member;
 ```
 
 <br>
