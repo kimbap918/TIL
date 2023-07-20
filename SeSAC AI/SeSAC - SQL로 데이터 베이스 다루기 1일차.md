@@ -279,8 +279,8 @@ from member;
 ```sql
 -- member 테이블의 키가 165이상, 멤버의 숫자가 4명 초과인 정보 전체를 조회
 select *
-	from member
- where height >= 165 and mem_number > 4;
+from member
+where height >= 165 and mem_number > 4;
 
 -- or은 둘 중 하나만 참이어도 가져온다.
 -- where height >= 165 or mem_number > 4; 
@@ -297,13 +297,13 @@ select *
 
 ```sql
 select mem_name, addr
-	from member
- where addr = '경기' or addr = '전남' or addr = '경남';
+from member
+where addr = '경기' or addr = '전남' or addr = '경남';
 
 -- in()을 사용해서 아래와 같이 나타낼 수 있다.
 select mem_name, addr
-	from member
- where addr in('경기', '전남', '경남');
+from member
+where addr in('경기', '전남', '경남');
 ```
 
 <br>
@@ -315,8 +315,8 @@ select mem_name, addr
 ```sql
 -- 첫 글자가 우로 시작하는 회원 무엇이든(%) 허용
 select *
-	from member
- where mem_name like '우%';
+from member
+where mem_name like '우%';
 ```
 
 <br>
@@ -336,10 +336,8 @@ select *
 ```sql
 -- 그룹 이름이 에이핑크인 그룹의 평균키보다 큰 그룹의 이름과 평균키
 select mem_name, height
-	from member
- where height > (select height
-									 from member
-									where mem_name = '에이핑크' );
+from member
+where height > (select height from member where mem_name = '에이핑크' );
 ```
 
 <br>
@@ -349,28 +347,23 @@ select mem_name, height
 ```sql
 -- 이름이 핑크로 끝나는 그룹의 인원 수(6, 4)와 하나라도 같거나, 평균키가 167 이하인 그룹(에이핑크, 블랙핑크, 잇지, 마마무, 오마이걸, 레드벨벳, 우주소녀, 트와이스, 여자친구)의 이름을 출력
 select mem_name
-  from member
- where mem_number in(select mem_number 
-											  from member 
-											 where mem_name like '%핑크') or height <= 167;
+from member
+where mem_number in(select mem_number from member where mem_name like '%핑크') or height <= 167;
 											 
 -- 이름이 핑크로 끝나는 그룹들의 각 인원수(6, 4)와 다르고,
 -- 평균키가 167 이하인 그룹(잇지, 오마이걸, 우주소녀, 트와이스)의 이름을 출력
 select mem_name
-  from member
- where mem_number not in(select mem_number
-						 						   from member
-						  						where mem_name like '%핑크') and height <= 167;
+from member
+where mem_number not in(select mem_number from member where mem_name like '%핑크') 
+and height <= 167;
 											 
 ```
 
 ```sql
 -- 이름이 핑크로 끝나는 그룹의 인원 수와 하나라도 같거나, 평균키가 167 이하인 그룹의 이름을 출력
 select mem_name
-  from member
- where mem_number IN (select mem_number 
-											  from member 
-											 where mem_name like '%핑크');
+from member
+where mem_number IN (select mem_number from member where mem_name like '%핑크');
 ```
 
 <br>
@@ -378,8 +371,8 @@ select mem_name
 ### ORDER BY
 
 ```sql
-	select mem_id, mem_name, debut_date
-	  from member
+select mem_id, mem_name, debut_date
+from member
 order by debut_date desc; -- desc는 내림차순, asc는 오름차순, 기본은 오름차순이라 적지 않아도 된다.
 ```
 
@@ -392,8 +385,8 @@ order by debut_date desc; -- desc는 내림차순, asc는 오름차순, 기본�
 
 ```sql
 -- limit에 숫자 1개만 넣으면 개수만 제한한다.
-	select mem_id, mem_name, debut_date
-	  from member
+select mem_id, mem_name, debut_date
+from member
 order by debut_date, desc limit 1; 
 ```
 
@@ -401,18 +394,15 @@ order by debut_date, desc limit 1;
 
 ```sql
 select mem_name, height
-  from member
+from member
 order by height desc limit 0, 1; -- 시작지점 0부터 1개만 출력
 
 -- 출력결과를 보면 평균키가 168로 가장 큰 소녀시대가 출력된다.
 -- 키가 2번째로 큰 그룹의 키 보다 작은 그룹들의 그룹 명을 출력
 
 select mem_name
-  from member
- where height < (select height
-								   from member
-							 order by height desc
-								  limit 1, 1);
+from member
+where height < (select height from member order by height desc limit 1, 1);
 ```
 
 <br>
@@ -423,7 +413,7 @@ select mem_name
 
 ```sql
 select distinct addr
-  from member;
+from member;
 ```
 
 <br>
@@ -455,17 +445,17 @@ group by mem_id; -- mem_id로 그룹화
 - 이 때에 where 대신 사용하는것이 having이다.
 
 ```sql
-	select mem_id, sum(price*amount)
-	  from buy
+select mem_id, sum(price*amount)
+from buy
 group by mem_id
-  having sum(price*amount) > 1000
+having sum(price*amount) > 1000
 order by sum(price*amount) desc;
 
 -- 집계함수를 사용하다보면 이름이 길어지기때문에 다음과 같이 사용이 가능하다.
-	select mem_id, sum(price*amount) buy_sum
-	  from buy
+select mem_id, sum(price*amount) buy_sum
+from buy
 group by mem_id
-  having buy_sum > 1000
+having buy_sum > 1000
 order by buy_sum desc;
 ```
 
@@ -477,8 +467,16 @@ order by buy_sum desc;
 -- buy 테이블로 진행
 -- 분류 별로 가장 많이 판매된 순으로 정렬해서 출력
 
-	select group_name 분류, sum(amount) 판매량
-		from buy
+select group_name 분류, sum(amount) 판매량
+from buy
 group by 분류
 order by 판매량 desc;
+
+-- 가장 매출이 높은 분류의 상품명을 출력
+-- 매출을 분류별로 다 합쳐본다
+select distinct prod_name 상품명
+from buy
+where group_name = (select group_name from buy group by group_name order by
+                    sum(amount*price) desc limit 1);
+        
 ```
