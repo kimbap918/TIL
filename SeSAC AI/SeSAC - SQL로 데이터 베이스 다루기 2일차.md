@@ -1062,7 +1062,7 @@ for idx, val in count_by_year[::5].items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 37.png)
+![1](https://github.com/chipok918/chipok/assets/140158458/5e7ab24a-36d6-41da-a714-c8f01556ba3b)
 
 <br>
 
@@ -1079,7 +1079,7 @@ for idx, val in count_by_subject.items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 38.png)
+![Untitled (1)](https://github.com/chipok918/chipok/assets/140158458/683bd0c2-f3c6-4e06-a258-0df235099e1f)
 
 ```python
 plt.bar(count_by_subject.index, count_by_subject.values, width=0.7, color='blue')
@@ -1093,7 +1093,7 @@ for idx, val in count_by_subject.items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 39.png)
+![Untitled (2)](https://github.com/chipok918/chipok/assets/140158458/71115a6a-1f72-4ca7-a71f-474e08ffaf3a)
 
 ```python
 plt.barh(count_by_subject.index, count_by_subject.values, height=0.7, color='blue')
@@ -1107,7 +1107,7 @@ for idx, val in count_by_subject.items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 40.png)
+![Untitled (3)](https://github.com/chipok918/chipok/assets/140158458/2cf46ed1-d0eb-47e0-9f7f-08867690bf27)
 
 <br>
 
@@ -1132,7 +1132,7 @@ plt.imshow(img)
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 41.png)
+![Untitled (4)](https://github.com/chipok918/chipok/assets/140158458/14325ed8-f76f-49c8-ba8c-1b6ecf0de7fc)
 
 ```python
 plt.figure(figsize=(8, 6))
@@ -1143,7 +1143,7 @@ plt.axis('off')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 42.png)
+![Untitled (5)](https://github.com/chipok918/chipok/assets/140158458/fa522171-26ee-4b79-8212-6fcf3d8b3fdd)
 
 ```python
 from PIL import Image
@@ -1155,7 +1155,7 @@ plt.axis('off')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 43.png)
+![Untitled (6)](https://github.com/chipok918/chipok/assets/140158458/d48bb11f-813a-477b-a887-3dacb99a3043)
 
 ```python
 import numpy as np
@@ -1193,7 +1193,7 @@ plt.savefig('books_by_subject.png')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 44.png)
+![Untitled (7)](https://github.com/chipok918/chipok/assets/140158458/4cffe5f8-50ae-4d70-acba-27094fb43331)
 
 ```python
 # 이미지 불러오기
@@ -1203,6 +1203,8 @@ plt.imshow(pil_img)
 plt.axis('off')
 plt.show()
 ```
+
+![Untitled (8)](https://github.com/chipok918/chipok/assets/140158458/e02c997b-4de1-41c5-99ce-75f2cbd3a943)
 
 <br>
 
@@ -1271,7 +1273,7 @@ plt.scatter(ns_alc['alcohol'], ns_alc['residual sugar'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../6feabf97-cddc-4e11-b1cb-1671e8270861_Export-db50adc7-5aed-4221-b4b6-16a7ca7f93b8/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 46.png)
+![Untitled (9)](https://github.com/chipok918/chipok/assets/140158458/b63d30a2-d5f8-44f7-9092-176f985c098a)
 
 ```python
 # 4. 당도(resdual sugar)가 x축으로된 히스토 그램을 그리되 구간은 5개
@@ -1279,7 +1281,7 @@ plt.hist(ns_alc['residual sugar'], bins=5)
 plt.show()
 ```
 
-
+![Untitled (10)](https://github.com/chipok918/chipok/assets/140158458/6987a00a-f0e9-49f2-a89b-ac189fc97fbc)
 
 ```python
 # 5. 3번과 4번 그래프는 서브플롯을 이용하여 1행 2열로 그리되 가로 세로는 20:8설정 
@@ -1300,7 +1302,7 @@ axs[1].set_ylabel('alcohol')
 fig.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2048.png)
+![Untitled (11)](https://github.com/chipok918/chipok/assets/140158458/74031275-ecd0-462c-a6ca-bb839ccafc46)
 
 
 
