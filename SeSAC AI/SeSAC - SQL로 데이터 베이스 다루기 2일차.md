@@ -373,7 +373,7 @@ plt.scatter([1,2,3,4], [1,2,3,4])
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled.png)
+![Untitled (3)](https://github.com/kimbap918/TIL/assets/75712723/2cc6a10c-89fc-49b2-81de-ce17cf629b25)
 
 ```python
 # x축에 번호, y축에 대출건수
@@ -381,14 +381,14 @@ plt.scatter(ns_book7['번호'], ns_book7['대출건수'])
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%201.png)
+![Untitled (4)](https://github.com/kimbap918/TIL/assets/75712723/f3fe6f64-221f-45a1-8cae-3a07b10b398c)
 
 ```python
 plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'])
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%202.png)
+![Untitled (5)](https://github.com/kimbap918/TIL/assets/75712723/e43d52af-0ac5-4743-a229-d550e9c2455c)
 
 ```python
 # alpha = 투명도, 수치가 높아질수록 진해진다.
@@ -396,7 +396,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%203.png)
+![Untitled (6)](https://github.com/kimbap918/TIL/assets/75712723/102ece30-5de6-4963-b1dd-6a03e28c4eb4)
 
 ```python
 average_borrows = ns_book7['대출건수']/ns_book7['도서권수']
@@ -404,7 +404,7 @@ plt.scatter(average_borrows, ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%204.png)
+![Untitled (7)](https://github.com/kimbap918/TIL/assets/75712723/7c7c2250-747e-44b7-936b-a886f86b6f67)
 
 <br>
 
@@ -421,7 +421,7 @@ plt.hist([0,3,5,6,7,7,9,13], bins=5)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%205.png)
+![Untitled (8)](https://github.com/kimbap918/TIL/assets/75712723/9535ba0b-2f46-4d99-9008-7cdfcf718aac)
 
 ```python
 import numpy as np
@@ -465,14 +465,14 @@ plt.hist(random_samples)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%206.png)
+![Untitled (9)](https://github.com/kimbap918/TIL/assets/75712723/a9cc9f89-16f9-4749-9f62-4c36d7f59966)
 
 ```python
 plt.hist(ns_book7['대출건수'])
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%207.png)
+![Untitled (10)](https://github.com/kimbap918/TIL/assets/75712723/0a3708f8-6441-4d35-a660-59d1f337c1a9)
 
 ```python
 plt.hist(ns_book7['대출건수'])
@@ -481,13 +481,13 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%208.png)
+![Untitled (11)](https://github.com/kimbap918/TIL/assets/75712723/7208427e-c746-43cc-87dc-b575d118b9c4)
 
 ```python
 plt.hist(ns_book7['대출건수'], log=True)plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%209.png)
+![Untitled (12)](https://github.com/kimbap918/TIL/assets/75712723/8f18d7dd-c486-4788-ab1b-eb0b4b54ff44)
 
 ```python
 plt.hist(ns_book7['대출건수'], bins=100)
@@ -495,7 +495,7 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2010.png)
+![Untitled (13)](https://github.com/kimbap918/TIL/assets/75712723/fd49ee87-0343-4e6d-bfc9-bbd833fe3c0b)
 
 <br>
 
@@ -514,7 +514,7 @@ plt.show()
 # 도서명이 100글자는..?
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2011.png)
+![Untitled (14)](https://github.com/kimbap918/TIL/assets/75712723/1604a270-6c17-4244-abbc-c9a4a77b5dd7)
 
 ```python
 plt.hist(title_len, bins=100)
@@ -522,7 +522,7 @@ plt.xscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2012.png)
+![Untitled (15)](https://github.com/kimbap918/TIL/assets/75712723/3c1fcfe3-9145-4ed8-be27-d788bcef22da)
 
 <br>
 
@@ -545,7 +545,7 @@ plt.boxplot(temp)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2013.png)
+![Untitled (16)](https://github.com/kimbap918/TIL/assets/75712723/d75b414b-2d06-46ec-9828-90a7a71a3019)
 
 ```python
 
@@ -564,7 +564,7 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2014.png)
+![Untitled (17)](https://github.com/kimbap918/TIL/assets/75712723/bd54386c-21c8-4301-9009-d8235482c6e0)
 
 ```python
 # 수평으로 그릴때 vert=False
@@ -573,7 +573,7 @@ plt.xscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2015.png)
+![Untitled (18)](https://github.com/kimbap918/TIL/assets/75712723/2cdcff7c-b71c-4474-96e0-b0c867f0561c)
 
 ```python
 # whis를 높게 설정하면 멀리까지 있는 outlier 값들을 수염으로 볼수있다.
@@ -582,7 +582,7 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2016.png)
+![Untitled (19)](https://github.com/kimbap918/TIL/assets/75712723/67600bd2-8823-4ddc-92b1-16794234a092)
 
 ```python
 # 백분위로도 설정이 가능하다.
@@ -591,7 +591,7 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2017.png)
+![Untitled (20)](https://github.com/kimbap918/TIL/assets/75712723/196d89ed-5a34-4b5f-a117-db3280f58a12)
 
 <br>
 
@@ -610,14 +610,14 @@ ns_book7.plot.scatter('도서권수', '대출건수', alpha=0.1)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2018.png)
+![Untitled (21)](https://github.com/kimbap918/TIL/assets/75712723/c14a8ddb-055c-40b8-886a-4481c1ce6a5a)
 
 ```python
 ns_book7['도서명'].apply(len).plot.hist(bins=100)
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2019.png)
+![Untitled (22)](https://github.com/kimbap918/TIL/assets/75712723/7ef99f19-0397-45e5-830a-b357bffec41a)
 
 <br>
 
@@ -629,7 +629,7 @@ plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2020.png)
+![Untitled (23)](https://github.com/kimbap918/TIL/assets/75712723/c44c8977-a408-4535-8b23-ae3501155caf)
 
 <br>
 
@@ -675,7 +675,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 21.png)
+![Untitled (24)](https://github.com/kimbap918/TIL/assets/75712723/c25d29b3-7377-4d31-b51a-91e1bb0f8125)
 
 ```python
 # rc = run configure
@@ -690,7 +690,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 22.png)
+![Untitled (25)](https://github.com/kimbap918/TIL/assets/75712723/53de6c12-bd13-4d80-a739-419aba529914)
 
 ```python
 # 1인치당 72개의 점이 찍힌다.
@@ -705,7 +705,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 23.png)
+![Untitled (26)](https://github.com/kimbap918/TIL/assets/75712723/a1b83a4d-6270-4eba-bf0f-cd73ca37773d)
 
 ```python
 %config InlineBackend.print_figure_kwargs = {'bbox_inches': None}
@@ -714,7 +714,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 24.png)
+![Untitled (27)](https://github.com/kimbap918/TIL/assets/75712723/2ad87287-1cb9-4e12-8623-d3ebef0f7af8)
 
 ```python
 # {'bbox_inches': 'tight'}
@@ -728,7 +728,7 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 25.png)
+![Untitled (28)](https://github.com/kimbap918/TIL/assets/75712723/2930a46e-37e4-46c7-a4a9-2d6ae61bff85)
 
 <br>
 
@@ -754,14 +754,14 @@ plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1)
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 26.png)
+![Untitled (29)](https://github.com/kimbap918/TIL/assets/75712723/230fe5ab-55b0-4ba8-916a-59d2f530b514)
 
 ```python
 plt.scatter(ns_book7['도서권수'], ns_book7['대출건수'], alpha=0.1, marker='+')
 plt.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 27.png)
+![Untitled (30)](https://github.com/kimbap918/TIL/assets/75712723/3d2c9ba9-9d5a-4444-91d4-d10a0661c569)
 
 <br>
 
@@ -782,7 +782,7 @@ axs[1].set_yscale('log')
 fig.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 28.png)
+![Untitled (48)](https://github.com/kimbap918/TIL/assets/75712723/e972b377-e502-48e2-b98b-8ef7aa9179f9)
 
 ```python
 # 그래프, 축, 좌우로 그리고 옆으로 늘려준다.
@@ -800,7 +800,7 @@ axs[1].set_yscale('log')
 fig.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 29.png)
+![Untitled (31)](https://github.com/kimbap918/TIL/assets/75712723/0a466d3c-78c8-4d05-8667-15fce08ae7a9)
 
 ```python
 fig, axs = plt.subplots(2, figsize=(6, 8))
@@ -815,7 +815,7 @@ axs[1].set_yscale('log')
 fig.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 30.png)
+![Untitled (32)](https://github.com/kimbap918/TIL/assets/75712723/9697a235-a81d-47c3-bdbe-849ff635dfdf)
 
 ```python
 fig, axs = plt.subplots(1, 2, figsize=(10, 4))
@@ -843,7 +843,7 @@ axs[1].set_ylabel('frequency')
 fig.show()
 ```
 
-![Untitled](../439e1a8a-6102-4db1-83a1-6cd5229d12dc_Export-c665acc2-3855-48a4-9ae1-4696a2b97ecf/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 31.png)
+![Untitled (33)](https://github.com/kimbap918/TIL/assets/75712723/f6f1357b-4ab2-45e6-b752-20c5f691240c)
 
 <br>
 
@@ -996,7 +996,7 @@ plt.ylabel('number of books')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 32.png)
+![Untitled (34)](https://github.com/kimbap918/TIL/assets/75712723/8427d3d0-918c-4b54-a280-6edeec7ecddd)
 
 ```python
 # marker = 년도 별 마커 모양, linestyle = 선의 모양, color = 색깔
@@ -1007,7 +1007,7 @@ plt.ylabel('number of books')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 33.png)
+![Untitled (35)](https://github.com/kimbap918/TIL/assets/75712723/ba24ab74-ad10-47ed-8e6b-553326892d5b)
 
 ```python
 # 맷플롯립에서는 '*-g'로 마커모양과 색을 설정할수 있다.
@@ -1018,7 +1018,7 @@ plt.ylabel('number of books')
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 34.png)
+![Untitled (50)](https://github.com/kimbap918/TIL/assets/75712723/c9ecca74-78a0-4099-8341-824a94708d83)
 
 ```python
 plt.plot(count_by_year, '*-g')
@@ -1036,7 +1036,7 @@ for idx, val in count_by_year[::5].items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 35.png)
+![Untitled (51)](https://github.com/kimbap918/TIL/assets/75712723/ef5cd493-8506-441c-9c02-2b5c11851b38)
 
 ```python
 plt.plot(count_by_year, '*-g')
@@ -1049,7 +1049,7 @@ for idx, val in count_by_year[::5].items():
 plt.show()
 ```
 
-![Untitled](../43cddcb5-47a6-49f5-8077-aa12af408770_Export-21243d02-0f6f-467c-9f58-f7646aa84b44/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 36.png)
+![Untitled (53)](https://github.com/kimbap918/TIL/assets/75712723/084e9657-c102-4ad3-90d8-50d4f5504c76)
 
 ```python
 plt.plot(count_by_year, '*-g')
@@ -1276,11 +1276,10 @@ plt.show()
 ```python
 # 4. 당도(resdual sugar)가 x축으로된 히스토 그램을 그리되 구간은 5개
 plt.hist(ns_alc['residual sugar'], bins=5)
-plt.yscale('log')
 plt.show()
 ```
 
-![Untitled](../6feabf97-cddc-4e11-b1cb-1671e8270861_Export-db50adc7-5aed-4221-b4b6-16a7ca7f93b8/SeSAC - SQL로 데이터 베이스 다루기 2일차 48b2181603724ac9bb2826ba7e82b80a/Untitled 47.png)
+
 
 ```python
 # 5. 3번과 4번 그래프는 서브플롯을 이용하여 1행 2열로 그리되 가로 세로는 20:8설정 
@@ -1290,7 +1289,6 @@ fig, axs = plt.subplots(1, 2, figsize=(20, 8))
 
 axs[0].scatter(ns_alc['alcohol'], ns_alc['residual sugar'], alpha=0.1)
 axs[1].hist(ns_alc['residual sugar'], bins=5)
-axs[1].set_yscale('log')
 
 # 6. 모든 그래프는 x, y 축에 레이블이 있어야 한다.
 axs[0].set_xlabel('alcohol')
@@ -1302,7 +1300,9 @@ axs[1].set_ylabel('alcohol')
 fig.show()
 ```
 
-![Untitled](https://github.com/kimbap918/TIL/assets/75712723/cdee1cb9-c780-4896-89f3-d29f6c5e43f2)
+![Untitled](SeSAC%20-%20SQL%E1%84%85%E1%85%A9%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%83%E1%85%A1%E1%84%85%E1%85%AE%E1%84%80%E1%85%B5%202%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%2048b2181603724ac9bb2826ba7e82b80a/Untitled%2048.png)
+
+
 
 
 
