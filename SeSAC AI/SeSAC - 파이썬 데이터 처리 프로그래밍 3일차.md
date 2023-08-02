@@ -177,7 +177,7 @@ d = webdriver.Chrome(service=service)
 try:
     d.get("https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=105")
     # find_elements 여러개를 가져올때
-		elem = d.find_element(By.CSS_SELECTOR, "#_rankingList0")
+	elem = d.find_element(By.CSS_SELECTOR, "#_rankingList0")
     print(elem.text)
 except Exception as e:
     print(e)
