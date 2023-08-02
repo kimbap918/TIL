@@ -479,7 +479,8 @@ for e in elem:
     rank = e.select_one(".rank").text
     title = e.select_one(".ellipsis.rank01 > span > a").text.replace("'", '"') # replace는 DB insert 시 작은따옴표 처리를 위해 사용
     singer = e.select_one(".ellipsis.rank02 > a").text.replace("'", '"')
-    album = e.select_one(".ellipsis.rank03 > a").text.replace("'", '"')
+    album = e.select_one(".ellipsis.rank03 > a").text.strip() # 수집 시 공백을 제거해주는게 좋다.
+    album = album.replace("'", '"')
     diff = e.select_one(".rank_wrap").text.replace("'", '"')
 
     # 6. DB에 저장
