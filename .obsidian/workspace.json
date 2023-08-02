@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "dc4d8fbf2ccf6e0f",
@@ -148,6 +148,9 @@
   },
   "active": "ab831f725f0324de",
   "lastOpenFiles": [
+    "백준/Bronze/25377. 빵/빵.py",
+    "백준/Bronze/25377. 빵/README.md",
+    "백준/Bronze/25377. 빵",
     "SeSAC - 파이썬 데이터 처리 프로그래밍 3일차 f7fb0c62b07a45f3a88f6f3aca2382eb/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-02_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.19.26.png.md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md",
     "SeSAC - 파이썬 데이터 처리 프로그래밍 3일차 f7fb0c62b07a45f3a88f6f3aca2382eb",
