@@ -35,6 +35,7 @@ https://ko.wikipedia.org/wiki/API
 GET, POST는 대상에 대한 행위이며,
 주소에 해당하는 /posts 는 행위의 대상이다.
 <br>
+
 ### HTTP의 주요 메서드
 
 GET : 서버에게 리소스를 보내달라고 요청
@@ -45,6 +46,7 @@ DELETE : 서버에게 리소스의 삭제를 요청
 
 [HTTP 상태 코드 - HTTP | MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
 <br>
+
 ### 기상청 중기예보 조회서비스 openAPI 정보 사용해보기
 https://www.data.go.kr/data/15059468/openapi.do
 
