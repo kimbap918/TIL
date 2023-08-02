@@ -7,66 +7,46 @@
 ### 공공데이터포털
 
 가입 후 로그인
-
 [공공데이터 포털](https://www.data.go.kr/)
-dsd
+<br>
 1. 홈페이지 메뉴에서 데이터 찾기 → 데이터 목록에서 원하는 데이터 검색
-
-![스크린샷 2023-08-02 오전 9.19.26.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.19.26.png)
+![](https://i.imgur.com/sOeiO3B.png)
 
 2. 상세 페이지에서 활용 신청하기
+![](https://i.imgur.com/ORfvWWa.png)
 
-
-![](https://i.imgur.com/zIizadj.png)
-
-
-![스크린샷 2023-08-02 오전 9.20.09.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.20.09.png)
 
 3. 마이페이지 → 데이터 활용 → 인증키 발급현황에서 인증키 확인
 
-![스크린샷 2023-08-02 오전 9.21.14.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.21.14.png)
+![](https://i.imgur.com/KQZusL3.png)
 
 <br>
-
 ### API
-
+https://ko.wikipedia.org/wiki/API
 <br>
-
 ### Fake API
 
 [JSONPlaceholder - Free Fake REST API](https://jsonplaceholder.typicode.com/)
 
-![스크린샷 2023-08-02 오전 9.43.15.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_9.43.15.png)
+![](https://i.imgur.com/wdRcyqV.png)
 
+GET, POST는 대상에 대한 행위이며,
+주소에 해당하는 /posts 는 행위의 대상이다.
 <br>
-
-여기서 주소에 해당하는 /posts 는 대상이며
-
-GET, POST는 대상에 대한 행위를 뜻한다.
-
-<br>
-
 ### HTTP의 주요 메서드
 
 GET : 서버에게 리소스를 보내달라고 요청
-
 POST : 서버에게 리소스를 보내면서 생성해달라고 요청
-
 PUT : 서버에게 리소스의 업데이트를 하거나 리소스가 없다면 새로운 리소스를 생성해 달라고 요청, 회원정보 수정 등에 사용됨
-
 PATCH : 서버에게 리소스의 업데이트를 요청, 회원정보 수정 등에 사용
-
 DELETE : 서버에게 리소스의 삭제를 요청 
 
 [HTTP 상태 코드 - HTTP | MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
-
 <br>
-
 ### 기상청 중기예보 조회서비스 openAPI 정보 사용해보기
+https://www.data.go.kr/data/15059468/openapi.do
 
 1. 해당 페이지 아래로 이동해서 샘플 코드 복사
-
-![스크린샷 2023-08-02 오전 10.04.37.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_10.04.37.png)
 
 ```python
 # Python3 샘플 코드 #
@@ -82,7 +62,7 @@ print(response.content)
 
 2. 마이페이지에서 인코딩 되지 않은 원본 인증키를 복사 후 serviceKey의 값 부분에 붙여넣기
 
-![스크린샷 2023-08-02 오전 10.07.41.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_10.07.41.png)
+![](https://i.imgur.com/VLzgpee.png)
 
 3. Jupyter에서 샘플 코드를 수정 후 실행
 
@@ -104,9 +84,9 @@ data = response.json() # json 형태로 바꾼다.
 pprint(data)
 ```
 
-![스크린샷 2023-08-02 오전 10.24.56.png](SeSAC%20-%20%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%8A%E1%85%A5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%20%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC%203%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8E%E1%85%A1%20f7fb0c62b07a45f3a88f6f3aca2382eb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-08-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_10.24.56.png)
+![](https://i.imgur.com/kjPxdPu.png)
 
-1. json에서 텍스트만 출력해보기
+4. json에서 텍스트만 출력해보기
 
 ```python
 import requests 
@@ -135,7 +115,7 @@ for item in data["response"]["body"]["items"]["item"]:
 
 * 이번 예보기간 제6호 태풍(카눈)의 이동경로에 따라 강수구역과 시점이 변경될 가능성이 있으며, 내륙을 중심으로 소나기가 내릴 가능성이 있으니, 앞으로 발표되는 최신 예보를 참고하기 바랍니다.
 ```
-
+<br>
 ### Selenium
 
 - 동적 웹을 분석하기 위해 사용하는 도구
@@ -289,4 +269,87 @@ finally:
     time.sleep(2)
     d.close()
     d.quit()
+```
+<br>
+### 실습 - 멜론 차트 Selenium으로 수집하기
+* 좋아요(like) 수집하고 콤마(,) 제거 후 int형으로 바꿀것
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By 
+from webdriver_manager.chrome import ChromeDriverManager
+from openpyxl import Workbook
+import pymysql
+import requests
+import time
+
+# 4. DB
+db = pymysql.connect(host="localhost", port=3306, user="root", password="jen401018&", db="sba")
+cursor = db.cursor()
+
+# 6. Workbook
+wb = Workbook()
+ws = wb.active
+
+# 1. chromedriver
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver" # chromedriver 경로
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service)
+
+# 데이터 수집
+try:
+    d.get("https://www.melon.com/chart/index.htm")
+    time.sleep(0.5)
+
+	# 2. 수집할 영역 클래스
+    area = d.find_element(By.CSS_SELECTOR, ".service_list_song")
+    elem = area.find_elements(By.CSS_SELECTOR, "div > table > tbody > tr")
+
+	# 3. 순위, 제목, 가수, 앨범, 변동, 좋아요
+    for e in elem:
+        rank = e.find_element(By.CSS_SELECTOR, ".rank").text
+        # 수집시 공백을 제거하기 위해 strip() 사용, sql 삽입 시 작은따옴표(') 오류를 해결하기 위해 큰 따옴표로 치환 
+        # find_element 는 select_one과 같다.
+        # find_elements 는 select와 같다.
+        title = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank01 > span > a").text.strip().replace("'", '"')
+        singer = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank02 > a").text.strip().replace("'", '"')
+        album = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank03 > a").text.strip().replace("'", '"')
+        diff = e.find_element(By.CSS_SELECTOR, ".rank_wrap").text.replace("'", '"')
+        diff_icon = e.find_element(By.CSS_SELECTOR, ".rank_wrap")
+        diff_icon = diff_icon.get_attribute('title')
+        # 좋아요를 수집해서 쉼표 제거, 정수형으로 변환
+        like = e.find_element(By.CSS_SELECTOR, ".cnt").text.replace(",", "")
+        like = int(like)
+        
+        if "순위 동일" in diff_icon:
+            diff = "-"
+        elif "단계 상승" in diff_icon:
+            diff = "+" + diff
+        elif "단계 하락" in diff_icon:
+            diff =  "-" + diff
+        else:
+            diff = "new"
+
+		# 5. SQL 삽입
+        sql = f"""
+        insert into melon
+        values(NULL, {rank}, '{title}', '{singer}', '{album}', {like}, '{diff}')
+        """
+        cursor.execute(sql)
+
+		# 7. workbook 삽입
+        ws.append([rank, title, singer, album, like, diff])
+
+except Exception as e:
+    print(e)
+    
+finally:
+    time.sleep(1)
+    d.close()
+    d.quit()
+    # DB 커밋
+    db.commit()
+    db.close()
+    # Excel 저장
+    wb.save("melon2.xlsx")
 ```
