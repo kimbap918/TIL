@@ -325,19 +325,19 @@ try:
 
 	# 3. 순위, 제목, 가수, 앨범, 변동, 좋아요
     for e in elem:
-        rank = e.find_element(By.CSS_SELECTOR, ".rank").text
-        # 수집시 공백을 제거하기 위해 strip() 사용, sql 삽입 시 작은따옴표(') 오류를 해결하기 위해 큰 따옴표로 치환 
+	    # 수집시 공백을 제거하기 위해 strip() 사용
+        rank = e.find_element(By.CSS_SELECTOR, ".rank").text.strip()
+        # sql 삽입 시 작은따옴표(') 오류를 해결하기 위해 큰 따옴표로 치환 
         # find_element 는 select_one과 같다.
         # find_elements 는 select와 같다.
         title = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank01 > span > a").text.strip().replace("'", '"')
         singer = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank02 > a").text.strip().replace("'", '"')
         album = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank03 > a").text.strip().replace("'", '"')
-        diff = e.find_element(By.CSS_SELECTOR, ".rank_wrap").text.replace("'", '"')
+        diff = e.find_element(By.CSS_SELECTOR, ".rank_wrap").text.strip().replace("'", '"')
         diff_icon = e.find_element(By.CSS_SELECTOR, ".rank_wrap")
         diff_icon = diff_icon.get_attribute('title')
-        # 좋아요를 수집해서 쉼표 제거, 정수형으로 변환
-        like = e.find_element(By.CSS_SELECTOR, ".cnt").text.replace(",", "")
-        like = int(like)
+        # 좋아요를 수집해서 쉼표 제거
+        like = e.find_element(By.CSS_SELECTOR, ".cnt").text.strip().replace(",", "")
         
         if "순위 동일" in diff_icon:
             diff = "-"
@@ -370,4 +370,169 @@ finally:
     db.close()
     # Excel 저장
     wb.save("melon2.xlsx")
+```
+
+<br>
+
+### Selenium을 사용해서 검색하고 값 가져오기
+``` python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By 
+from selenium.webdriver.common.keys import Keys # 키보드의 특수키를 전달하기 위해 import
+from webdriver_manager.chrome import ChromeDriverManager
+import requests
+import time
+
+# chromedriver
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver" # chromedriver 경로
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service)
+
+try:
+    d.get("https://cafe.naver.com/joonggonara")
+    elem = d.find_element(By.CSS_SELECTOR, "#topLayerQueryInput")
+    elem.send_keys("자전거") # 자전거를 검색창에 입력
+    elem.send_keys(Keys.RETURN) # 엔터키(Return)
+
+    time.sleep(2)
+
+except Exception as e:
+    print(e)
+finally:
+    d.close()
+    d.quit()
+```
+
+<br>
+
+검색 결과를 가져올때 클래스를 가져와도 아무것도 없다고 오류가 뜨기도 한다. 
+
+![](https://i.imgur.com/f1iKvSO.png)
+![](https://i.imgur.com/kUloXEV.png)
+위의 사진처럼 a 태그의 article 클래스를 가져왔지만 `no such element` 오류가 뜬다.  이  때는 iframe태그가 있는지 확인해보자.
+
+<br>
+
+> iframe  :  Inline Frame, 웹 브라우저 내에 또 다른 프레임, 즉 현재 브라우저에 렌더링되고 있는 문서 안에 또 다른 HTML페이지를 삽입할 수 있도록 하는 기능
+
+![](https://i.imgur.com/tzMGoGb.png)
+
+``` python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By 
+from selenium.webdriver.common.keys import Keys # 키보드의 특수키를 전달하기 위해 import
+from webdriver_manager.chrome import ChromeDriverManager
+import requests
+import time
+
+# chromedriver
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver" # chromedriver 경로
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service)
+
+try:
+    d.get("https://cafe.naver.com/joonggonara")
+    elem = d.find_element(By.CSS_SELECTOR, "#topLayerQueryInput")
+    elem.send_keys("자전거") # 자전거를 검색창에 입력
+    elem.send_keys(Keys.RETURN) # 엔터키(Return)
+
+	# time.sleep(1)
+	# 다른 웹사이트이기 때문에 느리게 로딩될 수 있어서 기다리는 함수
+
+	# iframe
+    iframe = d.find_element(By.CSS_SELECTOR, "#cafe_main")
+    d.switch_to.frame(iframe) # iframe 안으로 이동 
+
+	# 원본 웹으로 돌아오는 함수
+	# d.switch_to.default_content()
+
+	# iframe 안의 .article을 찾는다.
+    article = d.find_element(By.CSS_SELECTOR, ".article")
+    print(article.text)
+    
+    time.sleep(2)
+
+except Exception as e:
+    print(e)
+finally:
+    d.close()
+    d.quit()
+```
+
+<br>
+
+### 실습 - 중고나라 검색(제목, 작성자, 작성일)
+* 입력한 값을 검색해서 엑셀에 삽입하기
+``` python
+# 1~5페이지까지 게시글 제목, 작성자, 작성일 
+# 엑셀에 삽입하기
+
+from openpyxl import Workbook
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+import requests
+import time
+
+
+# 1. chromedriver의 경로
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver"
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service)
+
+# 7. Workbook
+wb = Workbook()
+ws = wb.active
+
+try:
+    # 2. 중고나라 검색창에서 검색
+    d.get("https://cafe.naver.com/joonggonara")
+    elem = d.find_element(By.CSS_SELECTOR, "#topLayerQueryInput")
+
+	# 3. 입력한 값을 검색
+    elem.send_keys(input())
+    elem.send_keys(Keys.RETURN)
+    
+    time.sleep(1)
+
+    # 4. iframe
+    iframe = d.find_element(By.CSS_SELECTOR, "#cafe_main") # id가 cafe_main인 태그를 찾아 iframe에 저장
+    d.switch_to.frame(iframe) # iframe으로 이동
+
+	# 6. 페이징
+    for i in range(1, 6):
+        element = d.find_elements(By.CSS_SELECTOR, ".article-board.m-tcol-c > table > tbody > tr")
+
+		# 5. 제목, 작성자, 날짜, 조회수 가져오기
+        for e in element:
+            title = e.find_element(By.CSS_SELECTOR, ".article").text.strip()
+            nick = e.find_element(By.CSS_SELECTOR, ".p-nick").text.strip()
+            date = e.find_element(By.CSS_SELECTOR, ".td_date").text.strip()
+            view = e.find_element(By.CSS_SELECTOR, ".td_view").text.strip()
+
+            # print("==========================", i)
+            # print(title)
+            # print(nick)
+            # print(date)
+            # print(view)
+            ws.append([title, nick, date, view])
+            
+        page_area = d.find_element(By.CSS_SELECTOR, ".prev-next")
+        page = page_area.find_element(By.LINK_TEXT, str(i))
+        page.click()
+        
+        time.sleep(1)
+    
+except Exception as e:
+    print(e)
+finally:
+    time.sleep(1)
+    d.close()
+    d.quit()
+    # 8. 엑셀로 저장하기
+    wb.save("jungo.xlsx")
 ```
