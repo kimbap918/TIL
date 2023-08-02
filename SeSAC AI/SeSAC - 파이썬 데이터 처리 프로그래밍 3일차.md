@@ -21,9 +21,11 @@
 ![](https://i.imgur.com/KQZusL3.png)
 
 <br>
+
 ### API
 https://ko.wikipedia.org/wiki/API
 <br>
+
 ### Fake API
 
 [JSONPlaceholder - Free Fake REST API](https://jsonplaceholder.typicode.com/)
@@ -116,8 +118,8 @@ for item in data["response"]["body"]["items"]["item"]:
 * 이번 예보기간 제6호 태풍(카눈)의 이동경로에 따라 강수구역과 시점이 변경될 가능성이 있으며, 내륙을 중심으로 소나기가 내릴 가능성이 있으니, 앞으로 발표되는 최신 예보를 참고하기 바랍니다.
 ```
 <br>
-### Selenium
 
+### Selenium
 - 동적 웹을 분석하기 위해 사용하는 도구
 
 ```python
@@ -273,6 +275,7 @@ finally:
 <br>
 ### 실습 - 멜론 차트 Selenium으로 수집하기
 * 좋아요(like) 수집하고 콤마(,) 제거 후 int형으로 바꿀것
+
 ```python
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
