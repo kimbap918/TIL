@@ -373,3 +373,66 @@ finally:
 
 ```
 
+
+<br>
+2. song 테이블에 singer 테이블의 id에 해당하는 singer_id, title, album 삽입하기
+``` python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from openpyxl import Workbook
+import pymysql
+import requests
+import time
+import traceback # 에러 정보를 가지고있는 라이브러리
+
+# INSERT INTO 테이블2 (singer_id, song, title)
+# SELECT id, '노래명', '제목' -- 
+# FROM 테이블1;
+
+# DB
+db = pymysql.connect(host="localhost", port=3306, user="root", password="jen401018&", db="sba")
+cursor = db.cursor()
+
+# webdriver options
+options = webdriver.ChromeOptions()
+options.add_argument("--user-data-dir=/Users/sopung/Desktop/MyChrome")
+
+# path
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver"
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service, options=options)
+
+try:
+    # 멜론 차트 top100
+    d.get("https://www.melon.com/chart/index.htm")
+
+    # 차트 top100영역
+    area = d.find_element(By.CSS_SELECTOR, ".service_list_song")
+    elem = area.find_elements(By.CSS_SELECTOR, "tbody > tr")
+    singer_list = []
+
+    # 가수 목록
+    for e in elem:
+        singer = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank02").text.strip()
+        title = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank01").text.strip().replace("'", '"')
+        album = e.find_element(By.CSS_SELECTOR, ".ellipsis.rank03").text.strip().replace("'", '"')
+
+		# singer id에 해당하는 제목, 앨범 넣기
+        sql = f"""
+            insert into song
+            values(NULL, (select id from singer where name = '{singer}'), '{title}', '{album}');
+        """
+        cursor.execute(sql)
+        
+except Exception as e:
+    traceback.print_exc()
+finally:
+    d.close()
+    d.quit()
+    db.commit()
+    db.close()
+
+```
