@@ -62,7 +62,9 @@ finally:
 
 ![](https://i.imgur.com/oXLOQDL.png)
 
+
 div가 겹겹으로 감싸져 있는것을 확인할 수 있다.
+
 ![](https://i.imgur.com/d3053xv.png)
 
 여기서 인스타그램의 메뉴 아이콘을 쉽게 찾으려면 아래와 같은 접근법이 필요하다.
@@ -375,6 +377,7 @@ finally:
 
 
 <br>
+
 2. song 테이블에 singer 테이블의 id에 해당하는 singer_id, title, album 삽입하기
 ``` python
 from selenium import webdriver
