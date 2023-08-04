@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8f88bc8c9996957f",
+        "id": "60cc58dd1e0ed0c7",
         "type": "tabs",
         "children": [
           {
-            "id": "db735001471e07de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6f0f1dff82450c4a",
+            "id": "1118dd1fd1772485",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md",
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md",
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md"
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차.md"
               }
             }
           }
@@ -159,12 +147,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "db735001471e07de",
+  "active": "1118dd1fd1772485",
   "lastOpenFiles": [
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차.md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
     "백준/Bronze/25591. 푸앙이와 종윤이/푸앙이와 종윤이.py",
     "백준/Bronze/25591. 푸앙이와 종윤이/README.md",
     "백준/Bronze/25591. 푸앙이와 종윤이",

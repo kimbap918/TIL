@@ -439,3 +439,118 @@ finally:
     db.close()
 
 ```
+
+<br>
+
+3. 인스타그램에서 가수명으로 검색한 후 인증마크 달려있는 계정의 follower가져와서 DB에 업데이트하기
+``` python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from openpyxl import Workbook
+import pymysql
+import requests
+import time
+import traceback # 에러 정보를 가지고있는 라이브러리
+
+# DB
+db = pymysql.connect(host="localhost", port=3306, user="root", password="jen401018&", db="sba")
+cursor = db.cursor()
+
+# webdriver options
+options = webdriver.ChromeOptions()
+options.add_argument("--user-data-dir=/Users/sopung/Desktop/MyChrome")
+
+# path
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver"
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service, options=options)
+
+try:
+    # 인스타그램
+    d.get("https://www.instagram.com/")
+    
+    sql = """
+        SELECT name
+        FROM singer;
+    """
+
+    cursor.execute(sql)
+    result = cursor.fetchmany(size=100)
+    first = 0 # 횟수에 따른 동작을 달리하기위해 생성한 변수
+
+	# 불러온 가수 목록(튜플)
+    for data in result:
+	    # 튜플 안에서 스트링을 가져온다(2중 for문)
+        for text in data:       
+            singer = text
+            buttons = d.find_elements(By.CSS_SELECTOR, ".xvy4d1p")
+            search_button = buttons[2] # 키 전달
+
+            # 검색버튼 클릭 부분, 2번째 실행 이후로는 실행하지 않는다.
+            if first < 2:
+                ac = ActionChains(d)
+                ac.move_to_element(search_button).click()
+                ac.pause(1)
+                ac.perform() 
+                time.sleep(1)
+                first += 1
+                
+            # 검색창
+            elem = d.find_element(By.CSS_SELECTOR, ".x7xwk5j")
+            ac.reset_actions()
+            ac.move_to_element(elem).click()
+            ac.send_keys(singer) # 가수명을 넣어서 검색
+            ac.pause(1)
+            ac.perform()
+
+            time.sleep(1.5)
+
+            # 인증 마크
+            marks = d.find_elements(By.CSS_SELECTOR, ".x9f619.xjbqb8w.x1rg5ohu.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.xsgj6o6.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1")
+
+            # 마크가 있으면
+            if marks:
+	            # 마크를 클릭
+                ac.move_to_element(marks[0])
+                ac.click()
+                ac.perform()
+                
+                time.sleep(2)
+
+				# 팔로워를 가져옴
+                follows = d.find_elements(By.CSS_SELECTOR, "._ac2a > span")
+                follower = follows[1].text
+                print(follower)
+
+				# 2번째 이후에는 검색창이 띄워져 있으므로 검색창 내용만 지운다.
+                if first == 2:
+                    elem.clear()  
+                    ac.pause(0.5)
+                
+                # UPDATE [테이블] SET [열] = '변경할값' WHERE [조건]
+                # 가수명으로 업데이트
+                sql = f"""
+                    update singer 
+                    set follower = '{follower}' where name = '{singer}'
+                """
+                cursor.execute(sql)
+                
+            # 마크가 없으면 검색창의 내용만 지운다.
+            else:
+                elem.clear()
+                ac.pause(0.5)
+
+                
+
+        
+except Exception as e:
+    traceback.print_exc()
+finally:
+    d.close()
+    d.quit()
+    db.commit()
+    db.close()
+```

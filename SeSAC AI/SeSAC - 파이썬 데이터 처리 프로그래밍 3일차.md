@@ -535,3 +535,101 @@ finally:
     # 8. 엑셀로 저장하기
     wb.save("jungo.xlsx")
 ```
+
+
+<br>
+
+``` python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from openpyxl import Workbook
+import pymysql
+import requests
+import time
+import traceback # 에러 정보를 가지고있는 라이브러리
+
+# DB
+db = pymysql.connect(host="localhost", port=3306, user="root", password="jen401018&", db="sba")
+cursor = db.cursor()
+
+# webdriver options
+options = webdriver.ChromeOptions()
+options.add_argument("--user-data-dir=/Users/sopung/Desktop/MyChrome")
+
+# path
+path = "/Users/sopung/Downloads/chromedriver_mac_arm64/chromedriver"
+service = Service(executable_path=path)
+d = webdriver.Chrome(service=service, options=options)
+
+try:
+    # 인스타그램
+    d.get("https://www.instagram.com/")
+    
+    sql = """
+        SELECT name
+        FROM singer;
+    """
+
+    cursor.execute(sql)
+    result = cursor.fetchmany(size=100)
+
+    for data in result:
+        for text in data:
+            singer = text
+            
+            buttons = d.find_elements(By.CSS_SELECTOR, ".xvy4d1p")
+            search_button = buttons[2] # 키 전달
+
+            # 검색버튼
+            ac = ActionChains(d)
+            ac.move_to_element(search_button).click()
+            ac.pause(1)
+            ac.perform() 
+
+            time.sleep(1.5)
+
+            # 검색창
+            elem = d.find_element(By.CSS_SELECTOR, ".x7xwk5j")
+            ac.reset_actions()
+            ac.move_to_element(elem).click()
+            ac.send_keys(singer)
+            ac.pause(1)
+            ac.perform()
+
+            time.sleep(1.5)
+
+            # 인증 마크
+            marks = d.find_elements(By.CSS_SELECTOR, ".x9f619.xjbqb8w.x1rg5ohu.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.xsgj6o6.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1")
+
+            if marks:
+                ac.move_to_element(marks[0])
+                ac.click()
+                ac.perform()
+                
+                time.sleep(3)
+
+                follows = d.find_elements(By.CSS_SELECTOR, "._ac2a > span")
+                print(follows[1].text)
+
+                time.sleep(5)
+            else:
+                
+
+     # diff_icon = diff_icon.get_attribute('title')
+    # tmp = "x9f619 xjbqb8w x1rg5ohu x168nmei x13lgxp2 x5pf9jr xo71vjh xsgj6o6 x1uhb9sk x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1"
+    # tmp = tmp.split(" ")
+    # tmp = "." + ".".join(tmp)
+
+        
+except Exception as e:
+    traceback.print_exc()
+finally:
+    d.close()
+    d.quit()
+    db.commit()
+    db.close()
+
+```
