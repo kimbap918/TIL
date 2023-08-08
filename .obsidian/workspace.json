@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+                "file": "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+                "file": "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+                "file": "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md"
+                "file": "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md"
               }
             }
           }
@@ -149,6 +149,12 @@
   },
   "active": "1118dd1fd1772485",
   "lastOpenFiles": [
+    "백준/Bronze/25640. MBTI/README.md",
+    "백준/Bronze/25640. MBTI/MBTI.py",
+    "백준/Bronze/25640. MBTI",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+    "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
+    "SeSAC - 프로젝트 소통 역량 강화.md",
     "백준/Bronze/25628. 햄버거 만들기/햄버거 만들기.py",
     "백준/Bronze/25628. 햄버거 만들기/README.md",
     "백준/Bronze/25628. 햄버거 만들기",
@@ -163,7 +169,6 @@
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
     "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
@@ -178,14 +183,9 @@
     "연습장/test5.py",
     "백준/Bronze/25494. 단순한 문제 （Small）/단순한 문제 （Small）.py",
     "백준/Bronze/25494. 단순한 문제 （Small）/README.md",
-    "백준/Bronze/25494. 단순한 문제 （Small）",
-    "백준/Bronze/25591. 푸앙이와 종윤이/푸앙이와 종윤이.py",
     "백준/Bronze/25591. 푸앙이와 종윤이/README.md",
-    "백준/Bronze/25591. 푸앙이와 종윤이",
     "SeSAC - 파이썬 데이터 처리 프로그래밍 4일차.md",
     "Untitled 1.canvas",
-    "Untitled.canvas",
-    "SeSAC - 파이썬 데이터 처리 프로그래밍 3일차 f7fb0c62b07a45f3a88f6f3aca2382eb/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-02_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_10.24.56.png.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차~.md"
+    "Untitled.canvas"
   ]
 }
