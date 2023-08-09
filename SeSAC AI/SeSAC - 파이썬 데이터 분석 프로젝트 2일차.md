@@ -93,8 +93,13 @@ In [2] : a.[Tab] # a.를 입력하고 tab을 누른다.
 ```
 8. 덕 타이핑
 https://nesoy.github.io/articles/2018-02/Duck-Typing
+
+<br>
+
 9. 파이썬의 연산자
 https://dingrr.com/blog/post/python-103-%EC%97%B0%EC%82%B0%EC%9E%90%EC%9D%98-8%EA%B0%80%EC%A7%80-%EC%A2%85%EB%A5%98
+
+<br>
 
 ### 파이썬의 자료형
 스칼라 자료형
@@ -107,6 +112,7 @@ float
 bool
 int
 ```
+
 1. 숫자 자료형
 숫자를 위한 주요 자료형은 `int`, `float`다. int는 임의의 숫자를 저장할 수 있고 부동소수점 숫자는 float 자료형으로 나타낸다.
 ``` python
@@ -123,6 +129,9 @@ b = '0123456789'
 ```
 (참고) f-string
 https://blockdmask.tistory.com/429
+
+<br>
+
 (참고) 바이트와 유니코드
 https://wikidocs.net/194282
 
