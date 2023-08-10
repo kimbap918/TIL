@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md"
+                "file": "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md"
               }
             }
           }
@@ -149,18 +149,26 @@
   },
   "active": "9ae211e8bcefa24d",
   "lastOpenFiles": [
-    "백준/Bronze/28235. 코드마스터 2023/코드마스터 2023.py",
-    "백준/Bronze/28235. 코드마스터 2023/README.md",
-    "백준/Bronze/28235. 코드마스터 2023",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
+    "백준/Bronze/28113. 정보섬의 대중교통/정보섬의 대중교통.py",
+    "백준/Bronze/28113. 정보섬의 대중교통/README.md",
+    "백준/Bronze/28113. 정보섬의 대중교통",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
     "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 프로젝트 1일차 intro.md",
-    "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
-    "SeSAC AI/SeSAC - 데이터 분석 기초 2일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
     "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
     "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
+    "SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
+    "백준/Bronze/28235. 코드마스터 2023/코드마스터 2023.py",
+    "백준/Bronze/28235. 코드마스터 2023/README.md",
+    "백준/Bronze/28235. 코드마스터 2023",
+    "SeSAC AI/SeSAC - 파이썬 데이터 프로젝트 1일차 intro.md",
+    "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
+    "SeSAC AI/SeSAC - 데이터 분석 기초 2일차.md",
     "연습장/test6.py",
     "SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
     "백준/Bronze/25640. MBTI/README.md",
@@ -174,17 +182,9 @@
     "백준/Bronze/25625. 샤틀버스/README.md",
     "백준/Bronze/25625. 샤틀버스",
     "백준/Bronze/21591. Laptop Sticker/README.md",
-    "백준/Bronze/21591. Laptop Sticker/Laptop Sticker.py",
-    "백준/Bronze/21591. Laptop Sticker",
     "SeSAC - 파이썬 데이터 프로젝트 1일차 intro.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
     "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
     "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
-    "SeSAC AI/SeSAC - Pandas(1) pandas와 시리즈, 데이터프레임.md",
-    "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
-    "SeSAC AI/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
-    "SeSAC AI/SeSAC - 열에 있는 값을 행으로 내리는 방법.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
