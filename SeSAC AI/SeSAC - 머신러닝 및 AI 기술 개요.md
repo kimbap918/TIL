@@ -34,11 +34,18 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 ### 알고리즘의 분류
 수학적인 방법에 따라 4가지로 분류
 * Similarity-Based Learning : 유사성 기반 
+
 -> 누구와 얼마나 비슷한지
 -> 두 숫자가 있다면 그 두 숫자를 기하학적으로 두 숫자의 가까운 거리로 유사성을 측정
 * probablity-Based Learning : 확률 기반
-* Information-Based Learning : 여기서 가장 유명한게 Decision Tree
+* Information-Based Learning 
+
+-> 여기서 가장 유명한게 Decision Tree
+
 * Error-Based Learning : 오차 베이스, 틀린것을 측정해서 오차가 줄어들때 까지 공부하는것, 딥러닝 
+
+-> 내가 가지고 있는 데이터를 가장 잘 설명하는 직선
+-> 원본 데이터와 가장 오차가 작은 직선
 
 <br>
 
@@ -52,11 +59,14 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 -> 사진을 제시하고, 라벨이 없는 데이터를 비슷한 특징끼리 군집화 하여 새로운 데이터에 대한 결과를 예측, 라벨이 없음
 
 
+<br>
+
 ### Supervised Learning
+지도학습은 다시 다음에 따라 나눠진다.
 * Regression(회귀) : 선형적, 연속적인 수치를 예측할때
-* 
 -> Linear, Logistic, Decision Tree
 * classification(분류) : 이상값들을 예측할때 
+-> KNeighbors
 
 <br>
 
@@ -661,6 +671,14 @@ import numpy as np
 ```
 
 ``` python
+# 농어의 무게를 입력하면 길이 예측해보기 -> 회귀모델
+# k-최근접 이웃 회귀의 한계 : 내가 가지고 있는 데이터가 한정적인데 새롭게 들어오는 데이터를 예측하기가 어렵다. 예를들어 여기 리스트에서 55cm의 농어라면?
+# -> 선형 회귀(Linear)로 해결
+
+# 선형회귀는 곡선이 유용해 보이는데 왜 직선형일까?
+# 차원이 높아지면 우리는 볼수없기 때문에 
+
+# 농어의 길이
 perch_length = np.array(
     [8.4, 13.7, 15.0, 16.2, 17.4, 18.0, 18.7, 19.0, 19.6, 20.0,
      21.0, 21.0, 21.0, 21.3, 22.0, 22.0, 22.0, 22.0, 22.0, 22.5,
@@ -669,6 +687,7 @@ perch_length = np.array(
      36.5, 36.0, 37.0, 37.0, 39.0, 39.0, 39.0, 40.0, 40.0, 40.0,
      40.0, 42.0, 43.0, 43.0, 43.5, 44.0]
      )
+# 농어의 무게
 perch_weight = np.array(
     [5.9, 32.0, 40.0, 51.5, 70.0, 100.0, 78.0, 80.0, 85.0, 85.0,
      110.0, 115.0, 125.0, 130.0, 120.0, 120.0, 130.0, 135.0, 110.0,
@@ -768,6 +787,7 @@ print(knr.score(test_input, test_target))
 ```
 
 <br>
+
 ### 확인문제
 ``` python
 # k-최근접 이웃 회귀 객체를 생성
