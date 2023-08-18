@@ -1,9 +1,5 @@
 2023.08.18
 
-깃허브 페이지 내에 ipynb파일 1-3.ipynb 따라해보기
-
-https://github.com/rickiepark/hg-mldl
-
 <br>
 
 신경정보처리 시스템학회
@@ -62,9 +58,13 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 -> Linear, Logistic, Decision Tree
 * classification(분류) : 이상값들을 예측할때 
 
+<br>
 
+깃허브 페이지 내에 ipynb파일 따라해보기
 
+https://github.com/rickiepark/hg-mldl
 
+<br>
 
 ## 생선 분류 문제(1-3)
 
