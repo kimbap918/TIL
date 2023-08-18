@@ -38,6 +38,7 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 * Similarity-Based Learning : 유사성 기반 
 
 -> 누구와 얼마나 비슷한지
+
 -> 두 숫자가 있다면 그 두 숫자를 기하학적으로 두 숫자의 가까운 거리로 유사성을 측정
 * probablity-Based Learning : 확률 기반
 * Information-Based Learning 
@@ -47,6 +48,7 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 * Error-Based Learning : 오차 베이스, 틀린것을 측정해서 오차가 줄어들때 까지 공부하는것, 딥러닝 
 
 -> 내가 가지고 있는 데이터를 가장 잘 설명하는 직선
+
 -> 원본 데이터와 가장 오차가 작은 직선
 
 <br>
