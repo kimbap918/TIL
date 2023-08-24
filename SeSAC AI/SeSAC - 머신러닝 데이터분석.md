@@ -405,7 +405,7 @@ https://m.blog.naver.com/alwaysneoi/100135882596
 
 ### 평균 제곱근 오차, Root Mean Square Error, RMSE
 
- $\sqrt{\frac{1}{n}\sum_{i=1}^{n}((y_{i}-\widehat{y_{i}})^2)}$
+ $$\sqrt{\frac{1}{n}\sum_{i=1}^{n}((y_{i}-\widehat{y_{i}})^2)}$$
 
 1. $n$: 데이터 포인트의 개수를 나타낸다.
 2. $y_{i}$: 실제 관측된 값(데이터 포인트), 여기서 $i$는 데이터 포인트의 인덱스를 나타낸다.
@@ -418,22 +418,25 @@ https://m.blog.naver.com/alwaysneoi/100135882596
 <br>
 
 ### 평균 제곱 오차, Mean Square Error, MSE
+
 * 선형회귀 모델의 예측 성능 평가 지표
 * RMSE에 제곱근을 취하지 않은것
 
-$\frac{1}{n}\sum_{i=1}^{n}((y_{i}-\widehat{y_{i}})^2)$
+$$\frac{1}{n}\sum_{i=1}^{n}((y_{i}-\widehat{y_{i}})^2)$$
+
 
 <br>
 
 1. 릿지 (Ridge) 회귀: 
-* 목적 함수: $\text{MSE} + \alpha \sum_{j=1}^{p} \beta_j^2$
+* 목적 함수: 
+$$\text{MSE} + \alpha \sum_{j=1}^{p} \beta_j^2$$
 
 여기서 $\text{MSE}$는 평균 제곱 오차(Mean Squared Error)를 나타내고, $\beta_j$는 모델의 가중치(weight)입니다. $\alpha$는 정규화 강도를 조절하는 매개변수로, 릿지 회귀에서는 이 값이 커질수록 가중치의 크기를 줄이는 역할을 한다.
 
 <br>
 
 2. 라쏘 (Lasso) 회귀: 
-* 목적 함수: $\text{MSE} + \alpha \sum_{j=1}^{p} |\beta_j|$
+* 목적 함수: $$\text{MSE} + \alpha \sum_{j=1}^{p} |\beta_j|$$
 
  마찬가지로 $\text{MSE}$는 평균 제곱 오차이고, $\beta_j$는 가중치다. 라쏘 회귀에서는 가중치의 절댓값을 사용하며, $\alpha$ 역시 정규화 강도를 조절하는 매개변수로 정규화 강도를 조절한다. 라쏘는 가중치를 0으로 만들 수 있어 변수 선택의 역할을 하며, 특성 선택에 유용하다.
 
@@ -588,7 +591,7 @@ print(np.sum(lasso.coef_ == 0))
 
 https://ko.wikipedia.org/wiki/%EB%A1%9C%EC%A7%80%EC%8A%A4%ED%8B%B1_%ED%95%A8%EC%88%98
 
-$f(z) = \frac{1}{1 + e^{-z}}$
+$$f(z) = \frac{1}{1 + e^{-z}}$$
 
 * 이 로지스틱 함수의 z 자리에 선형회귀식을 넣는다
 * 직선 함수를 z자리에 넣으면 곡선으로 바뀐다
@@ -597,7 +600,7 @@ $f(z) = \frac{1}{1 + e^{-z}}$
 <br>
 
 ### 로지스틱 함수의 Cost function
-$cost F = -(Plog_{e}\widehat{P})$
+$$cost F = -(Plog_{e}\widehat{P})$$
 
 - $P$: 실제 관측값을 나타낸다. 이 값은 0 또는 1일 수 있으며, 각 데이터 포인트의 실제 클래스를 나타낸다.
 - $\widehat{P}$: 모델의 예측 확률을 나타낸다. 이 값은 로지스틱 함수를 통해 계산된 예측 확률이며, 0과 1 사이의 값이다.
