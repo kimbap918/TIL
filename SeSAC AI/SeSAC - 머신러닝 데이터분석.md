@@ -431,7 +431,7 @@ $$\frac{1}{n}\sum_{i=1}^{n}((y_{i}-\widehat{y_{i}})^2)$$
 * 목적 함수: 
 $$\text{MSE} + \alpha \sum_{j=1}^{p} \beta_j^2$$
 
-여기서 $\text{MSE}$는 평균 제곱 오차(Mean Squared Error)를 나타내고, $\beta_j$는 모델의 가중치(weight)입니다. $\alpha$는 정규화 강도를 조절하는 매개변수로, 릿지 회귀에서는 이 값이 커질수록 가중치의 크기를 줄이는 역할을 한다.
+여기서 $\text{MSE}$는 평균 제곱 오차(Mean Squared Error)를 나타내고, $\beta_j$는 모델의 가중치(weight)다. $\alpha$는 정규화 강도를 조절하는 매개변수로, 릿지 회귀에서는 이 값이 커질수록 가중치의 크기를 줄이는 역할을 한다.
 
 <br>
 

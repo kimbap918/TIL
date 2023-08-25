@@ -30,6 +30,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d2fac7816fe43a1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC - 머신러닝 데이터분석.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -164,6 +176,12 @@
   },
   "active": "404a9c1710cf4c76",
   "lastOpenFiles": [
+    "백준/Bronze/25893. Majestic 10/README.md",
+    "백준/Bronze/25893. Majestic 10/Majestic 10.py",
+    "백준/Bronze/25893. Majestic 10",
+    "SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
     "백준/Bronze/28097. 모범생 포닉스/모범생 포닉스.py",
     "백준/Bronze/28097. 모범생 포닉스/README.md",
     "백준/Bronze/28097. 모범생 포닉스",
@@ -173,9 +191,6 @@
     "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
     "Untitled.canvas",
     "Untitled 1.canvas",
-    "SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
     "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
     "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
@@ -198,9 +213,6 @@
     "SeSAC AI/news-2.ipynb",
     "news-2.ipynb",
     "연습장/__pycache__/streamlit.cpython-39.pyc",
-    "연습장/streamlit.py",
-    "백준/Bronze/20833. Kuber/Kuber.py",
-    "백준/Bronze/20833. Kuber",
-    "백준/Bronze/10998. A×B/A×B.py"
+    "연습장/streamlit.py"
   ]
 }
