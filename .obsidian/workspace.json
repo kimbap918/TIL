@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md"
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md"
               }
             }
           }
@@ -171,6 +171,11 @@
   },
   "active": "f65a1e0d52237d3e",
   "lastOpenFiles": [
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
     "백준/Bronze/8710. Koszykarz/README.md",
     "백준/Bronze/8710. Koszykarz/Koszykarz.py",
     "백준/Bronze/8710. Koszykarz",
@@ -179,13 +184,8 @@
     "백준/Bronze/25600. Triathlon",
     "readme.md",
     "SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
     "Untitled.md",
     "SeSAC - 머신러닝 데이터분석(3).md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
