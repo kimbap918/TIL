@@ -338,7 +338,6 @@ kn.score(test_input, test_target)
 ```
 
 <br>
-(2-1)
 
 ### numpy
 ``` python

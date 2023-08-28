@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "97a7197094f590fe",
+        "id": "46e06f1fd4bf269b",
         "type": "tabs",
         "children": [
           {
-            "id": "3816ec5ee50e4bc2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "404a9c1710cf4c76",
+            "id": "034798d8d14f23e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,15 +20,23 @@
             }
           },
           {
-            "id": "d2fac7816fe43a1f",
+            "id": "f65a1e0d52237d3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC - 머신러닝 데이터분석.md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "f262d67a699cbbf8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -94,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "dc4d8fbf2ccf6e0f",
@@ -111,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석.md"
+                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md"
               }
             }
           }
@@ -174,24 +169,37 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "404a9c1710cf4c76",
+  "active": "f65a1e0d52237d3e",
   "lastOpenFiles": [
+    "백준/Bronze/8710. Koszykarz/README.md",
+    "백준/Bronze/8710. Koszykarz/Koszykarz.py",
+    "백준/Bronze/8710. Koszykarz",
+    "백준/Bronze/25600. Triathlon/README.md",
+    "백준/Bronze/25600. Triathlon/Triathlon.py",
+    "백준/Bronze/25600. Triathlon",
+    "readme.md",
+    "SeSAC - 머신러닝 데이터분석(2).md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
+    "Untitled.md",
+    "SeSAC - 머신러닝 데이터분석(3).md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3).md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "2023-08-28.md",
     "백준/Bronze/25893. Majestic 10/README.md",
     "백준/Bronze/25893. Majestic 10/Majestic 10.py",
     "백준/Bronze/25893. Majestic 10",
-    "SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
     "백준/Bronze/28097. 모범생 포닉스/모범생 포닉스.py",
     "백준/Bronze/28097. 모범생 포닉스/README.md",
     "백준/Bronze/28097. 모범생 포닉스",
     "백준/Bronze/20839. Betygsättning/README.md",
     "백준/Bronze/20839. Betygsättning/Betygsättning.py",
     "백준/Bronze/20839. Betygsättning",
-    "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
-    "Untitled.canvas",
-    "Untitled 1.canvas",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
     "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
     "SeSAC AI/SeSAC - 데이터 분석 기초 2일차.md",
@@ -201,18 +209,6 @@
     "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
     "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
     "SeSAC AI/SeSAC - Pandas(1) pandas와 시리즈, 데이터프레임.md",
-    "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC AI/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
-    "SeSAC AI/SeSAC - 열에 있는 값을 행으로 내리는 방법.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
-    "SeSAC AI/news-2.ipynb",
-    "news-2.ipynb",
-    "연습장/__pycache__/streamlit.cpython-39.pyc",
-    "연습장/streamlit.py"
+    "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md"
   ]
 }
