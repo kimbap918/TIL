@@ -82,15 +82,19 @@ https://jxo21.tistory.com/17
 https://sumniya.tistory.com/26
 
 ### 정확도(Accuracy)
+
 가장 기본적인 분류에서의 평가척도
 
 <br>
 
 ### 정밀도(precision) 
+
 모델이 "Positive" 라고 예측한 샘플 중에서 실제로 실제 클래스가 "Positive"인 샘플의 비율, 모델이 양성 클래스로 예측한 것 중 얼마나 정확한지를 측정
 
 <br>
+
 ### 재현률(recall) 
+
 실제로 "Positive" 인 샘플 중에서 모델이 "Positive"를 찾아낸 숫자
 
 |      |  o, o, o, o, o, o, o, o, x, x    |   정확도(A)   | 정밀도(P)     |   재현률(R)  |
@@ -202,6 +206,7 @@ $Gini(D)=1−∑_{i=1}^c​p_{i}^2​$
 - $p_{i}$​는 데이터 집합 내에서 클래스 $i$에 속하는 샘플의 비율을 나타낸다.
 
 예를 들어, 레드와인이 4개, 화이트와인이 6개라면?
+
 $p_{red}=\frac{4}{10} =0.4$  및 $p_{white}=\frac{6}{10}=0.6$
 
 $Gini(D)=1−(p_{red}^2​+p_{white}^2​)$
