@@ -20,6 +20,19 @@ https://www.geogebra.org/m/prktwpwp
 
 <br>
 
+XGBoost
+
+https://docs.aws.amazon.com/ko_kr/sagemaker/latest/dg/xgboost.html
+
+<br>
+
+XAI(eXplainable Artificial Intelligence)
+
+https://www.irsglobal.com/bbs/rwdboard/15501
+
+<br>
+
+
 
 ## 확률적 경사 하강법(Stochastic Gradient Descent)
 점진적 기울기 접근법
@@ -194,11 +207,22 @@ https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-4-%EA%B2%B
 Entropy(엔트로피)는 정보 이론에서 유래한 개념으로, 어떤 확률 분포의 불확실성을 나타내는 척도, 엔트로피가 높을수록 데이터가 더 다양하게 혼합되어 있고 불확실성이 높다는 것을 의미한다
 
 
+$$InformationGain=Entropy(parent)−∑_{i}\frac{​N}{Ni}​​×Entropy(child_{i}​)$$
+
+여기서,
+
+- $Entropy(parent)$는 부모 노드의 엔트로피를 나타낸다.
+- $N_{i}​$는 i번째 자식 노드에 속하는 데이터의 개수
+- $N$은 전체 데이터의 개수
+- $Entropy(child_{i}​)$는 i번째 자식 노드의 엔트로피를 나타냅니다.
+
+<br>
+
 * Gini 불순도 : Gini Impurity
 
 주어진 데이터 집합 내의 다양한 클래스의 분포를 측정하여 얼마나 '순수한' 상태인지를 나타내는 지표
 
-$Gini(D)=1−∑_{i=1}^c​p_{i}^2​$
+$$Gini(D)=1−∑_{i=1}^c​p_{i}^2​$$
 
 여기서,
 - $D$는 데이터 집합이며, 이 집합은 다양한 클래스의 샘플을 포함한다.
@@ -396,6 +420,16 @@ plt.show()
 <br>
 
 ## 교차 검증과 그리드 서치
+교차검증이 어떻게 데이터를 뻥튀기 할까?
+
+> 작은 차이가 명품을 만든다. - 필립스의 광고
+
+교차검증
+1. 데이터 분할: 데이터셋을 일정한 수의 분할(폴드)로 나눈다. 예를 들어, 5000개의 데이터가 있다면 1000개씩 5개의 폴드로 나눌 수 있다.
+2. 모델 훈련과 평가: 분할된 데이터 중 일부(예를 들어, 4개의 폴드)를 선택하여 훈련 데이터로 사용하고, 나머지 1개의 폴드를 검증 데이터로 사용한다. 이때 검증 데이터는 모델의 성능을 평가하는데 사용된다.
+3. 검증 성능 평가: 선택한 폴드를 검증 데이터로 사용해 모델을 훈련하고, 나머지 1개 폴드를 검증 데이터로 사용해 모델의 성능을 평가한다. 이렇게 하여 모델이 새로운 데이터에 얼마나 잘 일반화되는지를 평가한다.
+4. 반복: 위의 과정을 각 폴드에 대해 번갈아가며 반복한다. 모든 폴드에 대해 각각 한 번씩 검증 데이터로 사용하면서 모델을 훈련하고 평가한다.
+5. 평균 성능 계산: 모든 반복을 마치면 각 검증 데이터에서 얻은 성능 지표들을 평균내어 최종 성능 평가 지표를 계산한다. 이로서 모델의 일반화 성능을 더 신뢰할 수 있는 값으로 추정할 수 있다.
 
 <br>
 
@@ -415,14 +449,19 @@ from sklearn.model_selection import train_test_split
 train_input, test_input, train_target, test_target = train_test_split(data, target, test_size=0.2, random_state=42)
 ```
 ``` python
+# 트레이닝 데이터를 다시 쪼갠다. -> 검증 데이터를 얻기 위해
 sub_input, val_input, sub_target, val_target = train_test_split(train_input, train_target, test_size=0.2, random_state=42)
 ```
 ``` python
 print(sub_input.shape, val_input.shape)
+
+# (4157, 3) (1040, 3)
 ```
 ``` python
+# 패키지.라이브러리 import 클래스 
 from sklearn.tree import DecisionTreeClassifier
 
+# dt 인스턴스
 dt = DecisionTreeClassifier(random_state=42)
 dt.fit(sub_input, sub_target)
 
@@ -439,6 +478,8 @@ print(dt.score(val_input, val_target))
 ``` python
 from sklearn.model_selection import cross_validate
 
+# cross_validate는 반드시 하나의 decision tree를 줘야한다.
+# dt = 교차검증을 수행할 모델
 scores = cross_validate(dt, train_input, train_target)
 print(scores)
 
@@ -454,6 +495,8 @@ print(np.mean(scores['test_score']))
 ``` python
 from sklearn.model_selection import StratifiedKFold
 
+# cv = StratifiedKFold 교차 검증을 위해 데이터를 계층적으로 나누어 균등한 클래스 분포를 유지
+# 기본적으로 적용되나, 가독성을 높이기 위해 적는것을 추천
 scores = cross_validate(dt, train_input, train_target, cv=StratifiedKFold())
 print(np.mean(scores['test_score']))
 
@@ -470,11 +513,14 @@ print(np.mean(scores['test_score']))
 
 ### 하이퍼파라미터 튜닝
 ``` python
+# cross validation
 from sklearn.model_selection import GridSearchCV
 
 params = {'min_impurity_decrease': [0.0001, 0.0002, 0.0003, 0.0004, 0.0005]}
 ```
 ``` python
+# number of jobs = -1
+# 모든 프로세스의 모든 코어를 사용
 gs = GridSearchCV(DecisionTreeClassifier(random_state=42), params, n_jobs=-1)
 ```
 ``` python
@@ -484,17 +530,20 @@ gs.fit(train_input, train_target)
 #                                                    0.0004, 0.0005]})
 ```
 ``` python
+# 가장 성능이 좋은것 측정
 dt = gs.best_estimator_
 print(dt.score(train_input, train_target))
 
 # 0.9615162593804117
 ```
 ``` python
+# 0.0001일때 가장 좋은 결과를 나타냈다
 print(gs.best_params_)
 
 # {'min_impurity_decrease': 0.0001}
 ```
 ``` python
+# 0.0001, 0.0002, 0.0003, 0.0004, 0.0005
 print(gs.cv_results_['mean_test_score'])
 
 # [0.86819297 0.86453617 0.86492226 0.86780891 0.86761605]
@@ -506,12 +555,17 @@ print(gs.cv_results_['params'][best_index])
 # {'min_impurity_decrease': 0.0001}
 ```
 ``` python
+# 0.0001부터 0.001까지 0.0001씩 증가
+# 5부터 19까지 1씩 증가
+# 쪼개야할 노드에 남아있는 샘플의 개수, min_samples_split은 짝수가 나오지 않게 쪼개는게 좋다.
+# 동일 개수가 나올 수 있기 때문에 
 params = {'min_impurity_decrease': np.arange(0.0001, 0.001, 0.0001),
           'max_depth': range(5, 20, 1),
           'min_samples_split': range(2, 100, 10)
           }
 ```
 ``` python
+# 9(impurity_decrease) * 15(max_depth) * 10(samples_split) * 5(트리의 수)
 gs = GridSearchCV(DecisionTreeClassifier(random_state=42), params, n_jobs=-1)
 gs.fit(train_input, train_target)
 
@@ -551,6 +605,7 @@ np.unique(rgen.rvs(1000), return_counts=True)
 #  array([116, 105,  95, 100,  84,  90,  97,  95, 107, 111]))
 ```
 ``` python
+# 각각의 나오는 unique한 숫자가 거의 비슷함
 ugen = uniform(0, 1)
 ugen.rvs(10)
 
@@ -581,10 +636,12 @@ gs.fit(train_input, train_target)
 ```
 ``` python
 print(gs.best_params_)
-
+# 100번의 난수를 발생시킨 것중에 가장 결과가 좋았던 파라미터
 # {'max_depth': 39, 'min_impurity_decrease': 0.00034102546602601173, 'min_samples_leaf': 7, 'min_samples_split': 13}
 ```
 ``` python
+
+# 어떤 범위를 잡아서 다 해보는것과, 랜덤의 성능 차이가 크게 없다.
 print(np.max(gs.cv_results_['mean_test_score']))
 
 # 0.8695428296438884
