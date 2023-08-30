@@ -20,7 +20,19 @@
             }
           },
           {
-            "id": "f65a1e0d52237d3e",
+            "id": "fad3e0302ffb07e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "609ded7a01cef8be",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+                "file": "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+                "file": "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md"
+                "file": "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md"
               }
             }
           }
@@ -161,46 +173,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f65a1e0d52237d3e",
+  "active": "fad3e0302ffb07e0",
   "lastOpenFiles": [
-    "SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
-    "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
-    "백준/Bronze/28431. 양말 짝 맞추기/README.md",
-    "백준/Bronze/28431. 양말 짝 맞추기",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "백준/Bronze/8710. Koszykarz/README.md",
-    "백준/Bronze/8710. Koszykarz/Koszykarz.py",
-    "백준/Bronze/8710. Koszykarz",
-    "백준/Bronze/25600. Triathlon/README.md",
-    "백준/Bronze/25600. Triathlon/Triathlon.py",
-    "백준/Bronze/25600. Triathlon",
-    "readme.md",
-    "SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC - 머신러닝 데이터분석(3).md",
-    "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "2023-08-28.md",
-    "백준/Bronze/25893. Majestic 10/README.md",
-    "백준/Bronze/25893. Majestic 10/Majestic 10.py",
-    "백준/Bronze/25893. Majestic 10",
-    "백준/Bronze/28097. 모범생 포닉스/모범생 포닉스.py",
-    "백준/Bronze/28097. 모범생 포닉스/README.md",
-    "백준/Bronze/28097. 모범생 포닉스",
-    "백준/Bronze/20839. Betygsättning/README.md",
-    "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
+    "SeSAC - 딥러닝 데이터 분석(1).md",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md",
+    "백준/Bronze/18411. 試験 （Exam）/試験 （Exam）.py",
+    "백준/Bronze/18411. 試験 （Exam）/README.md",
+    "백준/Bronze/18411. 試験 （Exam）",
     "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
-    "SeSAC AI/SeSAC - 데이터 분석 기초 2일차.md",
     "SeSAC AI/SeSAC - SQL로 데이터 베이스 다루기 2일차.md",
     "SeSAC AI/SeSAC - SQL로 데이터 베이스 다루기 1일차.md",
     "SeSAC AI/SeSAC - seaborn 라이브러리를 활용해서 그래프 그리기.md",
     "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
-    "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md"
+    "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
+    "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
+    "SeSAC AI/SeSAC - Pandas(1) pandas와 시리즈, 데이터프레임.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 4일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
+    "SeSAC AI/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
+    "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
+    "백준/Bronze/28431. 양말 짝 맞추기",
+    "백준/Bronze/8710. Koszykarz/Koszykarz.py",
+    "백준/Bronze/8710. Koszykarz",
+    "백준/Bronze/25600. Triathlon/Triathlon.py",
+    "백준/Bronze/25600. Triathlon",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "백준/Bronze/25893. Majestic 10/Majestic 10.py",
+    "백준/Bronze/25893. Majestic 10"
   ]
 }

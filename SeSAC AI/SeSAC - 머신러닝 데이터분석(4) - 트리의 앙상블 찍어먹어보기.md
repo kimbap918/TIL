@@ -29,7 +29,7 @@ https://product.kyobobook.co.kr/detail/S000001810496
 
 
 
-## 트리의 앙상블
+## 5-3 트리의 앙상블
 * 랜덤포레스트와 엑스트라 트리를 묶어서 bagging이라고 한다.
 * bagging(Bootstrap Aggregating)의 대척점은 boosting이다.
 
@@ -198,7 +198,7 @@ print(np.mean(scores['train_score']), np.mean(scores['test_score']))
 
 <br>
 
-## 비 지도학습
+## 6-1 비 지도학습
 * 군집
 * 주성분 분석(PCA)
 

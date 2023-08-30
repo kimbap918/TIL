@@ -34,7 +34,7 @@ https://www.irsglobal.com/bbs/rwdboard/15501
 
 
 
-## 확률적 경사 하강법(Stochastic Gradient Descent)
+## 4-2 확률적 경사 하강법(Stochastic Gradient Descent)
 점진적 기울기 접근법
 
 <br>
@@ -185,7 +185,7 @@ print(sc.score(test_scaled, test_target))
 
 <br>
 
-## 결정트리(Decision Tree)
+## 5-1 결정트리(Decision Tree)
 
 https://bkshin.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-4-%EA%B2%B0%EC%A0%95-%ED%8A%B8%EB%A6%ACDecision-Tree
 
@@ -419,7 +419,7 @@ plt.show()
 
 <br>
 
-## 교차 검증과 그리드 서치
+## 5-2 교차 검증과 그리드 서치
 교차검증이 어떻게 데이터를 뻥튀기 할까?
 
 > 작은 차이가 명품을 만든다. - 필립스의 광고
