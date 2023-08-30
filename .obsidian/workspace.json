@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md"
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md"
               }
             }
           }
@@ -175,9 +175,11 @@
   },
   "active": "fad3e0302ffb07e0",
   "lastOpenFiles": [
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
     "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
     "SeSAC - 딥러닝 데이터 분석(1).md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1).md",
     "백준/Bronze/18411. 試験 （Exam）/試験 （Exam）.py",
     "백준/Bronze/18411. 試験 （Exam）/README.md",
     "백준/Bronze/18411. 試験 （Exam）",
@@ -201,8 +203,6 @@
     "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
     "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
     "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
     "백준/Bronze/28431. 양말 짝 맞추기",
     "백준/Bronze/8710. Koszykarz/Koszykarz.py",
