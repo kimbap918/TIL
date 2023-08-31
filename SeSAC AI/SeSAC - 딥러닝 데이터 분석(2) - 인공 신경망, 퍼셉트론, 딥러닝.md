@@ -1,4 +1,4 @@
-2023.08.30
+62023.08.30
 
 <br>
 
@@ -184,12 +184,17 @@ dense = keras.layers.Dense(10, activation='softmax', input_shape=(784,))
 model = keras.Sequential(dense)
 ```
 
+
+#### (참고) softmax 함수
+`softmax(x_i) = exp(x_i) / sum(exp(x_j)) for all j`
+![](https://i.imgur.com/qGXxdi5.png)
+
+
 <br>
 
 ### 인공신경망으로 패션 아이템 분류하기
 ``` python
 # 케라스 라이브러리에서는 log loss를 다중 분류 손실함수(categorical_crossentropy)라 한다
-# 
 model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
 
 print(train_target[:10])

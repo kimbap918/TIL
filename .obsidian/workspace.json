@@ -4,35 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "46e06f1fd4bf269b",
+        "id": "23bca751ec5b39ef",
         "type": "tabs",
         "children": [
           {
-            "id": "034798d8d14f23e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fad3e0302ffb07e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "609ded7a01cef8be",
+            "id": "e561517d4591ff85",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "softmax",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,12 +126,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md"
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md"
               }
+            }
+          },
+          {
+            "id": "0186ea4a1c74c025",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -173,12 +157,29 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fad3e0302ffb07e0",
+  "active": "e561517d4591ff85",
   "lastOpenFiles": [
+    "백준/Bronze/20232. Archivist/README.md",
+    "백준/Bronze/20232. Archivist/Archivist.py",
+    "백준/Bronze/20232. Archivist",
+    "SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "().md",
     "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "2023-08-31.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
     "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
+    "Untitled.canvas",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "2023-08-28.md",
+    "백준/Silver/1676. 팩토리얼 0의 개수/README.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
+    "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
     "SeSAC - 딥러닝 데이터 분석(1).md",
     "백준/Bronze/18411. 試験 （Exam）/試験 （Exam）.py",
     "백준/Bronze/18411. 試験 （Exam）/README.md",
@@ -189,20 +190,6 @@
     "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
     "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
     "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
-    "SeSAC AI/SeSAC - Pandas(1) pandas와 시리즈, 데이터프레임.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 4일차.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
-    "SeSAC AI/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
-    "SeSAC AI/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
-    "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
     "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
     "백준/Bronze/28431. 양말 짝 맞추기",
     "백준/Bronze/8710. Koszykarz/Koszykarz.py",
@@ -210,9 +197,6 @@
     "백준/Bronze/25600. Triathlon/Triathlon.py",
     "백준/Bronze/25600. Triathlon",
     "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "백준/Bronze/25893. Majestic 10/Majestic 10.py",
-    "백준/Bronze/25893. Majestic 10"
+    "Untitled 1.canvas"
   ]
 }

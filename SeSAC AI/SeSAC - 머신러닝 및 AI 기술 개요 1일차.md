@@ -780,6 +780,8 @@ $R^2 = 1-\tfrac{오차^2}{편차^2}$
 
 $= 1-\tfrac{\sum (예측값 - 실제값)^2}{\sum (실제값평균-실제값)^2}$
 
+
+
 -> $R^2$ 가 가장 좋은 값은 1이다.
 ``` python
 from sklearn.neighbors import KNeighborsRegressor
