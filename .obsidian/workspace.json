@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+                "file": "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "softmax",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+                "file": "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+                "file": "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md"
+                "file": "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md"
               }
             }
           },
@@ -159,13 +158,20 @@
   },
   "active": "e561517d4591ff85",
   "lastOpenFiles": [
+    "백준/Bronze/15128. Congruent Numbers/README.md",
+    "백준/Bronze/15128. Congruent Numbers/Congruent Numbers.py",
+    "백준/Bronze/15128. Congruent Numbers",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "output_13_0.png.md",
+    "convolution_schematic.webp",
+    "().md",
     "백준/Bronze/20232. Archivist/README.md",
     "백준/Bronze/20232. Archivist/Archivist.py",
     "백준/Bronze/20232. Archivist",
     "SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-    "().md",
     "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
     "2023-08-31.md",
     "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
@@ -177,7 +183,6 @@
     "SeSAC AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
     "2023-08-28.md",
     "백준/Silver/1676. 팩토리얼 0의 개수/README.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
     "SeSAC AI/SeSAC - 데이터프레임 누락값 처리.md",
     "SeSAC - 딥러닝 데이터 분석(1).md",
@@ -187,15 +192,10 @@
     "SeSAC AI/SeSAC - SQL로 데이터 베이스 다루기 2일차.md",
     "SeSAC AI/SeSAC - SQL로 데이터 베이스 다루기 1일차.md",
     "SeSAC AI/SeSAC - seaborn 라이브러리를 활용해서 그래프 그리기.md",
-    "SeSAC AI/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
-    "SeSAC AI/SeSAC - Pandas(2) 판다스 통계 함수.md",
-    "SeSAC AI/SeSAC - 프로젝트 소통 역량 강화.md",
     "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
     "백준/Bronze/28431. 양말 짝 맞추기",
     "백준/Bronze/8710. Koszykarz/Koszykarz.py",
     "백준/Bronze/8710. Koszykarz",
-    "백준/Bronze/25600. Triathlon/Triathlon.py",
-    "백준/Bronze/25600. Triathlon",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]
