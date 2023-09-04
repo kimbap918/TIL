@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md"
+                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md"
               }
             }
           },
@@ -183,12 +183,12 @@
   },
   "active": "3d8e4fa2d11b0e5e",
   "lastOpenFiles": [
-    "SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
+    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
     "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
     "SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
     "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
     "SeSAC AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
