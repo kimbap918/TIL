@@ -5,7 +5,25 @@ tim sort
 
 https://d2.naver.com/helloworld/0315536
 
+Autoencoder
+* 여러개의 벡터가 들어가서 하나의 벡터가 나온다.(encoder)
+* 하나의 벡터가 들어가서 여러개의 벡터가 나온다.(decoder)
+
+https://en.wikipedia.org/wiki/Autoencoder
+
+
+한국어 임베딩
+
+https://product.kyobobook.co.kr/detail/S000001804861
+
+
+word2vec
+
+https://word2vec.kr/search/
 <br>
+
+## 순환 신경망으로 IMDB 리뷰 분류하기
+
 
 ``` python
 import tensorflow as tf
@@ -20,7 +38,8 @@ tf.config.experimental.enable_op_determinism()
 ``` python
 from tensorflow.keras.datasets import imdb
 
-# 단어를 300단어로 제한
+# 어휘를 300단어로 제한, 그외에 단어는 2번으로 처리한다
+# imdb에서 제공하는 단어 중 빈도 순으로 가장 많이 나타나는 단어를 1번부터 300번까지 정해서 사용한다.
 (train_input, train_target), (test_input, test_target) = imdb.load_data(num_words=300)
 
 # Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/imdb.npz
@@ -48,6 +67,7 @@ print(train_input[0])
 # [1, 14, 22, 16, 43, 2, 2, 2, 2, 65, 2, 2, 66, 2, 4, 173, 36, 256, 5, 25, 100, 43, 2, 112, 50, 2, 2, 9, 35, 2, 284, 5, 150, 4, 172, 112, 167, 2, 2, 2, 39, 4, 172, 2, 2, 17, 2, 38, 13, 2, 4, 192, 50, 16, 6, 147, 2, 19, 14, 22, 4, 2, 2, 2, 4, 22, 71, 87, 12, 16, 43, 2, 38, 76, 15, 13, 2, 4, 22, 17, 2, 17, 12, 16, 2, 18, 2, 5, 62, 2, 12, 8, 2, 8, 106, 5, 4, 2, 2, 16, 2, 66, 2, 33, 4, 130, 12, 16, 38, 2, 5, 25, 124, 51, 36, 135, 48, 25, 2, 33, 6, 22, 12, 215, 28, 77, 52, 5, 14, 2, 16, 82, 2, 8, 4, 107, 117, 2, 15, 256, 4, 2, 7, 2, 5, 2, 36, 71, 43, 2, 2, 26, 2, 2, 46, 7, 4, 2, 2, 13, 104, 88, 4, 2, 15, 297, 98, 32, 2, 56, 26, 141, 6, 194, 2, 18, 4, 226, 22, 21, 134, 2, 26, 2, 5, 144, 30, 2, 18, 51, 36, 28, 224, 92, 25, 104, 4, 226, 65, 16, 38, 2, 88, 12, 16, 283, 5, 16, 2, 113, 103, 32, 15, 16, 2, 19, 178, 32]
 ```
 ``` python
+# 0이 부정, 1이 긍정으로 나누어진다
 print(train_target[:20])
 # [1 0 0 1 0 0 1 0 1 0 1 0 0 0 0 0 1 1 0 1]
 ```
@@ -59,15 +79,18 @@ train_input, val_input, train_target, val_target = train_test_split(train_input,
 ``` python
 import numpy as np
 
+# 25000
 lengths = np.array([len(x) for x in train_input])
 ```
 ``` python
+# 평균과 중앙값, 평균과 중앙값을 볼때 이상치(리뷰 길이가 매우 긴것)가 평균을 올린다는것을 알수있다.
 print(np.mean(lengths), np.median(lengths))
 # 239.00925 178.0
 ```
 ``` python
 import matplotlib.pyplot as plt
 
+# 히스토그램은 구간의 도수를 구한다.
 plt.hist(lengths)
 plt.xlabel('length')
 plt.ylabel('frequency')
@@ -78,14 +101,17 @@ plt.show()
 <br>
 
 ``` python
+# pad_sequences : CNN 모델에서 패딩을 주는것
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+# 100개의 단어
 train_seq = pad_sequences(train_input, maxlen=100)
 ```
 ``` python
 print(train_seq.shape)
 # (20000, 100)
 
+# train_seq에 있는 첫번째 샘플
 print(train_seq[0])
 
 [ 10   4  20   9   2   2   2   5  45   6   2   2  33 269   8   2 142   2
@@ -96,9 +122,15 @@ print(train_seq[0])
    6   2  46   7  14  20  10  10   2 158]
 ```
 ``` python
+# train_input[0]의 마지막 10개 출력
 print(train_input[0][-10:])
 # [6, 2, 46, 7, 14, 20, 10, 10, 2, 158]
 
+# 최신 단어가 시퀀스의 뒷부분에 있으며, 이것은 RNN 구조에서 중요한 역할을 한다. RNN은 순서의 중요성을 고려하여 입력 데이터를 처리하는데 사용된다.
+# 문장의 앞이 0으로 패딩되어 있다. 시퀀스의 길이를 동일하게 맞추기 위한것.
+# RNN구조 
+# 1. 순서의 중요성
+# 2. 단어의 중요성
 print(train_seq[5])
 [  0   0   0   0   1   2 195  19  49   2   2 190   4   2   2   2 183  10
   10  13  82  79   4   2  36  71 269   8   2  25  19  49   7   4   2   2
@@ -113,21 +145,39 @@ val_seq = pad_sequences(val_input, maxlen=100)
 <br>
 
 ### 순환 신경망 만들기
+![](https://i.imgur.com/DQkNTkB.png)
+
+* 모든 퍼셉트론 구조를 가진 신경망은 가중합(weighted sum) 방식의 연산을 취한다.
+* RNN은 입력으로 벡터가 들어가고, 이 벡터를 가중합한다.
+* RNN은 입력 벡터와 이전 시간 단계에서의 은닉 상태를 조합한 가중합을 계산한다. 이 가중합에 활성화 함수를 적용하여 현재 시간 단계의 출력을 생성한다.
+* RNN구조는 활성화 함수를 relu를 사용하지 않고, Hyperbolic Tangent를 사용한다.
+* TanH는 시그모이드 함수의 형태를 가지고 있으나, 입력을 -1과 1 사이의 값으로 압축하는 역할을 한다. 시그모이드 함수는 양수 중심이고, TanH는 원점 중심이다.
+* RNN과 같이 입력은 여러번, 출력은 1번인 구조를 다 대 일 구조라고 한다.
+https://mathworld.wolfram.com/HyperbolicTangent.html
+
+
 ``` python
 from tensorflow import keras
 
 model = keras.Sequential()
 
+# 퍼셉트론 8개
+# 벡터의 개수가 100이고 각 시간 단계(time step)마다 각 벡터의 요소 수가 300개가 있는 데이터
 model.add(keras.layers.SimpleRNN(8, input_shape=(100, 300)))
 model.add(keras.layers.Dense(1, activation='sigmoid'))
 ```
 ``` python
 train_oh = keras.utils.to_categorical(train_seq)
 
+# 총 20000개의 문장, 각 문장에 포함된 단어의 최대 개수 100개, 각 단어의 요소 수 300개 
 print(train_oh.shape)
 # (20000, 100, 300)
 ```
 ``` python
+
+
+# 20000개 중 첫번째 문장의 첫번째 단어, 처음부터 12개까지 출력
+# 이 단어는 전체를 출력하면 이진수 300개의 벡터로 이뤄져있다.
 print(train_oh[0][0][:12])
 # [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
 ```
@@ -135,11 +185,18 @@ print(train_oh[0][0][:12])
 print(np.sum(train_oh[0][0]))
 # 1.0
 
+# 원-핫 인코딩
 val_oh = keras.utils.to_categorical(val_seq)
 ```
 ``` python
 model.summary()
 
+# 1. 입력특성의 수 300개
+# 2. 은닉 상태의 크기 : 8
+# 3. 가중치 행렬의 크기 300 * 8
+# 4. 순환 가중치 행렬의 크기 8 * 8
+# 5. 편향 벡터의 크기 8
+# 300 x 8 + 8 x 8 = 2400 + 64 = 2464 + 편향 벡터의 크기 8 = 2472
 Model: "sequential"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
@@ -165,6 +222,9 @@ checkpoint_cb = keras.callbacks.ModelCheckpoint('best-simplernn-model.h5', save_
 
 early_stopping_cb = keras.callbacks.EarlyStopping(patience=3, restore_best_weights=True) 
 
+# 이미지에 비해 자연어에 배치 사이즈가 큰 이유 : 
+# 1. 이미지에 비해 글자의 다양성이 굉장히 많아서 오류가 날 가능성이 높아짐(128, 256)
+# 2. 역전파(Backpropagation)를 줄이기 위해
 history = model.fit(train_oh, train_target, epochs=100, batch_size=64, validation_data=(val_oh, val_target), callbacks=[checkpoint_cb, early_stopping_cb])
 ```
 ``` python
@@ -180,9 +240,17 @@ plt.show()
 <br>
 
 ### 단어 임베딩을 사용하기
+단어를 임베딩 하는 방법
+* 원-핫 인코딩
+-> 원-핫 인코딩의 단점은 입력 데이터가 너무 많다는것.
+
+임베딩을 사용해보자.
+* 중요함을 나타내는것 : 빈도수
+* 임베딩 공간에서 가까운 위치에 있는 단어들은 의미적으로 유사한 단어들
 ``` python
 model2 = keras.Sequential()
 
+# 임베딩은 레이어로 표현했지만 퍼셉트론은 아니다.
 model2.add(keras.layers.Embedding(300, 16, input_length=100))
 model2.add(keras.layers.SimpleRNN(8))
 model2.add(keras.layers.Dense(1, activation='sigmoid'))
@@ -193,8 +261,10 @@ Model: "sequential_1"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
+ # 300개의 단어 * 16(weight) 퍼셉트론이 아니기 때문에 bias가 없다.
  embedding (Embedding)       (None, 100, 16)           4800      
-                                                                 
+
+ # (16 * 8) + (8 * 8) + 8 = 128 + 64 + 8 = 200
  simple_rnn_1 (SimpleRNN)    (None, 8)                 200       
                                                                  
  dense_1 (Dense)             (None, 1)                 9         
