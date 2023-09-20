@@ -1,0 +1,4 @@
+{
+  "python.analysis.typeCheckingMode": "off",
+  "px-to-rem.px-per-rem": 16
+}

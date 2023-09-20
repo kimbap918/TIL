@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "23bca751ec5b39ef",
+        "id": "692594e6ef0ec95b",
         "type": "tabs",
         "children": [
           {
-            "id": "e561517d4591ff85",
+            "id": "b5acc337d5c3f4df",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3d8e4fa2d11b0e5e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9b15ca10bdeb68a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,8 +44,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "명목",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md"
-              }
+              "state": {}
             }
           },
           {
@@ -181,46 +148,55 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d8e4fa2d11b0e5e",
+  "active": "b5acc337d5c3f4df",
   "lastOpenFiles": [
-    "SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
-    "flex-wrap.md",
-    "HTML, CSS, JS 실습/flex-wrap.md",
-    "백준/Bronze/26532. Acres/README.md",
-    "백준/Bronze/26532. Acres/Acres.py",
-    "백준/Bronze/26532. Acres",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
-    "SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
-    "SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "Thumbs.db",
-    "SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
-    "백준/Bronze/15128. Congruent Numbers/README.md",
-    "백준/Bronze/15128. Congruent Numbers/Congruent Numbers.py",
-    "백준/Bronze/15128. Congruent Numbers",
-    "SeSAC AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-    "output_13_0.png.md",
-    "convolution_schematic.webp",
-    "().md",
-    "백준/Bronze/20232. Archivist/README.md",
-    "백준/Bronze/20232. Archivist/Archivist.py",
-    "백준/Bronze/20232. Archivist",
-    "SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "2023-08-31.md",
-    "SeSAC AI/SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC AI/SeSAC - 데이터 분석 기초 1일차.md",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 4번 - FastText.ipynb",
+    "SeSAC_AI/수업자료/프로젝트1 - 회귀분석하기.ipynb",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 4번 - FastText.html",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 3번 - Word2Vec.ipynb",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 3번 - Word2Vec.html",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 2번 TF-IDF.ipynb",
+    "SeSAC_AI/수업자료/텍스트 AI - 4번 FastText.pdf",
+    "SeSAC_AI/수업자료/텍스트 AI 실습 1번.ipynb",
+    "SeSAC_AI/수업자료/텍스트 AI - 3번 Word2Vec.pdf",
+    "SeSAC_AI/수업자료/텍스트 AI - 2번 TFIDF.pdf",
+    "SeSAC_AI/수업자료/인디언_당뇨병_예측_colab.ipynb",
+    "SeSAC_AI/SeSAC - 프로젝트 소통 역량 강화.md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 분석 프로젝트 4일차.md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
+    "SeSAC_AI/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
+    "SeSAC_AI/SeSAC - 열에 있는 값을 행으로 내리는 방법.md",
+    "SeSAC_AI/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
+    "SeSAC_AI/SeSAC - 수치 계산 라이브러리 Numpy.md",
+    "SeSAC_AI/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC_AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC_AI/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC_AI/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "SeSAC_AI/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "SeSAC_AI/SeSAC - 머신러닝 데이터분석(2).md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC_AI/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/logo.png",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/carousel6.jpg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/carousel5.jpg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/carousel2.jpg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner6.jpeg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner5.jpeg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner4.jpeg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner3.jpeg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner2.jpeg",
+    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner1.jpg",
     "Untitled.canvas",
-    "SeSAC AI/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "백준/Bronze/18411. 試験 （Exam）/試験 （Exam）.py",
-    "백준/Bronze/18411. 試験 （Exam）",
-    "백준/Bronze/28431. 양말 짝 맞추기/양말 짝 맞추기.py",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]

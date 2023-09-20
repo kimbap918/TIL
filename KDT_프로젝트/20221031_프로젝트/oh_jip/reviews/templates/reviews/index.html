@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  <!-- carousel -->
+  <div id="carouselExampleControls" class="carousel slide bg-dark" data-bs-ride="carousel">
+    <!-- inner -->
+    <div class="carousel-inner">
+      <!-- 1 -->
+      <div class="carousel-item active">
+        <img src="{% static 'images/carousel6.jpg' %}" class="d-block w-100 opacity-75" alt="...">
+        <div class="carousel-caption">
+          <h2 class="fw-bold">식물과 함께하는 삶</h2>
+          <p>싱그러운 고층 집 리모델링</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="carousel-item">
+        <img src=" {% static 'images/carousel2.jpg' %}" class="d-block w-100 opacity-75" alt="...">
+        <div class="carousel-caption">
+          <h2 class="fw-bold">도시에 사는 당신을 위한<br>모던 인테리어 추천</h2>
+          <p></p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="carousel-item">
+        <img src="{% static 'images/carousel5.jpg' %}" class="d-block w-100 opacity-75" alt="...">
+        <div class="carousel-caption">
+          <h2 class="fw-bold">오래된 단칸방 인테리어</h2>
+          <p>7평 원룸의 변신</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- 포스터 섹션 -->
+  <section class="py-5 px-5">
+    <div class="mb-3">
+      <h4 class="fw-bold">이웃 집들이 가기 🎈</h4>
+    </div>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 gx-4">
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/3"><img class="card-img-top" src="{% static 'images/banner1.jpg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">네모 창 속 이야기</span>
+                가족을 담은, 사랑채</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/3">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/4"><img class="card-img-top" src="{% static 'images/banner2.jpeg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">투톤으로 단정하게!</span>
+                세련된 30평대 가족의 집</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/4">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/5"><img class="card-img-top" src="{% static 'images/banner3.jpeg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">만들어가는 재미!</span>
+                세 가족의 주택</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/5">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <h4 class="fw-bold">포실포실 💕 올 겨울 꿀잠 예약!</h4>
+    </div>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1 gx-4">
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/6"><img class="card-img-top" src="{% static 'images/banner4.jpeg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">옷보다 침구가 많아</span>
+                맥시멀리스트의 겨울 침구들</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/6">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/7"><img class="card-img-top" src="{% static 'images/banner5.jpeg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">하나를 사도 제대로!</span>
+                겨울 이불 구매 가이드</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/7">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-5">
+        <div class="card h-100">
+          <a href="http://127.0.0.1:8000/detail/8"><img class="card-img-top" src="{% static 'images/banner6.jpeg' %}" alt="..."/></a>
+          <div class="card-body py-4">
+            <div class="text-center">
+              <p class="fw-bold">
+                <span style="color:#FFBA46;">겨울에도 질 수 없다!</span>
+                화사한 침구 스타일링</p>
+            </div>
+          </div>
+          <div class="card-footer bg-light p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+              <a class="btn btn-outline-dark" href="http://127.0.0.1:8000/detail/8">집들이 가기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}
