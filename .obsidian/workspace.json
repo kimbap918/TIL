@@ -4,18 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "692594e6ef0ec95b",
+        "id": "31b05a77a52205b7",
         "type": "tabs",
         "children": [
           {
-            "id": "b5acc337d5c3f4df",
+            "id": "6080fbafcf9723a6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 TF-IDF, Word2Vec.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ff14aac1ce0c1e6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ed8cd60f200692d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md"
+              }
             }
           },
           {
@@ -148,44 +181,46 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b5acc337d5c3f4df",
+  "active": "87e34ec933a4f1a4",
   "lastOpenFiles": [
+    "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 FastText.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 TF-IDF, Word2Vec.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
+    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머 최종 정리.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/9. Transformer",
+    "SeSAC_AI/수업자료/텍스트AI/untitled folder",
+    "SeSAC_AI/수업자료/텍스트AI/8. Attention/텍스트 AI - 어텐션.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/8. Attention",
+    "SeSAC_AI/수업자료/텍스트AI/7. BytePairEncoding/텍스트 AI - BytePairEncoding.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/7. BytePairEncoding",
+    "SeSAC_AI/수업자료/텍스트AI/텍스트 AI - BytePairEncoding.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/텍스트 AI - 어텐션.pdf",
+    "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
+    "SeSAC - 딥러닝 Word2Vec.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
     "SeSAC_AI/ML/convolution_schematic.webp",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(2).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 자연어 처리(NLP).md",
+    "SeSAC - 딥러닝 자연어 처리(NLP).md",
+    "SeSAC_AI/SeSAC - 딥러닝 자연어 처리(NLP).md",
     "SeSAC_AI/기타/SeSAC - 프로젝트 소통 역량 강화.md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC_AI/SQL/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
-    "SeSAC_AI/pandas, library/SeSAC - 수치 계산 라이브러리 Numpy.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 4일차(Selenium으로 인스타그램 크롤링하기).md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 5일차(python 문제풀기).md",
-    "SeSAC_AI/SQL/SeSAC - SQL로 데이터 베이스 다루기 1일차.md",
-    "SeSAC_AI/SQL/SeSAC - SQL로 데이터 베이스 다루기 2일차.md",
-    "SeSAC_AI/SQL",
-    "SeSAC_AI/무제 폴더",
-    "SeSAC_AI/pandas, library/SeSAC - seaborn 라이브러리를 활용해서 그래프 그리기.md",
-    "SeSAC_AI/pandas, library/SeSAC - Pandas(3) 시리즈와 데이터프레임 다루기.md",
-    "SeSAC_AI/pandas, library/SeSAC - Pandas(2) 판다스 통계 함수.md",
-    "SeSAC_AI/pandas, library/SeSAC - Pandas(1) pandas와 시리즈, 데이터프레임.md",
-    "SeSAC_AI/pandas, library",
-    "SeSAC_AI/기타",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 4일차.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 1일차 intro.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 열에 있는 값을 행으로 내리는 방법.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 여러 개의 데이터프레임을 합치는 방법.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC_AI/DL",
-    "SeSAC_AI/ML",
-    "SeSAC_AI/딥러닝",
-    "SeSAC_AI/데이터 분석",
-    "알고리즘/SWEA 문제풀이",
-    "알고리즘/SWEA/D4/1218. ［S／W 문제해결 기본］ 4일차 － 괄호 짝짓기/［S／W 문제해결 기본］ 4일차 － 괄호 짝짓기.py",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
     "알고리즘/데이터 구조와 알고리즘/시간복잡도와 빅오표기법.assets/big-o.jpeg",
     "알고리즘/데이터 구조와 알고리즘/스택과 큐.assets/stack.png",
@@ -194,8 +229,6 @@
     "알고리즘/데이터 구조와 알고리즘/딕셔너리.assets/hash function.png",
     "알고리즘/데이터 구조와 알고리즘/priority queue.png",
     "알고리즘/데이터 구조와 알고리즘/BFS DFS.png",
-    "데이터 구조와 알고리즘/스택과 큐.assets/stack.png",
-    "데이터 구조와 알고리즘/시간복잡도와 빅오표기법.assets/big-o.jpeg",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

@@ -16,7 +16,8 @@ tf.config.experimental.enable_op_determinism(
 * 순환 신경망 (Recurrent Neural Network, RNN)의 한 종류
 * LSTM은 RNN의 한계인 단기 기억을 오래 기억하기 위해 고안되었다.
 * LSTM에서는 은닉 상태, 셀 상태(cell state)로 순환되는 상태가 2개이다. 
-![](https://i.imgur.com/oosKOxF.png)
+![](https://i.imgur.com/TIq5MFa.png)
+
 
 
 #### LSTM의 구조
@@ -214,7 +215,7 @@ plt.show()
 
 * LSTM(Long Short-Term Memory)과 비슷한 역할을 하지만 더 간단한 구조를 가지고 있다
 * 셀 상태(cell state)가 없다
-* 삭제 게이트와 기억 게이트만 넣어서 hidden state를 만들어낸다
+* 업데이트 게이트와 리셋 게이트만 넣어서 hidden state를 만들어낸다
 * Output Gate가 없다
 ``` python
 model4 = keras.Sequential()
