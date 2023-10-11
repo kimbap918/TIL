@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
                 "mode": "source",
                 "source": false
               }
@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2c1f601a17bf9e3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -73,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "뉴스",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +102,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md"
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md"
               }
             }
           },
@@ -181,23 +194,37 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "87e34ec933a4f1a4",
+  "active": "ff14aac1ce0c1e6c",
   "lastOpenFiles": [
-    "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
+    "백준/Bronze/2959. 거북이/거북이.py",
+    "백준/Bronze/2959. 거북이/README.md",
+    "백준/Bronze/2959. 거북이",
+    "백준/Bronze/2914. 저작권/저작권.py",
+    "백준/Bronze/2914. 저작권/README.md",
+    "백준/Bronze/2914. 저작권",
+    "백준/Bronze/2863. 이게 분수？/이게 분수？.py",
+    "백준/Bronze/2863. 이게 분수？/README.md",
+    "백준/Bronze/2863. 이게 분수？",
+    "백준/Bronze/2712. 미국 스타일/미국 스타일.py",
+    "백준/Bronze/2712. 미국 스타일/README.md",
+    "백준/Bronze/2712. 미국 스타일",
+    "백준/Bronze/2523. 별 찍기 － 13/별 찍기 － 13.py",
+    "백준/Bronze/2523. 별 찍기 － 13/README.md",
+    "백준/Bronze/2523. 별 찍기 － 13",
+    "백준/Bronze/2522. 별 찍기 － 12/별 찍기 － 12.py",
+    "백준/Bronze/2522. 별 찍기 － 12/README.md",
+    "백준/Bronze/2490. 윷놀이/README.md",
+    "백준/Bronze/2460. 지능형 기차 2/README.md",
+    "백준/Bronze/2455. 지능형 기차/README.md",
     "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 FastText.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
+    "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+    "SeSAC_AI/SQL/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
+    "kobert-news.md",
     "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 TF-IDF, Word2Vec.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 FastText.md",
     "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
-    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머 최종 정리.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/9. Transformer",
-    "SeSAC_AI/수업자료/텍스트AI/untitled folder",
-    "SeSAC_AI/수업자료/텍스트AI/8. Attention/텍스트 AI - 어텐션.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/8. Attention",
-    "SeSAC_AI/수업자료/텍스트AI/7. BytePairEncoding/텍스트 AI - BytePairEncoding.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/7. BytePairEncoding",
-    "SeSAC_AI/수업자료/텍스트AI/텍스트 AI - BytePairEncoding.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/텍스트 AI - 어텐션.pdf",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC - 딥러닝 Word2Vec.md",
     "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
@@ -207,20 +234,6 @@
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 자연어 처리(NLP).md",
-    "SeSAC - 딥러닝 자연어 처리(NLP).md",
-    "SeSAC_AI/SeSAC - 딥러닝 자연어 처리(NLP).md",
-    "SeSAC_AI/기타/SeSAC - 프로젝트 소통 역량 강화.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
     "알고리즘/데이터 구조와 알고리즘/시간복잡도와 빅오표기법.assets/big-o.jpeg",
     "알고리즘/데이터 구조와 알고리즘/스택과 큐.assets/stack.png",
