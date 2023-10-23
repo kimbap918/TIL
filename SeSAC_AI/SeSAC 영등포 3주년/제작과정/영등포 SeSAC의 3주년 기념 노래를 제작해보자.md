@@ -243,7 +243,10 @@ Embarking on the journey to our dreams, so bright
 
 
 5. 완성된 곡의 앨범 커버 편집, 가사 정보 삽입 및 동영상 제작
-![](새싹_3주년_노래.mp4)
+
+  https://github.com/kimbap918/TIL/blob/main/SeSAC_AI/SeSAC%20%EC%98%81%EB%93%B1%ED%8F%AC%203%EC%A3%BC%EB%85%84/%EC%A0%9C%EC%9E%91%EA%B3%BC%EC%A0%95/%EC%83%88%EC%8B%B9_3%EC%A3%BC%EB%85%84_%EB%85%B8%EB%9E%98.mp4
+
+  ![](새싹_3주년_노래.mp4)
 
 #### 시행착오
 * 처음에 멜론 차트를 기반으로 가사 트렌드를 수집하고 분석해서 문장을 생성했으나, 차트에 한이 많았는지 생일축하가 아닌 생이별 노래같은 가사가 생성되었다.
@@ -251,8 +254,8 @@ Embarking on the journey to our dreams, so bright
 * 작곡된 멜로디를 매끄럽게 연결하는 과정이 stable diffusion만큼이나 많이 걸렸다. 부르는 가수 자체가 달라지거나, 음악의 플롯이 이전과 너무 맞지 않거나, 부르는 음이 어색한 경우가 많았다. 
 
 (딴딴딴딴딴)넌 우↗️리↘️의➡️꿈
-![](넌~%20우리으꿈~.mp3)
-노래 안부르다가, 뒤에가서 급하게부르다가, 부를 시간 없으니까 얼버무려요
-![](노래언제불러.mp3)
+https://github.com/kimbap918/TIL/blob/main/SeSAC_AI/SeSAC%20%EC%98%81%EB%93%B1%ED%8F%AC%203%EC%A3%BC%EB%85%84/%EC%A0%9C%EC%9E%91%EA%B3%BC%EC%A0%95/%EB%84%8C~%20%EC%9A%B0%EB%A6%AC%EC%9C%BC%EA%BF%88~.mp3
+노래 안부르다가, 뒤에가서 급하게부르다가, 부를 시간 없으니까 얼버무린다.
+https://github.com/kimbap918/TIL/blob/main/SeSAC_AI/SeSAC%20%EC%98%81%EB%93%B1%ED%8F%AC%203%EC%A3%BC%EB%85%84/%EC%A0%9C%EC%9E%91%EA%B3%BC%EC%A0%95/%EB%85%B8%EB%9E%98%EC%96%B8%EC%A0%9C%EB%B6%88%EB%9F%AC.mp3
 이런게 정말 많았다.
 
