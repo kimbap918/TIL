@@ -23,24 +23,16 @@
             "id": "42ec50ebefdad989",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "새싹이를 의인화 해보자..md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
             "id": "eedc5ea03c629961",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "영등포 SeSAC의 3주년 기념 노래를 제작해보자.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -110,7 +102,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "새싹이를 의인화 해보자..md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +118,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "새싹이를 의인화 해보자..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +139,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "새싹이를 의인화 해보자..md"
-              }
+              "state": {}
             }
           },
           {

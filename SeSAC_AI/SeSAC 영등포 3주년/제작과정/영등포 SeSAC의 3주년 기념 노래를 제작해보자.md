@@ -253,9 +253,17 @@ Embarking on the journey to our dreams, so bright
 * KoGPT2가 생성한 가사가 매끄럽지 않아서 가사의 이해가 힘들었다.
 * 작곡된 멜로디를 매끄럽게 연결하는 과정이 stable diffusion만큼이나 많이 걸렸다. 부르는 가수 자체가 달라지거나, 음악의 플롯이 이전과 너무 맞지 않거나, 부르는 음이 어색한 경우가 많았다. 
 
+
+
 (딴딴딴딴딴)넌 우↗️리↘️의➡️꿈
+
 https://github.com/kimbap918/TIL/blob/main/SeSAC_AI/SeSAC%20%EC%98%81%EB%93%B1%ED%8F%AC%203%EC%A3%BC%EB%85%84/%EC%A0%9C%EC%9E%91%EA%B3%BC%EC%A0%95/%EB%84%8C~%20%EC%9A%B0%EB%A6%AC%EC%9C%BC%EA%BF%88~.mp3
+
+
+
 노래 안부르다가, 뒤에가서 급하게부르다가, 부를 시간 없으니까 얼버무린다.
+
 https://github.com/kimbap918/TIL/blob/main/SeSAC_AI/SeSAC%20%EC%98%81%EB%93%B1%ED%8F%AC%203%EC%A3%BC%EB%85%84/%EC%A0%9C%EC%9E%91%EA%B3%BC%EC%A0%95/%EB%85%B8%EB%9E%98%EC%96%B8%EC%A0%9C%EB%B6%88%EB%9F%AC.mp3
+
 이런게 정말 많았다.
 
