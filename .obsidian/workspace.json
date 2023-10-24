@@ -28,6 +28,18 @@
             }
           },
           {
+            "id": "69119b80df98a11e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "eedc5ea03c629961",
             "type": "leaf",
             "state": {
@@ -36,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -102,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,6 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +153,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md"
+              }
             }
           },
           {
@@ -169,8 +185,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "42ec50ebefdad989",
+  "active": "69119b80df98a11e",
   "lastOpenFiles": [
+    "백준/Bronze/4619. 루트/루트.py",
+    "백준/Bronze/4619. 루트/README.md",
+    "백준/Bronze/4619. 루트",
     "영등포 SeSAC의 3주년 기념 노래를 제작해보자.md",
     "노래언제불러.mp3",
     "넌~ 우리으꿈~.mp3",
@@ -194,7 +213,6 @@
     "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM/텍스트 AI - 잡다한 이야기들.pdf",
     "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM",
     "SeSAC_AI/수업자료/텍스트AI/10. /텍스트 AI - 파운데이션 모델.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/10. /텍스트 AI - 잡다한 이야기들.pdf",
     "백준/Bronze/2959. 거북이/README.md",
     "백준/Bronze/2914. 저작권/README.md",
     "백준/Bronze/2863. 이게 분수？/README.md",
@@ -205,7 +223,6 @@
     "백준/Bronze/2460. 지능형 기차 2/README.md",
     "백준/Bronze/2455. 지능형 기차/README.md",
     "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
-    "SeSAC_AI/SQL/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
