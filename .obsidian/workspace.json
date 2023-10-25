@@ -8,38 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "02218f2637b3afc4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "42ec50ebefdad989",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "69119b80df98a11e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "eedc5ea03c629961",
             "type": "leaf",
             "state": {
@@ -47,8 +15,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md"
-              }
+              "state": {}
             }
           },
           {
@@ -185,8 +148,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "69119b80df98a11e",
+  "active": "eedc5ea03c629961",
   "lastOpenFiles": [
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/%E1%84%89%E1%85%A2%E1%84%8A%E1%85%A1%E1%86%A8%E1%84%82%E1%85%A9%E1%84%85%E1%85%A2.mp4.md",
+    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/IMG_7178_waifu2x_art_noise1_scale-removebg-preview_waifu2x_art_noise1_scale_waifu2x_art_noise1_scale_waifu2x_art_noise1.png.md",
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/Untitled.png.md",
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612",
+    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
+    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/영등포 SeSAC의 3주년 기념 노래를 제작해보자.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
     "백준/Bronze/4619. 루트/루트.py",
     "백준/Bronze/4619. 루트/README.md",
     "백준/Bronze/4619. 루트",
@@ -196,7 +168,6 @@
     "새싹이를 의인화 해보자..md",
     "새싹_3주년_노래.mp4",
     "SOURCE_SeSAC 3rd Anniversary Song.mp3",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
     "python/PythonWorkspace/BOJ 연습장/2547.py",
     "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
     "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
@@ -211,18 +182,10 @@
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM/텍스트 AI - 파운데이션 모델.pdf",
     "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM/텍스트 AI - 잡다한 이야기들.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM",
-    "SeSAC_AI/수업자료/텍스트AI/10. /텍스트 AI - 파운데이션 모델.pdf",
     "백준/Bronze/2959. 거북이/README.md",
     "백준/Bronze/2914. 저작권/README.md",
     "백준/Bronze/2863. 이게 분수？/README.md",
     "백준/Bronze/2712. 미국 스타일/README.md",
-    "백준/Bronze/2523. 별 찍기 － 13/README.md",
-    "백준/Bronze/2522. 별 찍기 － 12/README.md",
-    "백준/Bronze/2490. 윷놀이/README.md",
-    "백준/Bronze/2460. 지능형 기차 2/README.md",
-    "백준/Bronze/2455. 지능형 기차/README.md",
-    "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
