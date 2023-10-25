@@ -11,8 +11,12 @@
             "id": "eedc5ea03c629961",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md"
+              }
             }
           },
           {
@@ -150,8 +158,9 @@
   },
   "active": "eedc5ea03c629961",
   "lastOpenFiles": [
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/%E1%84%89%E1%85%A2%E1%84%8A%E1%85%A1%E1%86%A8%E1%84%82%E1%85%A9%E1%84%85%E1%85%A2.mp4.md",
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/Screenshot_2023-10-24_at_4.48.20_PM-removebg-preview_waifu2x_art_noise1.png.md",
     "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
+    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/%E1%84%89%E1%85%A2%E1%84%8A%E1%85%A1%E1%86%A8%E1%84%82%E1%85%A9%E1%84%85%E1%85%A2.mp4.md",
     "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/IMG_7178_waifu2x_art_noise1_scale-removebg-preview_waifu2x_art_noise1_scale_waifu2x_art_noise1_scale_waifu2x_art_noise1.png.md",
     "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/Untitled.png.md",
@@ -185,7 +194,6 @@
     "백준/Bronze/2959. 거북이/README.md",
     "백준/Bronze/2914. 저작권/README.md",
     "백준/Bronze/2863. 이게 분수？/README.md",
-    "백준/Bronze/2712. 미국 스타일/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
