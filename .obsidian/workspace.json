@@ -13,13 +13,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0c45eb60d24db4a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Object Detection(1) - Selective Search.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c942e4396961afa4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Object Detection(2) - Faster R-CNN.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06d4042aa003fa7f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "2ff5508c9f08907c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Object Detection(3) - Two-stage detector, SSD.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Object Detection(1) - Selective Search.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "Object Detection(1) - Selective Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Object Detection(1) - Selective Search.md"
               }
             }
           },
@@ -156,44 +201,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "da7c05a3dfb09381",
+  "active": "87e34ec933a4f1a4",
   "lastOpenFiles": [
-    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/작업 자료.md",
-    "Untitled.md",
-    "00010-2190181187.png.md",
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/Screenshot_2023-10-24_at_4.48.20_PM-removebg-preview_waifu2x_art_noise1.png.md",
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/%E1%84%89%E1%85%A2%E1%84%8A%E1%85%A1%E1%86%A8%E1%84%82%E1%85%A9%E1%84%85%E1%85%A2.mp4.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/IMG_7178_waifu2x_art_noise1_scale-removebg-preview_waifu2x_art_noise1_scale_waifu2x_art_noise1_scale_waifu2x_art_noise1.png.md",
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612/Untitled.png.md",
-    "작업한 자료 - 준혁 a6068325a83143109ef202569684b612",
-    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/새싹이를 의인화 해보자..md",
-    "SeSAC_AI/SeSAC 영등포 3주년/제작과정/영등포 SeSAC의 3주년 기념 노래를 제작해보자.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-    "백준/Bronze/4619. 루트/루트.py",
-    "백준/Bronze/4619. 루트/README.md",
-    "백준/Bronze/4619. 루트",
-    "영등포 SeSAC의 3주년 기념 노래를 제작해보자.md",
-    "노래언제불러.mp3",
-    "넌~ 우리으꿈~.mp3",
-    "새싹이를 의인화 해보자..md",
-    "새싹_3주년_노래.mp4",
-    "SOURCE_SeSAC 3rd Anniversary Song.mp3",
-    "python/PythonWorkspace/BOJ 연습장/2547.py",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
-    "kobert-news.md",
-    "readme.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM/텍스트 AI - 파운데이션 모델.pdf",
-    "SeSAC_AI/수업자료/텍스트AI/10. 대형 언어 모델 LLM/텍스트 AI - 잡다한 이야기들.pdf",
-    "백준/Bronze/2959. 거북이/README.md",
+    "백준/Bronze/6378. 디지털 루트/디지털 루트.py",
+    "백준/Bronze/6378. 디지털 루트/README.md",
+    "백준/Bronze/6378. 디지털 루트",
+    "백준/Bronze/6030. Scavenger Hunt/Scavenger Hunt.py",
+    "백준/Bronze/6030. Scavenger Hunt/README.md",
+    "백준/Bronze/6030. Scavenger Hunt",
+    "백준/Bronze/5988. 홀수일까 짝수일까/홀수일까 짝수일까.py",
+    "백준/Bronze/5988. 홀수일까 짝수일까/README.md",
+    "백준/Bronze/5988. 홀수일까 짝수일까",
+    "백준/Bronze/5724. 파인만/파인만.py",
+    "백준/Bronze/5724. 파인만/README.md",
+    "백준/Bronze/5724. 파인만",
+    "백준/Bronze/5692. 팩토리얼 진법/팩토리얼 진법.py",
+    "백준/Bronze/5692. 팩토리얼 진법/README.md",
+    "백준/Bronze/5692. 팩토리얼 진법",
+    "백준/Bronze/5565. 영수증/영수증.py",
+    "백준/Bronze/5565. 영수증/README.md",
+    "백준/Bronze/5523. 경기 결과/README.md",
+    "백준/Bronze/5361. 전투 드로이드 가격/README.md",
+    "백준/Bronze/5354. J박스/README.md",
+    "백준/Bronze/5342. Billing/README.md",
+    "백준/Bronze/5340. Secret Location/README.md",
+    "백준/Bronze/5220. Error Detection/README.md",
+    "백준/Bronze/5217. 쌍의 합/README.md",
+    "백준/Bronze/5101. Sequences/README.md",
+    "백준/Bronze/5074. When Do We Finish？/README.md",
+    "백준/Bronze/4909. Judging Olympia/README.md",
+    "백준/Bronze/4892. 숫자 맞추기 게임/README.md",
+    "백준/Bronze/4880. 다음수/README.md",
+    "백준/Bronze/4766. 일반 화학 실험/README.md",
+    "백준/Bronze/4690. 완전 세제곱/README.md",
+    "백준/Bronze/4655. Hangover/README.md",
+    "백준/Bronze/4504. 배수 찾기/README.md",
+    "백준/Bronze/3578. Holes/README.md",
+    "백준/Bronze/3533. Explicit Formula/README.md",
+    "백준/Bronze/3460. 이진수/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
