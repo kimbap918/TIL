@@ -1,5 +1,10 @@
 <br>
 
+Teacher forcing
+https://en.wikipedia.org/wiki/Teacher_forcing
+
+<br>
+
 ## Attention
 
 우리 뇌는 여러가지 사물이 있을 때, 한가지의 사물만 집중할 수 있다. 

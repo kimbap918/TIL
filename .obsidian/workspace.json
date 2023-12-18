@@ -32,12 +32,24 @@
             }
           },
           {
+            "id": "e53276dde0e1b20a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "c942e4396961afa4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Object Detection(2) - Faster R-CNN.md",
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -130,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Object Detection(1) - Selective Search.md",
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Object Detection(1) - Selective Search.md",
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Object Detection(1) - Selective Search.md"
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md"
               }
             }
           },
@@ -203,42 +215,42 @@
   },
   "active": "87e34ec933a4f1a4",
   "lastOpenFiles": [
-    "백준/Bronze/6378. 디지털 루트/디지털 루트.py",
-    "백준/Bronze/6378. 디지털 루트/README.md",
-    "백준/Bronze/6378. 디지털 루트",
-    "백준/Bronze/6030. Scavenger Hunt/Scavenger Hunt.py",
-    "백준/Bronze/6030. Scavenger Hunt/README.md",
-    "백준/Bronze/6030. Scavenger Hunt",
-    "백준/Bronze/5988. 홀수일까 짝수일까/홀수일까 짝수일까.py",
-    "백준/Bronze/5988. 홀수일까 짝수일까/README.md",
-    "백준/Bronze/5988. 홀수일까 짝수일까",
-    "백준/Bronze/5724. 파인만/파인만.py",
-    "백준/Bronze/5724. 파인만/README.md",
-    "백준/Bronze/5724. 파인만",
-    "백준/Bronze/5692. 팩토리얼 진법/팩토리얼 진법.py",
-    "백준/Bronze/5692. 팩토리얼 진법/README.md",
-    "백준/Bronze/5692. 팩토리얼 진법",
-    "백준/Bronze/5565. 영수증/영수증.py",
-    "백준/Bronze/5565. 영수증/README.md",
-    "백준/Bronze/5523. 경기 결과/README.md",
-    "백준/Bronze/5361. 전투 드로이드 가격/README.md",
-    "백준/Bronze/5354. J박스/README.md",
-    "백준/Bronze/5342. Billing/README.md",
-    "백준/Bronze/5340. Secret Location/README.md",
-    "백준/Bronze/5220. Error Detection/README.md",
-    "백준/Bronze/5217. 쌍의 합/README.md",
-    "백준/Bronze/5101. Sequences/README.md",
-    "백준/Bronze/5074. When Do We Finish？/README.md",
-    "백준/Bronze/4909. Judging Olympia/README.md",
-    "백준/Bronze/4892. 숫자 맞추기 게임/README.md",
-    "백준/Bronze/4880. 다음수/README.md",
-    "백준/Bronze/4766. 일반 화학 실험/README.md",
-    "백준/Bronze/4690. 완전 세제곱/README.md",
-    "백준/Bronze/4655. Hangover/README.md",
-    "백준/Bronze/4504. 배수 찾기/README.md",
-    "백준/Bronze/3578. Holes/README.md",
-    "백준/Bronze/3533. Explicit Formula/README.md",
-    "백준/Bronze/3460. 이진수/README.md",
+    "백준/Bronze/8678. Zbiór/Zbiór.py",
+    "백준/Bronze/8678. Zbiór/README.md",
+    "백준/Bronze/8678. Zbiór",
+    "백준/Bronze/6780. Sumac Sequences/Sumac Sequences.py",
+    "백준/Bronze/6780. Sumac Sequences/README.md",
+    "백준/Bronze/6780. Sumac Sequences",
+    "백준/Bronze/6779. Who Has Seen The Wind/Who Has Seen The Wind.py",
+    "백준/Bronze/6779. Who Has Seen The Wind/README.md",
+    "백준/Bronze/6779. Who Has Seen The Wind",
+    "백준/Bronze/6750. Rotating letters/Rotating letters.py",
+    "백준/Bronze/6750. Rotating letters/README.md",
+    "백준/Bronze/6750. Rotating letters",
+    "백준/Bronze/6438. Reverse Text/Reverse Text.py",
+    "백준/Bronze/6438. Reverse Text/README.md",
+    "백준/Bronze/6438. Reverse Text",
+    "백준/Bronze/6322. 직각 삼각형의 두 변/직각 삼각형의 두 변.py",
+    "백준/Bronze/6322. 직각 삼각형의 두 변/README.md",
+    "백준/Bronze/6321. IBM 빼기 1/README.md",
+    "백준/Bronze/6190. Another Cow Number Game/README.md",
+    "백준/Bronze/6162. Superlatives/README.md",
+    "백준/Bronze/5789. 한다 안한다/README.md",
+    "백준/Bronze/5753. Pascal Library/README.md",
+    "백준/Bronze/5751. Head or Tail/README.md",
+    "백준/Bronze/5691. 평균 중앙값 문제/README.md",
+    "백준/Bronze/5612. 터널의 입구와 출구/README.md",
+    "백준/Bronze/5356. Triangles/README.md",
+    "백준/Bronze/3034. 앵그리 창영/README.md",
+    "백준/Bronze/2783. 삼각 김밥/README.md",
+    "백준/Bronze/1703. 생장점/README.md",
+    "백준/Bronze/10817. 세 수/README.md",
+    "Seq2Seq.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+    "Attention.md",
+    "Orange로 no code 프로토타이핑 해보기.md",
+    "Object Detection(3) - Two-stage detector, SSD.md",
+    "Object Detection(2) - Faster R-CNN.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
