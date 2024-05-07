@@ -74,9 +74,43 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "abc25d24c910e8d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8894824eb5f578ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "빅분기 예제 풀어보기.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "45af1d8ce7c532d8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -142,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
+                "file": "빅분기 예제 풀어보기.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -159,7 +193,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md",
+                "file": "빅분기 예제 풀어보기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +216,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 1일차.md"
+                "file": "빅분기 예제 풀어보기.md"
               }
             }
           },
@@ -213,44 +247,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "87e34ec933a4f1a4",
+  "active": "45af1d8ce7c532d8",
   "lastOpenFiles": [
-    "백준/Bronze/8678. Zbiór/Zbiór.py",
-    "백준/Bronze/8678. Zbiór/README.md",
-    "백준/Bronze/8678. Zbiór",
-    "백준/Bronze/6780. Sumac Sequences/Sumac Sequences.py",
-    "백준/Bronze/6780. Sumac Sequences/README.md",
-    "백준/Bronze/6780. Sumac Sequences",
-    "백준/Bronze/6779. Who Has Seen The Wind/Who Has Seen The Wind.py",
-    "백준/Bronze/6779. Who Has Seen The Wind/README.md",
-    "백준/Bronze/6779. Who Has Seen The Wind",
-    "백준/Bronze/6750. Rotating letters/Rotating letters.py",
-    "백준/Bronze/6750. Rotating letters/README.md",
-    "백준/Bronze/6750. Rotating letters",
-    "백준/Bronze/6438. Reverse Text/Reverse Text.py",
-    "백준/Bronze/6438. Reverse Text/README.md",
-    "백준/Bronze/6438. Reverse Text",
-    "백준/Bronze/6322. 직각 삼각형의 두 변/직각 삼각형의 두 변.py",
-    "백준/Bronze/6322. 직각 삼각형의 두 변/README.md",
-    "백준/Bronze/6321. IBM 빼기 1/README.md",
-    "백준/Bronze/6190. Another Cow Number Game/README.md",
-    "백준/Bronze/6162. Superlatives/README.md",
-    "백준/Bronze/5789. 한다 안한다/README.md",
-    "백준/Bronze/5753. Pascal Library/README.md",
-    "백준/Bronze/5751. Head or Tail/README.md",
-    "백준/Bronze/5691. 평균 중앙값 문제/README.md",
-    "백준/Bronze/5612. 터널의 입구와 출구/README.md",
-    "백준/Bronze/5356. Triangles/README.md",
-    "백준/Bronze/3034. 앵그리 창영/README.md",
-    "백준/Bronze/2783. 삼각 김밥/README.md",
-    "백준/Bronze/1703. 생장점/README.md",
-    "백준/Bronze/10817. 세 수/README.md",
-    "Seq2Seq.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-    "Attention.md",
-    "Orange로 no code 프로토타이핑 해보기.md",
-    "Object Detection(3) - Two-stage detector, SSD.md",
-    "Object Detection(2) - Faster R-CNN.md",
+    "백준/Bronze/9907. ID/README.md",
+    "백준/Bronze/9907. ID/ID.py",
+    "백준/Bronze/9907. ID",
+    "백준/Bronze/9838. XMAS/XMAS.py",
+    "백준/Bronze/9838. XMAS/README.md",
+    "백준/Bronze/9838. XMAS",
+    "백준/Bronze/9699. RICE SACK/RICE SACK.py",
+    "백준/Bronze/9699. RICE SACK/README.md",
+    "백준/Bronze/9699. RICE SACK",
+    "백준/Bronze/9550. 아이들은 사탕을 좋아해/아이들은 사탕을 좋아해.py",
+    "백준/Bronze/9550. 아이들은 사탕을 좋아해/README.md",
+    "백준/Bronze/9550. 아이들은 사탕을 좋아해",
+    "백준/Bronze/9517. 아이 러브 크로아티아/아이 러브 크로아티아.py",
+    "백준/Bronze/9517. 아이 러브 크로아티아/README.md",
+    "백준/Bronze/9517. 아이 러브 크로아티아",
+    "백준/Bronze/9501. 꿍의 우주여행/README.md",
+    "백준/Bronze/9493. 길면 기차， 기차는 빨라， 빠른 것은 비행기/README.md",
+    "백준/Bronze/9469. 폰 노이만/README.md",
+    "백준/Bronze/9366. 삼각형 분류/README.md",
+    "백준/Bronze/9317. Monitor DPI/README.md",
+    "백준/Bronze/9295. 주사위/README.md",
+    "백준/Bronze/9094. 수학적 호기심/README.md",
+    "백준/Bronze/9085. 더하기/README.md",
+    "백준/Bronze/8932. 7종 경기/README.md",
+    "백준/Bronze/8815. Test/README.md",
+    "백준/Bronze/8721. Wykreślanka/README.md",
+    "백준/Bronze/7510. 고급 수학/README.md",
+    "백준/Bronze/6845. Federal Voting Age/README.md",
+    "백준/Bronze/6812. Good times/README.md",
+    "백준/Bronze/6784. Multiple Choice/README.md",
+    "백준/Bronze/6768. Don’t pass me the ball！/README.md",
+    "백준/Bronze/6437. Golf/README.md",
+    "백준/Bronze/5666. Hot Dogs/README.md",
+    "백준/Bronze/5613. 계산기 프로그램/README.md",
+    "백준/Bronze/4806. 줄 세기/README.md",
+    "백준/Bronze/4740. 거울， 오！ 거울/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
