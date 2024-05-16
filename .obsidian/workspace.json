@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "70307f9b61bcf7f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "금융데이터/핀테크 개요.md",
+                "file": "Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "금융데이터/핀테크 개요.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "금융데이터/핀테크 개요.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -156,14 +169,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "795a931ffd1e9304",
+  "active": "70307f9b61bcf7f2",
   "lastOpenFiles": [
+    "금융데이터/week1/2024.05.16/day1.ipynb",
+    "금융데이터/week1/2024.05.16",
+    "금융데이터/week1/untitled folder",
+    "금융데이터/week1/오민엽_파이썬.pdf",
+    "금융데이터/week1/day1.ipynb",
+    "금융데이터/week1",
+    "백준/Silver/1251. 단어 나누기/단어 나누기.py",
+    "백준/Silver/1251. 단어 나누기/README.md",
+    "백준/Silver/1251. 단어 나누기",
+    "python/PythonWorkspace/BOJ 연습장/1308.py",
+    "python/PythonWorkspace/BOJ 연습장/pr.py",
+    "python/PythonWorkspace/BOJ 연습장/1251.py",
+    "금융데이터/핀테크 개요.md",
+    "Untitled.md",
     "금융데이터/커리어 트렌드.md",
     "핀테크 개요.md",
-    "금융데이터/핀테크 개요.md",
-    "금융데이터",
-    "핀테크",
-    "untitled folder",
     "SeSAC_AI/DL/Seq2Seq.md",
     "SeSAC_AI/DL/Orange로 no code 프로토타이핑 해보기.md",
     "SeSAC_AI/DL/Object Detection(3) - Two-stage detector, SSD.md",
@@ -177,23 +200,13 @@
     "SeSAC_AI/Object Detection(1) - Selective Search.md",
     "SeSAC_AI/Attention.md",
     "커리어 트렌드.md",
-    "python/PythonWorkspace/BOJ 연습장/1094.py",
-    "python/PythonWorkspace/BOJ 연습장/1312.py",
-    "python/PythonWorkspace/BOJ 연습장/1212.py",
-    "python/PythonWorkspace/BOJ 연습장/26264.py",
-    "python/PythonWorkspace/BOJ 연습장/26264.ㅔy",
-    "python/PythonWorkspace/BOJ 연습장/26264.Py",
     "백준/Bronze/9907. ID/README.md",
-    "백준/Bronze/9907. ID/ID.py",
     "백준/Bronze/9838. XMAS/README.md",
     "백준/Bronze/9699. RICE SACK/README.md",
     "백준/Bronze/9550. 아이들은 사탕을 좋아해/README.md",
     "백준/Bronze/9517. 아이 러브 크로아티아/README.md",
     "백준/Bronze/9501. 꿍의 우주여행/README.md",
     "백준/Bronze/9493. 길면 기차， 기차는 빨라， 빠른 것은 비행기/README.md",
-    "백준/Bronze/9469. 폰 노이만/README.md",
-    "백준/Bronze/9366. 삼각형 분류/README.md",
-    "백준/Bronze/9317. Monitor DPI/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
