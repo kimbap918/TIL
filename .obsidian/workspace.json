@@ -8,109 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da7c05a3dfb09381",
+            "id": "795a931ffd1e9304",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+                "file": "금융데이터/핀테크 개요.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "0c45eb60d24db4a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Object Detection(1) - Selective Search.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e53276dde0e1b20a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c942e4396961afa4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06d4042aa003fa7f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "2ff5508c9f08907c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Object Detection(3) - Two-stage detector, SSD.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "abc25d24c910e8d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8894824eb5f578ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "빅분기 예제 풀어보기.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "45af1d8ce7c532d8",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
               }
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "빅분기 예제 풀어보기.md",
+                "file": "금융데이터/핀테크 개요.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -193,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "빅분기 예제 풀어보기.md",
+                "file": "금융데이터/핀테크 개요.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -216,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "빅분기 예제 풀어보기.md"
+                "file": "금융데이터/핀테크 개요.md"
               }
             }
           },
@@ -247,44 +156,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "45af1d8ce7c532d8",
+  "active": "795a931ffd1e9304",
   "lastOpenFiles": [
+    "금융데이터/커리어 트렌드.md",
+    "핀테크 개요.md",
+    "금융데이터/핀테크 개요.md",
+    "금융데이터",
+    "핀테크",
+    "untitled folder",
+    "SeSAC_AI/DL/Seq2Seq.md",
+    "SeSAC_AI/DL/Orange로 no code 프로토타이핑 해보기.md",
+    "SeSAC_AI/DL/Object Detection(3) - Two-stage detector, SSD.md",
+    "SeSAC_AI/DL/Object Detection(2) - Faster R-CNN.md",
+    "SeSAC_AI/DL/Object Detection(1) - Selective Search.md",
+    "SeSAC_AI/DL/Attention.md",
+    "SeSAC_AI/Seq2Seq.md",
+    "SeSAC_AI/Orange로 no code 프로토타이핑 해보기.md",
+    "SeSAC_AI/Object Detection(3) - Two-stage detector, SSD.md",
+    "SeSAC_AI/Object Detection(2) - Faster R-CNN.md",
+    "SeSAC_AI/Object Detection(1) - Selective Search.md",
+    "SeSAC_AI/Attention.md",
+    "커리어 트렌드.md",
+    "python/PythonWorkspace/BOJ 연습장/1094.py",
+    "python/PythonWorkspace/BOJ 연습장/1312.py",
+    "python/PythonWorkspace/BOJ 연습장/1212.py",
+    "python/PythonWorkspace/BOJ 연습장/26264.py",
+    "python/PythonWorkspace/BOJ 연습장/26264.ㅔy",
+    "python/PythonWorkspace/BOJ 연습장/26264.Py",
     "백준/Bronze/9907. ID/README.md",
     "백준/Bronze/9907. ID/ID.py",
-    "백준/Bronze/9907. ID",
-    "백준/Bronze/9838. XMAS/XMAS.py",
     "백준/Bronze/9838. XMAS/README.md",
-    "백준/Bronze/9838. XMAS",
-    "백준/Bronze/9699. RICE SACK/RICE SACK.py",
     "백준/Bronze/9699. RICE SACK/README.md",
-    "백준/Bronze/9699. RICE SACK",
-    "백준/Bronze/9550. 아이들은 사탕을 좋아해/아이들은 사탕을 좋아해.py",
     "백준/Bronze/9550. 아이들은 사탕을 좋아해/README.md",
-    "백준/Bronze/9550. 아이들은 사탕을 좋아해",
-    "백준/Bronze/9517. 아이 러브 크로아티아/아이 러브 크로아티아.py",
     "백준/Bronze/9517. 아이 러브 크로아티아/README.md",
-    "백준/Bronze/9517. 아이 러브 크로아티아",
     "백준/Bronze/9501. 꿍의 우주여행/README.md",
     "백준/Bronze/9493. 길면 기차， 기차는 빨라， 빠른 것은 비행기/README.md",
     "백준/Bronze/9469. 폰 노이만/README.md",
     "백준/Bronze/9366. 삼각형 분류/README.md",
     "백준/Bronze/9317. Monitor DPI/README.md",
-    "백준/Bronze/9295. 주사위/README.md",
-    "백준/Bronze/9094. 수학적 호기심/README.md",
-    "백준/Bronze/9085. 더하기/README.md",
-    "백준/Bronze/8932. 7종 경기/README.md",
-    "백준/Bronze/8815. Test/README.md",
-    "백준/Bronze/8721. Wykreślanka/README.md",
-    "백준/Bronze/7510. 고급 수학/README.md",
-    "백준/Bronze/6845. Federal Voting Age/README.md",
-    "백준/Bronze/6812. Good times/README.md",
-    "백준/Bronze/6784. Multiple Choice/README.md",
-    "백준/Bronze/6768. Don’t pass me the ball！/README.md",
-    "백준/Bronze/6437. Golf/README.md",
-    "백준/Bronze/5666. Hot Dogs/README.md",
-    "백준/Bronze/5613. 계산기 프로그램/README.md",
-    "백준/Bronze/4806. 줄 세기/README.md",
-    "백준/Bronze/4740. 거울， 오！ 거울/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
