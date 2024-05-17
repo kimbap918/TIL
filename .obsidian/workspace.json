@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "금융데이터/핀테크 개요.md",
+                "file": "금융데이터/week1/2024.05.16/아나콘다.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "281664e6e6982527",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "금융데이터/핀테크 개요.md",
+                "file": "Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "금융데이터/핀테크 개요.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "금융데이터/핀테크 개요.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -156,25 +169,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "795a931ffd1e9304",
+  "active": "281664e6e6982527",
   "lastOpenFiles": [
+    "금융데이터/week1/2024.05.17/Untitled.md",
+    "금융데이터/week1/2024.05.17/day2.ipynb",
+    "금융데이터/week1/2024.05.17",
+    "금융데이터/week1/untitled folder",
+    "python/PythonWorkspace/BOJ 연습장/1418.py",
+    "python/PythonWorkspace/BOJ 연습장/1402.py",
+    "python/PythonWorkspace/BOJ 연습장/pr2.py",
+    "python/PythonWorkspace/BOJ 연습장/pr2",
     "금융데이터/week1/2024.05.16/아나콘다.md",
+    "Untitled.md",
+    "금융데이터/핀테크 개요.md",
     "금융데이터/week1/2024.05.16/Untitled.md",
     "금융데이터/week1/Untitled.md",
-    "Untitled.md",
     "금융데이터/Untitled.md",
     "금융데이터/week1/2024.05.16/day1.ipynb",
     "금융데이터/week1/2024.05.16",
-    "금융데이터/week1/untitled folder",
     "금융데이터/week1/오민엽_파이썬.pdf",
-    "금융데이터/week1/day1.ipynb",
-    "금융데이터/week1",
-    "백준/Silver/1251. 단어 나누기/단어 나누기.py",
     "백준/Silver/1251. 단어 나누기/README.md",
-    "백준/Silver/1251. 단어 나누기",
-    "python/PythonWorkspace/BOJ 연습장/1308.py",
-    "python/PythonWorkspace/BOJ 연습장/pr.py",
-    "금융데이터/핀테크 개요.md",
     "금융데이터/커리어 트렌드.md",
     "핀테크 개요.md",
     "SeSAC_AI/DL/Seq2Seq.md",
@@ -193,7 +207,6 @@
     "백준/Bronze/9907. ID/README.md",
     "백준/Bronze/9838. XMAS/README.md",
     "백준/Bronze/9699. RICE SACK/README.md",
-    "백준/Bronze/9550. 아이들은 사탕을 좋아해/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",
