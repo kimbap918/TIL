@@ -23,8 +23,5 @@ for i in range(2, N+1):
 
 print(sum(k_num)-1)
 
-# 10 , 3
-# 10 5 2 1
-
 
 
