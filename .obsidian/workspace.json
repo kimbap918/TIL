@@ -23,12 +23,8 @@
             "id": "281664e6e6982527",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -37,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 1.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled 1.md",
+                "file": "Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled 1.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 1.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -183,17 +179,18 @@
   },
   "active": "b78811d6e29c7e84",
   "lastOpenFiles": [
-    "금융데이터/week1/2024.05.20/day3.ipynb",
-    "금융데이터/week1/2024.05.20",
-    "금융데이터/week1/untitled folder",
-    "python/PythonWorkspace/BOJ 연습장/forpr_4.py",
-    "python/PythonWorkspace/BOJ 연습장/forpr_3.py",
-    "python/PythonWorkspace/BOJ 연습장/forpr_2.py",
-    "python/PythonWorkspace/BOJ 연습장/forpr.py",
-    "python/PythonWorkspace/BOJ 연습장/ifpr_5.py",
-    "python/PythonWorkspace/BOJ 연습장/ifpr_4.py",
-    "python/PythonWorkspace/BOJ 연습장/ifpr_3.py",
-    "python/PythonWorkspace/BOJ 연습장/ifpr_2.py",
+    "백준/Bronze/1247. 부호/부호.py",
+    "백준/Bronze/1247. 부호/README.md",
+    "백준/Bronze/1247. 부호",
+    "python/PythonWorkspace/BOJ 연습장/whilepr_11.py",
+    "python/PythonWorkspace/BOJ 연습장/whilepr_10.py",
+    "python/PythonWorkspace/BOJ 연습장/1247.py",
+    "python/PythonWorkspace/BOJ 연습장/whilepr_3.py",
+    "python/PythonWorkspace/BOJ 연습장/whilepr",
+    "python/PythonWorkspace/BOJ 연습장/whilepr_1.py",
+    "python/PythonWorkspace/BOJ 연습장/whilepr_1.pu",
+    "python/PythonWorkspace/BOJ 연습장/forpr_11.py",
+    "python/PythonWorkspace/BOJ 연습장/forpr_10.py",
     "Untitled.md",
     "Untitled 1.md",
     "금융데이터/week1/2024.05.17/Untitled.md",
@@ -218,7 +215,6 @@
     "SeSAC_AI/Object Detection(1) - Selective Search.md",
     "SeSAC_AI/Attention.md",
     "커리어 트렌드.md",
-    "백준/Bronze/9907. ID/README.md",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
     "SeSAC_AI/ML/convolution_schematic.webp",
     "python/python 필기/python 에러:예외처리.assets/python3.png",

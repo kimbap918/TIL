@@ -1,0 +1,18 @@
+import random
+rand = random.randint(0, 101)
+me = -1
+cnt = 0
+
+while rand != me:
+    try:
+        me = int(input("up&down 게임! 0부터 100까지 숫자 중 입력하세요 :"))
+        cnt += 1
+        if me < rand:
+            print(f'내 숫자 {me}(은)는 정답보다 작습니다.')
+        elif me > rand:
+            print(f'내 숫자 {me}(은)는 정답보다 큽니다.')
+        else:
+            print(f'정답입니다! 숫자 : {rand}')
+            print(f'총 시도 횟수 {cnt}회')
+    except ValueError:
+        print("0~100의 숫자 중 하나를 입력해주세요.")
