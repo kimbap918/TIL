@@ -44,9 +44,21 @@
                 "file": "SeSAC_AI/DL/NLP/NIPS-2017-attention-is-all-you-need-Paper.pdf"
               }
             }
+          },
+          {
+            "id": "1b087beb3bf67753",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "데이콘 수상작 탐색.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -75,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "encoder",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +104,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -112,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/NIPS-2017-attention-is-all-you-need-Paper.pdf",
+                "file": "데이콘 수상작 탐색.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/NIPS-2017-attention-is-all-you-need-Paper.pdf",
+                "file": "데이콘 수상작 탐색.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC_AI/DL/NLP/NIPS-2017-attention-is-all-you-need-Paper.pdf"
+                "file": "데이콘 수상작 탐색.md"
               }
             }
           },
@@ -183,22 +196,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac4a83d15a0c1343",
+  "active": "1b087beb3bf67753",
   "lastOpenFiles": [
-    "백준/Bronze/28061. 레몬 따기/레몬 따기.py",
+    "백준/Bronze/24724. 현대모비스와 함께하는 부품 관리/현대모비스와 함께하는 부품 관리.py",
+    "백준/Bronze/24724. 현대모비스와 함께하는 부품 관리/README.md",
+    "백준/Bronze/24724. 현대모비스와 함께하는 부품 관리",
+    "SeSAC_AI/DL/Seq2Seq.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
+    "SeSAC_AI/DL/NLP/NIPS-2017-attention-is-all-you-need-Paper.pdf",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
+    "데이콘 수상작 탐색.md",
+    "데이터분석/week1/2024.06.12/2_2019goms_code book.xlsx",
+    "데이터분석/week1/2024.06.12/2_pyplot_대졸자직업이동_lab(student).ipynb",
+    "데이터분석/week1/2024.06.12/3_pyplot_3(student).ipynb",
+    "데이터분석/week1/2024.06.11/1_pyplot_1_example(student).ipynb",
+    "데이터분석/week1/2024.06.11/1_pyplot_1(student).ipynb",
+    "데이터분석/week1/2024.06.12/시각화 연습.ipynb",
+    "데이터분석/week1/2024.06.12/풀이.ipynb",
+    "데이터분석/week1/2024.06.12",
     "백준/Bronze/28061. 레몬 따기/README.md",
-    "백준/Bronze/28061. 레몬 따기",
-    "백준/Bronze/28014. 첨탑 밀어서 부수기/첨탑 밀어서 부수기.py",
     "백준/Bronze/28014. 첨탑 밀어서 부수기/README.md",
-    "백준/Bronze/28014. 첨탑 밀어서 부수기",
-    "백준/Bronze/27465. 소수가 아닌 수/소수가 아닌 수.py",
     "백준/Bronze/27465. 소수가 아닌 수/README.md",
-    "백준/Bronze/27465. 소수가 아닌 수",
-    "데이터분석/week1/2024.06.11/05_Time_Series_Apple_Stock_Exercises(student).ipynb",
-    "데이터분석/week1/2024.06.11/05_Time_Series_Investor_Flow_of_Funds_US_Exercises(student).ipynb",
-    "데이터분석/week1/2024.06.10/03_Grouping_Alcohol_Consumption_Exercise(student).ipynb",
-    "데이터분석/week1/2024.06.10/03_Grouping_Regiment_Exercises(student).ipynb",
-    "데이터분석/week1/2024.06.10/04_Apply_Students_Alcohol_Consumption_Exercises(student).ipynb",
     "데이터분석/week1/2024.06.05/Untitled 1.md",
     "데이터분석/week1/Untitled 1.md",
     "데이터분석/Untitled 1.md",
@@ -212,15 +230,10 @@
     "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
     "2024.06.04 최준혁.md",
     "Untitled 1.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "백준/Silver/28278. 스택 2/README.md",
     "백준/Silver/1439. 뒤집기/README.md",
     "백준/Silver/12789. 도키도키 간식드리미/README.md",
     "백준/Bronze/30454. 얼룩말을 찾아라！/README.md",
-    "백준/Bronze/26068. 치킨댄스를 추는 곰곰이를 본 임스 2/README.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 4일차.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 3일차.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 분석 프로젝트 2일차.md",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
