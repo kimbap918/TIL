@@ -66,7 +66,7 @@ dense2 = keras.layers.Dense(10, activation='softmax')
 
 ## 심층 신경망 만들기
 
-``` python
+ㅏ ``` python
 model = keras.Sequential([dense1, dense2])
 model.summary()
 
