@@ -4,16 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "e33ba210c8c8664b",
+        "id": "192a1c50f4a1aae4",
         "type": "tabs",
         "children": [
           {
-            "id": "e271bdd8f7df20c1",
+            "id": "9f835874e8a24b2c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3bda98cdd5b789cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c0d40b5ca0523d6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Minima",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +89,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md"
+                "file": "데이터분석/스터디/데이콘 수상작 탐색.md"
               }
             }
           },
@@ -157,44 +180,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e271bdd8f7df20c1",
+  "active": "9f835874e8a24b2c",
   "lastOpenFiles": [
+    "백준/Bronze/2858. 기숙사 바닥/기숙사 바닥.py",
+    "백준/Bronze/2858. 기숙사 바닥/README.md",
+    "백준/Bronze/2858. 기숙사 바닥",
+    "백준/Bronze/2052. 지수연산/지수연산.py",
+    "백준/Bronze/2052. 지수연산/README.md",
+    "백준/Bronze/2052. 지수연산",
+    "백준/Bronze/1668. 트로피 진열/트로피 진열.py",
+    "백준/Bronze/1668. 트로피 진열/README.md",
+    "백준/Bronze/1668. 트로피 진열",
+    "데이터분석/스터디/딥러닝 모델 조사.md",
+    "딥러닝 모델 조사.md",
+    "데이터분석/딥러닝 모델 조사.md",
+    "데이터분석/스터디/데이콘 수상작 탐색.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
+    "SeSAC_AI/DL/NLP/RNN Encoder-Decoder.pdf",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(2).md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
+    "빅분기/BigDataCertificationCourses-main/README.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "빅분기/kaggle-퇴근후딴짓/T2-4/t2-4-house-prices-regression (1).ipynb",
     "빅분기/kaggle-퇴근후딴짓/T2-3/풀이.ipynb",
     "빅분기/kaggle-퇴근후딴짓/T2-2/풀이.ipynb",
     "데이터분석/week1/2024.06.14/풀이.ipynb",
     "백준/Bronze/14954. Happy Number/README.md",
-    "백준/Bronze/14954. Happy Number/Happy Number.py",
-    "백준/Bronze/14954. Happy Number",
-    "백준/Bronze/1252. 이진수 덧셈/이진수 덧셈.py",
     "백준/Bronze/1252. 이진수 덧셈/README.md",
-    "백준/Bronze/1252. 이진수 덧셈",
-    "데이터분석/week1/2024.06.14/1_0_도입.pdf",
-    "데이터분석/week1/2024.06.14/2_0_Regression.pdf",
-    "데이터분석/week1/2024.06.14/1_0_도입(필기).pdf",
-    "데이터분석/week1/2024.06.14/2_0_Regression(필기).pdf",
     "learning_rate.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
-    "데이터분석/스터디/데이콘 수상작 탐색.md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "SeSAC_AI/DL/Seq2Seq.md",
     "데이콘 수상작 탐색.md",
     "데이터분석/데이콘 수상작 탐색.md",
-    "백준/Bronze/30958. 서울사이버대학을 다니고/README.md",
-    "백준/Bronze/24724. 현대모비스와 함께하는 부품 관리/README.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(6) - 순환 신경망으로 IMDB 리뷰 분류하기.md",
-    "백준/Bronze/28061. 레몬 따기/README.md",
-    "백준/Bronze/28014. 첨탑 밀어서 부수기/README.md",
-    "백준/Bronze/27465. 소수가 아닌 수/README.md",
-    "데이터분석/week1/2024.06.05/Untitled 1.md",
-    "데이터분석/week1/Untitled 1.md",
-    "데이터분석/Untitled 1.md",
-    "데이터분석/week1/2024.06.04/2024.06.04 최준혁.md",
-    "SeSAC_AI/DL/NLP/Attention.md",
-    "SeSAC_AI/DL/NLP/SeSAC - Transformer~.md",
-    "SeSAC_AI/DL/NLP/SeSAC - Transformer.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 FastText.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 TF-IDF, Word2Vec.md",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
