@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
+                "file": "데이터분석/스터디/딥러닝 모델 조사.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "딥러닝 모델",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
+                "file": "데이터분석/스터디/딥러닝 모델 조사.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/스터디/데이콘 수상작 탐색.md",
+                "file": "데이터분석/스터디/딥러닝 모델 조사.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/스터디/데이콘 수상작 탐색.md"
+                "file": "데이터분석/스터디/딥러닝 모델 조사.md"
               }
             }
           },
@@ -182,6 +183,9 @@
   },
   "active": "9f835874e8a24b2c",
   "lastOpenFiles": [
+    "데이터분석/스터디/데이콘 수상작 탐색.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "백준/Bronze/2858. 기숙사 바닥/기숙사 바닥.py",
     "백준/Bronze/2858. 기숙사 바닥/README.md",
     "백준/Bronze/2858. 기숙사 바닥",
@@ -194,9 +198,6 @@
     "데이터분석/스터디/딥러닝 모델 조사.md",
     "딥러닝 모델 조사.md",
     "데이터분석/딥러닝 모델 조사.md",
-    "데이터분석/스터디/데이콘 수상작 탐색.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "SeSAC_AI/DL/NLP/RNN Encoder-Decoder.pdf",
     "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
     "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
@@ -210,7 +211,6 @@
     "빅분기/kaggle-퇴근후딴짓/T2-4/t2-4-house-prices-regression (1).ipynb",
     "빅분기/kaggle-퇴근후딴짓/T2-3/풀이.ipynb",
     "빅분기/kaggle-퇴근후딴짓/T2-2/풀이.ipynb",
-    "데이터분석/week1/2024.06.14/풀이.ipynb",
     "백준/Bronze/14954. Happy Number/README.md",
     "백준/Bronze/1252. 이진수 덧셈/README.md",
     "learning_rate.md",
