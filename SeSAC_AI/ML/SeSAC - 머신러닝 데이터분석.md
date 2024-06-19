@@ -378,14 +378,18 @@ print(lr.score(test_poly, test_target))
 # -> -144.40579436844948
 ```
 
+
 <br>
+
 
 ### 규제(regularization)
 * 릿지(Ridge)
 * 라쏘(Lasso)
 * 두가지 다 과적합을 막는 방법이다
 
+
 <br>
+
 
 미분이 불가능 함수
 * x값이 0일때 미분할 수 없다
@@ -453,9 +457,6 @@ train_scaled = ss.transform(train_poly)
 test_scaled = ss.transform(test_poly)
 ```
 
-<br>
-## 규제
- 릿지(Ridge)와 라쏘(Lasso) 회귀는 머신 러닝과 통계에서 사용되는 선형 회귀 모델의 두 가지 형태로, 다중 공선성 문제를 해결하고 모델의 과적합을 방지하기 위해 사용된다.
 
 <br>
 
