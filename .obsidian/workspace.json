@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -159,8 +158,11 @@
   },
   "active": "c0d40b5ca0523d6d",
   "lastOpenFiles": [
-    "데이터분석/공모전/딥러닝 모델 조사.md",
+    "데이터분석/스터디/정규 표현식(Regular Expression).md",
+    "정규 표현식(Regular Expression).md",
+    "데이터분석/정규 표현식(Regular Expression).md",
     "데이터분석/공모전/데이콘 수상작 탐색.md",
+    "데이터분석/공모전/딥러닝 모델 조사.md",
     "SeSAC_AI/DL/Object Detection(1) - Selective Search.md",
     "SeSAC_AI/DL/Orange로 no code 프로토타이핑 해보기.md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
@@ -192,9 +194,6 @@
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(2).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "백준/Bronze/14954. Happy Number/README.md",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
