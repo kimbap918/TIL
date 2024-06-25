@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f4009d6c626d2944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "정규표",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/스터디/정규 표현식(Regular Expression).md",
+                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/스터디/정규 표현식(Regular Expression).md",
+                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/스터디/정규 표현식(Regular Expression).md"
+                "file": "데이터분석/공모전/데이콘 수상작 탐색.md"
               }
             }
           },
@@ -157,14 +170,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c0d40b5ca0523d6d",
+  "active": "f4009d6c626d2944",
   "lastOpenFiles": [
+    "백준/Bronze/1681. 줄 세우기/줄 세우기.py",
+    "백준/Bronze/1681. 줄 세우기/README.md",
+    "백준/Bronze/1681. 줄 세우기",
+    "데이터분석/공모전/금융 이상거래 탐지.ipynb",
+    "데이터분석/공모전/딥러닝 모델 조사.md",
+    "데이터분석/스터디/정규 표현식(Regular Expression).md",
+    "Untitled.md",
     "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 2일차.md",
     "데이터분석/공모전/데이콘 수상작 탐색.md",
-    "데이터분석/스터디/정규 표현식(Regular Expression).md",
     "정규 표현식(Regular Expression).md",
     "데이터분석/정규 표현식(Regular Expression).md",
-    "데이터분석/공모전/딥러닝 모델 조사.md",
     "SeSAC_AI/DL/Object Detection(1) - Selective Search.md",
     "SeSAC_AI/DL/Orange로 no code 프로토타이핑 해보기.md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
@@ -176,8 +194,6 @@
     "데이터분석/week1/untitled folder",
     "데이터분석/week1/2024.06.19/3_0.Classification.pdf",
     "데이터분석/week1/2024.06.19/3_0.Classification(필기).pdf",
-    "데이터분석/week1/2024.06.19",
-    "데이터분석/week1/2024.06.18/2_4.학습곡선.pdf",
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
     "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
     "빅분기/BigDataCertificationCourses-main/README.md",
@@ -192,9 +208,6 @@
     "백준/Bronze/1668. 트로피 진열/README.md",
     "딥러닝 모델 조사.md",
     "데이터분석/딥러닝 모델 조사.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
