@@ -57,11 +57,47 @@ support@example.org
 
 #### 2. `^` (캐럿)
 - **역할**: 문자열의 시작 부분과 매칭된다
-- **예시**: 정규표현식 `^abc`는 "abc"로 시작하는 문자열과 매칭된다. 즉, abcdefghi는 추출하지만, acbdefghi는 추출하지 못한다.
+- **예시**: 정규표현식 `^abc`는 "abc"로 시작하는 문자열과 매칭된다. 
+
+```python
+import re
+
+# 문자열이 'abc'로 시작하는지 검사
+pattern = r'^abc'
+
+test_string1 = "abc123"
+test_string2 = "123abc"
+
+match1 = re.match(pattern, test_string1)
+match2 = re.match(pattern, test_string2)
+
+print(bool(match1))  # True: 'abc123'는 'abc'로 시작한다.
+print(bool(match2))  # False: '123abc'는 'abc'로 시작하지 않는다.
+
+```
 
 ### 3. `$` (달러 기호)
 - **역할**: 문자열의 끝 부분과 매칭된다.
-- **예시**: 정규표현식 `abc$`는 "abc"로 끝나는 문자열과 매칭된다. 즉, fgijkabc는 추출하지만, fgijkacb는 추출하지 못한다.
+- **예시**: 정규표현식 `abc$`는 "abc"로 끝나는 문자열과 매칭된다. 
+
+```python
+import re
+
+# 문자열이 'abc'로 끝나는지 검사
+pattern = r'abc$'
+
+test_string1 = "abc123"
+test_string2 = "123abc"
+
+match1 = re.search(pattern, test_string1)
+match2 = re.search(pattern, test_string2)
+
+print(bool(match1))  # False: 'abc123'는 'abc'로 끝나지 않는다.
+print(bool(match2))  # True: '123abc'는 'abc'로 끝난다.
+
+```
+
+
 
 #### 4. `*` (별표)
 - **역할**: 앞의 문자나 그룹이 0회 이상 반복되는 패턴을 매칭한다.
@@ -119,7 +155,7 @@ print(matches)
 - `\.`: 실제 점(.) 문자를 매칭한다.
 - `[A-Za-z]{2,}`: 알파벳 대문자(A-Z)와 소문자(a-z)가 최소 2번 이상 반복되는 패턴({2, }). 최상위 도메인(예: `com`, `org`, `net` 등)을 매칭한다.
 
-### 
+ 
 
 <br>
 
@@ -190,7 +226,20 @@ result = re.search(r'\d+', '123abc')
 print(result.group())  # 출력: 123
 ```
 
-#### 2. re.findall(pattern, string)
+#### 2. re.match(pattern, string)
+
+- **설명**: 주어진 패턴이 문자열의 시작 부분과 일치하는지 검사한다. 
+- **반환값**: 매칭된 객체를 반환한다. 매칭되지 않으면 `None`을 반환한다.
+
+```python 
+import re
+result = re.match(r'\d+', '123abc')
+print(result.group())  # 출력: 123
+```
+
+
+
+#### 3. re.findall(pattern, string)
 
 - **설명**: 문자열 전체에서 패턴과 일치하는 모든 부분을 찾아 리스트로 반환한다.
 - **반환값**: 매칭된 부분을 리스트 형태로 반환한다.
@@ -200,7 +249,7 @@ result = re.findall(r'\d+', 'abc123def456ghi')
 print(result)  # 출력: ['123', '456']
 ```
 
-#### 3. re.sub(pattern, repl, string)
+#### 4. re.sub(pattern, repl, string)
 
 - **설명**: 문자열에서 패턴과 일치하는 부분을 다른 문자열로 치환한다.
 - **반환값**: 치환된 문자열을 반환한다.
@@ -210,7 +259,7 @@ result = re.sub(r'\d+', '#', 'abc123def456ghi')
 print(result)  # 출력: abc#def#ghi, 연속된 숫자(\d+)가 #로 치환됨
 ```
 
-#### 4. re.split(pattern, string)
+#### 5. re.split(pattern, string)
 
 - **설명**: 패턴과 일치하는 부분을 기준으로 문자열을 분할한다.
 - **반환값**: 분할된 문자열의 리스트를 반환한다.
@@ -219,4 +268,6 @@ print(result)  # 출력: abc#def#ghi, 연속된 숫자(\d+)가 #로 치환됨
 result = re.split(r'\d+', 'abc123def456ghi')
 print(result)  # 출력: ['abc', 'def', 'ghi'], 연속된 숫자(\d+) 기준으로 분할됨
 ```
+
+
 

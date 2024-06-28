@@ -74,6 +74,7 @@ https://www.storagereview.com/ko/review/meta-llama-and-alpacas-loose-in-the-lab-
 -> 사진을 제시하고, 라벨이 없는 데이터를 비슷한 특징끼리 군집화 하여 새로운 데이터에 대한 결과를 예측, 라벨이 없음
 
 
+
 <br>
 
 ### Supervised Learning

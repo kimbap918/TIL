@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "192a1c50f4a1aae4",
+        "id": "ac3058438871739a",
         "type": "tabs",
         "children": [
           {
-            "id": "c0d40b5ca0523d6d",
+            "id": "67683eb335b278a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터분석/스터디/정규 표현식(Regular Expression).md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f4009d6c626d2944",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "dropout",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/공모전/데이콘 수상작 탐색.md",
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/공모전/데이콘 수상작 탐색.md"
+                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md"
               }
             }
           },
@@ -170,44 +157,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f4009d6c626d2944",
+  "active": "67683eb335b278a8",
   "lastOpenFiles": [
+    "백준/Bronze/2145. 숫자 놀이/숫자 놀이.py",
+    "백준/Bronze/2145. 숫자 놀이/README.md",
+    "백준/Bronze/2145. 숫자 놀이",
+    "백준/Bronze/1440. 타임머신/타임머신.py",
+    "백준/Bronze/1440. 타임머신/README.md",
+    "백준/Bronze/1440. 타임머신",
+    "백준/Bronze/1434. 책 정리/README.md",
+    "백준/Bronze/1434. 책 정리/책 정리.py",
+    "백준/Bronze/1434. 책 정리",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "데이터분석/공모전/머신러닝과 딥러닝.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "데이터분석/공모전/딥러닝 모델 조사.md",
+    "데이터분석/공모전/트랜스포머 초안.md",
+    "트랜스포머 초안.md",
+    "Untitled 1.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
+    "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 2일차.md",
+    "Untitled.md",
+    "Untitled~.md",
+    "데이터분석/스터디/정규 표현식(Regular Expression).md",
+    "데이터분석/공모전/데이콘 수상작 탐색.md",
     "백준/Bronze/1681. 줄 세우기/줄 세우기.py",
     "백준/Bronze/1681. 줄 세우기/README.md",
     "백준/Bronze/1681. 줄 세우기",
     "데이터분석/공모전/금융 이상거래 탐지.ipynb",
-    "데이터분석/공모전/딥러닝 모델 조사.md",
-    "데이터분석/스터디/정규 표현식(Regular Expression).md",
-    "Untitled.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 데이터 분석 기초 2일차.md",
-    "데이터분석/공모전/데이콘 수상작 탐색.md",
     "정규 표현식(Regular Expression).md",
     "데이터분석/정규 표현식(Regular Expression).md",
     "SeSAC_AI/DL/Object Detection(1) - Selective Search.md",
     "SeSAC_AI/DL/Orange로 no code 프로토타이핑 해보기.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "SeSAC_AI/SeSAC 영등포 3주년/SeSAC 3rd Anniversary Song.mp3",
     "데이터분석/week1/2024.06.20/3_1.Logistic_Regression(student).ipynb",
-    "데이터분석/week1/2024.06.20/3_2.로지스틱 회귀(Logistic Regression)(student).ipynb",
-    "데이터분석/week1/2024.06.20/3_3.Batch.pdf",
-    "데이터분석/week1/2024.06.20",
-    "데이터분석/week1/untitled folder",
-    "데이터분석/week1/2024.06.19/3_0.Classification.pdf",
-    "데이터분석/week1/2024.06.19/3_0.Classification(필기).pdf",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
-    "빅분기/BigDataCertificationCourses-main/README.md",
-    "백준/Bronze/2998. 8진수/README.md",
-    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
-    "SeSAC_AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(7) - LSTM, GRU.md",
-    "데이터분석/스터디/데이콘 수상작 탐색.md",
-    "데이터분석/스터디/딥러닝 모델 조사.md",
-    "백준/Bronze/2858. 기숙사 바닥/README.md",
-    "백준/Bronze/2052. 지수연산/README.md",
-    "백준/Bronze/1668. 트로피 진열/README.md",
-    "딥러닝 모델 조사.md",
-    "데이터분석/딥러닝 모델 조사.md",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
     "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
     "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
