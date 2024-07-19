@@ -1,0 +1,145 @@
+## 서론
+
+> 인간은 모든 생각을 밑바닥부터 시작하지 않는다.
+
+우리는 지금 이 글을 읽을 때도 매 단어를 그 전 단어들을 바탕으로 이해한다.
+지금까지 봐 왔던 것들을 모두 집어던지고 아무것도 모르는 채로 생각하지 않는다. 생각은 계속 나아간다.
+
+## RNN(Recurrent Neural Network)
+전통적인 **Neural network(MLP, Multi-Layer Perceptron)** 는 이렇게 인간처럼 지속되는 생각을 하지 못한다. 
+
+예를 들어보자면, 영화의 매 순간 일어나는 사건을 분류하고 싶을 때, MLP는 이전에 일어난 사건을 바탕으로 나중에 일어나는 사건을 도출하지 못한다.
+
+**Recurrent neural network, RNN**은 이 문제를 해결하고자 하는 모델이다. RNN은 스스로를 반복하면서 이전 단계에서 얻은 정보가 지속되도록 한다.
+![](https://i.imgur.com/jNbFU5j.png)
+위 그림에서 A는 RNN의 한 덩어리이다. A는 입력$(x_t)$를 받아서 은닉상태의 출력$(h_t)$를 내보낸다. 
+A를 둘러싼 반복은 다음 단계에서의 network가 이전 단계의 정보를 받는다는 것을 보여준다.
+
+즉, 각 시점 에서 입력(x)을 받고, 이전 단계의 정보를 포함한 은닉 상태(A)를 사용하여 출력(h)을 생성하며, 이 은닉 상태는 다음 단계에 전달된다. 이 과정은 입력의 길이 t만큼 반복된다.
+![](https://i.imgur.com/FZdl6Av.png)
+
+이 풀어놓은 RNN구조를 보면 좀더 이해하기 쉽다.
+입력에 은닉상태를 사용하고, 활성화 함수를 통과해 출력을 만든다. 그리고 이 단계에서 이용된 은닉상태는 다음의 A에 전달된다.
+
+
+<br>
+
+### 단점과 한계
+위와 같은 구조의 RNN은 순서를 가진 시퀀스 데이터 또는 시간의 흐름에 따라 변화하는 데이터를 다루기 위해 설계된 인공 신경망이다. 하지만 일반적인 RNN은 시퀀스가 길어질수록 학습하기가 어렵고, 장기 의존성`(시퀀스 데이터나 시계열 데이터에서, 현재 시점의 예측이나 출력이 과거의 특정 시점에 의존하는 정도)`을 다루는 데 한계가 있다.
+
+<br>
+
+## LSTM의 기본 개념 및 응용
+
+
+### LSTM 개요 및 기본 개념
+
+LSTM(Long Short-Term Memory)은 RNN의 한 종류로, 시계열 데이터나 순차적 데이터를 다루는 데 주로 사용된다. 전통적인 RNN(Recurrent Neural Network)은 시간의 흐름에 따라 데이터를 처리하지만, 장기적인 의존성을 기억하지 못하는 단점이 있다. LSTM은 이러한 문제를 해결하기 위해 개발된 네트워크로, 긴 시퀀스 데이터에서의  장기 의존성 문제를 효과적으로 처리한다.
+
+### LSTM의 구조 및 동작 
+![](https://i.imgur.com/aKhdKXC.png)
+
+LSTM은 기본적으로 **셀 상태(cell state)** 와 다양한 **게이트(gate)** 로 구성된다. 
+
+주요 구성 요소는 다음과 같다:
+* **$x$(입력)**  : 데이터의 입력값
+* **$h$(은닉 상태)** : LSTM 셀의 출력을 나타낸다. 이것은 현재 시점의 정보를 반영해 다음 시점의 입력으로 사용되기도 하고, 최종 출력으로 사용되기도 한다.
+1. **셀 상태 (Cell State, $C$)**: 장기적인 정보를 보존하는 역할을 한다. 셀 상태는 각 시점에서 중요한 정보를 유지하거나 업데이트하며, 네트워크의 주요 기억 장치 역할을 한다.
+	* **셀 후보 값 ( $\tilde{C}_t$ )**: 입력 게이트($i$)​와 곱해져서 셀 상태($C$)​를 업데이트하는 데 중요한 역할을 한다. 이는 LSTM 셀이 새로운 정보를 얼마나 많이 받아들일지를 결정하는 데 사용된다.
+2. **입력 게이트 (Input Gate, $i$)**: 현재 입력과 이전의 은닉 상태를 사용하여 새로운 정보를 셀 상태에 추가할지 결정한다.
+3. **망각 게이트 (Forget Gate, $f$)**: 셀 상태에서 불필요한 정보를 제거할지 결정한다.
+4. **출력 게이트 (Output Gate, $o$)**: 셀 상태와 현재 입력을 사용하여 다음 은닉 상태를 결정합니다.
+
+
+
+1. 데이터가 입력되면 **현재 시점의 입력 데이터($x$)와** **이전 시점의 은닉 상태($h$)를 결합**한다
+2. 이렇게 결합된 값은 LSTM 네트워크가 자동으로 학습하여 **잊어야 할 데이터는 망각 게이트($f$)**에, **잊지 말아야 할 데이터는 입력게이트($i$)**로 간다.
+3. 입력 값은 **입력 게이트($i$​)와 셀 상태 후보 ($\tilde{C}$)에서 처리**된 후 셀 상태 ($C$)로 업데이트된다.
+4. 이 떄, 출력 게이트($o$)는 현재 셀 상태에서 **어떤 부분이 은닉 상태 ($h_t$)​로 출력될지를 결정**한다.
+5. 업데이트된 셀 상태($C$)는 다음 시점으로 넘어가고, **출력할 값은 다시 출력 게이트($o_t$)의 값과 만나서 tanh함수를 거친 후 출력**된다.
+
+<br>
+
+### LSTM의 장점 및 활용 분야
+
+LSTM은 다음과 같은 장점을 가지고 있다:
+1. **장기 종속성 문제 해결**: RNN의 단점인 장기 종속성 문제를 해결하여, 긴 시퀀스 데이터에서도 효과적으로 학습할 수 있다.
+2. **시계열 데이터 처리**: 시계열 데이터, 자연어 처리, 음성 인식 등 순차적 데이터 처리에 적합하다.
+3. **높은 유연성**: 다양한 형태의 시퀀스 데이터를 처리할 수 있으며, 다양한 응용 분야에서 사용할 수 있다.
+
+LSTM의 활용 분야는 다음과 같다:
+1. **시계열 예측**: 주가 예측, 기상 예측 등 시간에 따른 변화를 예측하는 데 사용된다.
+2. **자연어 처리**: 번역, 텍스트 생성, 감정 분석 등 언어 데이터를 처리하는 데 사용된다.
+3. **음성 인식**: 음성 데이터를 텍스트로 변환하거나 음성을 인식하는 데 사용된다.
+4. **동작 인식**: 비디오 분석, 행동 예측 등 동작 인식 분야에서도 활용된다.
+
+### 시계열 예측
+
+시계열 예측은 시간의 흐름에 따라 변하는 데이터를 예측하는 작업이다. LSTM은 과거 데이터를 기반으로 미래의 값을 예측하는 데 강력한 성능을 발휘한다.
+
+**예시: 주가 예측**
+
+```python
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# 데이터 불러오기
+data = pd.read_csv('stock_prices.csv')
+
+# 데이터 전처리
+scaler = MinMaxScaler(feature_range=(0, 1))
+scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1, 1))
+
+# 시계열 데이터 생성
+def create_dataset(data, time_step=1):
+    X, y = [], []
+    for i in range(len(data) - time_step - 1):
+        a = data[i:(i + time_step), 0]
+        X.append(a)
+        y.append(data[i + time_step, 0])
+    return np.array(X), np.array(y)
+
+time_step = 100
+X, y = create_dataset(scaled_data, time_step)
+
+# 데이터셋 분할
+train_size = int(len(X) * 0.67)
+test_size = len(X) - train_size
+X_train, X_test = X[0:train_size], X[train_size:len(X)]
+y_train, y_test = y[0:train_size], y[train_size:len(y)]
+
+# LSTM 모델 생성
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(time_step, 1)))
+model.add(LSTM(50, return_sequences=False))
+model.add(Dense(25))
+model.add(Dense(1))
+
+# 모델 컴파일 및 학습
+model.compile(optimizer='adam', loss='mean_squared_error')
+model.fit(X_train, y_train, batch_size=1, epochs=1)
+
+# 예측
+train_predict = model.predict(X_train)
+test_predict = model.predict(X_test)
+
+# 역정규화
+train_predict = scaler.inverse_transform(train_predict)
+test_predict = scaler.inverse_transform(test_predict)
+
+# 결과 시각화
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(16,8))
+plt.plot(data['Close'], label='Actual Prices')
+plt.plot(np.arange(time_step, time_step + len(train_predict)), train_predict, label='Train Predict')
+plt.plot(np.arange(time_step + len(train_predict), time_step + len(train_predict) + len(test_predict)), test_predict, label='Test Predict')
+plt.legend()
+plt.show()
+```
+
+
