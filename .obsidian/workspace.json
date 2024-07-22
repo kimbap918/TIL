@@ -8,101 +8,40 @@
         "type": "tabs",
         "children": [
           {
-            "id": "67683eb335b278a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "빅분기/BigDataCertificationCourses-main/README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b90ea4c5ca82bd1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SeSAC_AI/SQL/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43ad342b0e55c7ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 1.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "57c8fa8269a5fe98",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.5"
-              }
-            }
-          },
-          {
             "id": "aa17bd4d630072f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "재무제표 기반 기업 경영 성과 분석 프로젝트.md",
-                "mode": "source",
+                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "da60ad35ef4e3a47",
+            "id": "8f16b0fe5aa4fda0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.6.7"
               }
             }
           },
           {
-            "id": "e43ce2dcaa340aa5",
+            "id": "43fe1c50ee045f46",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 3.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "68b68120da05df0e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 3.md",
+                "file": "Untitled 4.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -131,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fake",
+                "query": "LSTM",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -168,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled 3.md",
+                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled 3.md",
+                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled 3.md"
+                "file": "데이터분석/스터디/2024.07.22_LSTM.md"
               }
             }
           },
@@ -239,54 +178,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "68b68120da05df0e",
+  "active": "aa17bd4d630072f9",
   "lastOpenFiles": [
-    "백준/Bronze/4436. 엘프의 검/엘프의 검.py",
-    "백준/Bronze/4436. 엘프의 검/README.md",
-    "백준/Bronze/4436. 엘프의 검",
-    "백준/Bronze/3595. 맥주 냉장고/맥주 냉장고.py",
-    "백준/Bronze/3595. 맥주 냉장고/README.md",
-    "백준/Bronze/3595. 맥주 냉장고",
-    "백준/Bronze/3486. Adding Reversed Numbers/README.md",
-    "백준/Bronze/3486. Adding Reversed Numbers/Adding Reversed Numbers.py",
-    "백준/Bronze/3486. Adding Reversed Numbers",
-    "백준/Bronze/3183. Dates/README.md",
-    "백준/Bronze/3183. Dates/Dates.py",
-    "백준/Bronze/3183. Dates",
-    "백준/Bronze/2909. 캔디 구매/캔디 구매.py",
-    "백준/Bronze/2909. 캔디 구매/README.md",
-    "백준/Bronze/2909. 캔디 구매",
-    "백준/Bronze/2756. 다트/다트.py",
-    "백준/Bronze/2756. 다트/README.md",
-    "백준/Bronze/1919. 애너그램 만들기/README.md",
-    "백준/Bronze/1568. 새/README.md",
-    "백준/Bronze/1333. 부재중 전화/README.md",
-    "Untitled 2.md",
-    "Untitled 1.md",
+    "Untitled 4.md",
+    "readme.md",
+    "데이터분석/공모전/머신러닝과 딥러닝.md",
+    "learning_rate.md",
+    "데이터분석/미국 은행 재무제표 분석/(2023-06)_opinion_황세운.pdf",
+    "(2023-06)_opinion_황세운.pdf",
+    "데이터분석/(2023-06)_opinion_황세운.pdf",
+    "데이터분석/미국 은행 재무제표 분석/은행 목록.md",
+    "데이터분석/은행 목록.md",
+    "은행 목록.md",
+    "데이터분석/미국 은행 재무제표 분석/슬라이드.pdf",
+    "데이터분석/미국 은행 재무제표 분석/5조 발표 슬라이드_최종.pdf",
+    "데이터분석/미국 은행 재무제표 분석/재무제표 데이터 추출 및 병합 코드.ipynb",
+    "데이터분석/미국 은행 재무제표 분석/sec_edgar_url_scrap_v002 (1).ipynb",
+    "데이터분석/미국 은행 재무제표 분석/excel_modify_v002.ipynb",
+    "데이터분석/미국 은행 재무제표 분석/ML_sdo.ipynb",
+    "데이터분석/미국 은행 재무제표 분석/final_crawing_sdo.ipynb",
     "LSTM.md",
-    "Untitled 3.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(5) - 합성곱 신경망(CNN)의 시각화.md",
-    "대구 빅데이터 분석 경진대회 과제 분석 계획서.md",
-    "프로그래머스/0/181952. 문자열 출력하기/README.md",
-    "프로그래머스/0/181929. 원소들의 곱과 합/README.md",
-    "프로그래머스/0/181928. 이어 붙인 수/README.md",
-    "프로그래머스/0/181927. 마지막 두 원소/README.md",
-    "프로그래머스/0/181926. 수 조작하기 1/README.md",
-    "프로그래머스/0/181920. 카운트 업/README.md",
-    "프로그래머스/0/181916. 주사위 게임 3/README.md",
-    "프로그래머스/0/181915. 글자 이어 붙여 문자열 만들기/README.md",
-    "프로그래머스/0/181910. 문자열의 뒤의 n글자/README.md",
-    "프로그래머스/0/181893. 배열 조각하기/README.md",
-    "KDT_프로젝트/20221031_프로젝트/oh_jip/reviews/static/images/banner2.jpeg",
-    "빅분기/BigDataCertificationCourses-main/0_필답형/A2.png",
-    "빅분기/BigDataCertificationCourses-main/0_필답형/A1.jpg",
-    "SeSAC_AI/수업자료/텍스트AI/3. word2Vec/스크린샷 2023-09-29 오후 5.39.59.png",
-    "SeSAC_AI/ML/convolution_schematic.webp",
-    "python/python 필기/python 에러:예외처리.assets/python3.png",
-    "알고리즘/데이터 구조와 알고리즘/시간복잡도와 빅오표기법.assets/big-o.jpeg",
-    "알고리즘/데이터 구조와 알고리즘/스택과 큐.assets/stack.png",
-    "알고리즘/데이터 구조와 알고리즘/스택과 큐.assets/queue.png",
-    "알고리즘/데이터 구조와 알고리즘/스택과 큐.assets/deque.png",
+    "Screenshot 2024-07-22 at 2.12.48 PM.png",
+    "데이터분석/스터디/2024.07.22_LSTM.md",
+    "데이터분석/스터디/LSTM.md",
+    "Screenshot 2024-07-22 at 2.04.20 PM.png",
+    "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
+    "데이터분석/공모전/데이콘 수상작 탐색.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "SeSAC_AI/DL/Object Detection(2) - Faster R-CNN.md",
+    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
+    "알고리즘/백준 문제풀이/python 랜선 자르기(BOJ 1654).md",
+    "HTML, CSS, JS/HTML, CSS, JS 실습/20220915 실습/MDN JS 필기(2).md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
+    "SeSAC_AI/DL/Seq2Seq.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
+    "데이터분석/공모전/트랜스포머 초안.md",
+    "재무제표 기반 기업 경영 성과 분석 프로젝트.md",
+    "SeSAC_AI/DL/Attention.md",
+    "SeSAC_AI/DL/NLP/Attention.md",
+    "Pasted image 20240722095554.png",
+    "Pasted image 20240722095523.png",
+    "Untitled.md",
+    "Screenshot 2024-07-21 at 5.32.10 PM.png",
+    "Pasted image 20240721175138.png",
+    "Pasted image 20240721175114.png",
+    "Pasted image 20240721175034.png",
+    "Pasted image 20240721174954.png",
+    "Pasted image 20240721174852.png",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

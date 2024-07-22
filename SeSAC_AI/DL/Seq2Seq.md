@@ -40,7 +40,7 @@ RNN 하나만을 사용하여 번역기를 만들면 몇가지 문제점들이 �
 
 
 ## Seq2Seq model
-* 그래디언트 소실 문제를 완화하기 위해 LSTM (Long Short-Term Memory)과 GRU (Gated Recurrent Unit)와 같은 메모리 셀을 도입
+* 그래디언트 ㅣ소실 문제를 완화하기 위해 LSTM (Long Short-Term Memory)과 GRU (Gated Recurrent Unit)와 같은 메모리 셀을 도입
 * **attention** 매커니즘
 
 
