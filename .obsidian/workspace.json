@@ -8,35 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aa17bd4d630072f9",
+            "id": "7efce9037f381235",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
                 "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8f16b0fe5aa4fda0",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.6.7"
-              }
-            }
-          },
-          {
-            "id": "43fe1c50ee045f46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 4.md",
-                "mode": "source",
                 "source": false
               }
             }
@@ -70,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LSTM",
+                "query": "토큰화",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -107,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/스터디/2024.07.22_LSTM.md"
+                "file": "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md"
               }
             }
           },
@@ -178,48 +157,48 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "aa17bd4d630072f9",
+  "active": "7efce9037f381235",
   "lastOpenFiles": [
+    "백준/Bronze/4597. 패리티/패리티.py",
+    "백준/Bronze/4597. 패리티/README.md",
+    "백준/Bronze/4597. 패리티",
+    "백준/Bronze/4447. 좋은놈 나쁜놈/좋은놈 나쁜놈.py",
+    "백준/Bronze/4447. 좋은놈 나쁜놈/README.md",
+    "백준/Bronze/4447. 좋은놈 나쁜놈",
+    "백준/Bronze/3076. 상근이의 체스판/상근이의 체스판.py",
+    "백준/Bronze/3076. 상근이의 체스판/README.md",
+    "백준/Bronze/3076. 상근이의 체스판",
+    "백준/Bronze/14697. 방 배정하기/방 배정하기.py",
+    "백준/Bronze/14697. 방 배정하기/README.md",
+    "백준/Bronze/14697. 방 배정하기",
+    "데이터분석/NLP/2024.07.29_키워드_추출.ipynb",
+    "데이터분석/NLP/4_Keyword_Extraction (1).ipynb",
+    "데이터분석/공모전/머신러닝과 딥러닝.md",
+    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
+    "빅분기/BigDataCertificationCourses-main/0_필답형/README.md",
+    "데이터분석/스터디/2024.07.22_LSTM.md",
+    "Untitled.md",
+    "프로그래머스/1/176963. 추억 점수/추억 점수.py",
+    "프로그래머스/1/176963. 추억 점수/README.md",
+    "프로그래머스/0/181914. 9로 나눈 나머지/README.md",
+    "백준/Silver/28279. 덱 2/README.md",
+    "백준/Bronze/3943. 헤일스톤 수열/README.md",
     "Untitled 4.md",
     "readme.md",
-    "데이터분석/공모전/머신러닝과 딥러닝.md",
     "learning_rate.md",
-    "데이터분석/미국 은행 재무제표 분석/(2023-06)_opinion_황세운.pdf",
-    "(2023-06)_opinion_황세운.pdf",
-    "데이터분석/(2023-06)_opinion_황세운.pdf",
     "데이터분석/미국 은행 재무제표 분석/은행 목록.md",
     "데이터분석/은행 목록.md",
     "은행 목록.md",
-    "데이터분석/미국 은행 재무제표 분석/슬라이드.pdf",
-    "데이터분석/미국 은행 재무제표 분석/5조 발표 슬라이드_최종.pdf",
-    "데이터분석/미국 은행 재무제표 분석/재무제표 데이터 추출 및 병합 코드.ipynb",
-    "데이터분석/미국 은행 재무제표 분석/sec_edgar_url_scrap_v002 (1).ipynb",
-    "데이터분석/미국 은행 재무제표 분석/excel_modify_v002.ipynb",
-    "데이터분석/미국 은행 재무제표 분석/ML_sdo.ipynb",
-    "데이터분석/미국 은행 재무제표 분석/final_crawing_sdo.ipynb",
     "LSTM.md",
     "Screenshot 2024-07-22 at 2.12.48 PM.png",
-    "데이터분석/스터디/2024.07.22_LSTM.md",
     "데이터분석/스터디/LSTM.md",
     "Screenshot 2024-07-22 at 2.04.20 PM.png",
     "SeSAC_AI/ML/SeSAC - 머신러닝 데이터분석(3) - 경사 하강법, 결정 트리.md",
     "데이터분석/공모전/데이콘 수상작 탐색.md",
     "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(4) - 합성곱, 합성곱 신경망(CNN).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(2) - 인공 신경망, 퍼셉트론, 딥러닝.md",
     "SeSAC_AI/DL/Object Detection(2) - Faster R-CNN.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 Attention, Seq2Seq.md",
-    "알고리즘/백준 문제풀이/python 랜선 자르기(BOJ 1654).md",
-    "HTML, CSS, JS/HTML, CSS, JS 실습/20220915 실습/MDN JS 필기(2).md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(3) - 심층 신경망, 옵티마이저, 신경망 모델 훈련.md",
-    "SeSAC_AI/DL/Seq2Seq.md",
-    "SeSAC_AI/DL/SeSAC - 딥러닝 데이터 분석(1) - k-means, 주성분 분석(PCA).md",
-    "데이터분석/공모전/트랜스포머 초안.md",
-    "재무제표 기반 기업 경영 성과 분석 프로젝트.md",
-    "SeSAC_AI/DL/Attention.md",
-    "SeSAC_AI/DL/NLP/Attention.md",
     "Pasted image 20240722095554.png",
     "Pasted image 20240722095523.png",
-    "Untitled.md",
     "Screenshot 2024-07-21 at 5.32.10 PM.png",
     "Pasted image 20240721175138.png",
     "Pasted image 20240721175114.png",
