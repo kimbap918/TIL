@@ -1,4 +1,0 @@
-- **입력 값 (Inputs)**: x1,x2,…,xnx_1, x_2, \ldots, x_nx1​,x2​,…,xn​
-- **가중치 (Weights)**: w1,w2,…,wnw_1, w_2, \ldots, w_nw1​,w2​,…,wn​
-- **편향 (Bias)**: bbb
-- **활성화 함수 (Activation Function)**: 
