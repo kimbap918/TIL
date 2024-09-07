@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "88b2fe982a4a23c4",
+            "id": "dbaf93692ff8630c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "은행",
+                "query": "AWS",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md"
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md"
               }
             }
           },
@@ -156,24 +156,44 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "88b2fe982a4a23c4",
+  "active": "dbaf93692ff8630c",
   "lastOpenFiles": [
+    "데이터분석/공모전/대구로 이상거래 탐지/모델 튜닝.md",
+    "데이터분석/공모전/모델 튜닝.md",
+    "데이터분석/공모전/대구로 이상거래 탐지",
+    "데이터분석/공모전/untitled folder",
+    "AWS.md",
+    "모델 튜닝.md",
+    "데이터분석/모델 튜닝.md",
+    "Transformer.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "취업특강.md",
+    "python/PythonWorkspace/연습장/testml.py",
+    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
+    "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
+    "Screenshot 2024-08-13 at 2.02.27 PM.png",
+    "Screenshot 2024-08-13 at 1.57.14 PM.png",
+    "Screenshot 2024-08-13 at 1.57.01 PM.png",
+    "Pasted image 20240812173550.png",
+    "Screenshot 2024-08-12 at 5.28.38 PM.png",
+    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머.pdf",
+    "Pasted image 20240812033519.png",
+    "Pasted image 20240812032928.png",
+    "Pasted image 20240812032912.png",
+    "Pasted image 20240812031107.png",
+    "Pasted image 20240812030009.png",
+    "run_crawler.py",
+    "runspider.py",
     "백준/Bronze/8741. 이진수 합/이진수 합.py",
     "백준/Bronze/8741. 이진수 합/README.md",
     "백준/Bronze/8741. 이진수 합",
     "백준/Bronze/5704. 팬그램/팬그램.py",
     "백준/Bronze/5704. 팬그램/README.md",
     "백준/Bronze/5704. 팬그램",
-    "백준/Bronze/5026. 박사 과정/박사 과정.py",
     "백준/Bronze/5026. 박사 과정/README.md",
-    "백준/Bronze/5026. 박사 과정",
-    "백준/Bronze/4998. 저금/저금.py",
     "백준/Bronze/4998. 저금/README.md",
-    "백준/Bronze/4998. 저금",
-    "백준/Bronze/4592. 중복을 없애자/중복을 없애자.py",
     "백준/Bronze/4592. 중복을 없애자/README.md",
-    "백준/Bronze/4592. 중복을 없애자",
-    "백준/Bronze/2954. 창영이의 일기장/창영이의 일기장.py",
     "백준/Bronze/2954. 창영이의 일기장/README.md",
     "백준/Bronze/2139. 나는 너가 살아온 날을 알고 있다/README.md",
     "백준/Bronze/1731. 추론/README.md",
@@ -181,29 +201,9 @@
     "협업.md",
     "텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
     "데이터분석/텍스트 마이닝 프로젝트/협업.md",
-    "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
-    "Untitled.md",
-    "Untitled 1.md",
     "데이터분석/공모전/머신러닝과 딥러닝.md",
-    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
-    "Screenshot 2024-08-08 at 3.58.07 PM.png",
-    "Screenshot 2024-08-08 at 3.32.27 PM 1.png",
-    "Screenshot 2024-08-08 at 3.31.35 PM.png",
-    "Screenshot 2024-08-08 at 3.25.49 PM.png",
-    "Screenshot 2024-08-08 at 3.24.36 PM.png",
-    "Screenshot 2024-08-08 at 3.24.12 PM.png",
-    "Screenshot 2024-08-08 at 3.48.44 PM.png",
-    "Screenshot 2024-08-08 at 3.46.02 PM.png",
-    "Screenshot 2024-08-08 at 3.44.23 PM.png",
-    "Screenshot 2024-08-08 at 3.09.15 PM.png",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
-    "SeSAC_AI/SQL/SeSAC - 파이썬 데이터 처리 프로그래밍 1일차(SQL).md",
-    "Rakuten financial report.md",
-    "SeSAC_AI/DL/NLP/SeSAC - 딥러닝 자연어 처리(NLP).md",
-    "백준/Bronze/4597. 패리티/README.md",
-    "백준/Bronze/4447. 좋은놈 나쁜놈/README.md",
-    "백준/Bronze/3076. 상근이의 체스판/README.md",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
