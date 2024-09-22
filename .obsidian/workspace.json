@@ -18,8 +18,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b0761ba9da87d768",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66d917e70bff0273",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7ff343bed714a694",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "프로젝트에 앞서.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -85,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
+                "file": "프로젝트에 앞서.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
+                "file": "프로젝트에 앞서.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md"
+                "file": "프로젝트에 앞서.md"
               }
             }
           },
@@ -156,8 +193,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dbaf93692ff8630c",
+  "active": "7ff343bed714a694",
   "lastOpenFiles": [
+    "Untitled 1.md",
+    "프로젝트에 앞서.md",
+    "Untitled.md",
+    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
     "데이터분석/공모전/대구로 이상거래 탐지/모델 튜닝.md",
     "데이터분석/공모전/모델 튜닝.md",
     "데이터분석/공모전/대구로 이상거래 탐지",
@@ -166,11 +207,8 @@
     "모델 튜닝.md",
     "데이터분석/모델 튜닝.md",
     "Transformer.md",
-    "Untitled.md",
-    "Untitled 1.md",
     "취업특강.md",
     "python/PythonWorkspace/연습장/testml.py",
-    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
     "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
     "Screenshot 2024-08-13 at 2.02.27 PM.png",
     "Screenshot 2024-08-13 at 1.57.14 PM.png",
@@ -203,7 +241,6 @@
     "데이터분석/텍스트 마이닝 프로젝트/협업.md",
     "데이터분석/공모전/머신러닝과 딥러닝.md",
     "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 2일차(검색해서 데이터 가져오기).md",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
