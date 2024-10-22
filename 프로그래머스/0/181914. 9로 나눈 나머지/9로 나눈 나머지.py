@@ -1,4 +1,4 @@
 def solution(number):
-    number = int(number)
-    return number % 9
-
+    answer = int(number)%9
+    # answer = 0
+    return answer
