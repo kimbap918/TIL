@@ -1,18 +1,17 @@
 def solution(name, yearning, photo):
-    dict = {}
-    ans = []
-    
-    for i in range(len(name)):
-        if name[i] not in dict:
-            dict[name[i]] = yearning[i]
-        else:
-            dict[name[i]] += yearning[i]
-    # dict = {'may': 5, 'kein': 10, 'kain': 1, 'radi': 3}
-    for i in photo:
+    answer = []
+    for i in photo: # may, kein, kain, radi
         res = 0
-        for j in i:
-            if j in dict:
-                res += dict[j]
-        ans.append(res)
+        for j in name:
+            if j in i:
+                res += yearning[name.index(j)]
+        answer.append(res)
+    return answer
 
-    return ans
+# yearning
+# [5, 10, 1, 3]
+
+# photo
+# [["may", "kein", "kain", "radi"],
+#  ["may", "kein", "brin", "deny"], 
+#  ["kon", "kain", "may", "coni"]]
