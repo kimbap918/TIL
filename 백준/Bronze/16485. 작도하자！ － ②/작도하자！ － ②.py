@@ -1,2 +1,4 @@
 c, b = map(int, input().split())
-print(max(c,b)/min(c,b))
+ratio = c/b
+
+print(ratio)
