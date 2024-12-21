@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 맵 API 예제</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2ecd92ba9dac4686c4d9c6adf12cf83&libraries=services"></script>
+  
+</head>
+<body>
+    <div id="map" style="width:100%;height:350px;"></div>
+    <p id="result"></p>
+
+    <script>
+    // 카카오 지도 API 설정
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    // CSV 파일로부터 주소를 가져와서 좌표로 변환하는 함수
+    function processAddress(addresses) {
+        addresses.forEach(function(address, index) {
+            geocoder.addressSearch(address, function(result, status) {
+                if (status === kakao.maps.services.Status.OK) {
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                    // 지도에 마커를 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords
+                    });
+                    // 결과를 HTML에 출력합니다
+                    var resultDiv = document.getElementById('result');
+                    resultDiv.innerHTML += '주소: ' + address + ' 의 좌표는 위도: ' + result[0].y + ', 경도: ' + result[0].x + '<br>';
+
+                    // 좌표를 저장하거나 다른 작업을 수행합니다
+                    console.log('주소:', address, '위도:', result[0].y, '경도:', result[0].x);
+                } else {
+                    console.error('주소 변환 실패:', address);
+                }
+            });
+        });
+    }
+
+    // CSV 파일에서 주소 목록을 불러오는 예시
+    // 실제로는 서버에서 가져오거나 파일을 읽어서 배열 형태로 처리해야 함
+    var addresses = [
+      '용산구 한강로2가 12-9'
+    ];
+
+    // 주소를 처리하는 함수를 호출합니다
+    processAddress(addresses);
+    </script>
+</body>
+</html>

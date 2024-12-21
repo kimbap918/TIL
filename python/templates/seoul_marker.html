@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 맵 API 예제</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2ecd92ba9dac4686c4d9c6adf12cf83&libraries=services"></script>
+</head>
+<body>
+    <div id="map" style="width:100%;height:500px;"></div>
+
+    <script>
+    // 카카오 지도 API 설정
+    var mapContainer = document.getElementById('map'),
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울 중심 좌표
+            level: 9 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 지정된 경계 좌표 (북위 37.715133, 남위 37.413294, 서경 126.734086, 동경 127.269311)
+    var bounds = [
+        new kakao.maps.LatLng(37.715133, 126.734086), // 북서쪽
+        new kakao.maps.LatLng(37.715133, 127.269311), // 북동쪽
+        new kakao.maps.LatLng(37.413294, 127.269311), // 남동쪽
+        new kakao.maps.LatLng(37.413294, 126.734086)  // 남서쪽
+    ];
+
+    // 각 구역의 마커 위치 설정
+    var corners = [
+        { name: "북서쪽", position: bounds[0] },
+        { name: "북동쪽", position: bounds[1] },
+        { name: "남동쪽", position: bounds[2] },
+        { name: "남서쪽", position: bounds[3] }
+    ];
+
+    // 각 구역의 다각형(Polygon)을 그리기
+    var polygon = new kakao.maps.Polygon({
+        map: map,
+        path: bounds, // 경계 좌표 배열
+        strokeWeight: 3, // 외곽선의 두께
+        strokeColor: '#004c80', // 외곽선 색깔
+        strokeOpacity: 0.8, // 외곽선의 불투명도
+        strokeStyle: 'solid', // 외곽선 스타일
+        fillColor: '#0050ff', // 내부 색깔
+        fillOpacity: 0.3 // 내부 투명도
+    });
+
+    // 각 코너에 마커 표시
+    corners.forEach(function(corner) {
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: corner.position,
+            title: corner.name
+        });
+
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="padding:10px;">' + corner.name + '<br>위도: ' + corner.position.getLat().toFixed(6) + '<br>경도: ' + corner.position.getLng().toFixed(6) + '</div>'
+        });
+
+        kakao.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker); // 마커 클릭 시 인포윈도우 열기
+        });
+    });
+
+    // 중심점 설정
+    var centerPosition = new kakao.maps.LatLng(37.5665, 127.0); // 서울 중심 좌표
+
+    // 중심점 마커 및 인포윈도우 표시
+    var centerMarker = new kakao.maps.Marker({
+        map: map,
+        position: centerPosition,
+        title: "중심점"
+    });
+
+    var centerInfowindow = new kakao.maps.InfoWindow({
+        content: '<div style="padding:10px;">중심점<br>위도: ' + centerPosition.getLat().toFixed(6) + '<br>경도: ' + centerPosition.getLng().toFixed(6) + '</div>'
+    });
+
+    kakao.maps.event.addListener(centerMarker, 'click', function() {
+        centerInfowindow.open(map, centerMarker); // 마커 클릭 시 인포윈도우 열기
+    });
+
+    // 경계선을 연결하는 선 그리기 (직사각형 형태)
+    var linePath = [
+        bounds[0], // 북서쪽
+        bounds[1], // 북동쪽
+        bounds[2], // 남동쪽
+        bounds[3], // 남서쪽
+        bounds[0]  // 다시 북서쪽으로 연결
+    ];
+
+    var line = new kakao.maps.Polyline({
+        map: map,
+        path: linePath, // 경계선 좌표 배열
+        strokeWeight: 3, // 선의 두께
+        strokeColor: '#FF0000', // 선 색깔
+        strokeOpacity: 0.8, // 선의 불투명도
+        strokeStyle: 'solid' // 선 스타일
+    });
+
+    // 각 마커 사이의 중간 좌표 계산 및 마커 표시
+    var midpoints = [
+        new kakao.maps.LatLng(
+            (corners[0].position.getLat() + corners[1].position.getLat()) / 2,
+            (corners[0].position.getLng() + corners[1].position.getLng()) / 2
+        ),
+        new kakao.maps.LatLng(
+            (corners[1].position.getLat() + corners[2].position.getLat()) / 2,
+            (corners[1].position.getLng() + corners[2].position.getLng()) / 2
+        ),
+        new kakao.maps.LatLng(
+            (corners[2].position.getLat() + corners[3].position.getLat()) / 2,
+            (corners[2].position.getLng() + corners[3].position.getLng()) / 2
+        ),
+        new kakao.maps.LatLng(
+            (corners[3].position.getLat() + corners[0].position.getLat()) / 2,
+            (corners[3].position.getLng() + corners[0].position.getLng()) / 2
+        )
+    ];
+
+    midpoints.forEach(function(midpoint, index) {
+        var midMarker = new kakao.maps.Marker({
+            map: map,
+            position: midpoint,
+            title: "중간 좌표 " + (index + 1)
+        });
+
+        var midInfowindow = new kakao.maps.InfoWindow({
+            content: '<div style="padding:10px;">중간 좌표 ' + (index + 1) + '<br>위도: ' + midpoint.getLat().toFixed(6) + '<br>경도: ' + midpoint.getLng().toFixed(6) + '</div>'
+        });
+
+        kakao.maps.event.addListener(midMarker, 'click', function() {
+            midInfowindow.open(map, midMarker); // 마커 클릭 시 인포윈도우 열기
+        });
+    });
+    </script>
+</body>
+</html>

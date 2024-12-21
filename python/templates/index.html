@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울시 실시간 교통정보 지도 시각화</title>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2ecd92ba9dac4686c4d9c6adf12cf83&libraries=services"></script> <!-- 여기에 카카오 API 키 입력 -->
+</head>
+<body>
+    <div id="map" style="width:100%;height:500px;"></div>
+    <p id="result"></p> <!-- 결과를 표시할 부분 추가 -->
+
+    <script>
+    // 카카오 지도 API 설정
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울의 중심좌표 (예: 시청)
+            level: 5 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성
+
+    // 실시간 교통정보를 Flask 서버로부터 가져오기
+    fetch('/traffic_data')
+        .then(response => response.json())
+        .then(data => {
+            const roads = data.TrafficInfo.row; // 데이터에서 도로 정보 가져오기
+
+            // 데이터를 가져왔는지 확인
+            if (roads && roads.length) {
+                roads.forEach(road => {
+                    var coords = new kakao.maps.LatLng(road.latitude, road.longitude); // 도로 위치 정보
+
+                    // 혼잡도에 따라 마커 색상 설정
+                    var congestionLevel = road.congestion; // 예: 1~5 사이의 혼잡도
+                    var color = getCongestionColor(congestionLevel);
+
+                    // 지도에 마커 표시
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: coords,
+                        title: road.name, // 도로 이름
+                        image: new kakao.maps.MarkerImage(
+                            `http://via.placeholder.com/20/${color}/000000?text=%20`,
+                            new kakao.maps.Size(20, 20)
+                        )
+                    });
+                });
+            } else {
+                document.getElementById('result').innerHTML = '도로 정보가 없습니다.';
+            }
+        })
+        .catch(error => console.error('Error fetching traffic data:', error));
+
+    // 혼잡도에 따라 마커 색상 선택
+    function getCongestionColor(level) {
+        switch (level) {
+            case 1: return '00FF00'; // 원활 (초록색)
+            case 2: return 'FFFF00'; // 서행 (노란색)
+            case 3: return 'FFA500'; // 지체 (주황색)
+            case 4: return 'FF0000'; // 정체 (빨간색)
+            default: return '808080'; // 정보 없음 (회색)
+        }
+    }
+    </script>
+</body>
+</html>

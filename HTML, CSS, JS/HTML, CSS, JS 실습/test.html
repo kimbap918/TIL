@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공연장 위치 지도</title>
+    
+    <!-- CDN에서 PapaParse를 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <!-- 카카오 지도 스크립트 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e2ecd92ba9dac4686c4d9c6adf12cf83"></script>
+</head>
+
+<body>
+    <!-- 지도를 표시할 div -->
+    <div id="map" style="width:600px;height:400px;"></div>
+
+    <script>
+        // CSV 파일 경로
+        var csvFilePath = '/Users/sopung/Downloads/서울시_주차미제공_공연장.csv'; // 실제 CSV 파일 경로로 변경
+
+        // 지도 생성
+        var mapContainer = document.getElementById('map'),
+            mapOption = {
+                center: new kakao.maps.LatLng(37.566535, 126.9779692), // 서울 시청을 중심으로 지도 설정
+                level: 8 // 지도 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // CSV 파일을 파싱하고 마커 표시
+        Papa.parse(csvFilePath, {
+            download: true,
+            header: true,
+            complete: function(results) {
+                var data = results.data;
+
+                // 공연장 위치마다 마커 생성
+                data.forEach(function(venue) {
+                    var latitude = parseFloat(venue['위도']);
+                    var longitude = parseFloat(venue['경도']);
+                    var venueName = venue['공연장명']; // CSV에 공연장 이름이 있는 경우
+
+                    // 마커가 표시될 위치입니다
+                    var markerPosition = new kakao.maps.LatLng(latitude, longitude);
+
+                    // 마커 생성
+                    var marker = new kakao.maps.Marker({
+                        position: markerPosition,
+                        map: map // 마커를 지도에 표시
+                    });
+
+                    // 마커에 마우스오버시 공연장 이름 표시
+                    var infowindow = new kakao.maps.InfoWindow({
+                        content: '<div style="padding:5px;">' + venueName + '</div>'
+                    });
+
+                    kakao.maps.event.addListener(marker, 'mouseover', function() {
+                        infowindow.open(map, marker);
+                    });
+
+                    kakao.maps.event.addListener(marker, 'mouseout', function() {
+                        infowindow.close();
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

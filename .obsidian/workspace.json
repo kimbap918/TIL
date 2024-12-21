@@ -16,7 +16,9 @@
                 "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "2024.05.31 실습"
             }
           },
           {
@@ -28,7 +30,9 @@
                 "file": "Untitled.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           },
           {
@@ -40,7 +44,9 @@
                 "file": "Untitled 1.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 1"
             }
           },
           {
@@ -49,14 +55,166 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Django/Django_필기/Django(1) - 환경설정.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Django(1) - 환경설정"
+            }
+          },
+          {
+            "id": "f5dc9a195bee3470",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "프로젝트에 앞서.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "프로젝트에 앞서"
+            }
+          },
+          {
+            "id": "a6f536a06ab4c26a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Django 앱 생성하기.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Django 앱 생성하기"
+            }
+          },
+          {
+            "id": "942f95e294aef952",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 4"
+            }
+          },
+          {
+            "id": "0e3d56654dfcbef2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 5.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 5"
+            }
+          },
+          {
+            "id": "a4d7a5598614a3ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "색 조합.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "색 조합"
+            }
+          },
+          {
+            "id": "0eb0acd836600161",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 6"
+            }
+          },
+          {
+            "id": "8192eef018a6444d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 7.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 7"
+            }
+          },
+          {
+            "id": "c4875388d1c98652",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
+            }
+          },
+          {
+            "id": "c3576de89ac7977f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 9.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 9"
+            }
+          },
+          {
+            "id": "6505212d51ca29e4",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
+          },
+          {
+            "id": "1c8db3836f82419c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 10.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled 10"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -76,7 +234,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -85,13 +245,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "AWS",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -99,7 +261,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -122,7 +286,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "프로젝트에 앞서.md",
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +294,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024.05.31 실습"
             }
           },
           {
@@ -139,10 +305,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "프로젝트에 앞서.md",
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024.05.31 실습"
             }
           },
           {
@@ -153,7 +321,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -162,8 +332,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "프로젝트에 앞서.md"
-              }
+                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024.05.31 실습"
             }
           },
           {
@@ -171,7 +343,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ],
@@ -193,54 +367,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ff343bed714a694",
+  "active": "1c8db3836f82419c",
   "lastOpenFiles": [
-    "Untitled 1.md",
-    "프로젝트에 앞서.md",
-    "Untitled.md",
-    "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
-    "데이터분석/공모전/대구로 이상거래 탐지/모델 튜닝.md",
-    "데이터분석/공모전/모델 튜닝.md",
-    "데이터분석/공모전/대구로 이상거래 탐지",
-    "데이터분석/공모전/untitled folder",
-    "AWS.md",
-    "모델 튜닝.md",
-    "데이터분석/모델 튜닝.md",
-    "Transformer.md",
-    "취업특강.md",
-    "python/PythonWorkspace/연습장/testml.py",
-    "데이터분석/텍스트 마이닝 프로젝트/텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
+    "백준/Silver/4542. Blue Jeans/README.md",
+    "백준/Silver/4542. Blue Jeans/Blue Jeans.py",
+    "백준/Silver/4542. Blue Jeans",
+    "백준/Silver/4383. 점프는 즐거워/점프는 즐거워.py",
+    "백준/Silver/4383. 점프는 즐거워/README.md",
+    "백준/Silver/4383. 점프는 즐거워",
+    "백준/Silver/2890. 카약/카약.py",
+    "백준/Silver/2890. 카약/README.md",
+    "백준/Silver/2890. 카약",
+    "백준/Silver/2057. 팩토리얼 분해/팩토리얼 분해.py",
+    "백준/Silver/2057. 팩토리얼 분해/README.md",
+    "백준/Silver/2057. 팩토리얼 분해",
+    "백준/Silver/2018. 수들의 합 5/수들의 합 5.py",
+    "백준/Silver/2018. 수들의 합 5/README.md",
+    "백준/Silver/2018. 수들의 합 5",
+    "백준/Silver/1996. 지뢰 찾기/README.md",
+    "백준/Silver/1817. 짐 챙기는 숌/README.md",
+    "백준/Silver/1813. 논리학 교수/README.md",
+    "백준/Silver/1789. 수들의 합/README.md",
+    "백준/Silver/1769. 3의 배수/README.md",
+    "백준/Silver/1268. 임시 반장 정하기/README.md",
+    "백준/Silver/1094. 막대기/README.md",
+    "백준/Silver/1049. 기타줄/README.md",
+    "백준/Gold/1520. 내리막 길/README.md",
+    "백준/Bronze/9070. 장보기/README.md",
+    "백준/Bronze/8320. 직사각형을 만드는 방법/README.md",
+    "백준/Bronze/7600. 문자가 몇갤까/README.md",
+    "백준/Bronze/6131. 완전 제곱수/README.md",
+    "백준/Bronze/5032. 탄산 음료/README.md",
+    "백준/Bronze/4583. 거울상/README.md",
+    "백준/Bronze/4581. Voting/README.md",
+    "백준/Bronze/25703. 포인터 공부/README.md",
+    "백준/Bronze/25285. 심준의 병역판정검사/README.md",
+    "백준/Bronze/20528. 끝말잇기/README.md",
+    "백준/Bronze/19946. 2의 제곱수 계산하기/README.md",
+    "백준/Bronze/18406. 럭키 스트레이트/README.md",
+    "GIFMaker_me.gif",
     "Screenshot 2024-08-13 at 2.02.27 PM.png",
     "Screenshot 2024-08-13 at 1.57.14 PM.png",
     "Screenshot 2024-08-13 at 1.57.01 PM.png",
     "Pasted image 20240812173550.png",
     "Screenshot 2024-08-12 at 5.28.38 PM.png",
-    "SeSAC_AI/수업자료/텍스트AI/9. Transformer/텍스트 AI - 트랜스포머.pdf",
     "Pasted image 20240812033519.png",
     "Pasted image 20240812032928.png",
     "Pasted image 20240812032912.png",
     "Pasted image 20240812031107.png",
-    "Pasted image 20240812030009.png",
-    "run_crawler.py",
-    "runspider.py",
-    "백준/Bronze/8741. 이진수 합/이진수 합.py",
-    "백준/Bronze/8741. 이진수 합/README.md",
-    "백준/Bronze/8741. 이진수 합",
-    "백준/Bronze/5704. 팬그램/팬그램.py",
-    "백준/Bronze/5704. 팬그램/README.md",
-    "백준/Bronze/5704. 팬그램",
-    "백준/Bronze/5026. 박사 과정/README.md",
-    "백준/Bronze/4998. 저금/README.md",
-    "백준/Bronze/4592. 중복을 없애자/README.md",
-    "백준/Bronze/2954. 창영이의 일기장/README.md",
-    "백준/Bronze/2139. 나는 너가 살아온 날을 알고 있다/README.md",
-    "백준/Bronze/1731. 추론/README.md",
-    "백준/Bronze/14723. 이산수학 과제/README.md",
-    "협업.md",
-    "텍스트 마이닝으로 통화정책위원회 회의록 해독하기.md",
-    "데이터분석/텍스트 마이닝 프로젝트/협업.md",
-    "데이터분석/공모전/머신러닝과 딥러닝.md",
-    "SeSAC_AI/데이터 분석/SeSAC - 파이썬 데이터 처리 프로그래밍 3일차(기상청 중기예보 서비스 API 사용해보기).md",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
