@@ -1,29 +1,35 @@
-from collections import Counter
-
-N = int(input())
-play = []
-
-for i in range(N):
-    A, B, C, D = map(int, input().split())
-    check = Counter((A, B, C, D))
-    big = max(check.items(), key=lambda x: x[1])
+def calculate_reward(dice):
+    from collections import Counter
+    count = Counter(dice)
+    sorted_count = sorted(count.items(), key=lambda x: (-x[1], -x[0]))
     
-    if big[1] == 4:
-        res = 50000 + big[0] * 5000
-        play.append(res)
-    elif big[1] == 3:
-        res = 10000 + big[0] * 1000
-        play.append(res)
-    elif big[1] == 2:
-        if len(check) != 2:
-            res = 1000 + big[0] * 100
-            play.append(res)
+    if sorted_count[0][1] == 4:
+        return 50000 + sorted_count[0][0] * 5000
+    elif sorted_count[0][1] == 3:
+        return 10000 + sorted_count[0][0] * 1000
+    elif sorted_count[0][1] == 2:
+        if sorted_count[1][1] == 2:
+            return 2000 + sorted_count[0][0] * 500 + sorted_count[1][0] * 500
         else:
-            tmp = list(check.keys())
-            res = 2000 + tmp[0] * 500 + tmp[1] * 500
-            play.append(res)
+            return 1000 + sorted_count[0][0] * 100
     else:
-        res = max(check) * 100
-        play.append(res)
+        return max(dice) * 100
 
-print(max(play))
+def main():
+    import sys
+    input = sys.stdin.read
+    data = input().split()
+    
+    N = int(data[0])
+    max_reward = 0
+    
+    for i in range(N):
+        dice = list(map(int, data[1 + 4*i : 5 + 4*i]))
+        reward = calculate_reward(dice)
+        if reward > max_reward:
+            max_reward = reward
+    
+    print(max_reward)
+
+if __name__ == "__main__":
+    main()
