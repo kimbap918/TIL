@@ -113,3 +113,41 @@ git branch -d choi
 협업을 하다보면 팀원 간 작업파일이 겹치는 경우가 종종 있습니다. 이런 경우에 충돌이 발생하기도 하는데, main에 작업물을 바로 푸시해버리면 충돌에 대한 대처가 힘들어집니다.
 
 브랜치(나뭇가지)에서 작업을 해서 메인(기둥)에 작업이 완료된 것들을 푸시하는게 좋습니다.
+
+
+
+
+
+## GUI Tools
+
+CLI 보단 GUI 방식으로 작업하는게 직관적이고 충돌을 관리하기에 용이합니다.
+
+
+
+1. SourceTree
+	Mac 및 Windows 용으로 사용할 수 있는 무료 git GUI tool
+	사용하기 쉽고 직관적인 UI로 git 브랜치, 태그, 커밋, 병합 등을 관리할 수 있습니다.
+	일반적인 git 작업뿐만 아니라, Git-flow 작업도 지원합니다.
+	
+	맥OS 및 윈도우용 다운로드 링크: https://www.sourcetreeapp.com/
+
+2. GitHub Desktop
+	맥OS 및 윈도우용으로 사용할 수 있는 git GUI tool
+	git 커밋, 브랜치, 병합 등의 작업을 직관적인 UI로 관리할 수 있습니다.
+	GitHub 계정과 연동하여, 원격 저장소를 쉽게 관리할 수 있습니다.
+	
+	맥OS 및 윈도우용 다운로드 링크: https://desktop.github.com/
+
+3. Fork
+	Mac 및 Windows 용으로 사용할 수 있는 git GUI tool
+	강력한 UI와 기능으로 git 작업을 보다 쉽고 빠르게 수행할 수 있습니다.
+	Git-flow를 지원하며, 코드 검토 및 충돌 해결 기능도 제공합니다.
+	
+	맥OS 및 윈도우용 다운로드 링크: https://git-fork.com/
+
+4. Git GUI
+	Mac, Windows, Linux 용으로 사용할 수 있는 무료 git GUI tool
+	git 작업을 쉽게 수행할 수 있는 UI를 제공합니다.
+	다양한 git 명령어를 지원하며, 코드 검토 및 충돌 해결 기능도 제공합니다.
+	
+	맥OS, 윈도우 및 리눅스용 다운로드 링크: https://git-scm.com/downloads/guis
