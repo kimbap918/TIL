@@ -20,7 +20,7 @@ articles : 방명록 기능이 있는 앱
 
   * articles, practices 폴더가 있는 최상단에 templates 폴더 생성 후 기존에 있던 base.html 파일을 집어넣는다.
 
-  ![스크린샷 2022-09-27 오전 10.40.08](Django(4) - 템플릿 상속.assets/스크린샷 2022-09-27 오전 10.40.08.png)
+  ![](https://i.imgur.com/MXE81WL.png)
 
   <br>
 
@@ -92,7 +92,7 @@ articles : 방명록 기능이 있는 앱
 
   * 세분화할 앱 폴더 내에 urls.py 파일을 생성 
 
-  ![스크린샷 2022-09-27 오전 10.58.30](Django(4) - 템플릿 상속.assets/스크린샷 2022-09-27 오전 10.58.30.png)
+  ![](https://i.imgur.com/qVRJVDd.png)
 
   <br>
 

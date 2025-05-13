@@ -11,7 +11,7 @@ $ git clone <원격저장소주소>
 $ git clone https://github.com/kimbap918/dukbokki.git
 ```
 
-![스크린샷 2022-07-07 오전 11.18.26](git:github(3).assets/스크린샷 2022-07-07 오전 11.18.26.png)
+![](https://i.imgur.com/b4MQaas.png)
 
 원격 저장소를 보면 Clone 할 수 있는 주소와 Download ZIP이 있다. 
 
@@ -32,13 +32,13 @@ $ git clone https://github.com/kimbap918/dukbokki.git
    Resolving deltas: 100% (14/14), done.
    ```
 
-   ![스크린샷 2022-07-07 오전 11.29.21](git:github(3).assets/스크린샷 2022-07-07 오전 11.29.21.png)확인해보면 .git 폴더가 있다.
+   ![](https://i.imgur.com/d77H9Ab.png)확인해보면 .git 폴더가 있다.
 
 
 
 2. Download ZIP
 
-   ![스크린샷 2022-07-07 오전 11.31.43](git:github(3).assets/스크린샷 2022-07-07 오전 11.31.43.png)
+   ![](https://i.imgur.com/81lzPRE.png)
 
    ZIP 파일은 .git 폴더가 없다.
 

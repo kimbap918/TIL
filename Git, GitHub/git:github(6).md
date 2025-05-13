@@ -16,7 +16,7 @@ A뿐만 아니라 B도 로컬 저장소에 브랜치를 생성해서 같은 원�
 
 - 가져오고자 하는 저장소를 자신의 저장소로 Fork한다.
 
-![스크린샷 2022-07-07 오후 7.28.56](git:github(6).assets/스크린샷 2022-07-07 오후 7.28.56.png)
+![](https://i.imgur.com/xOCqqI8.png)
 
 
 
@@ -31,7 +31,7 @@ $ git clone {복사한 URL}
 $ git clone https://github.com/kimbap918/pull_folder.git
 ```
 
-![스크린샷 2022-07-07 오후 7.32.11](git:github(6).assets/스크린샷 2022-07-07 오후 7.32.11.png)
+![](https://i.imgur.com/gMlNnPE.png)
 
 ``` bash
 mac/Desktop - (main) > cd pull_folder # 폴더 생성 후 생성된 폴더 내로 이동
@@ -76,7 +76,7 @@ Desktop/pull_folder - (example) > # master -> example로 branch가 이동됨
 
 * 작업물을 추가
 
-![스크린샷 2022-07-07 오후 7.54.58](git:github(6).assets/스크린샷 2022-07-07 오후 7.54.58.png)
+![](https://i.imgur.com/nJekzbi.png)
 
 ``` bash
 Desktop/pull_folder - (example) > git add .
@@ -95,13 +95,13 @@ Desktop/pull_folder - (example) > git push origin example
 - push 완료후 자신의 github 저장소에서 `Compare & pull request`버튼이 활성화 되어있는걸 확인할 수 있다.
 - 버튼을 선택해 Pull Request를 생성한다.
 
-![스크린샷 2022-07-07 오후 8.09.23](git:github(6).assets/스크린샷 2022-07-07 오후 8.09.23.png)
+![](https://i.imgur.com/5jDeKx1.png)
 
 
 
 * 내용을 작성 후 pull request 를 생성
 
-![스크린샷 2022-07-07 오후 8.11.42](git:github(6).assets/스크린샷 2022-07-07 오후 8.11.42.png)
+![](https://i.imgur.com/57ienZg.png)
 
 
 

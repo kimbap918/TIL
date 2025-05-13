@@ -20,15 +20,13 @@ git(1)에서는 로컬저장소와 로컬저장소에서 사용되는 명령어�
 
  ## 원격 저장소 생성
 
-1. New Repository 클릭
-
-![스크린샷 2022-07-06 오전 11.31.18](git:github(2).assets/스크린샷 2022-07-06 오전 11.31.18.png)
+1. New Repository 클릭![](https://i.imgur.com/gbN3p4M.png)
 
 
 
 2. 저장소 설정
 
-   ![스크린샷 2022-07-06 오전 11.47.12](git:github(2).assets/스크린샷 2022-07-06 오전 11.47.12.png)
+   ![](https://i.imgur.com/rV0hvX3.png)
 
 * Repository name 저장소 이름
 * Description 저장소에 대한 설명 
@@ -38,9 +36,7 @@ git(1)에서는 로컬저장소와 로컬저장소에서 사용되는 명령어�
 
 
 
-3. 생성 화면
-
-![스크린샷 2022-07-06 오전 11.50.16](git:github(2).assets/스크린샷 2022-07-06 오전 11.50.16.png)
+3. 생성 화면![](https://i.imgur.com/bo1J4RF.png)
 
 * https://github.com/kimbap918/dukbokki.git
 
@@ -50,7 +46,7 @@ git(1)에서는 로컬저장소와 로컬저장소에서 사용되는 명령어�
 
 4. 로컬저장소의 버전을 원격 저장소로 보내주기
 
-   ![스크린샷 2022-07-06 오전 11.55.16](git:github(2).assets/스크린샷 2022-07-06 오전 11.55.16.png)
+   ![](https://i.imgur.com/nlgCvpU.png)
 
 ``` bash
 $ git remote add origin https://github.com/kimbap918/dukbokki.git
