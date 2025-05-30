@@ -1,0 +1,174 @@
+<AI서비스 프론트엔드, 백엔드>
+1. 개발구성
+   (1) 서버 : 116.125.140.113
+   (2) 데이터베이스 : MariaDB
+       본인계정
+   (3) 클라이언트
+       - 개발툴 : NextJS
+       - 통신프로토콜 : AXIOS(*), Fetch
+       - 통신방식 : API, Json형식
+   (4) 서버
+       - 개발툴 : DJango
+       - 통신방식 : API(자체개발), Json형식
+       - 데이터베이스 : MariaDB
+
+2. 서버에 생성할 계정정보
+   ~$ mkdir gemini_chatbot
+   ~$ cd gemini_chatbot
+   * 백엔드 폴더
+   ~$ mkdir backend
+   * 클라이언트 폴더
+   ~$ mkdir frontend
+   ~$ ls
+     backend  frontend
+
+3. Backend AI Chatbot API 엔진 개발
+   (1) 가상환경 구축
+       $ python3.11 -m venv venv
+   (2) 가상환경 활성화
+       $ source ./venv/bin/activate
+       (venv) .. $
+       가상환경이 활성화딤
+   (3) 프레임워크 설치
+       $ pip install django
+       $ django-admin --version
+   (4) 프로젝트 생성( 현재 디렉토리에 생성 )
+       $ django-admin startproject backend .
+
+<포트고민>
+8000~12000
+backend : 8890
+frontend : 8891
+
+   (5) 프로젝트 실행
+       $ python manage.py runserver 0.0.0.0:8890
+   (6) 챗봇 프로그램 경로 이동
+       $ cd ~/chatbot
+   (7) 복사
+       $ cp 명령어
+   (8) 라이브러리 설치
+       pip install langchain_text_splitters
+       pip install langchain_community
+       pip install langchain_google_genai
+       pip install faiss-cpu
+   (9) 앱 생성( api )
+       $ django-admin startapp api
+       path('api/', include(api.urls)),
+
+       c:\ai_exam\017_aichatbot
+
+<개발에서...>
+http://localhost:8890/api/
+
+                                 chat/
+
+1. API 구조(버젼)
+* 채팅처리
+http://localhost:116.125.140.113/api/v1/chat/
+http://localhost:8890/api/v1.2/chat/
+* 벡터디비생성
+http://localhost:8890/api/v1/vector_add/
+...
+
+챗봇 호출하면 <- 결과를 받는
+google - "postman"
+json 파일로 전송
+
+{
+   "msg" : "소설의 주인공과 역활을 알려줘."
+}
+
+http://116.125.140.113:8890/api/v1/chat/
+
+***************************************************************************************
+* 2시까지 회의하시고, 이후에 프론트엔드 하겠습니다.
+***************************************************************************************
+
+
+보고서작성중입니다.
+2:00
+
+소니 WH-1000XM5 vs 보스 QC45
+
+***************************************************************************************
+프론트엔드 PC제작 -> 서버 이동
+
+2. NextJS
+   (1) node.js 엔진에서 동작하는 프레임워크
+       https://nodejs.org/ko/download
+
+   (2) 프로젝트 경로
+       c:\ai_exam\018_frontend
+
+   (3) 프로젝트 생성
+       npm -v
+       npm은 Python에 pip와 같은 개념
+       npx create-next-app@latest .
+
+   (4) 폴더 설명
+       node_modules : 절대 수정
+       public : 홈페이지에 필요한 아이콘, 이미지, js 이런 파일들 저장하는 공간
+       src : 우리가 사용할 코드가 있는 부분
+       next.configs.mjs : NextJS 환경설정을 하는 파일
+       package.json : 설치된 프로그램이 무엇인지 확인
+       => 이 파일이 존재해야 복원이 됨.
+       => npm install
+
+   (5) 실행
+       npm run dev
+
+   (6) 소스파일
+       /src/app 디렉토리에 모두 존재한다.
+       * NextJS의 모든 시작페이지는 page.js
+      Django return HttpRes
+
+   (7) http://localhost:8891/news
+
+   (8) 서버와 통신을 하는 방법(3가지)
+       1. fetch를 사용방법(x)
+       2. axios를 사용방법(*)
+       3. 내가 직접 제작(x)
+
+       npm install axios
+
+       useEffect :  Side Effect를 렌더링 이후에 발생시킨다.
+  
+       <변수처리>
+       message : 우리가 작성한 변수
+
+<서버전송>
+api
+     urls.py
+     views.py
+backend
+     settings.py
+
+pip install django-cors-headers
+
+source ./venv/bin/activate
+
+http://116.125.140.113:8891
+
+<NextJS>
+npm install
+npm run dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

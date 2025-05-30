@@ -1,0 +1,152 @@
+<인공지능>
+** 도서 재투표
+1. 랭체인으로 RAG 개발하기
+2. 7가지 프로젝트로 배우는 LLM:AI
+
+3. 공동
+    혼자 만들면서 공부하는 딥러닝
+    벡터 데이터베이스 설계와 구축
+
+오후 2시까지 투표 종료
+
+(1) 피지컬AI
+(2) Agentic AI
+(3) AI 모델 경량화( 모바일에 탑재 )
+(4) 듀얼브레인
+
+---------------------------------------------------------------------------
+
+4. 인공지능 
+- 뉴런(Neuron)
+- 퍼셉트론(Perceptron)
+  Weights(가중치)
+  Activation function(활성화 함수)
+
+5. 신경망
+   입력층(Input Layer)
+   은익층(Hidden Layer)
+   출력층(Output Layer)
+
+6. 이미 학습된 정보
+   Pre-Trained Model
+
+7. 인공지능은 2개로 구분
+   (1) 학습(Train)
+       GPU가 꼭 필요
+   (2) 추론(Inference) = Pre-Trained Model
+       GPU가 꼭 필요지는 않다.
+
+8. 생성형 AI
+   Zero-Shot
+   One-Shot
+   Few-Shot
+
+9. 머신러닝
+   사람이 관여
+   딥러닝
+   사람의 관여가 없음
+
+10. 딥러닝은 문제와 답을 제공해야함.
+     => 많이.
+     문제와 답을 딥러닝 학습할때 제공
+     => 데이터셋(Dataset)
+    
+11. 생성형AI의 비용을 줄이기 위하여 나온
+     대안
+     => 오픈소스(OpenSource)
+
+12. Nvidia Digits
+     AI-Agent
+     채팅
+     sLLM(Small Large Language Model)
+
+13. GPU의  핵심
+     하드웨어, 소프트웨어
+     => Cuda, CuDNN
+
+14. TensorFlow로 강화학습
+    Q-Learning
+
+15. 학습 진행결과
+     훈련     평가      실제 적용
+     98%      95%            93%
+A   98%      97%            63%
+=> 데이터
+B   96%      71%            70%
+=> 인공지능 알고리즘 오류
+
+16. 인공지능
+     문제, 답 = 공식(학습)
+     처음보는문제 = 공식 -> 유사한 답
+     추론
+     문제 -> 공식(답) -> 유사한 답 제공
+
+17. 활성화함수
+     
+18. 원-핫 인코딩(one-hot encoding)
+데이터값
+1   [0,0,0,0,0,1]    10
+2   [0,0,0,0,1,0]    20
+3   [0,0,0,1,0,0]    30
+4   [0,0,1,0,0,0]    40
+...
+
+---------------------------------------------------------------------
+
+1. CNN 알고리즘 구현
+
+(1) 아나콘다 프롬프트
+    conda create -n p38_cnn python=3.8
+
+(2) 프로젝트 생성
+    c:\ai_exam\009_cnn
+
+(3) 프로젝트 경로로 이동
+    (base) C:\ai_exam\009_cnn>
+
+(4) 가상환경 활성화
+    conda activate p38_cnn
+    (p38_cnn) C:\ai_exam\009_cnn>
+
+(5) 주피터 설치
+- 주피터 노트북 설치(conda용 주피터 노트북)
+conda install -c conda-forge jupyter
+
+- 모델 설계된 파일의 구조를 확인
+  conda install pydot
+  !pip install pydot
+
+
+- 텐서플로우 설치(인공지능 설계, 구현)
+  pip install tensorflow
+- pip install matplotlib
+- conda install graphviz
+
+- 가상환경 강제 설정
+python -m ipykernel install --user --name p38_cnn --display-name "p38_cnn"
+- 프로젝트 경로로 이동
+
+35556
+
+shape 구조를 강제로 변형하는 방법
+reshape
+
+(6) 인공지능이 학습할수 있는 형태로 전처리작업
+0-1 : 실수형태로 변경
+
+(7) summary
+모델이 잘 설계되어있는지 확인
+
+(8) 모델을 학습할때는 컴파일  과정이 필요함.
+
+sparse_categorical_crossentropy
+
+(9) fit 학습데이터, 학습정답,
+
+
+
+
+
+
+
+

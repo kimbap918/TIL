@@ -1,0 +1,191 @@
+<YOLO>
+CNN 기반 : 고성능 엔진
+
+CNN : 분류(Classification), 객체 검출(Object Detection)
+
+-------------------------------------------------------------------
+
+아나콘다 가상환경 확인
+p38_cnn <= yolo 설치
+
+1. YOLO 의 장점
+   cnn :  속도, 분류(Claasification) 작업을 할때 사용
+   yolo : 객체 검출(Object Detection) 작업을 할때 사용
+           실시간성이 우수
+
+2. YOLO(You Only Look Once)
+   객체 감지 및 이미지 분할에 사용되는 인공지능 모델
+   실시간으로 물체를 감지하는 데 빠르게 사용
+   이미지를 한 번만 보고 객체를 감지하는 방식
+
+-------------------------------------------------------------------
+
+3. YOL 엔진 설치
+   google -> "git yolov5"
+
+   (1) 가상환경 p38_cnn을 사용
+   (2) 프로젝트 파일 생성
+       c:\ai_exam\011_yolo_fire
+
+   yolo파일 다운받아서 테스트,. 동작 되는지...(X)
+   yolo -> Custom Data(실제 적용할 데이터)->학습->동작
+   -> API, Django 서비스로 구축
+
+   (3) YOLO 개발환경
+   python 3.8 이상
+
+   (4) github 설치하는 방법
+       requirements.txt
+       => 라이브러리를 하나씩 설치하기 어려우니, 개발자가
+       한꺼번에 설치하도록 구성된 파일
+
+   (5) vscode
+       c:\ai_exam\011_yolo_fire <- 적용
+       ** 가상환경 설정
+
+   (6) 설치하기
+        Usage: pip install -r requirements.txt
+
+-------------------------------------------------------------------
+
+4. YOLO 세부 구조
+   /data/coco.yaml   <- 학습된 class 정보가 저장된 파일
+   yolov5s.pt           <- 객체 인식 할 수 있는 class
+   80개의 객체를 인식할 수 있음.
+
+   재학습을 시켜서 원하는 class만 감지 할수 있도록
+   개발
+
+5. 특정 객체만 탐지하고 싶을때
+   $python detect.py --weights yolov5s.pt --source "https://mblogthumb-phinf.pstatic.net/MjAyMTA2MTVfMjQ1/MDAxNjIzNzYwNjYxODM3.KsgsD2Oi0ceYCcnXJGFwig8ZuJ1WtqDnqECP8I2U8RYg.jgOC9J4bkrvYhN8utThrH6rQT8Uy8G2IlD4VR3rH3Psg.PNG.vet6390/%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC_%EC%84%A0%ED%83%9D_%EA%B8%B0%EC%A4%80.PNG?type=w800" --classes 15
+
+6. youtube 영상 다운로드
+https://www.youtube.com/watch?v=jWQx2f-CErU
+https://www.ssyoutube.com/watch?v=jWQx2f-CErU
+
+python detect.py --weights yolov5s.pt --source aespa.mp4
+
+  밤 20%     70~80%
+  model.conf <= confidence 신뢰도 : 0.2
+
+6. 라벨링 하는 방법
+   (1) 설치
+   pip install labelimg
+   (2) 경로이동
+   cd labeling
+   (3) 라벨링 프로그램 실행
+   labelimg
+
+   => 
+   [eab095ec9584eca780-580x405.jpg   : 문제
+   eab095ec9584eca780-580x405.json  : 답]
+   => 데이터셋(Dataset)
+
+6. CustomModel 학습하는 방법
+   c:\ai_exam\011_yolo_fire\labeling
+ 
+-------------------------------------------------------------------
+
+7. dataset 구조
+   train : 학습할 데이터
+   val : 학습진행에서 사용하는 평가
+   test: 최종 결과 테스트
+
+   nc : Name Classes
+   names : 클래스 영문명칭
+
+8. 학습을 진행하는 방법
+   google -> colab
+
+9. colab 사용하는 법
+   왼쪽 메뉴 폴더 표시 누루면 시스템이 표기 됨.
+   /content/
+   !pwd : 현재 위치 확인
+   %cd : 특정 디렉토리로 이동 <%를 넣어주셔야 함.>
+   # 압축풀기
+   !unzip -qq data.zip
+   data.zip 압축을 질문없이 바로 풀어주는것.
+   
+   # gpu 확인 하는방법
+   !nvidia-smi
+
+10. 학습 하는 방법
+    !python 
+     train.py
+     --img 415    # 학습시킬 이미지의 크기(싸이즈)
+     --batch 16   # 한번에 GPU메모리에 불러올 용량
+     --epochs 300 # 300번 학습
+     # 학습할 데이터 정보가 포함되어있는 yaml 설정파일
+     --data /content/data/data.yaml 
+     # 학습할 모델을 지정 yolov5 small모델로 학습
+     --cfg ./models/yolov5s.yaml 
+     # 학습할때 트레이닝 모델
+     --weights yolov5s.pt
+     # 학습결과를 저장할 파일 경로
+     --name fire_yolov5s_results
+
+!zip -r /content/fire_result.zip /content/train/yolov5/runs/train/fire_yolov5s_results/
+
+11. 학습 결과파일을 보는 방법
+     weights/           # Pre-Trained Model
+               best.pt   # 학습과정 중 가장 성능이 좋은 상태를 저장한 학습파일
+               last.pt    # 맨 마지막 학습된 상태를 저장한 학습파일
+
+학습은 GPU가 있는곳에서 하고, 실행은 GPU가 없는 곳에서 실행서
+발생하는 문제 해결 방법
+
+detect.py
+# GPU가 없을때 실행
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
+실행
+python detect.py --weights ./weights/last.pt --source ./source/fire.mp4
+
+-------------------------------------------------------------------
+
+aiaccess 에서
+회원데이터->사진(5개)-> 전처리 -> 벡터DB -> 일치여부 -> 승인
+                                                              |           -> 비승인
+                                                        외부카메라
+
+meta FIASS 라이브러리 사용하는 방법
+
+c:\ai_exam\012_faiss
+가상환경 : p38_cnn
+
+\data\org_data   <- 원본데이터
+        \datasets   <- 얼굴만 추출한 데이터
+
+1. 
+    Classification : 분류
+    Object Detection : 객체 검출(강아지, 고양이, 사람,.... )
+    Face Recognition : 누구인지 찾는것(홍길동,,,,)
+
+2. 사용할 라이브러리
+   google - "git faiss"
+   https://github.com/facebookresearch/faiss
+   3.9 이상
+   google - "git face_recognition"
+   3.8 까지 ?
+
+   pip install faiss-cpu
+   conda install -c conda-forge dlib
+   pip install face_recognition
+
+3. 라이브러리를 개발한다고 할때 ?
+   (1) 사진이미지를 등록해서 벡터DB로 생성하는 프로그램 1개
+       => Training 프로그램
+       이름 : faiss_db_lib.py
+               벡터DB 생성, 벡터DB 불러오는것
+   (2) 백터DB를 이용하여 검출하는 프로그램 1개
+       => 분류하는 프로그램
+       이름 : faiss_predict.py
+               벡터DB 불러오는 부분, 분류
+
+
+
+
+
+

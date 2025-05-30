@@ -1,0 +1,42 @@
+<RNN, LSTM, Transformer>
+
+* 전달사항
+  기업 인턴 수요조사 내용
+  (1) 사용 가능한 기술언어 종류
+  (2) 언어의 학습 정도
+  (3) 활용가능한 프로덕트가 궁금 
+      (예: 커머스, LLM, 챗봇, 기타 경험있는 내용 )
+
+=> 이력서 작성해서 6월 6일까지 담당자에게 전달해주세요.
+
+-------------------------------------------------------------
+
+RNN
+
+c:\ai_exam\019_rnn
+test.py
+가상환경 : p11_gemini
+
+1. 라이브러리
+   (1) 금융데이터를 처리하는 라이브러리
+       FinanceDataReader ***
+       PyPi FinanceDataReader
+       pip install finance-datareader
+   (2) 인공지능 알고리즘 구현
+       pip install tensorflow
+       pip install keras ( tensorflow 2.4 이하를 사용하시는 경우는 별도 설치 )
+
+2. 파일명
+   rnn_main.py
+
+
+
+
+
+
+
+
+
+
+
+

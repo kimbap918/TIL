@@ -1,0 +1,111 @@
+<PyQt5 프로그램 만들기>
+1. python 3.8, 3.10
+c:\ai_exam\003_finance_pyqt
+test.py
+
+2. 라이브러리 설치
+   google - "pypi financedatareader"
+
+3. 참고 : 설치 프로그램 보는 방법
+   pip list
+
+4. 라이브러리 설치
+   pip install finance-datareader
+   pip install pandas
+   pip install plotly
+
+5. 프로그램 개발*
+finance_test.py
+* 종목 가져오기
+ 
+6. 종목선택 ( 종목코드 )
+- 삼성전자(005930)
+- LG(003550)
+- 한화(000880)
+- 두산(000150)
+- 카카오(035720)
+=> 네이버(035420)
+틱커(tickers)
+
+tickers = ['005930','003550','000880','000150','035720']
+
+삼성전자 2025-01-01 ~ 2025-05-07
+
+7. PyQt 화면설계
+finance_main.ui
+
+=> finance_main.py
+=> finance_main.ui 화면에 동작하는 프로그램
+btnClose
+
+google "pyqt5 messagebox"
+
+google "pyqt5 TableWidget cell에 데이터 넣기"
+tableWidget -> tbl_finance , tblFinance
+
+df프레임을 쓰면 복잡해서...
+df프레임 -> 리스트형식으로 만들어서 사용하는 경우
+
+*** JavaScript JS
+프론트앤드 : React.JS, Next.JS
+백앤드 : Node.JS (API), Database
+
+=> Database를  직접 접근하는 방식(X)
+=> Spring -> MyBatis, SpringBoot -> SPA
+=> Django -> Objets
+
+=> JS쪽  개발을 아주 잘한다.
+
+<A라는 프로젝트 : 10개월>
+        1 2 3 4 5 6 7 8 9 10
+회의  <   >
+개발         <      >
+디자인    <     >
+------------------------------
+인공지능
+데이터수집
+...
+
+https://developers.naver.com/main/
+
+프론트앤드 NextJs
+RSS, API
+
+갱신일자 : 2025년 05월 07일 12시...
+
+갱신일자 : 0000-00-00 00:00:00
+
+label -> lb_date
+
+google -> "python date"
+
+date_test.py
+
+----------------------------------------------------------------------
+Python CLASS 에 대해서
+
+calss_cafe.py
+
+cafe_lib.py
+
+선언
+from cafe_lib import Cafe
+
+Cafe생성 : Cafe
+ordering
+자동 누적
+today_info : 매출
+
+
+
+
+
+
+
+
+
+
+
+
+
+

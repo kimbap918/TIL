@@ -1,0 +1,64 @@
+<면접때>
+- 면접관이...
+  혹시 소타(SOTA)모델은 어떤것을 해봤나요 ?
+  State-of-the-art : 특정 분야에서 현재 가장 높은 수준의 성능을 달성한 모델이나 기술
+- 사진, 이미지를 처리하는 라이브러리
+  pillow
+
+<OCR 활용도가 높은 프레임워크>
+- 해외 : tesseract OCR
+- 해외 : EasyOCR
+- 국내 : 네이버 CLOVA OCR
+
+1. 프로젝트 환경설정
+   c:\ai_exam\015_ocr
+   가상환경 : p38_cnn
+
+   OCR -> tesseract -> 결과 ?
+
+   google -> pypi tessetact
+   pip install pytesseract
+   => 엔진만 설치가 됨.
+        언어학습된 데이터는 존재하지 않음.
+
+2. 설치 프로그램(Pre-Trained모델)
+   https://github.com/UB-Mannheim/tesseract/wiki
+
+   OCR 저장 pdf
+   korean -> OCR 처리 -> 일본어 -> PDF
+   설치 후 언어데이터가 잘 설치되었는지 확인
+   C:\Program Files\Tesseract-OCR\tessdata
+   kor.traineddata
+
+3. 동작상태 확인
+   "c:\Program Files\Tesseract-OCR\tesseract"
+   동작되는지 확인 필요
+
+4. Python 프로그램 제작
+   ocr_eng.py
+   
+   * 전처리 작업이 되어야 한글 인식률이 높다.
+   RGB -> 흑백(이진화) -> 가우시안필터 -> 입력
+   => 인식률이 대폭 개선
+
+5. EasyOCR
+   pip install easyocr
+   easyocr_exam.py
+
+   ** 프로젝트를 하신다면 간단한 문장 확인하는 용도
+      에만 사용 가능하고 장문장은 많은 작업이 필요.
+      ex) 영수증, 민증확인, 운전면허증확인
+
+
+
+
+
+
+
+
+
+
+
+
+
+

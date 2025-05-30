@@ -1,0 +1,120 @@
+1. Gemini 가입
+- ai.google.dev
+- 3개월 무료
+- $300 무료지급
+
+2. AI 대시보드
+console.cloud.google.com
+
+3. API 키를 얼마나 사용했는지 모니터링
+aistudio.google.com/app/usage
+
+4. 서버 정보
+서버 : 116.125.140.113
+id : 본인 아이디
+pw : 암호
+
+* 서비스 포트범위
+8000 ~ 12000
+
+* python 설치본
+python3.10 : 3.10
+python3.11 : 3.11
+python3.8 : 3.8
+
+-----------------------------------------------------------------
+
+UI 설계
+
+Gradio, StreamLit
+
+챗봇 화면을 일단 구성
+=>LangChain 연결
+
+    c:\ai_exam\016_langchain
+    python 3.10
+    chatbot_main.py
+    p310_aitest
+
+(1) 화면 ui 구성
+    pip install streamlit
+
+(2) 실행
+    streamlit run chatbot_main.py
+    http://localhost:8501
+
+    history 계속 저장하는 문제...
+
+-------------------------------------------------------------
+
+5. Gemini 구성
+   (0) 가상환경 p311로 업그레이드
+       conda create -n p311_gemini python=3.11
+   gemini_test.py
+
+   (1) 라이브러리 설치
+   pip install google-generativeai
+
+   (2) dotenv
+       python 외부에서 변수를 불러올때 사용하는 방법
+       .env
+       변수명="" <- python에서 정보를 가져옴
+   
+6. 멀티톤 처리시 유의사항
+    (1) key는 1개를 사용
+        => 여러명이 동일한 key가지고
+             서비스를 하는경우 ?
+
+----------------------------------------------
+순번     키          사용여부(id)    로그아웃(?)
+1        ddd         abc               2025-05-27 14:00:11
+2        cccc         bbb              2025-05-27 14:00:11
+
+session, token
+리눅스 서버 crond 10분마다 동작
+
+7. 멀티톤 처리
+   chatbot_multi.py
+   
+8. LangChain 벡터DB 생성
+   (1) 벡터DB 생성
+       임베딩(Embedding) : OpenAI
+                                   Gemini(X) -> 허깅페이스(X)
+                                   OpenAI 키를 발급
+   (2) 채팅
+   (3) 문서요약
+
+9. LangGraph
+   (2) 채팅
+   (3) 문서요약
+
+----------------------------------------------------------------
+<랭체인 라이브러리 설치>
+- pip install langchain, langchain_community
+  pip install langchain_community
+  pip install pypdf
+conda
+- conda install langchain -c conda-forge
+
+10. 벡터DB 제작과정
+    gemini_vectordb.py
+    (1) PDF 파일을 불러온다.
+
+    (2) 정크 작업
+    (3) 임베딩
+    (4) 벡터 디비에 저장
+    벡터DB를 만들 원본 파일 경로
+    벡터DB를 저장하는 디렉토리
+    -> 저장하는 디렉토리가 있는게 좋겠음.
+
+
+
+
+
+
+
+
+
+
+
+

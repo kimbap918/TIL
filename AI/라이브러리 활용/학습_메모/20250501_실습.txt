@@ -1,0 +1,177 @@
+<교육>
+c:\ai_exam
+
+<툴 설치>
+아나콘다 - 가상환경(별도 디렉토리)
+
+디렉토리내에
+/venv/ 설치프로그램이 모두 설치
+
+<개발툴>
+- 아나콘다 = 가상화를 만들어주는 프레임워크
+  google 검색 "아나콘다"
+  다운로드 설치
+  *주의사항
+  C:\Users\hi\anaconda3 <- 한글(X)
+  Add Anaconda 3 to my PATH ....  <- 체크
+  환경 -> base(root)
+
+- vscode 개발툴
+  google "vscode"
+  Download  설치
+
+  <점심 후>
+  코파일럿 : git 아이디/암호
+
+- cursor.ai
+  google 계정  "cursor.ai"
+  * 자동 로그인
+  테스트
+
+<프로젝트 경로>
+c:\ai_exam\   <-     001_python
+c:\ai_exam\001_python
+이제부터 한글로 답변해줘.
+
+정확하게 명령을 지정해주셔야 합니다.
+
+python으로 구구단 프로그램을 만드려고해.
+함수명은 gugudan으로 만들어줘.
+
+nginx
+
+vscode, cursor 원격으로 작업을 하기때문에
+성능이 좋을필요는 없다.
+
+<확장프로그램>
+indent-rainbow
+Auto Rename Tag
+HTML CSS Support
+Live Server
+CodeSnap-K.O
+
+2. 시멘틱 태그
+test.html
+
+3. 아나콘다 프롬프트
+(base) C:\User\hi>
+
+*** HTML 은 나중에 배울것이니
+     이런것이 있다는것만 알고 계시면 됩니다.
+
+4. 아나콘다 사용하기
+   ** Anaconda Prompt 로 접속하여야 함.
+   (1) 가상환경이 몇개가 있는지 확인
+       conda env list
+   => base는 설치하면(X)
+
+   (2) 가상환경 생성
+       * python 3.10 가상환경 생성
+       conda create -n p310_aitest python=3.10
+   (3) 가상환경 사용
+       * 가상환경 사용
+       conda activate p310_aitest
+       python
+       >>>exit()
+       * 가상환경 해지
+       conda deactivate
+   (4) 다른 가상환경 사용
+       * python 3.8 가상환경 생성
+       conda create -n p38_aitest2 python=3.8
+       * 가상환경 사용
+       conda activate p38_aitest2
+       python
+       exit()
+       * 가상환경 해지
+       conda deactivate
+
+5. p310_aitest 가상환경을 vscode 에 적용
+
+python ai로 얼굴을 인식하는 프로그램을 개발하려고하는데 어떤 프레임워크를 쓰는게 좋은지 알려줘.
+
+** 툴 설치 및 사용은 이정도 아시면 됩니다.
+
+---------------------------------------------------------------------------------
+
+                     통  신
+클라이언트  <--  API(JSON)  --> 서버
+             
+6. 언어
+출력문 : print
+(1) 문자열을 출력하는것.
+(2) 숫자를 출력하는것.
+(3) fString 사용법
+
+24567890 + 12857329 
+
+주석문 : #
+
+(3) 4칙연산
++, -, *, /, //, %, **
+
+페이징
+Paging
+Pagination
+
+(4) 변수
+testVar 과 같은 방법으로
+변수명은 대소문자 구분하여 사용.
+
+(5) 타입연산자
+type
+
+(6) 숫자 실수(float)
+
+(7) 문장의 길이를 구하는 함수 : len
+제목 : 오늘은 날씨가 흐립니다.
+제목 : today...
+
+(8) 문자열 합치기
+문자열 + 문자열
+
+(9) 치환
+
+(10) 조건문
+if 조건문
+
+= 치환
+a = 5
+a를 5값으로 치환한다.
+
+== 비교연산자(비교)
+a == 5
+
+x < y     	x가 y보다 작은경우
+x > y	x가 y보다 큰경우
+x == y	x와 y는 같은경우
+x != y	x와 y가 같지 않은경우
+x >= y	x가 y보다 크거나 같은 경우
+x <= y	x가 y보다 작거나 같은 경우 
+
+(11) bool 형(true/false)
+
+(12) 전공자들...
+값이 None 인 경우와 공백인 경우 같은가요 ?
+
+(13) import / pip를 이용한 라이브러리를 설치
+
+(14) vscode 주석처리
+CTRL + / => 블럭이 주석처리됨
+
+타입
+int : 정수
+float : 실수
+str : 문자열
+bool : 참(True),거짓(False)
+
+a = 1
+
+
+
+
+
+
+
+
+
+

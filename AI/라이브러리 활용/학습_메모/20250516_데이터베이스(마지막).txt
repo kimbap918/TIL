@@ -1,0 +1,215 @@
+<Django, Database>
+LANG : Python
+WEB : Django
+WEB서비스 : HTML, TailwindCSS(화면설계)
+AI : Face Recognition, Dlib, CNN, FAISS, OpenCV
+DB : MariaDB
+
+제목 : 인공지능 출입관리 프로젝트
+
+------------------------------------------------------------
+
+<주말에 업로드>
+- Python 문법 PDF
+- Crawing, PYQT PDF
+- 데이터베이스, Django PDF
+- AWS 자격증 관련 자료(예상시험문제 500개까지)
+* Python PDF 도서가 필요하신 분은 개인톡주세요.
+=> 3개 공유해드리겠습니다.
+
+1. 데이터베이스 마지막(수정, 관리자 제어처리 부분)
+------------------------------------------------------------
+* 데이터베이스
+C(생성) R(조회) U(수정) D(삭제)
+프로젝트생성, 앱생성, 데이터베이스연결, CRUD
+
+2. 업데이트
+
+------------------------------------------------------------
+다음주
+인공지능 => 이론 + 실습
+
+python manage.py runserver 0.0.0.0:7000
+
+프로그램  = 공식(문제를 해결하는 방법을 얼마나 많이 알고있는지)
+
+수정페이지 -> 추가페이지를 수정해서 만듬.
+
+http://localhost:7000/member/update/?id=6
+
+http://localhost:7000/member/update/6/홍길동/
+http://localhost:7000/member/update/<int:idx>/
+<int:idx> => 정수(int) idx변수 값으로 받음.
+<str:names> => 문자열(str) names변수로 값을 받는다.
+
+데이터를 수정할때 id 고유값
+http://localhost:7000/member/update/6/
+Internal Server Error 500
+
+* 수정페이지를 제작 할때 순서
+(1) 수정한 정보값을 전달
+    => list 페이지에서 수정 : 
+         a테그 놀러서 수정할 id값을 python에 전달
+(2) 수정할 내용을 데이터베이스에서 검색해서
+    웹페이지에 표시
+    => member_add.html -> member_update.html
+    => rander로 연동
+    => 수정할 내용이 있는지 확인
+(3) "수정"버턴을 누루면 데이터베이스에 내용을 수정
+
+* 로그인이 안된 본인이 수정하고 싶을때는
+uid
+
+<HTML>
+a테크
+html 테그 형식 : <명령어></명령어>
+a : 특정 위치로 이동
+    href=어떤 html로 이동할거냐 ?
+    target=새창으로 열건지, 현재 페이지에서 열건지 ?
+    target="_blank" => 새창으로 열어
+<a href="이동할 위치(html)" target="_blank">클릭시 이동</a>
+
+google -> "Django 템플릿 언어"
+{{}}, for, if 
+3개정도 아시면 프로그램에 아무 문제없음.
+https://velog.io/@hidaehyunlee/Django-%ED%85%9C%ED%94%8C%EB%A6%BF-%EC%96%B8%EC%96%B4
+
+http://localhost:7000/member/
+
+html 마우스 오버시 손모양
+
+<TailwindCSS>
+cursor-pointer : 커서가 손모양으로 바뀜
+
+** 장고 CRUD 관련 명령어(Database)
+
+Create
+  함수명 : member_add_save() 참조
+  변수명 = 테이블명클래명()
+  변수명.항목 = 값
+  변수명.save()
+Read
+  함수명 : member_list() 참조
+  테이블명.objects.all().order_by("-id")
+  all() : 전체
+  filter() : 조건
+Update
+  함수명 : member_update_save()
+  변수명 = 클래스명.objects.get(조건)
+  변수명.속성 = 값
+  변수명.save()
+Delete
+  함수명 : member_delete() 참조
+  테이블명.objects.filter(조건).delete()
+
+** 없는 정보값을 호출하거나, 오류가 발생하는 경우
+try - except 사용
+
+<HTML>
+<input 속성> : 특정값을 받아서 서버에 보내거나 변수로 보내는 역활
+** 속성
+type="text" : 글씨를 입력받음
+type="password" : ******* 로 표시
+name="ids" : ids라는 변수값으로 데이터를 전달
+value="" : 입력되어있는 기본 값
+disabled : 수정불가
+
+-------------------------------------------------------------------
+
+2025년 서울 민간기업 맞춤형 매력일자리 사업에 팀을 구성하여 인공지능 프로젝트를 하려고 하는데 팀에 맞는 팀명과 슬로건을 5개만 추천해줘.
+
+넥스트 웨이브 (Next Wave) - "미래를 선도하는 물결, 인공지능으로 새로운 가치를 창조합니다"
+브레인스톰 (BrainStorm) - "인공지능의 지혜로 서울의 내일을 설계합니다"
+AI 파이오니어 (AI Pioneer) - "기술과 인재가 만나 서울의 혁신을 이끕니다"
+비전메이커스 (Vision Makers) - "AI로 그리는 서울의 미래, 함께 만드는 일자리의 혁신"
+스마트 이노베이터 (Smart Innovator) - "지능을 더하고 일자리를 창출하는 혁신의 동반자"
+
+AI Visionaries – "미래를 그리는 인공지능 혁신팀"
+NEXA AI – "한계를 넘어서, AI로 미래를 창조하다"
+MindForge – "AI로 새로운 지능을 설계하다"
+Infinity Code – "무한한 가능성, 코드로 실현하다"
+Seoul AI Dynamics – "서울을 이끄는 AI 혁신의 중심"
+
+인공지능 미래창조팀 – "AI로 여는 새로운 미래"
+넥사AI(NEXA AI) – "한계를 넘어서, 인공지능으로 혁신하다"
+마인드포지(MindForge) – "인공지능으로 새로운 가능성을 설계하다"
+무한코드 – "코드로 창조하는 무한한 세계"
+서울 AI 다이나믹스 – "서울을 이끄는 인공지능 혁신의 중심"
+
+퓨처브레인(FutureBrain) – "인공지능으로 미래를 그리다"
+코드메이커(CodeMaker) – "창조하는 알고리즘, 혁신하는 세상"
+넥스트AI(NextAI) – "AI와 함께 여는 새로운 가능성"
+서울 테크네이션(Seoul Technation) – "서울의 기술혁신, 우리 손으로"
+비전뉴럴(VisionNeural) – "AI로 보는 더 넓은 세상"
+시너지AI(SynergyAI) – "AI와 인간의 협업으로 혁신을 만들다"
+뉴럴플로우(NeuralFlow) – "끊임없이 진화하는 인공지능, 변화의 흐름을 주도하다"
+프롬프트랩(PromptLab) – "AI의 잠재력을 끌어내는 창의적인 연구소"
+데이터크래프트(DataCraft) – "데이터로 설계하고 AI로 완성하다"
+젠테크(Gentech) – "생성 AI와 기술의 융합, 무한한 가능성을 열다"
+
+-------------------------------------------------------------------
+
+<팀명>
+1조 : 마인드크래프트
+2조 : 에이아이토믹
+3조 : 펠리카닉
+4조 : 넥서스4
+5조 : 올드브영
+6조 : 페르소나
+
+** 업데이트는 중요사항...
+(1) 넘어온 데이터를 데이터베이스에서 다시 한번 확인
+    하는 작업이 필요합니다.
+
+상품정보
+ID   상품명    가격
+10   명품백    5,000,000원
+
+** 테스트 해보실려면
+앱추가
+member2 추가 <- 테스트 작업
+
+-------------------------------------------------------------------
+
+** 관리자 이외에는 사용이 불가능한 페이지
+
+google - "tailwindcss login example"
+
+/templates/auth/login.html
+
+http://localhost:7000/member/login/
+
+http://localhost:7000/member/login/?next=/member/add/
+
+http://localhost:7000/admin/login/?next=/admin/
+
+로그아웃
+
+<form>문의 역활
+
+<form></form> : 특정 데이터를 action에 지정된 경로로 값을 전송
+
+<form action="html파일경로" method="post">
+<input 속성>
+</form>
+
+** input에 있는 모든 내용을 action이 있는 html 경로로 전송
+
+** 장고기능에서 중요한 기능.
+
+/aiaccess/settings.py
+
+<Django 보안>
+django.contrib.auth import authenticate
+=> 장고 로그인, 로그아웃, 권한
+
+http://localhost:7000/member/logout/
+
+
+
+
+
+
+
+
+

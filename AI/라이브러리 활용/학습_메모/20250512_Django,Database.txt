@@ -1,0 +1,317 @@
+<Django, Database>
+LANG : Python
+WEB : Django
+WEB서비스 : HTML, TailwindCSS(화면설계)
+AI : Face Recognition, Dlib, CNN, FAISS, OpenCV
+DB : MariaDB
+
+제목 : 인공지능 출입관리 프로젝트
+
+WEB
+- Flask	: 라이브러리를 직접설치.
+- Django	: 모든 라이브러리가 포함.
+- FastAPI	: API 개발 전용.
+
+JavaScript
+- Node.js => Express
+=> Node.js(웹개발[서비스]) + nginx(웹서버) + MongoDB(MariaDB)
+
+----------------------------------------------------------------------
+1. Django 웹서비스 개발 : 구조
+(1) 경로
+     c:\ai_exam\007_django_ai
+(2) 가상환경 만들어서
+     p310_djangoai
+     * 가상환경 만들기
+     - 아나콘다 프롬프트
+     conda create -n p310_djangoai python=3.10
+(3) VSCODE 프로젝트 설정
+test.py 파일생성 -> 가상환경 설정
+
+2. Django 설치
+Django 4, Django 5
+pip install django==5
+* 설치가 가능한 전체버젼을 보고싶다.
+pip install django==11111111111
+
+3. Django 설치된 버전 확인
+django-admin --version
+
+4. Django 프로젝트 생성
+django-admin startproject helloapp .
+
+5. Django 실행하는 방법
+- 2가지 방법
+(1) python manage.py runserver
+    개발시에 개발자만 접속이 가능
+(2) python manage.py runserver 0.0.0.0:8000
+    개발시에도 모든 사람이 접속이 가능
+(3) 웹브라우저
+    http://localhost:8000
+
+6. Django 기본 셋팅
+   (1) 모든 환경설정은 settings.py
+       프로젝트명\settings.py
+   (2) ALLOWED_HOSTS = []
+       서버에 접근권한을 설정
+       * : 모두다 접근가능
+       127.0.0.1(localhost) : 나만 접속
+   (3) 항상 언어는 한국어로 설정**
+
+7. 장고의 구조
+   http://localhost:8000/
+
+   * App을 생성한다.
+   * AI 출입통제 시스템
+   http://localhost:8000/member/
+   회원관리
+   http://localhost:8000/control/
+   출입정보
+   http://localhost:8000/ai/
+   인공지능처리
+   http://localhost:8000/camera/
+   카메라제어
+   
+8. App을 생성
+   * App을 생성하면 기본페이지는 동작하지 않음.
+   django-admin startapp member
+
+   (1) settings.py에 App을 등록해줘야함.
+       INSTALLED_APPS에  "member"를 등록 해주면
+       서비스가 가능
+
+   member에 urls.py(경로)이 동작하려면 ?
+   프로젝트파일 urls.py에 경로가 있어야 되지 ?
+
+   (2) 경로 만들기
+   member / urls.py <- 생성
+
+9. 동작원리
+   http://localhost:8000/member/
+   어떻게 동작하는지 ?
+   /helloapp   <- 프로젝트파일
+               /urls.py ?
+               member/는 member/urls.py로 가라고
+               되어있다.
+   /member   <- 앱파일
+               /urls.py 확인
+               views.py 함수 index()을 호출해라.
+
+** 문제 
+http://localhost:8000/member/ <- 서비스를 하고있음.
+v1.0
+개발중
+http://localhost:8000/member2/ 개발하고 있음.
+v1.2
+
+member 앱
+member2 앱
+
+landing <- 개발전에 준비중...
+
+--------------------------------------------------------
+
+=> 폴더명 : 008_ai_access
+=> 프로젝트명 : aiaccess
+     프로젝트 포트 : 7000
+     앱리스트
+     landing (랜딩페이지)
+     member (회원관리)
+     camera (카메라제어)
+     ai (인공지능)
+        얼굴인식(Face Recognition)
+        얼굴추출(Dlib)
+        데이터VectorDB(FAISS)
+     api(API RESTful API)
+     가상환경 : p310_djangoai
+
+     http://localhost:7000/landing/
+     landing 페이지이다.
+    
+---------------------------------------------------------
+
+10. 웹페이지(HTML) 연결하기
+
+google - "claude ai"
+
+landing.html
+원래는 프로젝트 경로에 있으면 안됨.
+
+11. template 설정하기
+     (1) settings.py 수정
+
+12. 폴더생성(html이 있는 폴더)
+     templates
+
+13. landing 페이지를 파킹페이지로 사용
+/landing/views.py
+
+/templates/landing/main.html
+
+14. tag 언어
+PHP, ASP, JSP
+=> Django도 tag 언어가 있음.
+
+15. axios 통신전용 프레임워크 최강자
+
+react.js, next.js, Vue.js 100% 사용
+
+SPA
+SPA(Single Page Application)
+
+google - "json server"
+
+-------------------------------------------------------------------
+
+Django로 웹서비스를 만들면 ?
+[*]1. 디렉토리별 구성(앱)
+[*]2. 디자인파일을 불러와서 처리하는 방법(html)
+[ ]3. 파일업로드, 입력데이터를 저장, 수정, 삭제, 리스트
+[ ]4. 데이터베이스 처리하는 방법
+
+-------------------------------------------------------------------
+
+DB : mariadb
+관리프로그램 : MySQLWorkBench, HeidiSQL
+
+1. PC mariadb 설치
+   계정생성, 테이블생성...
+
+   google - "윈도우 mariadb 설치"
+   mariadb.org
+
+2. 실제 서버에서 SQL테스트(70만건)
+
+root
+암호 : 11223344
+PORT : 3306
+
+cmd
+mysql
+
+--------------------------------------------------------------
+
+0. 접속하는 방법
+   mysql -u root -p
+
+MariaDB [(none)]> show databases;
+** 4개 ...
+
+1. 데이터베이스 생성
+   데이터베이스 서버 : localhost
+   데이터베이스명 : aiaccess_db
+   아이디 : aiaccess
+   암호 : 0000
+<root권한>
+암호 : 11223344
+** 언어
+MariaDB [(none)]>create database aiaccess_db default CHARACTER SET UTF8;
+                                                            ^^^^^^^^^^^^^^^^^^^^
+
+2. 사용자 만들기
+   * 로컬에서 들어가는 생성
+   create user 'aiaccess'@'localhost' identified by '0000';
+   create user 'aiaccess'@'%' identified by '0000';
+
+   * 권한생성
+   grant all privileges on aiaccess_db.* to 'aiaccess'@'localhost';
+   grant all privileges on aiaccess_db.* to 'aiaccess'@'%';
+
+   * 권한을 적용
+   flush privileges;
+
+------------------------------------------------------------------------------------
+
+3. 만들어지는 것이 잘 동작하는지 확인
+mysql -u aiaccess -p aiaccess_db
+MariaDB [aiaccess_db]>
+
+google -> mysqlworkbench
+
+127.0.0.1 = localhost
+
+Default Schema = DB명
+
+4. 테이블 생성
+   = Excel 파일 하나 만든다.
+   사용자 엑셀을 만든다고
+   utf8        : 모든나라 언어가능
+   utf8mb4  : 모든나라 언어가능, 이모티콘이 가능
+   utf8mb4_general_ci : 
+
+   varchar(100)
+   abc   97공간이 비어있겠네요.
+
+CREATE TABLE `aiaccess_db`.`user` (
+  `idx` INT NOT NULL AUTO_INCREMENT,
+  `ids` VARCHAR(100) NOT NULL,
+  `pw` VARCHAR(100) NOT NULL,
+  `names` VARCHAR(100) NOT NULL,
+  `genders` VARCHAR(5) NOT NULL,
+  `ages` INT NOT NULL,
+  PRIMARY KEY (`idx`),
+  UNIQUE INDEX `idx_UNIQUE` (`idx` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+=> 테이블를 생성할때 사용하는 SQL문
+
+INSERT INTO `aiaccess_db`.`user` (`idx`, `ids`, `pw`, `names`, `genders`, `ages`) VALUES ('1', 'mat', '111', '홍길동', '남', '33');
+INSERT INTO `aiaccess_db`.`user` (`idx`, `ids`, `pw`, `names`, `genders`, `ages`) VALUES ('2', 'bts', '2222', '홍길동2', '여', '24');
+=> 테이블에 데이터를 넣을때 사용하는 SQL문
+
+테이블어떤것이 있는지 확인
+show tables;
+테이블의 구조 확인
+desc user;
+
+<실제 서버>
+   데이터베이스 서버 : 220.80.16.79
+   데이터베이스명 : martdb
+   아이디 : mart
+   암호 : mart^^1234
+
+<SQL 문>
+1. 총 갯수를 구하기(count)
+select count(*) from martlist;
+
+2. 필드등 정보를 바꾸고 싶을때(as)
+select count(*) as total from martlist;
+
+3. 이 데이터에 여자분이 구입한 수를 알고 싶을때
+select count(*) as total_woman from martlist
+where genders = '여';
+662024
+
+4. 탈퇴한 회원이 구입한 갯수
+select count(*) as exit_level from martlist
+where mem_level = '탈퇴';
+sale_pays : 구입금액
+
+5. 마트 총 매출(SUM)
+매출, 합계 : sum()
+select sum(sale_pays) as pay_total 
+from martlist;
+
+6. 특정데이터까지만 검색(limit)
+select * from martlist limit 10;
+
+7. 특정 필드만 뽑아서 사용할경우.
+select dates, sale_times, mem_numer, mem_level, mart_info
+from martlist limit 10;
+
+8. where 조건문
+천원이하는 어떤제품을 구입했는지 ?
+select item_cate1, item_cate2, item_cate3, sale_pays
+from martlist
+where sale_pays < 1000;
+
+9. 정렬 방법(order)
+- 내림차순(asc)
+- 오름차순(desc)
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+<크롤링, 워드클라우드>
+
+c:\ai_exam\004_crawling
+
+* 프로젝트 순서
+1. 라이브러리 확인
+2. 라이브러리 테스트
+3. 프로젝트 개발
+
+1. 라이브리러 확인
+   (1) 크롤링 하려면 어떤것이 필요한가 ?
+       - 라이브러리
+       <네이버 지식인 크롤링>
+       * BeautifulSoup4 -> HTML, 웹서비스 분석
+       * WordCloud -> 수집된 데이터의 시각화( 단어, 문장 )
+       * Selenium -> 웹데이터를 불러오거나 자료를 가져올때
+       <최근 뉴스>
+       * feedparser -> RSS FEED 정보(뉴스기사) 정보를 가져오는 라이브러리
+
+       - 프로그램
+       * Jupter Notebook
+       * VSCode
+
+2. 라이브러리 호환성 확인(PyPi)
+       google -> "PyPi BeautifulSoup4"  모두가능
+       google -> "PyPi WordCloud"       모두가능
+       google -> "PyPi Selenium"          3.9 이상
+
+* 결론 : Python 3.10을 사용하면 될것같음.
+test.py
+
+=> 주피터 노트북( 한줄씩 파이썬을 실행할때 )
+
+검색
+지식인의 정보를 가져오기 위한 방법
+=> 라이브러리를 설치하고 지식인정보를 가져오는 방법을 분석
+
+pip install requests
+
+=> 크롤링한 데이터를 엑셀파일로 저장
+
+https://kin.naver.com/search/list.naver?query=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5
+
+naver_kin.py
+
+https://kin.naver.com/search/list.naver   -> 주소
+?
+query=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5
+query =  변수
+%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5
+%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5
+ = 값
+query = "인공지능"
+
+https://kin.naver.com/search/list.naver?query=
+
+https://kin.naver.com/search/list.naver?query=인공지능&abc=1234
+query = "인공지능"
+abc = 1234
+
+HTML = TAG 언어
+HTML = Hyper Text Markup Language
+
+파서 Parser  역활
+<dd class="txt_inline">2024.05.17.</dd>
+
+https://kin.naver.com/search/list.naver?query=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&page=1
+https://kin.naver.com/search/list.naver?query=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&page=2
+https://kin.naver.com/search/list.naver?query=%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5&page=3
+
+total = soup.select('.basic1' )
+[
+    ["https://kin.naver", "인공지능..."],
+    ["https://kin.naver...", "인간이....."],
+]
+
+1. 인공지능 => 데이터를 크롤링한 경우 -> 파일로 저장
+2. 저장한 파일-> 불러와서 -> 데이터분석(EDA) -> 시각화
+
+search_date.py -> 복사
+
+python 으로 20250508_101010_인공지능.csv 같은 형식의 문자열을 만드려고 하는데
+20250508는 년월일, 101010 시분초로 구성된 결과물을 함수를 만들어줘.
+
+딜레이 함수
+import time
+import random
+
+delay_time = randint(1,7)
+
+** 크롤링 데이터를 수집하는 단계
+
+특수문자 부분이 예외처리가 안되어있음
+
+-------------------------------------------------------------------------------------------
+
+가져온 데이터를 불러와서 처리하는 프로그램
+
+** 정리(최종정리)
+- 가상환경 구축
+conda create -n p38_crawl python=3.8
+conda activate p38_crawl
+- 주피터 노트북 설치(conda용 주피터 노트북)
+conda install -c conda-forge jupyter
+- 가상환경 강제 설정
+python -m ipykernel install --user --name p38_crawl --display-name "p38_crawl"
+- 프로젝트 경로로 이동
+cd C:\ai_exam\004_crawling
+- jupyter 실행
+jupyter notebook
+- jupyter 내부에서 라이브러리 설치
+!python -m pip install pandas
+
+주석문 데이터프레임 사용법
+
+처음 데이터를 확인하는방법
+df_crawl.head()
+마지막 데이터를 확인하는 방법?
+df_crawl.tail()
+둘다를 보고싶으면 ?
+
+특정한 데이터를 삭제하는 방법
+drop
+
+동작형식
+데이터프레임->불필요한 부분 제거 -> 리스트 -> 문자열
+=> 원하는 형태의 데이터 구조로 변경
+=> 데이터 전처리
+
+불필여한 문자를 제거
+import re
+
+"python re 특수문자 제거"
+
+def clean_text(inputString):
+  text_rmv = re.sub('[-=+,#/\?:^.@*\"※~ㆍ!』‘|\(\)\[\]`\'…》\”\“\’·]', ' ', inputString)
+  text_rmv = ' '.join(text_rmv.split())
+  return text_rmv
+
+워드 클라우드
+!python -m pip install wordcloud
+
+wordcloud 특징
+1. 금지어를 지정할 수 있음.
+폰트 위치
+(윈도우)c:\windows\fonts\malgun.ttf
+(맥)/System/Library/Fonts/AppleSDGothicNeo.ttc
+
+2. 그래픽 라이브러리 설치
+!python -m pip install matplotlib
+import matplotlib.pyplot as plt
+
+%config InlineBackend.figure_format = 'retina'
+
+'관련','있나요','AI','인공지능은'
+
+** 데이터를 확보할 수 있는 사이트
+https://www.aihub.or.kr/
+
+1. 크롤링 라이브러리화
+navercrawl_lib.py
+2. 워드클라우드 라이브러리화 작업
+wordcloud_lib.py
+
+
+
+
+
+
+
+
+
+
+
+
+       google -> "PyPi feedparser"
+
+
+
+
+
+
+
+
+
+
+

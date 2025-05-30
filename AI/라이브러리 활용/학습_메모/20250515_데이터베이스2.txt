@@ -1,0 +1,76 @@
+<Django, Database>
+LANG : Python
+WEB : Django
+WEB서비스 : HTML, TailwindCSS(화면설계)
+AI : Face Recognition, Dlib, CNN, FAISS, OpenCV
+DB : MariaDB
+
+제목 : 인공지능 출입관리 프로젝트
+
+------------------------------------------------------------
+
+마음AI, 로봇
+=> ROS, SLAM, 라이다...
+     Python 으로 구현이 모두 가능함.
+
+소프트웨어 기업이 제품을 만들어서 모든것을 다 공급하는
+SaaS
+
+기업 -> 기업 : B2B
+기업 -> 개인 : B2C
+기업 -> 정부 : B2G
+
+<인공지능기술>
+- 생성형AI, 거의 모든 서비스가 웹베이스
+- RAG, AI-Agent, 카메라제어
+
+python manage.py runserver 0.0.0.0:7000
+
+http://localhost:7000/member/add/save/
+
+2. 데이터베이스 정보 리스트 만들기
+
+<TailwindCSS TAG>
+class="테그를 넣을 수있음."
+
+TAG
+py    : 위 아래 간격을 이야기함.
+py-1 : 에서 1의 의미는 4px 의미
+pt-2 : top(위)의 8px 공간을 주라는 의미.
+pb-10 : bottom(아래)에 40px 공간을 주라는 의미.
+
+글씨정렬
+text-center : 글씨 중앙정렬
+text-right : 오른쪽 정렬
+
+google - "Pesticide for Chrome"
+
+<HTML>
+<a></a> : 누르면 해당되는 페이지로 이동하는 명령어
+<a 여러가지 속성을 줄수있음></a>
+속성
+<a href="http://www.naver.com">네이버로 이동</a>
+
+C : Create ( 추가 )
+R : Read( 검색 )
+U : 
+D : Delete( 삭제 )
+
+google - "sweetalert2"
+
+전달해줄때. 
+
+<JavaScript>
+location.href = '/member/delete/';
+특정한 위치로 이동하는 경우
+
+http://localhost:7000/member/delete/6/
+
+
+
+
+
+
+
+
+

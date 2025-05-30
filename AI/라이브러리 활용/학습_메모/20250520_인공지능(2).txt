@@ -1,0 +1,139 @@
+<인공지능(2)>
+- CNN 결과 추론 프로그램 제작
+  Jupyter 실행
+  (1) 아나콘다 프롬프트
+  (2) 가상환경 활성화
+      conda env list
+      conda activate p38_cnn
+      (p38_cnn) C:\Users\hi>
+  (3) 프로젝트 경로로 이동
+      cd C:\ai_exam\009_cnn
+      (p38_cnn) C:\ai_exam\009_cnn>
+  (4) jupyter 실행
+      jupyter notebook
+
+  number_data.zip
+  압축을 풀면 0-9 숫자가 있습니다.
+
+  CNN알고리즘_추론
+
+1. pillow 라이브러리
+   이미지파일 변환, 처리할때 사용하는
+   라이브러리로 많이 사용됨.
+   pip install pillow
+   from PIL import ...
+
+2. 인공지능 학습데이터를 제공하는 방법
+   h5 : keras 학습 데이터 방식
+   => 추가 학습 불가
+   checkpoint : pytorch 학습
+   => 이어서 추가 학습이 가능
+
+3. 이미지변환, 처리, 가공 : numpy
+   input_shape에 들어갈 수 있는 형태로 변환
+   인공지능에 들어갈 데이터의 형태는 모두
+   numpy 형태로 되어야 함.
+
+-------------------------------------------------------------
+
+1. GAN, github 사용하는 방법
+- BeautyGAN 하도록 하겠습니다.
+  Dlib, GAN, 
+
+2. GAN
+   Generator(G)
+   Adversarial(A)
+   Network(N)
+
+  google -> "git BeautyGAN"
+
+Python3.6
+TensorFlow1.9
+
+3. 아나콘다 p36_19
+   c:\ai_exam\010_beautygan
+   (1) 가상환경 생성
+   conda create -n p36t19_beautygan python=3.6
+   (2) 가상환경 활성화
+   conda activate p36t19_beautygan
+   (3) 경로 이동
+   cd C:\ai_exam\010_beautygan
+   (p36t19_beautygan) C:\ai_exam\010_beautygan>
+
+4. 라이브러리 설치
+   공부
+   Dlib, FAISS => aiaccess 얼굴인식하는 처리 루틴
+
+   - 가상환경 강제 설정
+python -m ipykernel install --user --name p36t19_beautygan --display-name "p36t19_beautygan"
+
+    (1) Dlib 라이브러리 설치
+      => 사람의 얼굴의 특징을 분석하는 라이브러리(많이 사용하는 라이브러리)
+      => 사람얼굴 처리 : mediapipe
+    
+    conda install -c conda-forge dlib
+
+    (2) landmark 학습된 라이브러리가 있음.
+    https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2
+    https://github.com/davisking/dlib-models/blob/master/shape_predictor_5_face_landmarks.dat.bz2
+
+    압축을 해제후
+    C:\ai_exam\010_beautygan\models
+
+    (3) BeautyGAN Pre-Trained 모델
+    https://drive.google.com/drive/folders/1pgVqnF2-rnOxcUQ3SO4JwHUFTdiSe5t9
+    C:\ai_exam\010_beautygan\gan
+    총 4개파일 복사
+
+    (4) 깃허브 소스 다운로드
+        https://github.com/Honlan/BeautyGAN
+        압축 해제
+        imgs 폴더 전체를 C:\ai_exam\010_beautygan
+
+    (5) 폴더 정리
+        gan : BeautyGAN Pre-Trained 모델 학습된 파일
+        imgs : 레퍼런스 데이터가 있는 폴더
+        models : dlib face 분석 하는 라이브러리가 있는 파일
+        source : 화장을 적용하고 싶은 모델
+
+5. Jupyter 실행
+   jupyter notebook
+
+  (1) dlib에서 얼굴을 찾는 것을
+      detector
+
+[
+[(1454, 1097) (1775, 1418)], 
+[(260, 320) (527, 587)], 
+[(1787, 162) (2173, 547)], 
+[(1122, 647) (1389, 914)]
+]
+
+  x, y, w, h
+  x : left
+  y : top
+  w : width
+  h : height
+
+6. 얼굴의 랜드마크를 찾아서 박스를 그릴때
+   plt.subplots : 이미지 위에 추가로 정보를 처리할때
+   patches.Rectangle : 이미지 위에 박스를 그릴때
+
+7. dlib에서 5개의 랜드마크 포인트 인식
+   5개의 점으로 사람의 얼굴을 인식
+
+8. 
+    외국 : roboflow.com
+    국내 : aihub
+    구글 : google datasets search
+   
+
+
+
+
+
+
+
+
+<수업시간에 추가로 다루었으면 하는 부분>
+(1) pdf 파일을 읽고, 기록하는 부분

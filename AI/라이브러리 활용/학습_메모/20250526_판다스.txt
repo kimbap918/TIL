@@ -1,0 +1,152 @@
+<LangChain>
+** Neo4J(GraphDB)
+
+<PANDAS, OCR>
+
+c:\ai_exam\014_pandas
+가상환경 : p38_cnn
+
+* 판다스 기본 명령어 학습
+* 실습
+
+1. 가상환경 활성화
+   conda activate p38_cnn
+
+2. 프로젝트 경로로 이동
+   cd C:\ai_exam\014_pandas
+   (p38_cnn) C:\ai_exam\014_pandas>jupyter notebook
+
+3. 기초문법
+
+   (1) Series 변수 생성
+       a1 = pd.Series([1,2,3,4])
+   (2) Series의 합을 구하고 싶은경우
+       sum()
+   (3) 평균을 구하고싶은경우
+       mean()
+   (4) index 사용
+	a3_1 = pd.Series(
+	    ['이름', '나이', '성별', '직업'],
+	    index=['id1', 'id2', 'id3', 'id4'],
+	    name='회원정보'
+	)
+   (5) 딕셔너리 형태 구성
+	a4 = pd.Series(
+	    {'name':'홍길동','age':22, 	'gender':'M', 'job':'AI개발자'}
+	)
+   (6) 내부 검색 ( "==" )
+
+   (7) 특정 배열에서 일치하는 정보만
+       추출할때 사용하는 방법
+       a4[a4=='홍길동']
+       ** 사용빈도가 높다.
+
+   (8) 슬라이싱
+      0        1       2       3
+   ['이름', '나이', '성별', '직업']
+
+---------------------------------------------------------------
+
+2. DataFrame
+   df_mart = pd.DataFrame(...
+   (1) 컬럼지정
+       columns=['제목','생산일자','입출고','금액']
+   (2) 금액
+
+   (3) read_csv
+       csv파일을 불러온다.
+       read_excel " 기능이 있음.(잘됨)
+   (4) info
+       데이터의 형태가 어떤 구조로 되어있는지 판단.
+   (5) describe
+       숫자로 된 데이터의 최대, 최소, 평균, 표준편차등
+       ***************************************************
+       * 데이터 전처리
+       ***************************************************
+   (6) 공백 여부 *****
+       df_mart.isnull().sum()
+       => 데이터 중 공백이 있는 컬럼의 공백개수를 확인
+   (7) 컬럼 확인
+       df_mart.columns
+   (8) 컬럼 정보만 가져올 수 있음.
+       ** 중요
+   (9) 특정 행을 추출할때(사용빈도가 높음)
+       iloc
+             => 슬라이싱 기능 사용가능
+   (10) 정렬(사용법 익혀두세요)
+        # 정렬
+       df_mart.sort_values(by='구매금액')
+       생략하면 내림차순
+       df_mart.sort_values(by='구매금액', ascending=False)
+       섞어서 사용는 경우
+       # 구매수량과 연령대를 정렬(오름차순)
+       df_mart.sort_values(by=['구매수량','연령'], ascending=[False,True])
+
+   (11) 구매수량이 높고, 연령은 낮은순 상위 10개 ?
+       df_mart.sort_values(by=['구매수량','연령'], ascending=[False,True]).iloc[:10]
+   (12) value_counts : 카운트
+   (13) 전체 데이터에서 40대만 추출하고 싶을때
+   (14) loc  ***
+        데이터값중에서 True인 값만 추출하는 함수
+
+        iloc : 특정위치의 정보를 추출할때 사용하는 함수
+        loc : 데이터중 True인 값만 추출하는 함수
+
+   (15) 컬럼리스트, 정보를 DataFrame -> 리스트로
+         .tolist()
+        # 컬럼 정보를 리스트로 가져오기
+        df_mart.describe().columns.tolist()
+        => 데이터를 리스트형태로 전환하여 사용하는 경우가 많다. **
+
+   (16) 인공지능이나 데이터에서
+         문자형데이터는 모두 제거 하는 경우
+         
+         * 숫자만 뽑아내고 싶은경우
+         * 문자열 정보만 뽑아내고 싶은 경우
+
+   (17) 날짜 정보 가져오기
+         pd.to_datetime
+         문자열(objects)를 날짜형식으로 변환
+
+VirtualBox - 리눅스 설치
+Ubuntu 22.04, 24.04
+
+3. 시각화
+   데이터가공, 정제, 시각화 = EDA
+   (1) pivot_table
+       # 월별 구입금액을 확인
+       pd.pivot_table(data=df_mart, index='월', values='구매금액', aggfunc='sum')
+       => 데이터 형식
+       pd.pivot_table(data=df_mart, index='월', values='구매금액', aggfunc='sum').plot(kind='bar')
+       => 그래프형태(bar)
+
+# 한글 폰트 설정
+import matpltlib.pyplot as plt
+plt.rc('font', family='Malgun Gothic')
+plt.rcParams['axes.unicode_minus'] = False
+
+4. 데이터시각화(EDA) seaborn
+!pip install seaborn
+   (1) countplot
+       물품대분류 매출액
+       바형태의 데이터 분석
+   (2) 물품대분류대비 연령대
+
+   (3) 파일로 저장하고 싶다면
+       plt(matplotlib) 감싸고 나서 저장하면 이미지로
+       저장이 가능
+
+   (4) 그래프 정렬 **
+       order_list = df_mart['물품대분류'].value_counts().index.tolist()
+       plt.figure(figsize=[10,5])
+       sns.countplot(
+    	data=df_mart, 
+	x='물품대분류', 
+    	hue='연령대', 
+    	order=order_list
+        )
+
+
+
+
+

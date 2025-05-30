@@ -1,0 +1,167 @@
+서버 : 116.125.140.113
+DB포트 : 3306
+<서비스 장고, 리엑트, 넥스트JS>
+포트 : 8000~12000
+
+파일명 : 001_chatbot_gemini.py
+=> chatbot_gemini_lib.py
+     (1) vectordb_save()
+         문서로드 - 분할 - 임베딩 - 벡터디비
+         pip install pymupdf
+         pip install faiss-cpu
+     (2) vectordb_load()
+         벡터디비 로드
+     (3) chat_query()
+         로드된 벡터디비에 검색처리
+
+002_chatbot_chatgpt.py
+
+**********************************************************************
+
+google - "MobaXterm"
+MobaXterm_Personal_25.2.exe
+
+matalcross@qm391-0209:~$ <- 사용자 계정
+
+<리눅스 명령어>
+1. 화면 클리어
+   $ clear
+2. 디렉토리를 생성하는 명령어
+   $ mkdir web
+3. 현재 디렉토리 정보를 보는 명령어
+   (1) 일반 리스트 검색
+   $ ls
+   (2) 숨어있는 파일까지 확인하고 검색
+   $ ls -al
+4. 디렉토리 이동하는 명령어
+   $ cd web
+   ~/web$
+   뒤로이동
+   $ cd ..
+5. 디스크용량 확인하는 명령어
+   $ df -h (k바이트로 확인)
+6. 서버 버전 확인방법
+   $ uname -a
+   $ cat /etc/issue
+7. 디렉토리 삭제 명령어
+   $ rmdir web
+8. 편집
+   $ nano 파일명
+   파일명이 있으면 open
+   없으면 새로 생성
+   (1) 저장 : CTRL+O
+   (2) 나가기 : CTRL+X
+9. 파일 정보 확인
+   $ cat text.txt
+10. 파일삭제
+   $ rm 파일명
+
+npm i express
+nano app.js
+CTRL+O
+CTRL+X
+node app.js
+nano app.js
+CTRL+O
+CTRL+X
+
+116.125.140.113:9900
+
+8000~12000
+
+----------------------------------------------------------------
+
+11. 내 홈디렉토리로 이동하는 방법
+    $ cd ~
+    $ mkdir backend
+    $ cd backend
+    (1) 가상환경을 구축
+        python 3.8, 3.10, 3.11
+    $ python3.11
+       >>>exit()
+    * 가상환경 생성
+    $ python3.11 -m venv venv
+    $ ls
+      venv
+    * 가상환경 활성화
+    $ source ./venv/bin/activate
+    (venv) matalcross@qm391-0209:~/backend$
+    $ python
+    >>> exit()
+
+12. 서버에 장고설치
+   (1) 장고설치
+   (venv)$ pip install django
+   (venv)$ django-admin --version
+   (2) 프로젝트 생성
+       django-admin startproject backend .
+   (3) 정보 설정
+       $ cd backend
+       $ nano settings.py
+         alllow HOSTS = [] => ['*']
+         CTRL+O
+         CTRL+X
+       $ cd ..
+   (4) 서버가동
+       ~/backend$ python manage.py runserver 0.0.0.0:8890
+116.125.140.113:8890
+
+13. 서버 원격 접속하는 방법
+    (1) VS코드 실행
+    (2) 확장 프로그램
+        Remote Development
+    (3) Command Palette...
+        >Remote
+          Connect to host
+          ssh matalcross@116.125.140.113
+
+----------------------------------------------------------------
+
+14. 만들어진 라이브러리 동작
+(1) 벡터DB 생성
+    vectordb_save(원본PDF명)
+(2) 벡터DB 불러오기
+    vectordb_load(벡터DB경로)
+(3) 채팅
+    chat_query(메시지)
+
+15. gradio_main.py
+     pip install gradio
+
+16. github 소스 받을때
+    requirements.txt 만들수 있음.
+    pip freeze > requirements.txt
+
+17. 서버에 파일을 전송하는 프로그램(sftp)
+     Secure File Transfer Protocol
+     google - "파일질라"
+
+18. 서버 동작
+     demo.launch(server_port=8890,server_name="0.0.0.0")
+     
+19. 디렉토리와 파일을 통째로  삭제
+     rm -R 디렉토리명
+
+python3.11 -m venv venv
+
+pip install faiss-cpu
+
+20. 서버에서 계속 가동하는 방법
+python gradio_main.py 
+     $ nohup 
+
+nano chatbot_run.sh
+python gradio_main.py 
+CTRL+O
+CTRL+X
+ls -al
+권한변경
+chmod 755 chatbot_run.sh
+nohup ./chatbot_run.sh > out.txt &
+
+116.125.140.113:8890
+
+
+
+
+

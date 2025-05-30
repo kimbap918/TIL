@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "45e0d1e7c7e2d96e",
+        "id": "08a8ab94bfae7397",
         "type": "tabs",
         "children": [
           {
-            "id": "dbaf93692ff8630c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "데이터분석/week1/2024.05.31/2024.05.31 실습.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024.05.31 실습"
-            }
-          },
-          {
-            "id": "b0761ba9da87d768",
+            "id": "846750fab4e89874",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,199 +22,35 @@
             }
           },
           {
-            "id": "66d917e70bff0273",
+            "id": "083ae3c6b19dcefe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled 1.md",
+                "file": "25-05-30 SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled 1"
+              "title": "25-05-30 SQL"
             }
           },
           {
-            "id": "7ff343bed714a694",
+            "id": "9ee8e7de71385546",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Django/Django_필기/Django(1) - 환경설정.md",
+                "file": "25-05-30 회의록.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Django(1) - 환경설정"
-            }
-          },
-          {
-            "id": "f5dc9a195bee3470",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "프로젝트에 앞서.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "프로젝트에 앞서"
-            }
-          },
-          {
-            "id": "a6f536a06ab4c26a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Django 앱 생성하기.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Django 앱 생성하기"
-            }
-          },
-          {
-            "id": "942f95e294aef952",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 4"
-            }
-          },
-          {
-            "id": "0e3d56654dfcbef2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 5.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 5"
-            }
-          },
-          {
-            "id": "a4d7a5598614a3ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "색 조합.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "색 조합"
-            }
-          },
-          {
-            "id": "0eb0acd836600161",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 6.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 6"
-            }
-          },
-          {
-            "id": "8192eef018a6444d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 7.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 7"
-            }
-          },
-          {
-            "id": "c4875388d1c98652",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.4"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.4"
-            }
-          },
-          {
-            "id": "c3576de89ac7977f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 9.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 9"
-            }
-          },
-          {
-            "id": "6505212d51ca29e4",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.7"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.7"
-            }
-          },
-          {
-            "id": "1c8db3836f82419c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "데이터분석/스터디/2024.07.22_LSTM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2024.07.22_LSTM"
-            }
-          },
-          {
-            "id": "a73189b297ab86b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "25-05-30 회의록"
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -247,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -259,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LSTM",
+                "query": "뉴스",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -381,54 +204,54 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a73189b297ab86b5",
+  "active": "9ee8e7de71385546",
   "lastOpenFiles": [
-    "데이터분석/스터디/2024.07.22_LSTM.md",
+    "readme.md",
+    "25-05-30 SQL.md",
     "Untitled.md",
-    "Django/Django_필기/Django(4) - 템플릿 상속~.md",
-    "Django/Django_필기/Django프로젝트 생성 튜토리얼(1).md",
-    "Django/Django_필기/Django프로젝트 생성 튜토리얼(2).md",
-    "Git, GitHub/git으로 협업하기.md",
-    "Git, GitHub/협업.md",
-    "Git, GitHub/git:github(3)~.md",
-    "Git, GitHub/git:github(2)~.md",
-    "Untitled 11.md",
-    "프로그래머스/4/42891. 무지의 먹방 라이브/무지의 먹방 라이브.py",
-    "프로그래머스/4/42891. 무지의 먹방 라이브/README.md",
-    "프로그래머스/4/42891. 무지의 먹방 라이브",
-    "프로그래머스/4",
-    "프로그래머스/2/60057. 문자열 압축/문자열 압축.py",
-    "프로그래머스/2/60057. 문자열 압축/README.md",
-    "프로그래머스/2/60057. 문자열 압축",
-    "백준/Silver/9655. 돌 게임/돌 게임.py",
-    "백준/Silver/9655. 돌 게임/README.md",
-    "백준/Silver/9655. 돌 게임",
-    "백준/Silver/9017. 크로스 컨트리/크로스 컨트리.py",
-    "백준/Silver/9017. 크로스 컨트리/README.md",
-    "백준/Silver/9017. 크로스 컨트리",
-    "백준/Silver/8979. 올림픽/올림픽.py",
-    "백준/Silver/8979. 올림픽/README.md",
-    "백준/Silver/6603. 로또/README.md",
-    "백준/Silver/5397. 키로거/README.md",
-    "백준/Silver/3273. 두 수의 합/README.md",
-    "백준/Silver/2891. 카약과 강풍/README.md",
-    "백준/Silver/25757. 임스와 함께하는 미니게임/README.md",
-    "백준/Silver/2512. 예산/README.md",
-    "백준/Silver/22233. 가희와 키워드/README.md",
-    "백준/Silver/2217. 로프/README.md",
-    "백준/Silver/21921. 블로그/README.md",
-    "백준/Silver/20125. 쿠키의 신체 측정/README.md",
-    "백준/Silver/19941. 햄버거 분배/README.md",
-    "GIFMaker_me.gif",
-    "Screenshot 2024-08-13 at 2.02.27 PM.png",
-    "Screenshot 2024-08-13 at 1.57.14 PM.png",
-    "Screenshot 2024-08-13 at 1.57.01 PM.png",
-    "Pasted image 20240812173550.png",
-    "Screenshot 2024-08-12 at 5.28.38 PM.png",
-    "Pasted image 20240812033519.png",
-    "Pasted image 20240812032928.png",
-    "Pasted image 20240812032912.png",
-    "Pasted image 20240812031107.png",
+    "25-05-30 회의록.md",
+    "리눅스 서버 접속 및 프로젝트 생성하기.md",
+    "25-05-29 회의록.md",
+    "AI/라이브러리 활용/Gemini & ChatGPT 기반 Django, Next.js 챗봇 서버 운영 가이드~.md",
+    "공부.md",
+    "Gemini & ChatGPT 기반 Django, Next.js 챗봇 서버 운영 가이드.md",
+    "untitled.md",
+    "Untitled 4.md",
+    "Untitled 3.md",
+    "Untitled 2.md",
+    "AI/라이브러리 활용/ocr/OCR.md",
+    "AI/라이브러리 활용/OCR.md",
+    "AI/라이브러리 활용/Untitled 1.md",
+    "테이블 엔티티 정의.md",
+    "데이터분석/스터디/2024.07.22_LSTM.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/utils.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/in_memory.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/base.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/__pycache__",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/__init__.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/utils.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/usage.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/strings.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/pydantic.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/mustache.py",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/pymupdf-1.26.0.dist-info/README.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/opentelemetry/sdk/metrics/_internal/exponential_histogram/mapping/ieee_754.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/utils/embedding_functions/schemas/README.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/test/distributed/README.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/telemetry/README.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/starlette-0.45.3.dist-info/licenses/LICENSE.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/onnxruntime/tools/mobile_helpers/nnapi_supported_ops.md",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_xor.png",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_or.png",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_not.png",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_and.png",
+    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langsmith/evaluation/integrations/test.excalidraw.png",
+    "AI/라이브러리 활용/ocr/cnn_news.png",
+    "AI/라이브러리 활용/ocr/SOTA.png",
+    "AI/라이브러리 활용/ocr/NEWS2x.png",
+    "AI/라이브러리 활용/ocr/NEWS.png",
+    "AI/라이브러리 활용/015_ocr/NEWS2x.png",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

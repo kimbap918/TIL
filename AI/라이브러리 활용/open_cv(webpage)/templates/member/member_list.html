@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>회원가입 : 인공지능 출입관리 프로젝트</title>
+</head>
+<body>
+    <section class="bg-gray-50 dark:bg-gray-900">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
+      <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+          인공지능 출입관리 프로젝트    
+      </a>
+      
+      
+
+    <div class="w-full relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="pb-4 bg-white dark:bg-gray-900">
+            
+        </div>
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="p-4">
+                        <div class="flex items-center">
+                            <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                        </div>
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        아이디
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        이름
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        이메일
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        핸드폰번호
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        관리
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mem in data %}
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <td class="w-4 p-4">
+                        <div class="flex items-center">
+                            <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                        </div>
+                    </td>
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{ mem.ids }}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{ mem.usernames}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ mem.email}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ mem.phone }}
+                    </td>
+                    <td class="px-6 py-4">
+                        <a href="/member/update/{{mem.id}}/">
+                            <button type="button" class="cursor-pointer px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">수정</button>
+                        </a>
+                        <button onClick="JavaScript:showDelete('{{mem.id}}','{{mem.ids}}');" type="button" class="cursor-pointer px-3 py-2 text-xs font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">삭제</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="w-full pt-2 text-right">
+            <a href="/member/add/">
+                <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">추가</button>
+            </a>
+
+        </div>
+        
+    </div>
+  </div>
+</section>
+
+<script>
+    function showDelete(id, ids) {
+        Swal.fire({
+            title: "회원 정보 삭제",
+            text: "[ " + ids + " ] 회원정보를 삭제합니다.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "삭제",
+            cancelButtonText: "취소"
+            }).then((result) => {
+            if (result.isConfirmed) {
+                location.href = "/member/delete/" + id + "/";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

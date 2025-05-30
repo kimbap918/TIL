@@ -1,0 +1,116 @@
+<OpenCV, MediaPipe -> CVZONE>
+
+1. OpenCV
+   c:\ai_exam\013_opencv
+   p310_
+   => 처리결과 -> ai_access : 사용
+   => faiss 엔진 -> ai_access : 사용
+
+2. OpenCV 설치하기
+   (1) 설치
+       google -> "pypi opencv"
+       pip install opencv-python
+
+   (2) 설치 확인
+       import cv2
+
+3. Pypi로 설치된 라이브러리의 버젼을 확인하는 방법
+   __version__ => 버젼 정보 확인
+
+4. OpenCV  2가지 사용용도
+   1. 이미지
+   2. 영상
+
+   (1) 이미지
+   opencv_image.py
+
+   (2) Opencv 명령
+       im : 불러오기, 변환, 수정,....
+
+5. OpenCV  많이 사용하는 명령어
+   (1) waitKey(기다리는 시간)
+       입력값이 있을때 까지
+       0 : 무제한 기다림.
+       
+   (2) 이미지를 회색으로 처리하는 것
+       함수 : cv2.cvtColor
+       옵션 : COLOR_BGR2GRAY
+   (3) 컬러나 색상을 바꿀때 옵션
+       cv2.COLOR_
+       <- 색상변경과 관련된 옵션
+
+   빛의 3요소 : RGB
+   OpenCV : BGR2GRAY
+
+   (4) imshow
+       이미지를 화면에 표시
+       imshow('윈도우창이름', '이미지')
+
+   (5) flip(이미지, 어떻게 반전?)
+       이미지 반전
+       옵션
+            < 0 : 상하좌우 대칭
+            = 0 : 상하 반전
+            > 0 : 좌우 반전
+
+6. OpenCV 카메라(영상) 제어
+   opencv_camera.py
+
+   (1) cv2.VideoCapture()
+       카메라, 영상을 사용할때
+       옵션
+       숫자 : 카메라
+       영상파일명 : 영상이 출력
+   (2) .set
+       카메라(영상) 설정정보
+
+64칼라(CGA) = 잘산다.
+256*256*256 컬러 = True Color
+    (3) 영상
+        aespa_mv.mp4
+
+7. Django 실시간 스트리밍 제어
+   google - "tailblocks.cc"
+   https://tailblocks.cc/
+ 
+   camera.html
+
+8. 가상환경 생성
+   conda create -n p38_aiaccess python=3.8
+   pip install django
+   pip install pymysql
+   pip install opencv-python
+   conda install -c conda-forge dlib
+
+9. mp_face.py
+   mediapipe : 얼굴, 손, 모션등 다양한 분야에서 사용할수 있는
+                   구글이 공개한 인공지능 라이브러리(Pre-Trained)
+   pip install mediapipe
+
+10. MediaPipe보다 쉬운 CVZONE
+    cvzone_hand.py
+
+11. CVZONE : Pose
+    cvzone_pose.py
+
+12. cvzone_mash.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

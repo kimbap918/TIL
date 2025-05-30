@@ -1,0 +1,117 @@
+<PyQt5 크롤링 프로그램 완성>
+
+c:\ai_exam\005_pyqt_crawling
+어제 했던 부분
+lib, data 를 005_pyqt_crawling 에 복사
+test.py를 005_pyqt_crawling 에 복사
+가상환경 : p38_crawl
+
+* 프로그램을 제작할때 본임만의 규칙
+1. 유지보수가 쉬워야 한다.
+   (1) 소스코드가 고등학생이 봐도 이해될 정도로 쉽게
+   (2) 프로그램 개발할때 규정
+       전역변수 : G_data, strData, C_data
+   (3) 프로그램은 모듈별로 파일로 분리한다. **
+       네이버 크롤링 : navercrawl_lib.py 처리완료
+       데이터분석(워드클라우드) : wordcloud_lib.py 처리완료
+2. 메인 프로그램
+   라이브러리를 호출에서 결과 제작
+   PyQt5 메인 프로그램 제작
+   보통 디자인파일은 "/ui"라는 폴더를 만들고 따로 보관
+
+예)
+데이터
+./data/20250508_133805_인공지능.csv
+워드클라우드
+./data/20250508_133805_인공지능.png
+. 현재 위치에서
+.. 앞전 위치로 이동
+
+.csv .png <- 확장자
+=> 확장자를 변경해 해줘야함.
+데이터
+./data/20250508_133805_인공지능.csv
+워드클라우드
+./data/20250508_133805_인공지능.png
+어떻게 해야할까요 ?
+
+filename = "./data/20250508_133805_인공지능.csv"
+to_file = "./data/20250508_133805_인공지능.png"
+1. 함수를 만드는방법
+2. 확장자를 분리하여 처리하는 python 라이브러리를 이용하는 방법
+문자열치환(replace)
+filename.replace('.csv', '.png')
+
+vscode에서도 jupyter 파일을 열 수 있음.
+
+3. 화면을 wordcloud_main.py 파일을 만들어서 실행시켜보세요.
+cloudword_main.py
+
+* 화면크기를 고정하는 방법 검색
+google "pyqt5 윈도우 크기 고정"
+google "python 파일존재여부 확인"
+google "python 확장자 확인"
+google "python 문자열 분할"
+google "pyqt5 label에 이미지 넣는 방법"
+
+=> 오픈소스
+
+./data/20250508_133805_인공지능.csv
+
+os.path.splitext(file_path)[1]
+
+"고양이", "고양이가", "고양이는"
+고양이,고양이가,고양이는
+=>
+["고양이","고양이가","고양이는"]
+
+str_change.py
+
+split 함수
+최종 클라우드워드 이미지 = WordCloud_Create(csv파일, 금지어넣고)
+그려주면...
+
+------------------------------------------------------------------------------------------
+
+생성형 ChatBot 골격 구현
+OpenAI를 사용 -> API를 사용
+
+c:\ai_exam\006_chatbot
+openai_chat.py   <- OpenAI API를 이용한 채팅시스템
+chat_main.py      <- 채팅을 실제 하는 부분
+
+1. openai 라이브러리 설치
+   pip install openai
+   => 만약 오류가 나오면 conda 환경용 openai 설치
+   conda install -c conda-forge openai
+
+서비스를 서버랑 통신할때
+request : 서비스를 요청
+response : 서비스에서 응답을 받은경우
+
+pip install openai==0.28
+
+if a == b:
+
+google "json viewer"
+
+벡터DB = 용량속도
+
+기업
+MySQL
+MariaDB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

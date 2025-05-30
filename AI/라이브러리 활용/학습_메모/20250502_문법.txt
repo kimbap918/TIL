@@ -1,0 +1,192 @@
+(14) vscode 주석처리
+CTRL + / => 블럭이 주석처리됨
+
+타입
+int : 정수
+float : 실수
+str : 문자열
+bool : 참(True),거짓(False)
+
+a = 1
+
+----------------------------------------------------------------------
+python002.py
+
+(15) 데이터 입력함수
+input() 함수
+
+* 숫자를 입력받아서, 10보다 작은숫자이면
+입력된 숫자를 확인
+"5는 10보다 작습니다."
+"15는 10보다 큽니다."
+
+숫자를 문자로
+5 -> "5"      : str(변수명)
+문자를 숫자로
+"5" -> 5      : int(변수명)
+
+(16) 랜덤(random) = 난수 / 임의수
+random 함수 = 외부라이브러리를 불러오는 함수.
+random_exam.py
+NameError: name 'random' is not defined
+
+from random import *
+=> random.py라는 프로그램파일에서 모든 함수를 사용하겠다.
+
+/addlib/gugudan.py
+있는 경우 어떻게 호출?
+
+a프로젝트
+main.py <= 10만줄... (X)
+
+/comm     <= 공통사용 라이브러리 경로
+/auth        <= 로그인
+/member
+
+randrange
+범위를 지정한 정수의 값중 임의숫자
+맨 마지막 숫자는 제외
+randint
+범위를 지정한 정수의 갑중 임의숫자
+맨 마지막 숫자를 포함
+
+정규화
+
+(17) 형변환연산자
+int
+float
+str
+
+(18) 함수(function) **
+func_exam.py
+def define
+
+func_exam2.py
+
+** 많이 사용
+(19) 자료형:리스트
+str_exam.py
+
+19_001_001 개
+이름, 주소, 전화번호, ....
+
+login_exam.py
+=> python 정규식 re
+
+
+import re
+
+text = "이메일 주소 example@email.com 이야. 연락줘"
+pattern = r"[a-zA-Z0-9._+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}"
+email = re.findall(pattern, text)
+
+print(email) # 결과 값 :  ['example@email.com']
+
+전화번호
+google "python re 전화번호"
+
+(20) 리스트 : 슬라이싱
+특정한 영역 부분만을 잘라내서 가져오고 싶은경우
+
+a = [1, 2, 3, 4, 5]
+[::-1]
+[5,4,3,2,1]
+
+[첫번째위치:마지막위치:시작위치]
+[:]
+
+(21) 리스트 : 추가, 수정, 삭제
+리스트에서 갯수를 찾는거 ?
+
+(22) 리스트 : 정렬하고 싶으면
+sort : 내림차순
+reverse : 오름차순
+
+(23) 리스트 : 형변환이 가능
+튜플 : 리스트 같은 성격 / 수정불가
+
+** 중요한 구조체
+(24) 딕셔너리 : dic
+키:벨류
+key:value
+['홍길동',20,'010-000-000','test@naver.com']
+=>
+{"name":"홍길동","age":20,"phone":"010-000-000","email":"test@naver.com"}
+딕셔너리 -> 값을 추출
+key값을검색
+- keys : 키 리스트 
+- values : 값 리스트
+- items : 튜플형태로 데이터를 처리
+
+딕셔너리 = 데이터 송수신
+
+(26) 반복문
+while
+for
+
+loop_exam.py
+a = 1
+a = 5
+a = 10
+a = 15
+a = 20
+
+
+a[0] = 1
+a[1] = 5
+a[2] = 10
+a[3] = 15
+a[4] = 20
+
+a = [1, 2, 3, 4, 5]
+b = [6, 7, 8, 9, 10]
+for 문을 써서
+1, 6
+2, 7
+3, 8
+..
+
+(27) 파일 입출력
+save_file.py
+
+(28) 피클(pickle)
+pickle_data.py
+pickle_load.py
+
+---------------------------------------------------------
+
+Python 윈도우 프로그램 개발(GUI) - PyQt5
+
+PyQt5 = 윈도우 프로그램을 만들때 사용하는 라이브러리
+
+1. 설치
+   (1) 디렉토리 추가 
+   c:\ai_exam\001_python
+   c:\ai_exam\002_pyqt5
+   (2) 가상환경 설정
+   새파일 test.py
+   (3) PyQt5 설치
+   (win) pip install pyqt5
+   (mac) brew install pyqt5
+
+2. Qt Designer 프로그램 설치
+   https://build-system.fman.io/qt-designer-download
+   main.ui
+   main_test.py
+   
+pushButton -> btnLogin
+
+3. python 실행프로그램 만들기(exe)
+   (1) 실행파일 만드는 라이브러리 설치
+       pip install pyinstaller
+   (2) 실행파일
+       pyinstaller -w -F main_test.py
+
+
+
+
+
+
+
+
+

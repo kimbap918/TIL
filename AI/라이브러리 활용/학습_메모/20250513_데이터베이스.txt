@@ -1,0 +1,244 @@
+<Django, Database>
+LANG : Python
+WEB : Django
+WEB서비스 : HTML, TailwindCSS(화면설계)
+AI : Face Recognition, Dlib, CNN, FAISS, OpenCV
+DB : MariaDB
+
+제목 : 인공지능 출입관리 프로젝트
+
+--------------------------------------------------------------
+
+팀 선별
+
+1조
+김희재(팀장), 문주영, 정다소, 조유진
+2조
+곽은규, 권창범, 김남영, 이강건(팀장)
+3조
+김진규(팀장), 이석환, 김민지, 최준혁, 최재우
+4조
+김정민, 윤소영, 이춘우, 홍석원(팀장)
+5조
+김유신, 최덕진(팀장), 하승주, 황석호
+6조
+권세진(팀장), 김동욱, 김현우, 이우석
+
+----------------------------------------------------------------
+
+<실제 서버>
+   데이터베이스 서버 : 220.80.16.79
+   데이터베이스명 : martdb
+   아이디 : mart
+   암호 : mart^^1234
+
+<SQL 문>
+1. 총 갯수를 구하기(count)
+select count(*) from martlist;
+
+2. 필드등 정보를 바꾸고 싶을때(as)
+select count(*) as total from martlist;
+
+3. 이 데이터에 여자분이 구입한 수를 알고 싶을때
+select count(*) as total_woman from martlist
+where genders = '여';
+662024
+
+4. 탈퇴한 회원이 구입한 갯수
+select count(*) as exit_level from martlist
+where mem_level = '탈퇴';
+sale_pays : 구입금액
+
+5. 마트 총 매출(SUM)
+매출, 합계 : sum()
+select sum(sale_pays) as pay_total 
+from martlist;
+
+6. 특정데이터까지만 검색(limit)
+select * from martlist limit 10;
+
+7. 특정 필드만 뽑아서 사용할경우.
+select dates, sale_times, mem_numer, mem_level, mart_info
+from martlist limit 10;
+
+8. where 조건문
+천원이하는 어떤제품을 구입했는지 ?
+select item_cate1, item_cate2, item_cate3, sale_pays
+from martlist
+where sale_pays > 0 and sale_pays < 1000;
+
+9. 정렬 방법(order)
+- 내림차순(asc)
+- 오름차순(desc)
+
+10. 최대값과 초소값을 구하는 방법(max, min)
+혹시 마트에서 가장 비싼 제품이 어떤것인지 확인
+select max(sale_pays) from martlist;
+
+select *
+from martlist
+where sale_pays = (select max(sale_pays) from martlist);
+
+select *
+from martlist
+where sale_pays = (select min(sale_pays) from martlist);
+
+** 참고사항
+인공지능쪽 할때 SQL문은 복잡한것을 사용하지 않습니다.
+
+<개인DB>
+   데이터베이스 서버 : 220.80.16.79
+   데이터베이스명 : 메일_db
+   아이디 : 메일
+   암호 : 핸드폰번호(숫자만) 0100000000
+
+jmruby96
+
+----------------------------------------------------------------
+
+1. Django에서 데이터베이스 연결 하는 방법
+
+python manage.py runserver 0.0.0.0:7000
+
+* PyMysql
+mysqlclient ? => X
+
+pip install pymysql
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "데이터베이스명",
+        "USER": "계정",
+        "PASSWORD": "암호",
+        "HOST": "서버주소",
+        "PORT": "3306",
+        "OPTIONS": {
+            "charset": "utf8mb4",
+        }
+    }
+}
+
+2. 데이터베이스에 Django가 사용할 테이블 초기생성(최초)
+python mange.py migrate
+
+3. 관리자 생성하기
+python manage.py createsuperuser
+password : 0000
+
+python manage.py runserver 0.0.0.0:7000
+
+http://localhost:7000/admin
+
+서비스를 개발할때
+알파버전 - 베타버젼 - 정식서비스
+
+python mange.py makemigrations
+=> 나 테이블을 하나 생성하거나 수정할건이 있음.
+
+* 이상이없으면
+python manage.py migrate
+
+-------------------------------------------------------------
+
+9시 40분까지
+장소 : 코엑스 스타필드 스타벅스
+
+10:00 ~ 
+
+-------------------------------------------------------------
+
+=> 폴더명 : 008_ai_access
+=> 프로젝트명 : aiaccess
+     프로젝트 포트 : 7000
+     앱리스트
+     landing (랜딩페이지)
+        models.py
+     member (회원관리)
+        models.py
+     camera (카메라제어)
+        models.py
+     ai (인공지능)
+        models.py
+        얼굴인식(Face Recognition)
+        얼굴추출(Dlib)
+        데이터VectorDB(FAISS)
+     api(API RESTful API)
+        models.py
+     가상환경 : p310_djangoai
+
+3. 관리자페이지에 생성한 DB 연결
+   DB를 API에서 생성
+   api/admin.py
+
+   => SQL문으로 데이터를 등록
+
+   등록
+   http://localhost:7000/member/등록하고싶은아이디/add/
+   => 서버에 저장되는 함수
+   * http://localhost:7000/member/test_1234/add/
+   http://localhost:7000/member/add/?ids=test_1234
+
+http://localhost:7000/member/test_id/add/
+
+4. 데이터를 입력
+
+INSERT INTO api_members
+(ids, usernames, password, email, 
+phone, cnts, first_dates, first_ips)
+VALUES
+('test124', '가나다', '1234', 'test@naver.com',
+'010-000-0000', 0, '2025-05-13', '127.0.0.1');
+
+INSERT문을 사용한다.
+
+5. DELETE 문
+DELETE FROM api_members WHERE ids = "abc11";
+=> 한종류밖에 없음.
+
+jQuery : JavaScript에 대한 정보를 모두 모아놓은 프레임워크
+* bootStrap : 부트스트랩
+google -> sweetalert2
+
+6. UPDATE 문
+UPDATE api_members
+SET usernames = 'test1234', password = '4444'
+WHERE ids = 'test_id';
+
+UPDATE 테이블명
+SET 수정할 열,....
+WHERE 조건문;
+
+-------------------------------------------------------
+
+7. 입력화면 만들기
+TailwindCSS => 입력화면
+
+HTML 파일을 만들어야함.
+
+(1) html 만들어서 render로 연동
+(2) TailwindCSS를 연동 -> html에 연동
+google -> "tailwindcss"
+
+8. 서버에 데이터를 넘기기 위해서는
+<form>
+안에 있는 모든 변수 값
+</form>
+
+http://localhost:7000/member/?id=teset&pw=1234
+
+name : 파이썬에서 변수
+          name변수로 넘어옴
+id : 파이썬(X), 자바스크립트에서 제어할때
+
+http://localhost:7000/member/add/save/
+=> 저장 방법
+
+-------------------------------------------------------
+
+google "tailwindcss 테이블 example"
+
+
+
+
+
