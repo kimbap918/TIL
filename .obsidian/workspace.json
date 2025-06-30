@@ -4,11 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "08a8ab94bfae7397",
+        "id": "d06a63b8bd1458f0",
         "type": "tabs",
         "children": [
           {
-            "id": "846750fab4e89874",
+            "id": "f217ee4d0f526f7a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "해야할것.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "해야할것"
+            }
+          },
+          {
+            "id": "ba96b29ac73c2d8a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "포트폴리오 프로젝트 요약.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "포트폴리오 프로젝트 요약"
+            }
+          },
+          {
+            "id": "c07542244336060a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "포트폴리요 진짜 요약.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "포트폴리요 진짜 요약"
+            }
+          },
+          {
+            "id": "424f3c266757442b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Transtormer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Transtormer"
+            }
+          },
+          {
+            "id": "2b2094e5b2b419b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,35 +78,45 @@
             }
           },
           {
-            "id": "083ae3c6b19dcefe",
+            "id": "3b3dff59e74f5a61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "25-05-30 SQL.md",
+                "file": "Pel-World.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25-05-30 SQL"
+              "title": "Pel-World"
             }
           },
           {
-            "id": "9ee8e7de71385546",
+            "id": "ad34bf2a78cf37ef",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "3af10e950f3b94c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "25-05-30 회의록.md",
+                "file": "해야할것.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "25-05-30 회의록"
+              "title": "해야할것"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -82,7 +148,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "뉴스",
+                "query": "pytorch",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -204,26 +270,39 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9ee8e7de71385546",
+  "active": "ad34bf2a78cf37ef",
   "lastOpenFiles": [
-    "readme.md",
-    "25-05-30 SQL.md",
-    "Untitled.md",
-    "25-05-30 회의록.md",
-    "리눅스 서버 접속 및 프로젝트 생성하기.md",
-    "25-05-29 회의록.md",
-    "AI/라이브러리 활용/Gemini & ChatGPT 기반 Django, Next.js 챗봇 서버 운영 가이드~.md",
-    "공부.md",
-    "Gemini & ChatGPT 기반 Django, Next.js 챗봇 서버 운영 가이드.md",
-    "untitled.md",
+    "AI/LangGraph, A2A/Transtormer.md",
+    "AI/LangGraph, A2A/Google A2A.md",
+    "AI/LangGraph, A2A/LangGraph란?.md",
+    "AI/LangGraph, A2A/LangGraph 정리.md",
+    "AI/LangGraph, A2A",
+    "AI/untitled folder",
+    "윌루젼질문.md",
+    "해야할것.md",
+    "Transtormer.md",
+    "Untitled 12.md",
+    "LangGraph란?.md",
+    "Pel-World.md",
+    "LangGraph 정리.md",
+    "Untitled 2.md",
+    "기업 요약.md",
+    "질문예상.md",
+    "포트폴리오 프로젝트 요약.md",
     "Untitled 4.md",
     "Untitled 3.md",
-    "Untitled 2.md",
-    "AI/라이브러리 활용/ocr/OCR.md",
-    "AI/라이브러리 활용/OCR.md",
-    "AI/라이브러리 활용/Untitled 1.md",
-    "테이블 엔티티 정의.md",
-    "데이터분석/스터디/2024.07.22_LSTM.md",
+    "Google A2A.md",
+    "Untitled 1.md",
+    "포트폴리요 진짜 요약.md",
+    "해와 달이 된 오누이.md",
+    "프로젝트 정리.md",
+    "readme.md",
+    "AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 2일차.md",
+    "AI/ML/SeSAC - 머신러닝 및 AI 기술 개요 1일차.md",
+    "AI/ML/SeSAC - 머신러닝 데이터분석(4) - 트리의 앙상블 찍어먹어보기.md",
+    "잉그리스 자소서.docx",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/utils.py",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/in_memory.py",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/base.py",
@@ -231,17 +310,6 @@
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/vectorstores/__init__.py",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/utils.py",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/usage.py",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/strings.py",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/pydantic.py",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/langchain_core/utils/mustache.py",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/pymupdf-1.26.0.dist-info/README.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/opentelemetry/sdk/metrics/_internal/exponential_histogram/mapping/ieee_754.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/utils/embedding_functions/schemas/README.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/test/distributed/README.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/chromadb/telemetry/README.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/starlette-0.45.3.dist-info/licenses/LICENSE.md",
-    "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/onnxruntime/tools/mobile_helpers/nnapi_supported_ops.md",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_xor.png",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_or.png",
     "AI/라이브러리 활용/016_Langchain/venv/lib/python3.11/site-packages/sympy/plotting/tests/test_region_not.png",
@@ -252,8 +320,6 @@
     "AI/라이브러리 활용/ocr/NEWS2x.png",
     "AI/라이브러리 활용/ocr/NEWS.png",
     "AI/라이브러리 활용/015_ocr/NEWS2x.png",
-    "Untitled.canvas",
-    "Untitled 2.canvas",
-    "Untitled 1.canvas"
+    "Untitled 2.canvas"
   ]
 }
